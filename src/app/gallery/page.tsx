@@ -29,7 +29,7 @@ export default function GalleryPage() {
   return (
     <>
       <Navbar />
-      <GalleryPageClient  />
+      <GalleryPageClient/>
       <Footer />
     </>
   );
