@@ -162,7 +162,7 @@ export default function HeroSection() {
     >
       {/* Background Glow Lights */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-[70px] pointer-events-none z-0" />
-      <div className="absolute bottom-10 right-10 w-[30rem] h-[30rem] bg-blue-500/5 rounded-full blur-[80px] pointer-events-none z-0" />
+      <div className="absolute bottom-10 right-10 w-[30rem] h-[30rem] bg-black/5 rounded-full blur-[80px] pointer-events-none z-0" />
 
       {/* CONTINUOUS CINEMATOGRAPHY SLOW MOTION BACKGROUND CAROUSEL */}
       <div className="absolute inset-0 z-0 overflow-hidden">

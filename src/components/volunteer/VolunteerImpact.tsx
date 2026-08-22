@@ -67,7 +67,7 @@ export default function VolunteerImpact() {
       {/* Decorative floating elements */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-1/4 left-1/6 w-[400px] h-[400px] rounded-full bg-[#f97316]/8 blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/6 w-[350px] h-[350px] rounded-full bg-[#38bdf8]/8 blur-[110px]" />
+        <div className="absolute bottom-1/4 right-1/6 w-[350px] h-[350px] rounded-full bg-[#f97316]/8 blur-[110px]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-white/3 blur-[200px]" />
       </div>
 
@@ -110,7 +110,7 @@ export default function VolunteerImpact() {
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="text-base sm:text-lg text-blue-200/80 font-body leading-relaxed"
+            className="text-base sm:text-lg text-neutral-300/80 font-body leading-relaxed"
           >
             Every hour donated, every shoe sorted, every child visited — these contributions stack up to numbers that tell the story of a movement.
           </motion.p>
@@ -131,7 +131,7 @@ export default function VolunteerImpact() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <p className="font-body text-blue-200/70 text-base mb-6">
+          <p className="font-body text-neutral-300/70 text-base mb-6">
             These numbers grow because of people like you. Ready to add yours?
           </p>
           <a

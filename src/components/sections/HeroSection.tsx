@@ -70,15 +70,15 @@ export default function HeroSection() {
         {/* Blobs */}
         <motion.div
           className="absolute top-10 left-10 w-96 h-96 rounded-full opacity-30 animate-blob"
-          style={{ x: blob1X, y: blob1Y, background: "#2563eb" }}
+          style={{ x: blob1X, y: blob1Y, background: "#f97316" }}
         />
         <motion.div
           className="absolute bottom-20 right-20 w-80 h-80 rounded-full opacity-25 animate-blob-slow"
-          style={{ x: blob2X, y: blob2Y, background: "#2563eb" }}
+          style={{ x: blob2X, y: blob2Y, background: "#f97316" }}
           />
         <motion.div
           className="absolute top-1/2 left-1/3 w-48 h-48 rounded-full opacity-20 animate-blob"
-          style={{ background: "#2563eb", animationDelay: "3s" }}
+          style={{ background: "#f97316", animationDelay: "3s" }}
         />
 
         {/* Animated footprints */}
@@ -93,7 +93,7 @@ export default function HeroSection() {
             animate={{ opacity: [0.05, 0.2, 0.05], y: [0, -15, 0] }}
             transition={{ duration: 3, repeat: Infinity, delay: i * 0.5, ease: "easeInOut" }}
           >
-            <svg viewBox="0 0 24 32" className="w-6 h-8 fill-[#2563eb]">
+            <svg viewBox="0 0 24 32" className="w-6 h-8 fill-[#f97316]">
               <ellipse cx="12" cy="10" rx="7" ry="9" />
               <ellipse cx="7" cy="22" rx="3.5" ry="4" />
               <ellipse cx="17" cy="22" rx="3.5" ry="4" />
@@ -111,7 +111,7 @@ export default function HeroSection() {
               height: Math.random() * 6 + 3,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              background: i % 3 === 0 ? "#2563eb" : i % 3 === 1 ? "#f97316" : "#fbbf24",
+              background: i % 3 === 0 ? "#f97316" : i % 3 === 1 ? "#f97316" : "#fbbf24",
               opacity: 0.3,
             }}
             animate={{
@@ -141,7 +141,7 @@ export default function HeroSection() {
           >
             {/* Badge */}
             <motion.div variants={fadeUp} className="inline-flex">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-sm font-bold border border-blue-200">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-sm font-bold border border-slate-200">
                 <span className="w-2 h-2 rounded-full bg-[#f97316] animate-pulse" />
                 Nigerian Nonprofit • Founded 2022
               </span>
@@ -191,9 +191,9 @@ export default function HeroSection() {
                 Become a Volunteer
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <button className="flex items-center gap-2 px-5 py-3 rounded-full font-bold text-gray-700 hover:text-royal-blue hover:bg-blue-50 transition-all group">
+              <button className="flex items-center gap-2 px-5 py-3 rounded-full font-bold text-gray-700 hover:text-[#f97316] hover:bg-slate-50 transition-all group">
                 <span className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-md border border-gray-100 group-hover:shadow-lg transition-shadow">
-                  <Play size={14} className="ml-0.5 fill-[#2563eb] text-royal-blue" />
+                  <Play size={14} className="ml-0.5 fill-[#f97316] text-[#f97316]" />
                 </span>
                 Watch Our Story
               </button>
@@ -221,7 +221,7 @@ export default function HeroSection() {
             {/* Main illustration frame */}
             <div className="relative w-full max-w-lg">
               {/* Background glow */}
-              <div className="absolute inset-0 bg-[#2563eb] rounded-3xl blur-3xl scale-110" />
+              <div className="absolute inset-0 bg-[#09090b] rounded-3xl blur-3xl scale-110" />
 
               {/* Main image */}
               <motion.div
@@ -238,7 +238,7 @@ export default function HeroSection() {
                   priority
                 />
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-[#2563eb]" />
+                <div className="absolute inset-0 bg-[#09090b]" />
               </motion.div>
 
               {/* Floating glass card - Impact */}
@@ -248,11 +248,11 @@ export default function HeroSection() {
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#2563eb] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#09090b] flex items-center justify-center">
                     <span className="text-lg">👟</span>
                   </div>
                   <div>
-                    <div className="font-heading font-bold text-royal-blue text-lg">6,500+</div>
+                    <div className="font-heading font-bold text-[#f97316] text-lg">6,500+</div>
                     <div className="text-xs text-gray-500 font-body">Shoes Given</div>
                   </div>
                 </div>
@@ -265,11 +265,11 @@ export default function HeroSection() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#2563eb] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#09090b] flex items-center justify-center">
                     <span className="text-lg">🏘️</span>
                   </div>
                   <div>
-                    <div className="font-heading font-bold text-royal-blue text-lg">18+</div>
+                    <div className="font-heading font-bold text-[#f97316] text-lg">18+</div>
                     <div className="text-xs text-gray-500 font-body">Communities</div>
                   </div>
                 </div>
@@ -325,7 +325,7 @@ export default function HeroSection() {
               animate={{ opacity: [0.2, 0.6, 0.2] }}
               transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
             >
-              <ChevronDown size={14} className="text-royal-blue" />
+              <ChevronDown size={14} className="text-[#f97316]" />
             </motion.div>
           ))}
         </motion.div>

@@ -10,9 +10,9 @@ const steps = [
     title: "Community Assessment",
     desc: "We partner with local leaders, schools, and health workers to assess communities and identify children in greatest need of footwear support.",
     icon: "🔍",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
+    border: "border-slate-100",
   },
   {
     number: "02",
@@ -37,7 +37,7 @@ const steps = [
     title: "Prepare and Sort Supplies",
     desc: "Our volunteers carefully inspect, clean, sort by size, and package every pair to ensure a dignified, perfectly-fitting shoe for each child.",
     icon: "📦",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-purple-50",
     border: "border-purple-100",
   },
@@ -78,7 +78,7 @@ export default function HowProgramsWork() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs sm:text-sm font-bold border border-blue-200 mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold border border-slate-200 mb-4"
           >
             Our Process
           </motion.span>
@@ -86,7 +86,7 @@ export default function HowProgramsWork() {
             variants={fadeUp}
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
           >
-            How Our Programs <span className="text-royal-blue">Work</span>
+            How Our Programs <span className="text-[#f97316]">Work</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -100,7 +100,7 @@ export default function HowProgramsWork() {
         {/* Timeline */}
         <div ref={ref} className="relative max-w-5xl mx-auto">
           {/* Vertical line (desktop) */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1  from-blue-400 via-orange-400 via-purple-400 to-amber-400 -translate-x-1/2 rounded-full" />
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1  from-slate-700 via-orange-400 via-purple-400 to-amber-400 -translate-x-1/2 rounded-full" />
 
           <div className="flex flex-col gap-12 lg:gap-16">
             {steps.map((step, i) => {
@@ -123,7 +123,7 @@ export default function HowProgramsWork() {
                         </span>
                         <span className="text-3xl">{step.icon}</span>
                       </div>
-                      <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-3 group-hover:text-royal-blue transition-colors">
+                      <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-3 group-hover:text-[#f97316] transition-colors">
                         {step.title}
                       </h3>
                       <p className="font-body text-gray-600 text-sm leading-relaxed">{step.desc}</p>
@@ -133,7 +133,7 @@ export default function HowProgramsWork() {
                   {/* Circle Indicator (desktop) */}
                   <div
                     className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full border-4 border-white shadow-2xl items-center justify-center font-heading font-extrabold text-white text-lg z-10"
-                    style={{ background: "#2563eb" }}
+                    style={{ background: "#f97316" }}
                   >
                     {step.number}
                   </div>

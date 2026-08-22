@@ -32,7 +32,7 @@ function TimelineItem({
       {/* Connector line – only before last item */}
       {index < total - 1 && (
         <motion.div
-          className="absolute left-1/2 top-1/2 w-0.5 bg-[#2563eb]"
+          className="absolute left-1/2 top-1/2 w-0.5 bg-[#09090b]"
           style={{ height: "calc(100% + 2rem)", translateX: "-50%", top: "50%" }}
           initial={{ scaleY: 0 }}
           animate={inView ? { scaleY: 1 } : {}}
@@ -96,7 +96,7 @@ function TimelineItem({
 
 export default function ImpactTimeline() {
   return (
-    <section className="section-padding bg-[#2563eb] overflow-hidden">
+    <section className="section-padding bg-[#09090b] overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -117,7 +117,7 @@ export default function ImpactTimeline() {
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
           >
             Our Impact{" "}
-            <span className="text-royal-blue">Journey</span>
+            <span className="text-[#f97316]">Journey</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -158,7 +158,7 @@ export default function ImpactTimeline() {
           <div className="hidden md:block space-y-16 relative">
             {/* Vertical center line */}
             <motion.div
-              className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#2563eb] -translate-x-1/2"
+              className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#09090b] -translate-x-1/2"
               initial={{ scaleY: 0 }}
               whileInView={{ scaleY: 1 }}
               viewport={{ once: true, amount: 0.1 }}

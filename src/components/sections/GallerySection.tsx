@@ -106,7 +106,7 @@ export default function GallerySection() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-sm font-bold mb-4 border border-blue-200"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-sm font-bold mb-4 border border-slate-200"
           >
             <SparklesIcon size={14} className="text-orange-500" />
             Stories in Pictures
@@ -166,7 +166,7 @@ export default function GallerySection() {
                 />
 
                 {/* Gradient */}
-                <div className="absolute inset-0 bg-[#2563eb] pointer-events-none" />
+                <div className="absolute inset-0 bg-[#09090b] pointer-events-none" />
 
                 {/* Featured top badges */}
                 {isFeatured && (

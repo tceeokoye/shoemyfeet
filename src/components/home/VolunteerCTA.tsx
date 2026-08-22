@@ -26,7 +26,7 @@ export default function VolunteerCTA() {
   return (
     <section className="section-padding bg-[#fdfbf7] relative overflow-hidden">
       <div className="absolute top-0 right-0 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-black/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -50,7 +50,7 @@ export default function VolunteerCTA() {
 
             <motion.h2 variants={fadeUp} className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#0a0a0a] tracking-tight">
               Become a{" "}
-              <span className="text-[#f97316]">Change-Maker</span> Today
+              <span className="text-[#f97316]">Change Maker</span> Today
             </motion.h2>
 
             <motion.p variants={fadeUp} className="font-body text-slate-600 text-base sm:text-lg leading-relaxed">
@@ -94,7 +94,7 @@ export default function VolunteerCTA() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white card-3d">
               <FastImage
-                src="/images/volunteers.webp"
+                src="/images/volunteers.jpg"
                 alt="Volunteers at shoe distribution event"
                 width={600}
                 height={480}
@@ -130,14 +130,14 @@ export default function VolunteerCTA() {
         >
           <div className="absolute inset-0 opacity-15 pointer-events-none">
             <FastImage
-              src="/images/children_walking_school.webp"
+              src="/images/work-confidence.jpeg"
               alt=""
               fill
               className="object-cover"
             />
           </div>
           <div className="absolute top-0 right-0 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-black/20 rounded-full blur-3xl" />
 
           <div className="relative z-10 grid lg:grid-cols-2 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-white/15">
 
@@ -153,12 +153,12 @@ export default function VolunteerCTA() {
                 <span className="text-[#f59e0b]">Confidence</span>
               </h2>
 
-              <p className="font-body text-blue-100/90 text-sm leading-relaxed">
+              <p className="font-body text-neutral-200/90 text-sm leading-relaxed">
                 $20 provides a durable pair of shoes. $100 fits an entire classroom.
                 Join us in breaking the cycle of absenteeism today.
               </p>
 
-              <div className="flex flex-wrap gap-3 text-xs font-body text-blue-100">
+              <div className="flex flex-wrap gap-3 text-xs font-body text-neutral-200">
                 {["100% Direct Delivery", "Registered CAC NGO", "Transparent Reports"].map((t) => (
                   <span key={t} className="flex items-center gap-1.5 font-semibold">
                     <CheckCircle2Icon size={14} className="text-amber-400" />
@@ -188,7 +188,7 @@ export default function VolunteerCTA() {
                 Stay Connected to Our Mission
               </h3>
 
-              <p className="font-body text-blue-100/90 text-sm leading-relaxed">
+              <p className="font-body text-neutral-200/90 text-sm leading-relaxed">
                 Receive quarterly impact updates, heartwarming stories, and outreach announcements
                 directly in your inbox.
               </p>
@@ -203,7 +203,7 @@ export default function VolunteerCTA() {
                     <CheckCircle2Icon size={20} />
                     <span>Thank you for subscribing!</span>
                   </div>
-                  <p className="text-xs text-blue-200 font-body">
+                  <p className="text-xs text-neutral-300 font-body">
                     Welcome to the Shoe My Feet Foundation family.
                   </p>
                 </motion.div>
@@ -229,7 +229,7 @@ export default function VolunteerCTA() {
                 </form>
               )}
 
-              <p className="text-xs text-blue-300/70 font-body">
+              <p className="text-xs text-orange-300/70 font-body">
                 We respect your privacy. Unsubscribe at any time.
               </p>
             </div>

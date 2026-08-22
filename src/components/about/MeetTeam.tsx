@@ -148,7 +148,7 @@ export default function MeetTeam() {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#2563eb] hover:text-white transition-colors"
+                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#09090b] hover:text-white transition-colors"
                     aria-label={`${member.name} LinkedIn`}
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -159,7 +159,7 @@ export default function MeetTeam() {
                     href={member.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#38bdf8] hover:text-white transition-colors"
+                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#f97316] hover:text-white transition-colors"
                     aria-label={`${member.name} Twitter`}
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">

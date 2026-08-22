@@ -33,7 +33,7 @@ export default function FeaturedArticle({ article, onReadStory, onAuthorClick }:
               className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               priority
             />
-            <div className="absolute inset-0 bg-[#2563eb] lg: lg:from-transparent lg:via-black/20 lg:to-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-black/20 lg:to-black/60" />
 
             {/* Badges Overlay */}
             <div className="absolute top-6 left-6 flex flex-wrap items-center gap-2 z-10">
@@ -41,7 +41,7 @@ export default function FeaturedArticle({ article, onReadStory, onAuthorClick }:
                 <SparklesIcon size={12} />
                 Featured Story
               </span>
-              <span className="px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#2563eb] font-bold text-xs shadow-md">
+              <span className="px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#f97316] font-bold text-xs shadow-md">
                 {article.category}
               </span>
             </div>

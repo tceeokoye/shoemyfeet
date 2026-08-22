@@ -37,7 +37,7 @@ const packages = [
   {
     name: "Platinum Guardian",
     amount: "₦1,000,000+",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     perks: ["All Gold perks", "School naming rights", "Board observer seat", "National press coverage"],
   },
 ];
@@ -45,8 +45,8 @@ const packages = [
 export default function CorporatePartnerships() {
   return (
     <section className="section-padding bg-white relative overflow-hidden" aria-label="Corporate partnerships">
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#2563eb]" />
-      <div className="absolute top-10 right-10 w-80 h-80 rounded-full opacity-5 blur-3xl bg-[#2563eb] pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-[#09090b]" />
+      <div className="absolute top-10 right-10 w-80 h-80 rounded-full opacity-5 blur-3xl bg-[#09090b] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -56,7 +56,7 @@ export default function CorporatePartnerships() {
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-5">
             Partner With Us to{" "}
-            <span className="text-royal-blue">Maximize Impact</span>
+            <span className="text-[#f97316]">Maximize Impact</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Join forward-thinking businesses investing in the future of Nigerian children. Together, we create sustainable community change.

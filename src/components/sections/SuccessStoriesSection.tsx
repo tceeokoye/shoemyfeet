@@ -16,7 +16,7 @@ export default function SuccessStoriesSection() {
   const story = STORIES[activeIndex];
 
   return (
-    <section className="section-padding bg-[#2563eb] overflow-hidden">
+    <section className="section-padding bg-[#09090b] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -52,7 +52,7 @@ export default function SuccessStoriesSection() {
             >
               {/* Image */}
               <div className="relative">
-                <div className="absolute inset-0 bg-[#2563eb] rounded-3xl blur-2xl scale-105" />
+                <div className="absolute inset-0 bg-[#09090b] rounded-3xl blur-2xl scale-105" />
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <Image
                     src={`/images/story${(activeIndex % 2) + 1}.jpg`}
@@ -61,7 +61,7 @@ export default function SuccessStoriesSection() {
                     height={450}
                     className="w-full h-80 object-cover"
                   />
-                  <div className="absolute inset-0 bg-[#2563eb]" />
+                  <div className="absolute inset-0 bg-[#09090b]" />
                   <div className="absolute bottom-4 left-4">
                     <span className="glass rounded-full px-3 py-1 text-white text-xs font-bold border border-white/30">
                       {story.year} · {story.location}
@@ -81,7 +81,7 @@ export default function SuccessStoriesSection() {
                 </blockquote>
 
                 <div>
-                  <p className="font-heading font-bold text-lg text-royal-blue">{story.name}</p>
+                  <p className="font-heading font-bold text-lg text-[#f97316]">{story.name}</p>
                   <p className="text-gray-500 font-body text-sm">{story.role} · {story.location}</p>
                 </div>
 
@@ -89,7 +89,7 @@ export default function SuccessStoriesSection() {
                 <div className="flex items-center gap-4">
                   <button
                     onClick={prev}
-                    className="w-11 h-11 rounded-full border-2 border-[#2563eb] text-royal-blue flex items-center justify-center hover:bg-[#2563eb] hover:text-white transition-all"
+                    className="w-11 h-11 rounded-full border-2 border-[#09090b] text-[#f97316] flex items-center justify-center hover:bg-[#09090b] hover:text-white transition-all"
                     aria-label="Previous story"
                   >
                     <ChevronLeft size={18} />
@@ -110,7 +110,7 @@ export default function SuccessStoriesSection() {
                   </div>
                   <button
                     onClick={next}
-                    className="w-11 h-11 rounded-full border-2 border-[#2563eb] text-royal-blue flex items-center justify-center hover:bg-[#2563eb] hover:text-white transition-all"
+                    className="w-11 h-11 rounded-full border-2 border-[#09090b] text-[#f97316] flex items-center justify-center hover:bg-[#09090b] hover:text-white transition-all"
                     aria-label="Next story"
                   >
                     <ChevronRight size={18} />
@@ -129,8 +129,8 @@ export default function SuccessStoriesSection() {
               onClick={() => setActiveIndex(i)}
               className={`flex items-center gap-3 px-4 py-2.5 rounded-full border transition-all font-body text-sm ${
                 i === activeIndex
-                  ? "bg-[#2563eb] text-white border-[#2563eb] shadow-lg"
-                  : "bg-white text-gray-600 border-gray-200 hover:border-[#2563eb] hover:text-royal-blue"
+                  ? "bg-[#09090b] text-white border-[#09090b] shadow-lg"
+                  : "bg-white text-gray-600 border-gray-200 hover:border-[#09090b] hover:text-[#f97316]"
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}

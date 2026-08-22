@@ -16,7 +16,7 @@ const stories = [
     image: "/images/story1.jpg",
     quote: "I used to hide my feet in class because my shoes had big holes. Now I walk in front proudly. My teacher says I'm the first to raise my hand!",
     program: "Shoe Distribution Initiative",
-    tagColor: "bg-blue-100 text-royal-blue",
+    tagColor: "bg-orange-100 text-[#f97316]",
   },
   {
     id: 2,
@@ -110,7 +110,7 @@ export default function ProgramSuccessStories() {
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-[#2563eb]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3">
                   <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${story.tagColor} font-body`}>
                     {story.program}

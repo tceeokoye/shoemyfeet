@@ -14,8 +14,8 @@ const regions = [
     communities: 8,
     schools: 5,
     description: "Our founding state and primary base of operations. Home to our first distribution and ongoing child shoemaking program.",
-    color: "bg-[#2563eb]",
-    dotColor: "#2563eb",
+    color: "bg-[#09090b]",
+    dotColor: "#f97316",
     x: "52%",
     y: "65%",
     highlights: ["First distribution site", "kids shoemaking hub", "8 communities served"],
@@ -126,11 +126,11 @@ export default function ImpactMap() {
   const selected = regions.find((r) => r.id === activeRegion) || regions[0];
 
   return (
-    <section className="section-padding bg-[#2563eb] overflow-hidden relative">
+    <section className="section-padding bg-[#09090b] overflow-hidden relative">
       {/* Background glows */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full bg-[#f97316]/10 blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-[#38bdf8]/10 blur-[140px]" />
+        <div className="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-[#f97316]/10 blur-[140px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -159,7 +159,7 @@ export default function ImpactMap() {
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="text-blue-200 text-base sm:text-lg font-body leading-relaxed"
+            className="text-neutral-300 text-base sm:text-lg font-body leading-relaxed"
           >
             Currently active across 3 Nigerian states, we're growing our reach to serve more underserved communities every year.
           </motion.p>
@@ -185,7 +185,7 @@ export default function ImpactMap() {
                   className={`px-4 py-2 rounded-full text-sm font-bold font-body transition-all duration-300 cursor-pointer ${
                     activeRegion === region.id
                       ? " " + region.color + " text-white shadow-lg scale-105"
-                      : "bg-white/10 text-blue-200 hover:bg-white/20 border border-white/10"
+                      : "bg-white/10 text-neutral-300 hover:bg-white/20 border border-white/10"
                   }`}
                 >
                   {region.flag} {region.name}
@@ -218,11 +218,11 @@ export default function ImpactMap() {
                       <MapPinIcon size={16} className="text-warm-orange" />
                       <h3 className="font-heading text-2xl font-bold text-white">{selected.name}</h3>
                     </div>
-                    <p className="text-blue-300 text-xs font-body">Active since {selected.id === "enugu" ? "2022" : selected.id === "kaduna" ? "2023" : "2026"}</p>
+                    <p className="text-orange-300 text-xs font-body">Active since {selected.id === "enugu" ? "2022" : selected.id === "kaduna" ? "2023" : "2026"}</p>
                   </div>
                 </div>
 
-                <p className="text-blue-100 font-body text-base leading-relaxed mb-6">{selected.description}</p>
+                <p className="text-neutral-200 font-body text-base leading-relaxed mb-6">{selected.description}</p>
 
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mb-6">
@@ -235,7 +235,7 @@ export default function ImpactMap() {
                       <div className={`font-heading text-2xl font-bold selected.color bg-clip-text text-transparent`}>
                         {stat.value}
                       </div>
-                      <div className="text-blue-300 text-xs font-body mt-1">{stat.label}</div>
+                      <div className="text-orange-300 text-xs font-body mt-1">{stat.label}</div>
                     </div>
                   ))}
                 </div>
@@ -251,7 +251,7 @@ export default function ImpactMap() {
                       className="flex items-center gap-2.5"
                     >
                       <div className={`w-2 h-2 rounded-full selected.color flex-shrink-0`} />
-                      <p className="text-blue-200 font-body text-sm">{h}</p>
+                      <p className="text-neutral-300 font-body text-sm">{h}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -266,7 +266,7 @@ export default function ImpactMap() {
               transition={{ delay: 0.5 }}
               className="mt-8 p-4 rounded-2xl border border-white/15 bg-white/5 backdrop-blur-sm"
             >
-              <p className="text-blue-300 text-sm font-body">
+              <p className="text-orange-300 text-sm font-body">
                 <span className="text-warm-orange font-bold">🚀 Expanding soon:</span>{" "}
                 We're planning to reach Lagos, Abuja, Rivers, and Anambra states in our next phase of national expansion.
               </p>

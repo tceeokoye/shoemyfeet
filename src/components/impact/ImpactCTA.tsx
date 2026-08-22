@@ -19,11 +19,11 @@ const footprintPositions = [
 
 export default function ImpactCTA() {
   return (
-    <section className="section-padding bg-[#2563eb] overflow-hidden relative">
+    <section className="section-padding bg-[#09090b] overflow-hidden relative">
       {/* Glowing backgrounds */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full bg-[#f97316]/15 blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-[#38bdf8]/12 blur-[140px]" />
+        <div className="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-[#f97316]/12 blur-[140px]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-amber-400/5 blur-[160px]" />
       </div>
 
@@ -85,7 +85,7 @@ export default function ImpactCTA() {
           {/* Subtext */}
           <motion.p
             variants={fadeUp}
-            className="text-blue-100/90 text-lg sm:text-xl font-body leading-relaxed max-w-2xl mb-10"
+            className="text-neutral-200/90 text-lg sm:text-xl font-body leading-relaxed max-w-2xl mb-10"
           >
             Every donation, partnership, and volunteer hour helps another child take a confident step toward education, health, and opportunity. Together, we can multiply our impact.
           </motion.p>
@@ -120,7 +120,7 @@ export default function ImpactCTA() {
           {/* Trust indicators */}
           <motion.div
             variants={fadeUp}
-            className="mt-12 flex flex-wrap items-center justify-center gap-4 text-xs text-blue-300 font-body"
+            className="mt-12 flex flex-wrap items-center justify-center gap-4 text-xs text-orange-300 font-body"
           >
             {["CAC Registered", "100% Transparent", "Every ₦ Counts", "Impact Verified"].map((item) => (
               <span key={item} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5">

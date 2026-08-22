@@ -20,7 +20,7 @@ const programImages = [
 
 export default function ProgramsSection() {
   return (
-    <section id="programs" className="section-padding bg-[#2563eb] overflow-hidden">
+    <section id="programs" className="section-padding bg-[#09090b] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -36,7 +36,7 @@ export default function ProgramsSection() {
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-heading text-4xl sm:text-5xl font-bold text-[#1a1a2e] mb-4">
             Three Ways We&apos;re{" "}
-            <span className="text-royal-blue">Changing Lives</span>
+            <span className="text-[#f97316]">Changing Lives</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-lg text-gray-600 font-body leading-relaxed">
             Combining immediate impact with long-term community empowerment —
@@ -63,7 +63,7 @@ export default function ProgramsSection() {
                 className={index % 2 === 1 ? "md:order-2" : ""}
               >
                 <div className="relative rounded-3xl overflow-hidden shadow-xl group">
-                  <div className="absolute inset-0 bg-[#2563eb] blur-xl scale-105 z-[-1]" />
+                  <div className="absolute inset-0 bg-[#09090b] blur-xl scale-105 z-[-1]" />
                   <Image
                     src={programImages[index]}
                     alt={program.title}
@@ -71,7 +71,7 @@ export default function ProgramsSection() {
                     height={380}
                     className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-[#2563eb]" />
+                  <div className="absolute inset-0 bg-[#09090b]" />
 
                   {/* Floating stat */}
                   <motion.div

@@ -117,7 +117,7 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
       >
         <motion.div
           ref={containerRef}
-          className="relative w-full max-w-5xl bg-[#1e40af] rounded-3xl overflow-hidden shadow-2xl border border-white/15 flex flex-col max-h-[90vh]"
+          className="relative w-full max-w-5xl bg-[#09090b] rounded-3xl overflow-hidden shadow-2xl border border-white/15 flex flex-col max-h-[90vh]"
           initial={{ scale: 0.9, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -134,7 +134,7 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
                 <h3 className="font-heading font-bold text-white text-base sm:text-lg line-clamp-1">
                   {video.title}
                 </h3>
-                <div className="flex items-center gap-4 text-xs text-blue-200 font-body">
+                <div className="flex items-center gap-4 text-xs text-neutral-300 font-body">
                   <span className="flex items-center gap-1">
                     <MapPinIcon size={12} className="text-warm-orange" />
                     {video.location}
@@ -210,7 +210,7 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
                         {isMuted ? <VolumeXIcon size={16} /> : <Volume2Icon size={16} />}
                       </button>
 
-                      <span className="font-mono text-xs text-blue-200">
+                      <span className="font-mono text-xs text-neutral-300">
                         {currentTime} / {durationText || video.duration}
                       </span>
                     </div>
@@ -231,8 +231,8 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
           </div>
 
           {/* Description Footer */}
-          <div className="px-6 py-4 bg-[#1e40af] border-t border-white/10 text-white">
-            <p className="text-sm font-body text-blue-100 leading-relaxed">
+          <div className="px-6 py-4 bg-[#09090b] border-t border-white/10 text-white">
+            <p className="text-sm font-body text-neutral-200 leading-relaxed">
               {video.caption}
             </p>
             {video.beneficiaries && (

@@ -11,7 +11,7 @@ export default function FinalCTA() {
       <div className="bg-[#09090b] rounded-3xl p-10 sm:p-14 lg:p-20 text-white relative shadow-2xl overflow-hidden border border-white/10 text-center">
         {/* Animated footprints leading toward the CTA buttons */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <motion.div variants={float} initial="initial" animate="animate" className="absolute top-0 left-1/4 w-80 h-80 rounded-full bg-blue-400/10 blur-3xl" />
+          <motion.div variants={float} initial="initial" animate="animate" className="absolute top-0 left-1/4 w-80 h-80 rounded-full bg-slate-800/10 blur-3xl" />
           <motion.div variants={floatSlow} initial="initial" animate="animate" className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-orange-500/10 blur-3xl" />
 
           {/* Footprint Trail Animation */}
@@ -56,7 +56,7 @@ export default function FinalCTA() {
           </h2>
 
           {/* Supporting Text */}
-          <p className="text-blue-100 font-body text-base sm:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-neutral-200 font-body text-base sm:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
             Your support allows us to create more stories of hope, resilience, and transformed lives. Join Shoe My Feet Foundation in making every child&apos;s journey brighter.
           </p>
 
@@ -80,7 +80,7 @@ export default function FinalCTA() {
 
             <Link
               href="/contact"
-              className="px-7 py-4 rounded-full bg-white text-[#2563eb] hover:bg-blue-50 font-bold text-sm shadow-md transition-all inline-flex items-center gap-2"
+              className="px-7 py-4 rounded-full bg-white text-[#f97316] hover:bg-slate-50 font-bold text-sm shadow-md transition-all inline-flex items-center gap-2"
             >
               <span>Partner With Us</span>
             </Link>

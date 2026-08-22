@@ -39,11 +39,11 @@ export default function DonationCalculator() {
   const presets = [5000, 10000, 25000, 50000, 100000, 250000];
 
   return (
-    <section id="impact-calculator" className="section-padding bg-[#2563eb] relative overflow-hidden" aria-label="Donation impact calculator">
+    <section id="impact-calculator" className="section-padding bg-[#09090b] relative overflow-hidden" aria-label="Donation impact calculator">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 right-10 w-72 h-72 rounded-full opacity-8 blur-3xl bg-[#2563eb]" />
-        <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full opacity-8 blur-3xl bg-[#2563eb]" />
+        <div className="absolute top-10 right-10 w-72 h-72 rounded-full opacity-8 blur-3xl bg-[#09090b]" />
+        <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full opacity-8 blur-3xl bg-[#09090b]" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,7 +92,7 @@ export default function DonationCalculator() {
                 onChange={(e) => setAmount(Number(e.target.value))}
                 className="w-full h-3 rounded-full appearance-none cursor-pointer"
                 style={{
-                  background: "#2563eb",
+                  background: "#f97316",
                 }}
               />
             </div>
@@ -132,9 +132,9 @@ export default function DonationCalculator() {
                 label: "Pairs of Shoes",
                 value: shoes,
                 suffix: "",
-                color: "bg-[#2563eb]",
-                bg: "bg-blue-50",
-                border: "border-blue-100",
+                color: "bg-[#09090b]",
+                bg: "bg-slate-50",
+                border: "border-slate-100",
               },
               {
                 icon: "🏘️",
@@ -150,7 +150,7 @@ export default function DonationCalculator() {
                 label: "Outreach Funded",
                 value: outreachPct,
                 suffix: "%",
-                color: "bg-[#2563eb]",
+                color: "bg-[#09090b]",
                 bg: "bg-purple-50",
                 border: "border-purple-100",
               },
@@ -174,11 +174,11 @@ export default function DonationCalculator() {
           {/* Impact Statement */}
           <motion.div
             layout
-            className="mt-6 p-4 rounded-2xl bg-[#2563eb] border border-blue-100 text-center"
+            className="mt-6 p-4 rounded-2xl bg-[#09090b] border border-slate-100 text-center"
           >
             <p className="text-sm text-gray-700 font-body leading-relaxed">
               Your donation of{" "}
-              <strong className="text-royal-blue">₦{amount.toLocaleString("en-NG")}</strong>{" "}
+              <strong className="text-[#f97316]">₦{amount.toLocaleString("en-NG")}</strong>{" "}
               will provide{" "}
               <strong className="text-warm-orange-dark">{shoes} pair{shoes !== 1 ? "s" : ""} of shoes</strong>{" "}
               to{" "}

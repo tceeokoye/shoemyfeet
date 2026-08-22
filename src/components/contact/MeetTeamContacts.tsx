@@ -12,7 +12,7 @@ const teamMembers = [
     email: "chidubem@shoemyfeet.org",
     bio: "Leads global strategy, vision, and governance for Shoe My Feet Foundation.",
     avatar: "👨‍💼",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
   },
   {
     name: "Dr. Amaka Eze",
@@ -30,7 +30,7 @@ const teamMembers = [
     email: "emeka@shoemyfeet.org",
     bio: "Manages CSR partnerships, corporate sponsors, and major donor relationships.",
     avatar: "👨‍💼",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
   },
   {
     name: "Blessing Johnson",
@@ -69,7 +69,7 @@ export default function MeetTeamContacts() {
             👥 People Behind the Mission
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">
-            Meet Our Key <span className="text-royal-blue">Team Contacts</span>
+            Meet Our Key <span className="text-[#f97316]">Team Contacts</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Have a specific query for a department lead? Reach out directly to our leadership team.
@@ -107,7 +107,7 @@ export default function MeetTeamContacts() {
               <div className="pt-4 border-t border-gray-100">
                 <a
                   href={`mailto:${member.email}`}
-                  className="w-full py-2 px-3 rounded-xl bg-blue-50 text-royal-blue font-bold font-body text-xs flex items-center justify-center gap-1.5 hover:bg-royal-blue hover:text-white transition-all"
+                  className="w-full py-2 px-3 rounded-xl bg-slate-50 text-[#f97316] font-bold font-body text-xs flex items-center justify-center gap-1.5 hover:bg-[#09090b] hover:text-white transition-all"
                 >
                   <MailIcon size={13} />
                   <span>Email Direct</span>

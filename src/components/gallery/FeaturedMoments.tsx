@@ -25,7 +25,7 @@ export default function FeaturedMoments({ onOpenAlbum }: FeaturedMomentsProps) {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs sm:text-sm font-bold mb-3 border border-blue-200"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold mb-3 border border-slate-200"
           >
             <SparklesIcon size={14} className="text-warm-orange" />
             Curated Outreaches
@@ -66,7 +66,7 @@ export default function FeaturedMoments({ onOpenAlbum }: FeaturedMomentsProps) {
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-[#2563eb]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                 {/* Badges */}
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
@@ -93,7 +93,7 @@ export default function FeaturedMoments({ onOpenAlbum }: FeaturedMomentsProps) {
               {/* Card Body */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <p className="font-body text-xs font-semibold text-royal-blue mb-2">
+                  <p className="font-body text-xs font-semibold text-[#f97316] mb-2">
                     {moment.subtitle}
                   </p>
                   <p className="font-body text-xs text-gray-600 leading-relaxed line-clamp-3 mb-6">

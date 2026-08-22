@@ -47,7 +47,7 @@ export default function ProgramGallery() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs sm:text-sm font-bold border border-blue-200 mb-4"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold border border-slate-200 mb-4"
           >
             <SparklesIcon size={13} className="text-warm-orange" />
             Program Gallery
@@ -56,7 +56,7 @@ export default function ProgramGallery() {
             variants={fadeUp}
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
           >
-            Moments of <span className="text-royal-blue">Transformation</span>
+            Moments of <span className="text-[#f97316]">Transformation</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -88,7 +88,7 @@ export default function ProgramGallery() {
                 className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                 sizes={i === 0 ? "(max-width: 768px) 100vw, 60vw" : "(max-width: 768px) 50vw, 25vw"}
               />
-              <div className="absolute inset-0 bg-[#2563eb]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               {i === 0 && (
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1.5 rounded-full bg-[#f97316] text-white text-xs font-heading font-bold shadow-lg flex items-center gap-1.5">

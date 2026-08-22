@@ -6,9 +6,9 @@ import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 const partners = [
   { name: "Access Bank", type: "CSR Sponsor", initials: "AB", color: "bg-[#f97316]" },
   { name: "The Rose Project", type: "Initiative Partner", initials: "RP", color: "bg-[#f97316]" },
-  { name: "UBA Her Progress", type: "Recognition Partner", initials: "UB", color: "bg-[#2563eb]" },
+  { name: "UBA Her Progress", type: "Recognition Partner", initials: "UB", color: "bg-[#09090b]" },
   { name: "iF Design Award", type: "Global Recognition", initials: "iF", color: "bg-[#f59e0b]" },
-  { name: "Häagen-Dazs Initiative", type: "Supporting Partner", initials: "HD", color: "bg-[#2563eb]" },
+  { name: "Häagen-Dazs Initiative", type: "Supporting Partner", initials: "HD", color: "bg-[#09090b]" },
   { name: "Kaduna Education Ministry", type: "State Partner", initials: "KM", color: "bg-[#15803d]" },
   { name: "Enugu State Govt", type: "State Partner", initials: "ES", color: "bg-[#15803d]" },
   { name: "CAC Nigeria", type: "Regulatory Trustee", initials: "CA", color: "bg-slate-700" },
@@ -57,7 +57,7 @@ export default function PartnersSupporters() {
           {partners.concat(partners).map((partner, index) => (
             <div
               key={`about-partner-1-${index}`}
-              className="flex items-center gap-4 px-6 py-3.5 rounded-2xl bg-white border border-gray-200/70 shadow-sm hover:shadow-md hover:border-blue-300 transition-all shrink-0 cursor-default"
+              className="flex items-center gap-4 px-6 py-3.5 rounded-2xl bg-white border border-gray-200/70 shadow-sm hover:shadow-md hover:border-slate-200 transition-all shrink-0 cursor-default"
             >
               <div className={`w-10 h-10 rounded-xl partner.color flex items-center justify-center text-white font-heading font-bold text-sm shadow-sm`}>
                 {partner.initials}
@@ -79,7 +79,7 @@ export default function PartnersSupporters() {
           {partners.concat(partners).map((partner, index) => (
             <div
               key={`about-partner-2-${index}`}
-              className="flex items-center gap-4 px-6 py-3.5 rounded-2xl bg-white border border-gray-200/70 shadow-sm hover:shadow-md hover:border-blue-300 transition-all shrink-0 cursor-default"
+              className="flex items-center gap-4 px-6 py-3.5 rounded-2xl bg-white border border-gray-200/70 shadow-sm hover:shadow-md hover:border-slate-200 transition-all shrink-0 cursor-default"
             >
               <div className={`w-10 h-10 rounded-xl partner.color flex items-center justify-center text-white font-heading font-bold text-sm shadow-sm`}>
                 {partner.initials}

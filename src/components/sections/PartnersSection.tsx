@@ -10,7 +10,7 @@ const partners = [
     type: "Corporate Partner",
     description: "CSR funding for 1,000+ shoe distributions",
     initials: "AB",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-red-50",
     border: "border-red-200",
     year: "Since 2023",
@@ -30,9 +30,9 @@ const partners = [
     type: "NGO Alliance",
     description: "Child welfare alignment & community access",
     initials: "UN",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
-    border: "border-blue-200",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
+    border: "border-slate-200",
     year: "Partner",
   },
   {
@@ -40,7 +40,7 @@ const partners = [
     type: "Government Partner",
     description: "Northern Nigeria outreach facilitation",
     initials: "KM",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-purple-50",
     border: "border-purple-200",
     year: "2024–Present",
@@ -60,9 +60,9 @@ const partners = [
     type: "Health Ally",
     description: "Jigger & hookworm prevention in communities",
     initials: "NA",
-    color: "bg-[#2563eb]",
-    bg: "bg-sky-50",
-    border: "border-sky-200",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-100",
+    border: "border-slate-200",
     year: "Partner",
   },
   {
@@ -70,7 +70,7 @@ const partners = [
     type: "Government Partner",
     description: "2026 expansion into Benin City schools",
     initials: "ED",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-amber-50",
     border: "border-amber-200",
     year: "2026 Partner",
@@ -80,7 +80,7 @@ const partners = [
     type: "Regulatory Body",
     description: "Official registration & compliance oversight",
     initials: "CA",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-gray-50",
     border: "border-gray-200",
     year: "Registered NGO",
@@ -93,7 +93,7 @@ const testimonials = [
     name: "Corporate Affairs Director",
     org: "Access Bank Nigeria",
     initials: "AB",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
   },
   {
     quote: "The results speak for themselves — school attendance improved noticeably in every community where Shoe My Feet distributed shoes. A simple intervention with profound results.",
@@ -127,7 +127,7 @@ export default function PartnersSection() {
             className="font-heading text-4xl sm:text-5xl font-bold text-[#1a1a2e] mb-4"
           >
             Partners Who Believe In{" "}
-            <span className="text-royal-blue">Our Mission</span>
+            <span className="text-[#f97316]">Our Mission</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -191,10 +191,10 @@ export default function PartnersSection() {
             <motion.div
               key={i}
               variants={fadeUp}
-              className="bg-[#2563eb] rounded-2xl p-6 border border-blue-100 relative"
+              className="bg-[#09090b] rounded-2xl p-6 border border-slate-100 relative"
             >
               {/* Quote mark */}
-              <div className="absolute top-4 right-5 text-4xl font-serif text-blue-200 leading-none select-none">"</div>
+              <div className="absolute top-4 right-5 text-4xl font-serif text-neutral-300 leading-none select-none">"</div>
 
               <p className="font-body text-gray-700 leading-relaxed mb-4 pr-6 italic text-sm">
                 "{t.quote}"
@@ -214,7 +214,7 @@ export default function PartnersSection() {
 
         {/* Become a partner CTA */}
         <motion.div
-          className="relative bg-[#2563eb] rounded-3xl p-8 md:p-12 text-center overflow-hidden"
+          className="relative bg-[#09090b] rounded-3xl p-8 md:p-12 text-center overflow-hidden"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -233,7 +233,7 @@ export default function PartnersSection() {
             <h3 className="font-heading text-3xl font-bold text-white mb-3">
               Become a Partner
             </h3>
-            <p className="text-blue-200 font-body max-w-xl mx-auto mb-6 leading-relaxed">
+            <p className="text-neutral-300 font-body max-w-xl mx-auto mb-6 leading-relaxed">
               Whether you&apos;re a corporation, government body, or fellow NGO,
               let&apos;s build a partnership that puts shoes on the feet of Nigeria&apos;s
               most vulnerable children.

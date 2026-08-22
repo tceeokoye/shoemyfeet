@@ -76,7 +76,7 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
               <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 animate-bounce">
                 <CheckCircleIcon size={36} />
               </div>
-              <h3 className="font-heading text-2xl font-bold text-royal-blue mb-2">
+              <h3 className="font-heading text-2xl font-bold text-[#f97316] mb-2">
                 Thank You for Sharing!
               </h3>
               <p className="font-body text-gray-600 text-sm max-w-md mx-auto mb-6">
@@ -109,7 +109,7 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
                   type="button"
                   onClick={() => setMediaType("photo")}
                   className={`flex-1 py-2 rounded-xl text-xs font-bold font-heading flex items-center justify-center gap-2 transition-all ${
-                    mediaType === "photo" ? "bg-white text-royal-blue shadow-sm" : "text-gray-500"
+                    mediaType === "photo" ? "bg-white text-[#f97316] shadow-sm" : "text-gray-500"
                   }`}
                 >
                   <CameraIcon size={16} />
@@ -119,7 +119,7 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
                   type="button"
                   onClick={() => setMediaType("video")}
                   className={`flex-1 py-2 rounded-xl text-xs font-bold font-heading flex items-center justify-center gap-2 transition-all ${
-                    mediaType === "video" ? "bg-white text-royal-blue shadow-sm" : "text-gray-500"
+                    mediaType === "video" ? "bg-white text-[#f97316] shadow-sm" : "text-gray-500"
                   }`}
                 >
                   <VideoIcon size={16} />

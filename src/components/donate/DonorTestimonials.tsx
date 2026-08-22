@@ -61,8 +61,8 @@ export default function DonorTestimonials() {
 
   return (
     <section className="section-padding bg-white relative overflow-hidden" aria-label="Donor testimonials">
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#2563eb]" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 opacity-5 blur-3xl rounded-full bg-blue-400 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-[#09090b]" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 opacity-5 blur-3xl rounded-full bg-slate-800 pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -72,7 +72,7 @@ export default function DonorTestimonials() {
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-5">
             Hear From Our{" "}
-            <span className="text-royal-blue">Generous Donors</span>
+            <span className="text-[#f97316]">Generous Donors</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Real voices from the people and organizations who have joined our mission.
@@ -88,22 +88,22 @@ export default function DonorTestimonials() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.97 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-[#2563eb] rounded-4xl border border-gray-100 shadow-xl p-8 sm:p-10 relative overflow-hidden"
+              className="bg-[#09090b] rounded-4xl border border-gray-100 shadow-xl p-8 sm:p-10 relative overflow-hidden"
             >
               {/* Quote mark */}
               <div className="absolute top-6 right-8 opacity-10">
-                <QuoteIcon size={64} className="text-royal-blue" />
+                <QuoteIcon size={64} className="text-[#f97316]" />
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center mb-6">
                 {/* Avatar */}
-                <div className="w-20 h-20 rounded-2xl bg-[#2563eb] flex items-center justify-center text-4xl flex-shrink-0 border border-blue-100 shadow-sm">
+                <div className="w-20 h-20 rounded-2xl bg-[#09090b] flex items-center justify-center text-4xl flex-shrink-0 border border-slate-100 shadow-sm">
                   {testimonials[active].avatar}
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-xl text-[#1a1a2e]">{testimonials[active].name}</h3>
                   <p className="text-sm text-gray-500 font-body">{testimonials[active].role}</p>
-                  <p className="text-xs text-royal-blue font-body font-semibold">{testimonials[active].org}</p>
+                  <p className="text-xs text-[#f97316] font-body font-semibold">{testimonials[active].org}</p>
                   <div className="flex gap-0.5 mt-1">
                     {Array.from({ length: testimonials[active].stars }).map((_, i) => (
                       <StarIcon key={i} size={14} className="text-amber-400 fill-amber-400" />
@@ -140,7 +140,7 @@ export default function DonorTestimonials() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={prev}
-                className="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500 hover:border-royal-blue hover:text-royal-blue transition-all cursor-pointer"
+                className="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500 hover:border-[#09090b] hover:text-[#f97316] transition-all cursor-pointer"
               >
                 <ChevronLeftIcon size={18} />
               </motion.button>
@@ -148,7 +148,7 @@ export default function DonorTestimonials() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={next}
-                className="w-10 h-10 rounded-full bg-royal-blue text-white flex items-center justify-center hover:bg-royal-blue-dark transition-all shadow-md cursor-pointer"
+                className="w-10 h-10 rounded-full bg-[#09090b] text-white flex items-center justify-center hover:bg-[#09090b]-dark transition-all shadow-md cursor-pointer"
               >
                 <ChevronRightIcon size={18} />
               </motion.button>
@@ -172,7 +172,7 @@ export default function DonorTestimonials() {
               onClick={() => setActive(i)}
               className={`p-3 rounded-2xl border text-center cursor-pointer transition-all ${
                 i === active
-                  ? "border-royal-blue bg-blue-50 shadow-md"
+                  ? "border-[#09090b] bg-slate-50 shadow-md"
                   : "border-gray-100 bg-gray-50 hover:border-gray-200"
               }`}
             >

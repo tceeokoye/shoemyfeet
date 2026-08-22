@@ -15,7 +15,7 @@ export default function AboutCTA() {
       {/* Background ambient lighting */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 rounded-full bg-orange-500/10 blur-[130px] animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-blue-500/5 blur-[110px] animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-black/5 blur-[110px] animate-pulse" />
       </div>
 
       {/* Floating subtle animated shapes */}
@@ -67,7 +67,7 @@ export default function AboutCTA() {
           {/* Requested Supporting Text */}
           <motion.p
             variants={fadeUp}
-            className="text-blue-100/90 text-lg sm:text-xl font-body leading-relaxed max-w-3xl mb-10"
+            className="text-neutral-200/90 text-lg sm:text-xl font-body leading-relaxed max-w-3xl mb-10"
           >
             Whether you donate $20 for a child&apos;s first pair of school shoes, volunteer at an outreach event, or partner as an organization — your involvement creates immediate, lifelong impact.
           </motion.p>

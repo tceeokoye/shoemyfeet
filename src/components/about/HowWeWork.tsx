@@ -13,9 +13,9 @@ const fourSteps = [
     description:
       "We collaborate closely with school administrators, community elders, and local leaders to identify primary schools where children lack adequate footwear and face severe hardship.",
     icon: "🔍",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
+    border: "border-slate-100",
     details: ["School registration & verification", "Child shoe sizing audits", "Local stakeholder meetings"],
   },
   {
@@ -49,7 +49,7 @@ const fourSteps = [
     description:
       "We host joyous distribution events at schools where volunteers personally fit each child with new shoes, celebrate their educational journey, and instill confidence.",
     icon: "✨",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-purple-50",
     border: "border-purple-100",
     details: ["Personal shoe fitting events", "Child empowerment sessions", "Impact tracking & teacher follow-up"],
@@ -185,7 +185,7 @@ export default function HowWeWork() {
         {/* Tab 2: Foundation Journey Timeline */}
         {activeTab === "timeline" && (
           <div className="relative max-w-4xl mx-auto">
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#2563eb] hidden lg:block" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#09090b] hidden lg:block" />
 
             <div className="flex flex-col gap-10">
               {TIMELINE.map((item, i) => {
@@ -211,7 +211,7 @@ export default function HowWeWork() {
                       </div>
                     </div>
 
-                    <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full border-4 border-white shadow-lg items-center justify-center text-xs text-white z-10 bg-[#2563eb]">
+                    <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full border-4 border-white shadow-lg items-center justify-center text-xs text-white z-10 bg-[#09090b]">
                       •
                     </div>
 

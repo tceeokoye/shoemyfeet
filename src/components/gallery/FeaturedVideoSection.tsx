@@ -48,7 +48,7 @@ export default function FeaturedVideoSection({ onPlayVideo }: FeaturedVideoSecti
 
         {/* Cinematic Video Card */}
         <motion.div
-          className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#1e40af] border border-gray-200/80 group cursor-pointer"
+          className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#09090b] border border-gray-200/80 group cursor-pointer"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportConfig}
@@ -67,7 +67,7 @@ export default function FeaturedVideoSection({ onPlayVideo }: FeaturedVideoSecti
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 sizes="(max-width: 1024px) 100vw, 60vw"
               />
-              <div className="absolute inset-0 bg-[#2563eb] lg: lg:from-transparent lg:to-[#1e40af]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#09090b]" />
 
               {/* Pulsing Custom Play Button */}
               <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -75,7 +75,7 @@ export default function FeaturedVideoSection({ onPlayVideo }: FeaturedVideoSecti
                   <div className="ripple" />
                   <div className="ripple ripple-delay" />
                   <button
-                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#2563eb] text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 relative z-20"
+                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#09090b] text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 relative z-20"
                     aria-label="Play Featured Video"
                   >
                     <PlayIcon size={32} className="ml-1 fill-white" />
@@ -96,7 +96,7 @@ export default function FeaturedVideoSection({ onPlayVideo }: FeaturedVideoSecti
 
             {/* Content Details Area */}
             <div className="lg:col-span-5 p-6 sm:p-10 text-white flex flex-col justify-center">
-              <div className="flex flex-wrap items-center gap-3 text-xs text-blue-200 font-body mb-4">
+              <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-300 font-body mb-4">
                 <span className="flex items-center gap-1">
                   <MapPinIcon size={14} className="text-warm-orange" />
                   {FEATURED_VIDEO.location}
@@ -111,7 +111,7 @@ export default function FeaturedVideoSection({ onPlayVideo }: FeaturedVideoSecti
                 {FEATURED_VIDEO.title}
               </h3>
 
-              <p className="font-body text-sm sm:text-base text-blue-100/90 leading-relaxed mb-6">
+              <p className="font-body text-sm sm:text-base text-neutral-200/90 leading-relaxed mb-6">
                 {FEATURED_VIDEO.caption}
               </p>
 

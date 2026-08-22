@@ -42,7 +42,7 @@ export default function PopularTagsSection({ articles, selectedTag, onSelectTag 
               onClick={() => onSelectTag(tag)}
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-2 ${
                 isSelected
-                  ? "bg-[#2563eb] text-white shadow-md scale-105"
+                  ? "bg-[#09090b] text-white shadow-md scale-105"
                   : "bg-gray-50 text-gray-700 hover:bg-orange-100 hover:text-warm-orange-dark border border-gray-200/80"
               }`}
             >

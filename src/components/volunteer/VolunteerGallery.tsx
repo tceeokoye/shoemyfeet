@@ -84,7 +84,7 @@ export default function VolunteerGallery() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm font-bold font-body transition-all duration-300 cursor-pointer ${
                 activeCategory === cat
-                  ? "bg-[#2563eb] text-white shadow-lg scale-105"
+                  ? "bg-[#09090b] text-white shadow-lg scale-105"
                   : "bg-white border border-gray-200 text-gray-600 hover:border-purple-300 hover:text-purple-700 hover:scale-105"
               }`}
             >

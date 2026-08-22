@@ -69,7 +69,7 @@ export default function CommunityVoices({ onPlayVideo }: CommunityVoicesProps) {
                     />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base text-royal-blue leading-tight">
+                    <h3 className="font-heading font-bold text-base text-[#f97316] leading-tight">
                       {voice.name}
                     </h3>
                     <p className="font-body text-xs text-gray-500 font-medium line-clamp-1">

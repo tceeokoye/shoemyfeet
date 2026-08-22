@@ -22,10 +22,10 @@ const otherWays = [
     description: "Fund an entire outreach event for a community. Your sponsorship covers shoes, transportation, and coordination for hundreds of children.",
     cta: "Sponsor Community",
     href: "/contact",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
-    accent: "text-blue-600",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
+    border: "border-slate-100",
+    accent: "text-[#f97316]",
   },
   {
     icon: "🏫",
@@ -44,7 +44,7 @@ const otherWays = [
     description: "Integrate giving into your company's CSR strategy. We offer customizable partnership packages with brand visibility and impact reporting.",
     cta: "Corporate Partnership",
     href: "/contact",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-purple-50",
     border: "border-purple-100",
     accent: "text-purple-700",
@@ -77,7 +77,7 @@ export default function OtherWaysToGive() {
   return (
     <section className="section-padding bg-white relative overflow-hidden" aria-label="Other ways to give">
       {/* Subtle section divider */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#2563eb]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-[#09090b]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -87,7 +87,7 @@ export default function OtherWaysToGive() {
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-5">
             More Ways to{" "}
-            <span className="text-royal-blue">Make a Difference</span>
+            <span className="text-[#f97316]">Make a Difference</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Beyond monetary donations, there are many powerful ways you can help us put shoes on children&apos;s feet across Nigeria.
@@ -145,13 +145,13 @@ export default function OtherWaysToGive() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="mt-10 p-6 rounded-3xl bg-[#2563eb] border border-blue-100 flex items-start gap-4 max-w-2xl mx-auto"
+          className="mt-10 p-6 rounded-3xl bg-[#09090b] border border-slate-100 flex items-start gap-4 max-w-2xl mx-auto"
         >
-          <div className="w-10 h-10 rounded-xl bg-[#2563eb] flex items-center justify-center flex-shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-[#09090b] flex items-center justify-center flex-shrink-0">
             <ShieldCheckIcon size={20} className="text-white" />
           </div>
           <div>
-            <h4 className="font-heading font-bold text-royal-blue mb-1">All Giving is Welcome</h4>
+            <h4 className="font-heading font-bold text-[#f97316] mb-1">All Giving is Welcome</h4>
             <p className="text-sm text-gray-600 font-body leading-relaxed">
               Whether it&apos;s ₦1,000 or ₦1,000,000 — every contribution is transformative. We provide tax receipts for all eligible donations and full transparency on fund usage.
             </p>

@@ -36,9 +36,9 @@ function Counter({ value, suffix, prefix = "" }: { value: number; suffix: string
 
 const stats = [
   { value: 6500, suffix: "+", label: "Children Reached", emoji: "👧", color: "text-[#f97316]" },
-  { value: 6500, suffix: "+", label: "Pairs of Shoes Distributed", emoji: "👟", color: "text-[#2563eb]" },
+  { value: 6500, suffix: "+", label: "Pairs of Shoes Distributed", emoji: "👟", color: "text-[#f97316]" },
   { value: 18, suffix: "+", label: "Communities Served", emoji: "📍", color: "text-[#15803d]" },
-  { value: 24, suffix: "+", label: "Schools Partnered With", emoji: "🏫", color: "text-[#2563eb]" },
+  { value: 24, suffix: "+", label: "Schools Partnered With", emoji: "🏫", color: "text-[#f97316]" },
   { value: 150, suffix: "+", label: "Volunteers Engaged", emoji: "🙌", color: "text-[#f97316]" },
   { value: 12, suffix: "+", label: "Corporate Partners", emoji: "🤝", color: "text-[#f59e0b]" },
 ];
@@ -48,7 +48,7 @@ export default function ProgramImpact() {
   const inView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section className="section-padding bg-[#2563eb] overflow-hidden relative">
+    <section className="section-padding bg-[#09090b] overflow-hidden relative">
       {/* Footprint SVG background pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none overflow-hidden">
         {[...Array(12)].map((_, i) => (
@@ -67,7 +67,7 @@ export default function ProgramImpact() {
       </div>
 
       {/* Ambient glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-blue-400/10 blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-slate-800/10 blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-orange-400/10 blur-[80px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -85,7 +85,7 @@ export default function ProgramImpact() {
             Every Number Is a{" "}
             <span className="text-amber-300">Child&apos;s Story</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-blue-100/90 font-body text-base mt-4 leading-relaxed">
+          <motion.p variants={fadeUp} className="text-neutral-200/90 font-body text-base mt-4 leading-relaxed">
             Behind every statistic is a real child who walks to school with confidence, a family with renewed hope,
             and a community uplifted by the generosity of donors and volunteers.
           </motion.p>

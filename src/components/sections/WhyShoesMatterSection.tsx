@@ -34,12 +34,12 @@ export default function WhyShoesMatterSection() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-sm font-bold mb-4 border border-blue-200">
+          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-sm font-bold mb-4 border border-slate-200">
             Why It Matters
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-heading text-4xl sm:text-5xl font-bold text-[#1a1a2e] mb-4">
             A Pair of Shoes Is{" "}
-            <span className="text-royal-blue">More Than Footwear</span>
+            <span className="text-[#f97316]">More Than Footwear</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-lg text-gray-600 font-body leading-relaxed">
             For millions of Nigerian children, the absence of proper school shoes
@@ -70,7 +70,7 @@ export default function WhyShoesMatterSection() {
 
               {/* Gradient border effect */}
               <div className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                style={{ background: "#2563eb", boxShadow: `inset 0 0 0 1.5px rgba(26,58,107,0.1)` }}
+                style={{ background: "#f97316", boxShadow: `inset 0 0 0 1.5px rgba(26,58,107,0.1)` }}
               />
 
               {/* Icon */}
@@ -90,7 +90,7 @@ export default function WhyShoesMatterSection() {
                 </span>
               </div>
 
-              <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-2 group-hover:text-royal-blue transition-colors">
+              <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-2 group-hover:text-[#f97316] transition-colors">
                 {item.title}
               </h3>
               <p className="text-gray-600 font-body text-sm leading-relaxed">
@@ -117,9 +117,9 @@ export default function WhyShoesMatterSection() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <div className="inline-block bg-[#2563eb] rounded-2xl px-8 py-6 border border-blue-100">
+          <div className="inline-block bg-[#09090b] rounded-2xl px-8 py-6 border border-slate-100">
             <p className="font-body text-gray-600 mb-4">
-              <span className="font-bold text-royal-blue">$20 can provide 1 pair of shoes</span>{" "}
+              <span className="font-bold text-[#f97316]">$20 can provide 1 pair of shoes</span>{" "}
               and change a child&apos;s world forever.
             </p>
             <a href="#donate" className="btn-orange inline-flex">

@@ -26,7 +26,7 @@ export default function NewsletterSection() {
 
   return (
     <section className="my-20 relative overflow-hidden" id="newsletter-section">
-      <div className="bg-[#2563eb] rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative shadow-2xl overflow-hidden border border-white/10">
+      <div className="bg-[#09090b] rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative shadow-2xl overflow-hidden border border-white/10">
         {/* Background glow and floating footprints */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <motion.div variants={float} initial="initial" animate="animate" className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/5 blur-3xl" />
@@ -71,7 +71,7 @@ export default function NewsletterSection() {
                 </h2>
 
                 {/* Supporting text */}
-                <p className="text-blue-100 font-body text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto">
+                <p className="text-neutral-200 font-body text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto">
                   Receive inspiring stories, outreach updates, upcoming events, and opportunities to make a difference. No spam, only real impact dispatches.
                 </p>
 
@@ -109,7 +109,7 @@ export default function NewsletterSection() {
                   </button>
                 </form>
 
-                <p className="text-[11px] text-blue-300 font-body mt-4">
+                <p className="text-[11px] text-orange-300 font-body mt-4">
                   We respect your privacy. Unsubscribe anytime with one click.
                 </p>
               </motion.div>
@@ -127,10 +127,10 @@ export default function NewsletterSection() {
                 <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white mb-2">
                   Welcome to the Shoe My Feet Family, {name}!
                 </h3>
-                <p className="text-blue-100 font-body text-sm max-w-md mx-auto mb-6 leading-relaxed">
+                <p className="text-neutral-200 font-body text-sm max-w-md mx-auto mb-6 leading-relaxed">
                   Thank you for subscribing! We&apos;ve sent a confirmation email to <span className="font-bold text-hope-yellow">{email}</span>. Look out for our next edition on <span className="font-bold text-white">August 15, 2026</span>.
                 </p>
-                <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-body text-blue-200">
+                <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-body text-neutral-300">
                   <span className="flex items-center gap-1.5 bg-white/10 px-4 py-2 rounded-full border border-white/10">
                     <HeartIcon size={14} className="text-warm-orange fill-warm-orange" /> Next Newsletter: August 15, 2026
                   </span>

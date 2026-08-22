@@ -24,7 +24,7 @@ export default function GalleryHero() {
       {/* Background Image Collage Blend */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero.jpg"
+          src="/images/everymoment.jpeg"
           alt="Shoe My Feet Foundation outreach collage"
           fill
           priority
@@ -37,7 +37,7 @@ export default function GalleryHero() {
       {/* Background Glow Orbs */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[#f97316]/20 blur-[140px] animate-pulse" />
-        <div className="absolute bottom-1/3 right-1/4 w-[450px] h-[450px] rounded-full bg-[#38bdf8]/15 blur-[160px] animate-pulse" />
+        <div className="absolute bottom-1/3 right-1/4 w-[450px] h-[450px] rounded-full bg-[#f97316]/15 blur-[160px] animate-pulse" />
       </div>
 
       {/* Floating Footprints Animation Trail */}
@@ -104,7 +104,7 @@ export default function GalleryHero() {
             {/* Subtext */}
             <motion.p
               variants={fadeUp}
-              className="text-blue-100/95 text-base sm:text-xl font-body leading-relaxed max-w-2xl mb-8 mx-auto lg:mx-0"
+              className="text-neutral-200/95 text-base sm:text-xl font-body leading-relaxed max-w-2xl mb-8 mx-auto lg:mx-0"
             >
               Explore the unforgettable moments captured during our outreach programs, school visits, volunteer activities, and life-changing shoe distributions across Nigeria.
             </motion.p>
@@ -146,19 +146,19 @@ export default function GalleryHero() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-[#2563eb]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                   <span className="absolute bottom-3 left-3 text-xs font-heading font-bold text-white">
                     Enugu Distribution
                   </span>
                 </div>
                 <div className="relative h-36 rounded-3xl overflow-hidden border-2 border-white/20 shadow-xl group">
                   <Image
-                    src="/images/gallery3.jpg"
+                    src="/images/crafting4.jpeg"
                     alt="Shoemaking workshop"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-[#2563eb]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                   <span className="absolute bottom-3 left-3 text-xs font-heading font-bold text-white">
                     kids Workshop
                   </span>
@@ -173,19 +173,19 @@ export default function GalleryHero() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-[#2563eb]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                   <span className="absolute bottom-3 left-3 text-xs font-heading font-bold text-white">
                     School Visits
                   </span>
                 </div>
                 <div className="relative h-44 sm:h-52 rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl group">
                   <Image
-                    src="/images/gallery5.jpg"
+                    src="/images/happy-kids.jpeg"
                     alt="Happy children"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-[#2563eb]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                   <span className="absolute bottom-3 left-3 text-xs font-heading font-bold text-white">
                     15,000+ Smiles
                   </span>
@@ -194,7 +194,7 @@ export default function GalleryHero() {
 
               {/* Floating Center Badge */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                <div className="w-16 h-16 rounded-full bg-[#f97316] flex items-center justify-center text-white shadow-2xl border-4 border-[#1e40af] animate-bounce">
+                <div className="w-16 h-16 rounded-full bg-[#f97316] flex items-center justify-center text-white shadow-2xl border-4 border-[#09090b] animate-bounce">
                   <CameraIcon size={24} />
                 </div>
               </div>

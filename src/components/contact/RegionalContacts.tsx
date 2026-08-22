@@ -14,9 +14,9 @@ const regions = [
     email: "southeast@shoemyfeet.org",
     coverage: "Enugu, Anambra, Abia, Imo, Ebonyi",
     avatar: "👩‍⚕️",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
+    border: "border-slate-100",
   },
   {
     name: "Northern Regional Hub",
@@ -53,7 +53,7 @@ const regions = [
     email: "lagos@shoemyfeet.org",
     coverage: "Lagos, Ogun, Oyo, Osun, Ondo",
     avatar: "👩‍💼",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-purple-50",
     border: "border-purple-100",
   },
@@ -61,7 +61,7 @@ const regions = [
 
 export default function RegionalContacts() {
   return (
-    <section className="section-padding bg-[#2563eb] relative overflow-hidden" aria-label="Regional contacts">
+    <section className="section-padding bg-[#09090b] relative overflow-hidden" aria-label="Regional contacts">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -76,7 +76,7 @@ export default function RegionalContacts() {
             🌍 Regional Presence
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">
-            Our Regional <span className="text-royal-blue">Coordinators</span>
+            Our Regional <span className="text-[#f97316]">Coordinators</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Shoe My Feet Foundation operates active outreach hubs across Nigeria. Contact your local coordinator for community partnerships and field enquiries.
@@ -112,17 +112,17 @@ export default function RegionalContacts() {
                 </div>
 
                 <div className="p-3 rounded-2xl bg-white/80 border border-white/60 mb-4">
-                  <div className="font-heading font-bold text-sm text-royal-blue">{region.coordinator}</div>
+                  <div className="font-heading font-bold text-sm text-[#f97316]">{region.coordinator}</div>
                   <div className="text-[11px] text-gray-500 font-body">{region.role}</div>
                 </div>
 
                 <div className="space-y-2 text-xs font-body">
                   <div className="flex items-center gap-2 text-gray-600">
-                    <span className="text-royal-blue font-bold">📞</span>
+                    <span className="text-[#f97316] font-bold">📞</span>
                     <a href={`tel:${region.phone.replace(/\s/g, "")}`} className="hover:text-warm-orange font-semibold">{region.phone}</a>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600 truncate">
-                    <span className="text-royal-blue font-bold">✉️</span>
+                    <span className="text-[#f97316] font-bold">✉️</span>
                     <a href={`mailto:${region.email}`} className="hover:text-warm-orange font-semibold truncate">{region.email}</a>
                   </div>
                   <div className="pt-2 border-t border-black/5 text-[11px]">
@@ -135,7 +135,7 @@ export default function RegionalContacts() {
               <div className="pt-5 mt-5 border-t border-black/5">
                 <a
                   href={`mailto:${region.email}`}
-                  className="w-full py-2.5 px-3 rounded-xl bg-white border border-gray-200 text-royal-blue font-bold font-body text-xs text-center inline-block hover:bg-royal-blue hover:text-white transition-all shadow-xs"
+                  className="w-full py-2.5 px-3 rounded-xl bg-white border border-gray-200 text-[#f97316] font-bold font-body text-xs text-center inline-block hover:bg-[#09090b] hover:text-white transition-all shadow-xs"
                 >
                   Contact Hub →
                 </a>

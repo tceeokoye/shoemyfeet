@@ -10,7 +10,7 @@ const goals = [
     icon: "👟",
     title: "10,000 Shoes by 2027",
     description: "Reach 10,000 pairs of school shoes distributed annually, doubling our current capacity through expanded fundraising and partnerships.",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     status: "In Progress",
     progress: 65,
     timeline: "2025–2027",
@@ -20,7 +20,7 @@ const goals = [
     icon: "🏫",
     title: "50+ School Partnerships",
     description: "Establish formal partnerships with 50 schools across 5 Nigerian states, creating reliable distribution channels and impact tracking systems.",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     status: "Planning",
     progress: 24,
     timeline: "2025–2026",
@@ -60,7 +60,7 @@ const goals = [
     icon: "🚀",
     title: "Launch Digital Giving Platform",
     description: "Build a dedicated online giving platform enabling recurring donations, impact tracking dashboards, and real-time beneficiary updates for donors.",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     status: "Upcoming",
     progress: 5,
     timeline: "2026",
@@ -69,7 +69,7 @@ const goals = [
 
 const statusColors: Record<string, string> = {
   "In Progress": "bg-emerald-100 text-emerald-700 border-emerald-200",
-  "Planning": "bg-blue-100 text-royal-blue border-blue-200",
+  "Planning": "bg-orange-100 text-[#f97316] border-slate-200",
   "Upcoming": "bg-amber-100 text-amber-700 border-amber-200",
 };
 

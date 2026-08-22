@@ -51,7 +51,7 @@ export default function ImpactStats() {
     <section className="section-padding overflow-hidden relative bg-[#09090b] border-y border-white/10 text-white">
       {/* Background Glows */}
       <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none bg-orange-500/10 blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full pointer-events-none bg-blue-500/5 blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full pointer-events-none bg-black/5 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}

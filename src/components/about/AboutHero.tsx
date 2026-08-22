@@ -30,7 +30,7 @@ export default function AboutHero() {
       {/* Floating background glowing ambient lights */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full bg-[#f97316]/15 blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/6 w-[450px] h-[450px] rounded-full bg-[#38bdf8]/15 blur-[140px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/6 w-[450px] h-[450px] rounded-full bg-[#f97316]/15 blur-[140px] animate-pulse" />
       </div>
 
       {/* Floating decorative geometric shapes */}
@@ -88,7 +88,7 @@ export default function AboutHero() {
           {/* Subheading */}
           <motion.p
             variants={fadeUp}
-            className="text-blue-100/95 text-lg sm:text-xl lg:text-2xl font-body leading-relaxed max-w-3xl mb-10 text-shadow"
+            className="text-neutral-200/95 text-lg sm:text-xl lg:text-2xl font-body leading-relaxed max-w-3xl mb-10 text-shadow"
           >
             Shoe My Feet Foundation exists to restore dignity, confidence, and opportunity by providing durable, quality school shoes to children who need them most — breaking barriers to education across Nigeria.
           </motion.p>

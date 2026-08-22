@@ -7,14 +7,14 @@ import { HeartIcon, ArrowRightIcon, UsersIcon, HeartHandshakeIcon, PackageIcon }
 
 const actions = [
   {
-    icon: <PackageIcon size={32} className="text-royal-blue" />,
+    icon: <PackageIcon size={32} className="text-[#f97316]" />,
     title: "Donate Shoes",
     desc: "Help provide quality footwear to children who walk to school barefoot or in worn-out shoes.",
     cta: "Donate Shoes",
     href: "/donate",
-    color: "bg-blue-50",
-    border: "border-blue-100",
-    iconBg: "bg-blue-100",
+    color: "bg-slate-50",
+    border: "border-slate-100",
+    iconBg: "bg-orange-100",
     btnClass: "btn-primary",
   },
   {

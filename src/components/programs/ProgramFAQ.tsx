@@ -41,7 +41,7 @@ function FAQItem({ item, index }: { item: typeof faqs[0]; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ delay: index * 0.07, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-      className="border border-gray-200 rounded-2xl overflow-hidden bg-white hover:border-blue-200 transition-colors duration-300"
+      className="border border-gray-200 rounded-2xl overflow-hidden bg-white hover:border-slate-200 transition-colors duration-300"
     >
       <button
         onClick={() => setOpen((p) => !p)}
@@ -54,7 +54,7 @@ function FAQItem({ item, index }: { item: typeof faqs[0]; index: number }) {
         <motion.div
           animate={{ rotate: open ? 180 : 0 }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="shrink-0 w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-royal-blue"
+          className="shrink-0 w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-[#f97316]"
         >
           <ChevronDownIcon size={16} />
         </motion.div>
@@ -96,7 +96,7 @@ export default function ProgramFAQ() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs sm:text-sm font-bold border border-blue-200 mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold border border-slate-200 mb-4"
           >
             Frequently Asked Questions
           </motion.span>
@@ -104,7 +104,7 @@ export default function ProgramFAQ() {
             variants={fadeUp}
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
           >
-            Got <span className="text-royal-blue">Questions?</span>
+            Got <span className="text-[#f97316]">Questions?</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}

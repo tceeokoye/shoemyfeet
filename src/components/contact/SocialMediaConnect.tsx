@@ -22,9 +22,9 @@ const socialPlatforms = [
     count: "15.2k Followers",
     desc: "Community stories, volunteer spotlights, event announcements, and donor appreciation posts.",
     icon: "📘",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
+    border: "border-slate-100",
     link: "https://facebook.com",
   },
   {
@@ -44,9 +44,9 @@ const socialPlatforms = [
     count: "8.4k Professionals",
     desc: "CSR partnerships, governance reports, corporate sponsorships, and ESG impact news.",
     icon: "💼",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-slate-700",
-    border: "border-blue-100",
+    border: "border-slate-100",
     link: "https://linkedin.com",
   },
   {
@@ -128,11 +128,11 @@ export default function SocialMediaConnect() {
                 </div>
 
                 <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-0.5">{platform.name}</h3>
-                <div className="text-xs text-royal-blue font-body font-semibold mb-3">{platform.handle}</div>
+                <div className="text-xs text-[#f97316] font-body font-semibold mb-3">{platform.handle}</div>
                 <p className="text-xs text-gray-600 font-body leading-relaxed mb-4">{platform.desc}</p>
               </div>
 
-              <div className="pt-4 border-t border-black/5 flex items-center justify-between text-xs font-bold font-body text-royal-blue group-hover:text-warm-orange transition-colors">
+              <div className="pt-4 border-t border-black/5 flex items-center justify-between text-xs font-bold font-body text-[#f97316] group-hover:text-warm-orange transition-colors">
                 <span>Visit {platform.name}</span>
                 <ArrowRightIcon size={14} className="group-hover:translate-x-1 transition-transform" />
               </div>

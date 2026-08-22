@@ -9,10 +9,10 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 const staticParticles = [
   { width: 6, height: 6, left: "10%", top: "25%", color: "#f97316", duration: 4.2, delay: 0 },
   { width: 8, height: 8, left: "82%", top: "18%", color: "#fbbf24", duration: 5.0, delay: 0.5 },
-  { width: 5, height: 5, left: "38%", top: "72%", color: "#2563eb", duration: 3.6, delay: 1.0 },
+  { width: 5, height: 5, left: "38%", top: "72%", color: "#f97316", duration: 3.6, delay: 1.0 },
   { width: 7, height: 7, left: "90%", top: "65%", color: "#f97316", duration: 4.5, delay: 0.3 },
   { width: 4, height: 4, left: "6%", top: "80%", color: "#fbbf24", duration: 3.8, delay: 1.2 },
-  { width: 9, height: 9, left: "55%", top: "12%", color: "#2563eb", duration: 5.2, delay: 0.7 },
+  { width: 9, height: 9, left: "55%", top: "12%", color: "#f97316", duration: 5.2, delay: 0.7 },
 ];
 
 const footprintPositions = [
@@ -55,7 +55,7 @@ export default function ContactHero() {
         />
         <motion.div
           className="absolute bottom-12 right-12 w-[380px] h-[380px] rounded-full opacity-20 animate-blob-slow"
-          style={{ background: "#38bdf8" }}
+          style={{ background: "#f97316" }}
         />
 
         {staticParticles.map((p, i) => (
@@ -125,7 +125,7 @@ export default function ContactHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={isReady ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: HEADLINE_WORDS.length * 0.08 + 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="text-base sm:text-lg text-blue-100/90 font-body max-w-xl leading-relaxed"
+              className="text-base sm:text-lg text-neutral-200/90 font-body max-w-xl leading-relaxed"
             >
               Whether you want to volunteer, donate, partner with us, request assistance, or simply learn more about our mission, we&apos;d love to hear from you. Every conversation is another opportunity to change a child&apos;s life.
             </motion.p>
@@ -153,7 +153,7 @@ export default function ContactHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={isReady ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1 }}
-              className="flex items-center gap-4 pt-4 border-t border-white/15 mt-2 text-xs font-body text-blue-100/80"
+              className="flex items-center gap-4 pt-4 border-t border-white/15 mt-2 text-xs font-body text-neutral-200/80"
             >
               <span className="flex items-center gap-1.5 font-semibold text-emerald-300 bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-500/30">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -171,10 +171,10 @@ export default function ContactHero() {
               transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-full max-w-sm mx-auto"
             >
-              <div className="absolute inset-0 bg-[#2563eb] rounded-3xl blur-3xl scale-110" />
+              <div className="absolute inset-0 bg-[#09090b] rounded-3xl blur-3xl scale-110" />
 
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-white p-8">
-                <div className="w-20 h-20 rounded-2xl bg-[#2563eb] flex items-center justify-center mx-auto mb-5 shadow-xl text-3xl text-white">
+                <div className="w-20 h-20 rounded-2xl bg-[#09090b] flex items-center justify-center mx-auto mb-5 shadow-xl text-3xl text-white">
                   💬
                 </div>
                 <h2 className="font-heading text-2xl font-bold text-[#1a1a2e] text-center mb-2">Connect With Us</h2>
@@ -189,7 +189,7 @@ export default function ContactHero() {
                   </div>
                   <div className="flex items-center justify-between p-3 rounded-xl bg-gray-50 border border-gray-100">
                     <span className="text-gray-500 font-medium">✉️ General Email</span>
-                    <span className="font-bold text-royal-blue">hello@shoemyfeet.org</span>
+                    <span className="font-bold text-[#f97316]">hello@shoemyfeet.org</span>
                   </div>
                   <div className="flex items-center justify-between p-3 rounded-xl bg-gray-50 border border-gray-100">
                     <span className="text-gray-500 font-medium">📞 Helpline</span>
@@ -206,7 +206,7 @@ export default function ContactHero() {
               >
                 <span className="text-xl">🤝</span>
                 <div>
-                  <div className="font-heading font-bold text-royal-blue text-xs">Open for Partnerships</div>
+                  <div className="font-heading font-bold text-[#f97316] text-xs">Open for Partnerships</div>
                   <div className="text-[10px] text-gray-500 font-body">Schools, NGOs & Corporates</div>
                 </div>
               </motion.div>
@@ -218,7 +218,7 @@ export default function ContactHero() {
               >
                 <span className="text-xl">💚</span>
                 <div>
-                  <div className="font-heading font-bold text-royal-blue text-xs">Friendly Support</div>
+                  <div className="font-heading font-bold text-[#f97316] text-xs">Friendly Support</div>
                   <div className="text-[10px] text-gray-500 font-body">We reply to every query</div>
                 </div>
               </motion.div>

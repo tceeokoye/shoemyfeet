@@ -137,7 +137,7 @@ export default function OurStoryPreview() {
                   <h4 className="font-heading font-bold text-xl text-white mb-2 group-hover:text-amber-300 transition-colors">
                     {item.title}
                   </h4>
-                  <p className="text-xs sm:text-sm text-blue-100/90 font-body leading-relaxed">
+                  <p className="text-xs sm:text-sm text-neutral-200/90 font-body leading-relaxed">
                     {item.description}
                   </p>
                 </div>

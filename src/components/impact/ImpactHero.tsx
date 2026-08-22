@@ -39,7 +39,7 @@ export default function ImpactHero() {
       {/* Ambient glow overlays */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full bg-[#f97316]/12 blur-[130px] animate-pulse" />
-        <div className="absolute bottom-1/3 right-1/6 w-[450px] h-[450px] rounded-full bg-[#38bdf8]/10 blur-[150px] animate-pulse" />
+        <div className="absolute bottom-1/3 right-1/6 w-[450px] h-[450px] rounded-full bg-[#f97316]/10 blur-[150px] animate-pulse" />
       </div>
 
       {/* Animated footprint trail decorations */}
@@ -118,7 +118,7 @@ export default function ImpactHero() {
           {/* Subtext */}
           <motion.p
             variants={fadeUp}
-            className="text-blue-100/95 text-lg sm:text-xl lg:text-2xl font-body leading-relaxed max-w-3xl mb-10"
+            className="text-neutral-200/95 text-lg sm:text-xl lg:text-2xl font-body leading-relaxed max-w-3xl mb-10"
           >
             Every pair of shoes represents more than footwear — it represents confidence, opportunity, better health, and a brighter future. Explore how Shoe My Feet Foundation is transforming lives, one child and one community at a time.
           </motion.p>

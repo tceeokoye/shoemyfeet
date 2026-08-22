@@ -75,7 +75,7 @@ export default function AlbumModal({ album, onClose, onSelectMedia }: AlbumModal
           <div className="p-6 overflow-y-auto flex-1 bg-[#09090b]">
             <h4 className="font-heading text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center justify-between">
               <span>Album Gallery Items ({album.albumMedia.length})</span>
-              <span className="text-xs text-blue-300 font-normal">Click item to enlarge</span>
+              <span className="text-xs text-orange-300 font-normal">Click item to enlarge</span>
             </h4>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5">
@@ -109,7 +109,7 @@ export default function AlbumModal({ album, onClose, onSelectMedia }: AlbumModal
                     </div>
                   )}
 
-                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#2563eb]">
+                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#09090b]">
                     <p className="text-[11px] font-heading font-semibold text-white line-clamp-1">
                       {item.title}
                     </p>

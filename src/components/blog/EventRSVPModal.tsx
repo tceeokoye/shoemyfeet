@@ -56,7 +56,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
           {/* Header Banner */}
           <div className="relative h-36 overflow-hidden">
             <Image src={event.coverImage} alt={event.title} fill className="object-cover" />
-            <div className="absolute inset-0 bg-[#2563eb]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <button
               type="button"
               onClick={onClose}
@@ -77,8 +77,8 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
             {!isConfirmed ? (
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Event Details Quick Summary */}
-                <div className="bg-blue-50/70 p-4 rounded-2xl border border-blue-100 flex flex-col gap-1.5 text-xs text-gray-700 font-body">
-                  <div className="flex items-center gap-2 font-bold text-[#2563eb]">
+                <div className="bg-slate-50/70 p-4 rounded-2xl border border-slate-100 flex flex-col gap-1.5 text-xs text-gray-700 font-body">
+                  <div className="flex items-center gap-2 font-bold text-[#f97316]">
                     <CalendarIcon size={14} className="text-warm-orange" />
                     <span>{event.displayDate} • {event.time}</span>
                   </div>
@@ -99,7 +99,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     placeholder="e.g. Dr. Ngozi Eze"
-                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#2563eb]"
+                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#09090b]"
                   />
                 </div>
 
@@ -114,7 +114,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="ngozi@example.com"
-                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#2563eb]"
+                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#09090b]"
                     />
                   </div>
 
@@ -127,7 +127,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+234 803 123 4567"
-                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#2563eb]"
+                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#09090b]"
                     />
                   </div>
                 </div>
@@ -139,7 +139,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
                   <select
                     value={ticketsCount}
                     onChange={(e) => setTicketsCount(Number(e.target.value))}
-                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#2563eb]"
+                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#09090b]"
                   >
                     <option value={1}>1 Seat</option>
                     <option value={2}>2 Seats</option>
@@ -166,7 +166,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
                   RSVP Confirmed, {fullName}!
                 </h3>
                 <p className="text-gray-600 font-body text-xs sm:text-sm max-w-sm mx-auto mb-6 leading-relaxed">
-                  We have reserved <span className="font-bold text-warm-orange">{ticketsCount} seat(s)</span> for you at <span className="font-bold">{event.title}</span>. A confirmation pass has been sent to <span className="font-bold text-royal-blue">{email}</span>.
+                  We have reserved <span className="font-bold text-warm-orange">{ticketsCount} seat(s)</span> for you at <span className="font-bold">{event.title}</span>. A confirmation pass has been sent to <span className="font-bold text-[#f97316]">{email}</span>.
                 </p>
 
                 {/* Add to Calendar Link */}

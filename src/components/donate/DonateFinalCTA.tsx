@@ -21,11 +21,11 @@ const footprintTrail = [
 
 export default function DonateFinalCTA() {
   return (
-    <section className="relative section-padding bg-[#1e40af] text-white overflow-hidden" aria-label="Final call to action">
+    <section className="relative section-padding bg-[#09090b] text-white overflow-hidden" aria-label="Final call to action">
       {/* Background layers */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Glows */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl bg-blue-400" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl bg-slate-800" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full opacity-10 blur-3xl bg-orange-400" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-5 blur-3xl bg-white" />
 
@@ -85,16 +85,16 @@ export default function DonateFinalCTA() {
             <div className="absolute inset-0 rounded-full border-2 border-orange-400/20 animate-pulse-ring" style={{ animationDelay: "0.7s" }} />
           </motion.div>
 
-          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 text-white font-bold text-sm">
+          {/* <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 text-white font-bold text-sm">
             🌟 Join 10,000+ Generous Hearts
-          </motion.span>
+          </motion.span> */}
 
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] text-white">
             Together, Every Step Becomes{" "}
             <span className="text-warm-orange">a Brighter Future</span>
           </motion.h2>
 
-          <motion.p variants={fadeUp} className="text-blue-200 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          <motion.p variants={fadeUp} className="text-neutral-300 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Every contribution — no matter the size — helps place hope on a child&apos;s feet. Join thousands of compassionate supporters who are transforming lives one pair of shoes at a time.
           </motion.p>
 
@@ -109,7 +109,7 @@ export default function DonateFinalCTA() {
               <div key={stat.label} className="glass-dark rounded-2xl p-4 text-center border border-white/10">
                 <span className="text-2xl">{stat.icon}</span>
                 <div className="font-heading font-bold text-2xl text-white mt-1">{stat.value}</div>
-                <div className="text-[11px] text-blue-300 font-body mt-0.5">{stat.label}</div>
+                <div className="text-[11px] text-orange-300 font-body mt-0.5">{stat.label}</div>
               </div>
             ))}
           </motion.div>
@@ -129,7 +129,7 @@ export default function DonateFinalCTA() {
           </motion.div>
 
           {/* Security note */}
-          <motion.p variants={fadeUp} className="text-xs text-blue-400 font-body">
+          <motion.p variants={fadeUp} className="text-xs text-orange-400 font-body">
             🔒 All donations are SSL-encrypted and securely processed. CAC Registered Nonprofit.
           </motion.p>
         </motion.div>

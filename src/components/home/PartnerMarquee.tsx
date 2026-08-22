@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const partners = [
   { name: "Access Bank CSR", type: "Community Partner", initials: "AB", color: "bg-[#f97316]" },
   { name: "Enugu State Ministry", type: "Education Partner", initials: "ES", color: "bg-emerald-600" },
-  { name: "UNICEF Nigeria", type: "Child Welfare", initials: "UN", color: "bg-blue-600" },
-  { name: "Kaduna State Outreach", type: "Northern Partner", initials: "KM", color: "bg-[#1e40af]" },
+  { name: "UNICEF Nigeria", type: "Child Welfare", initials: "UN", color: "bg-black" },
+  { name: "Kaduna State Outreach", type: "Northern Partner", initials: "KM", color: "bg-[#09090b]" },
   { name: "GTBank Foundation", type: "kids Partner", initials: "GT", color: "bg-[#f97316]" },
   { name: "NACA Nigeria", type: "Health Protection", initials: "NA", color: "bg-teal-600" },
   { name: "Edo Education Board", type: "Skills Partner", initials: "ED", color: "bg-amber-500" },

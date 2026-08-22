@@ -150,7 +150,7 @@ export default function LightboxModal({ photos, currentIndex, onClose, onNavigat
 
         {/* Bottom Details Caption Bar */}
         <motion.div
-          className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-[#2563eb] z-30 pointer-events-auto flex flex-col sm:flex-row sm:items-end justify-between gap-4 max-w-6xl mx-auto"
+          className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-[#09090b] z-30 pointer-events-auto flex flex-col sm:flex-row sm:items-end justify-between gap-4 max-w-6xl mx-auto"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           onClick={(e) => e.stopPropagation()}
@@ -159,10 +159,10 @@ export default function LightboxModal({ photos, currentIndex, onClose, onNavigat
             <h3 className="font-heading font-bold text-white text-lg sm:text-2xl mb-1">
               {photo.title}
             </h3>
-            <p className="font-body text-blue-100/90 text-xs sm:text-sm leading-relaxed mb-2">
+            <p className="font-body text-neutral-200/90 text-xs sm:text-sm leading-relaxed mb-2">
               {photo.caption}
             </p>
-            <div className="flex flex-wrap items-center gap-3 text-xs text-blue-200 font-body">
+            <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-300 font-body">
               <span className="flex items-center gap-1">
                 <MapPinIcon size={14} className="text-warm-orange" />
                 {photo.location}

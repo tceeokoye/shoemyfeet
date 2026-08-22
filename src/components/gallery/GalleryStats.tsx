@@ -72,7 +72,7 @@ export default function GalleryStats() {
             <div className={`w-12 h-12 rounded-2xl stat.color flex items-center justify-center shadow-lg mb-3 group-hover:rotate-6 transition-transform`}>
               {getIcon(stat.icon)}
             </div>
-            <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-royal-blue leading-tight mb-1">
+            <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#f97316] leading-tight mb-1">
               <Counter value={stat.value} suffix={stat.suffix} />
             </h3>
             <p className="font-body text-xs sm:text-sm font-semibold text-gray-500">

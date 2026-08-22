@@ -6,12 +6,12 @@ import { GraduationCapIcon, HeartPulseIcon, HeartHandshakeIcon, SparklesIcon } f
 
 const pillars = [
   {
-    icon: <GraduationCapIcon size={32} className="text-royal-blue" />,
+    icon: <GraduationCapIcon size={32} className="text-[#f97316]" />,
     title: "Education",
     desc: "Ensuring every child can attend school with dignity",
-    color: "bg-blue-50",
-    border: "border-blue-100",
-    iconBg: "bg-blue-100",
+    color: "bg-slate-50",
+    border: "border-slate-100",
+    iconBg: "bg-orange-100",
   },
   {
     icon: <HeartPulseIcon size={32} className="text-emerald-600" />,

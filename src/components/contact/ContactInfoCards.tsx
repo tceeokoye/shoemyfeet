@@ -26,9 +26,9 @@ const contactCards: ContactCardCategory[] = [
   {
     category: "Head Office",
     icon: "📍",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
+    border: "border-slate-100",
     items: [
       { label: "Office Address", value: "No. 14 Independence Layout, Plot 8" },
       { label: "City & State", value: "Enugu, Enugu State" },
@@ -71,7 +71,7 @@ const contactCards: ContactCardCategory[] = [
   {
     category: "Office Hours",
     icon: "⏰",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-purple-50",
     border: "border-purple-100",
     items: [

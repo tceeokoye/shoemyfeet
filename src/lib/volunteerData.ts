@@ -98,8 +98,8 @@ export const WHY_VOLUNTEER_BENEFITS: BenefitCard[] = [
     icon: "🏘️",
     title: "Build Stronger Communities",
     description: "Your service strengthens neighborhoods, schools, and local economies where every child matters.",
-    color: "text-blue-600",
-    bg: "bg-blue-50",
+    color: "text-[#f97316]",
+    bg: "bg-slate-50",
   },
   {
     icon: "🎓",
@@ -153,7 +153,7 @@ export const VOLUNTEER_ROLES: VolunteerRole[] = [
     skills: ["Organization", "Attention to Detail"],
     location: "Multiple States",
     category: "Logistics",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#09090b]",
   },
   {
     id: "event-coordinator",
@@ -164,7 +164,7 @@ export const VOLUNTEER_ROLES: VolunteerRole[] = [
     skills: ["Project Management", "Teamwork", "Leadership"],
     location: "Nationwide",
     category: "Events",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#09090b]",
   },
   {
     id: "school-liaison",
@@ -219,7 +219,7 @@ export const VOLUNTEER_ROLES: VolunteerRole[] = [
     skills: ["Copywriting", "Design", "Social Media Strategy"],
     location: "Remote / Nationwide",
     category: "Digital",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#09090b]",
   },
   {
     id: "graphic-designer",
@@ -252,7 +252,7 @@ export const VOLUNTEER_ROLES: VolunteerRole[] = [
     skills: ["Microsoft Office", "Organization", "Communication"],
     location: "Remote",
     category: "Admin",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#09090b]",
   },
   {
     id: "corporate-teams",
@@ -281,7 +281,7 @@ export const VOLUNTEER_JOURNEY_STEPS: JourneyStep[] = [
     icon: "🤝",
     title: "Review & Interview",
     description: "Our volunteer coordinator reviews your application and schedules a brief welcome call within 48 hours.",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#09090b]",
   },
   {
     step: 3,
@@ -295,7 +295,7 @@ export const VOLUNTEER_JOURNEY_STEPS: JourneyStep[] = [
     icon: "🌍",
     title: "Join Outreach Activities",
     description: "Participate in scheduled distribution events, school visits, community drives, and field programs.",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#09090b]",
   },
   {
     step: 5,
@@ -386,9 +386,9 @@ export const VOLUNTEER_STORIES: VolunteerStory[] = [
 // ─── Volunteer Impact Stats ───────────────────────────────────────────────────
 export const VOLUNTEER_STATS: VolunteerStat[] = [
   { value: 480, suffix: "+", label: "Active Volunteers", icon: "🙋", color: "bg-[#f97316]" },
-  { value: 24000, suffix: "+", label: "Volunteer Hours Contributed", icon: "⏱️", color: "bg-[#1a3a6b]" },
+  { value: 24000, suffix: "+", label: "Volunteer Hours Contributed", icon: "⏱️", color: "bg-[#09090b]" },
   { value: 62, suffix: "+", label: "Communities Served", icon: "🏘️", color: "bg-[#15803d]" },
-  { value: 130, suffix: "+", label: "Outreach Events Supported", icon: "📅", color: "bg-[#1a3a6b]" },
+  { value: 130, suffix: "+", label: "Outreach Events Supported", icon: "📅", color: "bg-[#09090b]" },
   { value: 14000, suffix: "+", label: "Children Impacted", icon: "👟", color: "bg-[#f97316]" },
   { value: 78, suffix: "%", label: "Returning Volunteers", icon: "🔄", color: "bg-[#15803d]" },
 ];
@@ -499,13 +499,13 @@ export const RECOGNITION_ITEMS: RecognitionItem[] = [
     icon: "📜",
     title: "Appreciation Certificates",
     description: "Every active volunteer receives official certificates recognizing their service hours — valuable for CVs, university applications, and NYSC records.",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#09090b]",
   },
   {
     icon: "🎉",
     title: "Annual Recognition Gala",
     description: "Once a year, we celebrate our volunteer family with an in-person appreciation evening featuring awards, testimonials, and heartfelt recognition.",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#09090b]",
   },
   {
     icon: "🌱",
@@ -528,14 +528,14 @@ export const GROUP_TYPES: GroupType[] = [
     title: "Companies & Corporations",
     description: "Create meaningful CSR impact. Bring your team for a structured volunteer day that builds morale and changes lives.",
     benefits: ["Custom event planning", "CSR documentation", "Brand recognition", "Team certificates"],
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#09090b]",
   },
   {
     icon: "⛪",
     title: "Churches & Faith Groups",
     description: "Live your faith's call to service. Organize congregation-wide shoe drives, collection campaigns, and field outreach.",
     benefits: ["Group coordination support", "Prayer initiative alignment", "Community testimonials", "Recognition in reports"],
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#09090b]",
   },
   {
     icon: "🏫",

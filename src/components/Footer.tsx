@@ -56,7 +56,7 @@ export default function Footer() {
     <footer className="bg-[#09090b] text-white relative overflow-hidden border-t border-white/10">
       {/* Ambient Orbs */}
       <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-orange-500/5 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-blue-500/5 translate-x-1/2 translate-y-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-black/5 translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -76,12 +76,12 @@ export default function Footer() {
                   <FooterLogo />
                 </motion.div>
 
-                <motion.p variants={fadeUp} className="font-body text-sm text-blue-100/80 leading-relaxed mb-6 max-w-xs">
+                <motion.p variants={fadeUp} className="font-body text-sm text-neutral-200/80 leading-relaxed mb-6 max-w-xs">
                   Restoring dignity, protecting health, and promoting quality education for
                   underserved Nigerian children through school shoes and empowerment programmes.
                 </motion.p>
 
-                <motion.div variants={fadeUp} className="flex flex-col gap-2.5 text-xs text-blue-200 font-body mb-7">
+                <motion.div variants={fadeUp} className="flex flex-col gap-2.5 text-xs text-neutral-300 font-body mb-7">
                   <a href="mailto:hello@shoemyfeet.org" className="flex items-center gap-2 hover:text-[#f97316] transition-colors">
                     <MailIcon size={14} className="text-[#f97316]" />
                     hello@shoemyfeet.org
@@ -119,7 +119,7 @@ export default function Footer() {
                       <motion.li key={l.label} variants={fadeUp}>
                         <Link
                           href={l.href}
-                          className="font-body text-sm text-blue-100/70 hover:text-white transition-colors hover:translate-x-1 inline-block"
+                          className="font-body text-sm text-neutral-200/70 hover:text-white transition-colors hover:translate-x-1 inline-block"
                         >
                           {l.label}
                         </Link>
@@ -134,17 +134,17 @@ export default function Footer() {
         </div>
 
         {/* SDG Goals Strip */}
-        <div className="py-5 border-b border-white/10 flex flex-wrap items-center gap-3 text-xs font-body text-blue-200">
+        <div className="py-5 border-b border-white/10 flex flex-wrap items-center gap-3 text-xs font-body text-neutral-300">
           <span className="font-bold text-white tracking-wider uppercase text-xs font-heading">Aligned With:</span>
           {["SDG 1 — No Poverty", "SDG 3 — Good Health", "SDG 4 — Quality Education", "SDG 10 — Reduced Inequalities"].map((s) => (
-            <span key={s} className="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-blue-100">
+            <span key={s} className="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-neutral-200">
               {s}
             </span>
           ))}
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-200/80 font-body">
+        <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-300/80 font-body">
           <div className="flex items-center gap-1">
             <span>© 2026 Shoe My Feet Foundation. Crafted with</span>
             <HeartIcon size={12} className="fill-[#f97316] text-[#f97316] mx-0.5" />

@@ -19,7 +19,7 @@ export default function CorporateVolunteering() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs sm:text-sm font-bold border border-blue-200 mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold border border-slate-200 mb-4"
           >
             Group & Corporate Volunteering
           </motion.span>
@@ -28,7 +28,7 @@ export default function CorporateVolunteering() {
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
           >
             Volunteer as a{" "}
-            <span className="text-royal-blue">Team</span>
+            <span className="text-[#f97316]">Team</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -71,7 +71,7 @@ export default function CorporateVolunteering() {
 
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="font-heading text-xl font-bold text-[#1a1a2e] mb-2 group-hover:text-royal-blue transition-colors duration-300">
+                <h3 className="font-heading text-xl font-bold text-[#1a1a2e] mb-2 group-hover:text-[#f97316] transition-colors duration-300">
                   {group.title}
                 </h3>
                 <p className="font-body text-gray-500 text-sm leading-relaxed mb-5">{group.description}</p>
@@ -102,7 +102,7 @@ export default function CorporateVolunteering() {
 
         {/* CSR highlight blurb */}
         <motion.div
-          className="mt-14 rounded-3xl bg-[#2563eb] p-8 sm:p-10 text-center relative overflow-hidden"
+          className="mt-14 rounded-3xl bg-[#09090b] p-8 sm:p-10 text-center relative overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -110,14 +110,14 @@ export default function CorporateVolunteering() {
         >
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-orange-400/10 blur-[80px]" />
-            <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-blue-400/8 blur-[80px]" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-slate-800/8 blur-[80px]" />
           </div>
           <div className="relative z-10">
             <div className="text-4xl mb-4">🏢</div>
             <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-3">
               CSR That Actually Matters
             </h3>
-            <p className="font-body text-blue-200/80 text-base leading-relaxed max-w-2xl mx-auto mb-6">
+            <p className="font-body text-neutral-300/80 text-base leading-relaxed max-w-2xl mx-auto mb-6">
               Partner with us for a corporate social responsibility experience that goes beyond a press release. Your team will sort shoes, visit schools, and see firsthand the difference you make — documented with photos and a full impact report.
             </p>
             <a href="/contact" className="btn-orange inline-flex items-center gap-2 px-8 py-4 text-base">

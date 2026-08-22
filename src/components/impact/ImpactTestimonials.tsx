@@ -16,7 +16,7 @@ const testimonials = [
     quote: "I used to hide my feet in class because my shoes had big holes. Now I walk in front proudly. My teacher says I'm the first to raise my hand!",
     image: "/images/story1.jpg",
     stars: 5,
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const testimonials = [
     quote: "Class attendance jumped by nearly 30% after Shoe My Feet visited our school. The children are more focused, confident, and eager to learn.",
     image: "/images/story2.jpg",
     stars: 5,
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ const testimonials = [
     quote: "Our partnership with Shoe My Feet is one of the most impactful CSR initiatives we've undertaken. The transparency and dedication are unmatched.",
     image: "/images/founder.jpg",
     stars: 5,
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
   },
 ];
 
@@ -193,7 +193,7 @@ export default function ImpactTestimonials() {
           <div className="flex items-center justify-between mt-8">
             <button
               onClick={goPrev}
-              className="w-12 h-12 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-600 hover:border-blue-400 hover:text-royal-blue hover:shadow-lg transition-all duration-300 cursor-pointer"
+              className="w-12 h-12 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-600 hover:border-slate-300 hover:text-[#f97316] hover:shadow-lg transition-all duration-300 cursor-pointer"
               aria-label="Previous testimonial"
             >
               <ChevronLeftIcon size={20} />
@@ -215,7 +215,7 @@ export default function ImpactTestimonials() {
 
             <button
               onClick={goNext}
-              className="w-12 h-12 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-600 hover:border-blue-400 hover:text-royal-blue hover:shadow-lg transition-all duration-300 cursor-pointer"
+              className="w-12 h-12 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-600 hover:border-slate-300 hover:text-[#f97316] hover:shadow-lg transition-all duration-300 cursor-pointer"
               aria-label="Next testimonial"
             >
               <ChevronRightIcon size={20} />

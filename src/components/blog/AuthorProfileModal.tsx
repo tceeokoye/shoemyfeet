@@ -37,7 +37,7 @@ export default function AuthorProfileModal({ author, onClose, onSelectArticle }:
           className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 z-10 flex flex-col max-h-[90vh]"
         >
           {/* Header Banner */}
-          <div className="bg-[#2563eb] h-32 relative p-6 flex items-start justify-between">
+          <div className="bg-[#09090b] h-32 relative p-6 flex items-start justify-between">
             <div className="w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center backdrop-blur-xs">
               <BookOpenIcon size={16} />
             </div>
@@ -66,7 +66,7 @@ export default function AuthorProfileModal({ author, onClose, onSelectArticle }:
             {/* Author Stats Strip */}
             <div className="grid grid-cols-2 gap-4 bg-gray-50 p-4 rounded-2xl border border-gray-100 text-center">
               <div>
-                <span className="font-heading font-bold text-xl text-[#2563eb] block">{author.articleCount}</span>
+                <span className="font-heading font-bold text-xl text-[#f97316] block">{author.articleCount}</span>
                 <span className="text-xs text-gray-500 font-body block">Articles Published</span>
               </div>
               <div>
@@ -86,7 +86,7 @@ export default function AuthorProfileModal({ author, onClose, onSelectArticle }:
               {author.socialLinks.email && (
                 <a
                   href={`mailto:${author.socialLinks.email}`}
-                  className="px-4 py-2 rounded-full bg-blue-50 text-[#2563eb] hover:bg-blue-100 text-xs font-bold font-body transition-colors inline-flex items-center gap-1.5"
+                  className="px-4 py-2 rounded-full bg-slate-50 text-[#f97316] hover:bg-orange-100 text-xs font-bold font-body transition-colors inline-flex items-center gap-1.5"
                 >
                   <MailIcon size={14} /> Contact Author
                 </a>

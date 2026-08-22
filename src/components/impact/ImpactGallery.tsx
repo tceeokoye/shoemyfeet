@@ -133,7 +133,7 @@ export default function ImpactGallery() {
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
           >
             Moments That{" "}
-            <span className="text-royal-blue">Define Our Mission</span>
+            <span className="text-[#f97316]">Define Our Mission</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -157,8 +157,8 @@ export default function ImpactGallery() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm font-bold font-body transition-all duration-300 cursor-pointer ${
                 activeCategory === cat
-                  ? "bg-[#2563eb] text-white shadow-lg"
-                  : "bg-white text-gray-600 border border-gray-200 hover:border-blue-300 hover:text-royal-blue"
+                  ? "bg-[#09090b] text-white shadow-lg"
+                  : "bg-white text-gray-600 border border-gray-200 hover:border-slate-200 hover:text-[#f97316]"
               }`}
             >
               {cat}
@@ -244,7 +244,7 @@ export default function ImpactGallery() {
               >
                 <CloseIcon size={18} />
               </button>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-[#2563eb]">
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-[#09090b]">
                 <p className="text-white text-sm font-body">{lightboxAlt}</p>
               </div>
             </motion.div>

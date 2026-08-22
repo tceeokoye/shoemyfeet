@@ -101,7 +101,7 @@ export default function OurStory() {
               ].map((chip) => (
                 <div
                   key={chip.label}
-                  className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-blue-50/80 border border-blue-100 text-xs sm:text-sm font-body font-bold text-royal-blue shadow-sm"
+                  className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-slate-50/80 border border-slate-100 text-xs sm:text-sm font-body font-bold text-[#f97316] shadow-sm"
                 >
                   <span>{chip.icon}</span>
                   <span>{chip.label}</span>

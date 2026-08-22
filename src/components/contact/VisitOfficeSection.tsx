@@ -28,11 +28,11 @@ export default function VisitOfficeSection() {
   return (
     <section id="visit-office" className="section-padding bg-white relative overflow-hidden" aria-label="Visit our office">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#2563eb] rounded-4xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+        <div className="bg-[#09090b] rounded-4xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
           
           {/* Background Ambient Elements */}
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 bg-orange-400 blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-10 bg-blue-300 blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-10 bg-slate-300 blur-3xl pointer-events-none" />
 
           <div className="grid lg:grid-cols-12 gap-8 items-center relative z-10">
             
@@ -52,7 +52,7 @@ export default function VisitOfficeSection() {
                 Visit Our Office in <span className="text-warm-orange">Enugu</span>
               </motion.h2>
 
-              <motion.p variants={fadeUp} className="text-blue-100 font-body text-base leading-relaxed max-w-xl">
+              <motion.p variants={fadeUp} className="text-neutral-200 font-body text-base leading-relaxed max-w-xl">
                 We welcome volunteers, donors, school delegates, corporate partners, and well-wishers to visit our main headquarters. Tour our facilities, meet our team, and see our shoe distribution logistics center in action.
               </motion.p>
 
@@ -63,7 +63,7 @@ export default function VisitOfficeSection() {
                   { label: "Accessibility", val: "100% Ramp Access" },
                 ].map((item) => (
                   <div key={item.label} className="p-3 rounded-2xl bg-white/10 border border-white/10">
-                    <div className="text-[10px] text-blue-200 font-body font-semibold">{item.label}</div>
+                    <div className="text-[10px] text-neutral-300 font-body font-semibold">{item.label}</div>
                     <div className="font-heading font-bold text-sm text-white mt-0.5">{item.val}</div>
                   </div>
                 ))}
@@ -92,7 +92,7 @@ export default function VisitOfficeSection() {
                 <div className="text-4xl text-center">🏢</div>
                 <h3 className="font-heading font-bold text-xl text-center text-white">Visitor Amenities</h3>
                 
-                <div className="space-y-2 text-xs font-body text-blue-100">
+                <div className="space-y-2 text-xs font-body text-neutral-200">
                   <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10">
                     <span>☕</span>
                     <span>Complimentary Guest Refreshments</span>
@@ -157,7 +157,7 @@ export default function VisitOfficeSection() {
                       placeholder="e.g. Blessing Okafor"
                       value={visitForm.name}
                       onChange={(e) => setVisitForm({ ...visitForm, name: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-royal-blue"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
                     />
                   </div>
 
@@ -169,7 +169,7 @@ export default function VisitOfficeSection() {
                       placeholder="blessing@example.com"
                       value={visitForm.email}
                       onChange={(e) => setVisitForm({ ...visitForm, email: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-royal-blue"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
                     />
                   </div>
 
@@ -181,7 +181,7 @@ export default function VisitOfficeSection() {
                         required
                         value={visitForm.date}
                         onChange={(e) => setVisitForm({ ...visitForm, date: e.target.value })}
-                        className="w-full px-3 py-2 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-royal-blue"
+                        className="w-full px-3 py-2 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
                       />
                     </div>
                     <div>
@@ -189,7 +189,7 @@ export default function VisitOfficeSection() {
                       <select
                         value={visitForm.time}
                         onChange={(e) => setVisitForm({ ...visitForm, time: e.target.value })}
-                        className="w-full px-3 py-2 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-royal-blue"
+                        className="w-full px-3 py-2 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
                       >
                         <option value="10:00 AM">10:00 AM</option>
                         <option value="11:30 AM">11:30 AM</option>
@@ -204,7 +204,7 @@ export default function VisitOfficeSection() {
                     <select
                       value={visitForm.purpose}
                       onChange={(e) => setVisitForm({ ...visitForm, purpose: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-royal-blue"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
                     >
                       <option value="General Visit & Tour">General Visit & Tour</option>
                       <option value="School Partnership">School Partnership Discussion</option>

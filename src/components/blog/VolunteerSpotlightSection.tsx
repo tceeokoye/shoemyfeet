@@ -42,7 +42,7 @@ export default function VolunteerSpotlightSection({ onSpotlightClick }: Voluntee
             className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
           >
             {/* Top decorative gradient bar */}
-            <div className="absolute top-0 left-0 right-0 h-2 bg-[#2563eb]" />
+            <div className="absolute top-0 left-0 right-0 h-2 bg-[#09090b]" />
 
             <div>
               {/* Header: Portrait & Role */}
@@ -61,7 +61,7 @@ export default function VolunteerSpotlightSection({ onSpotlightClick }: Voluntee
 
               {/* Location Badge */}
               <div className="flex items-center gap-1.5 text-xs text-gray-500 font-body mb-4">
-                <MapPinIcon size={14} className="text-royal-blue" />
+                <MapPinIcon size={14} className="text-[#f97316]" />
                 <span>{person.location}</span>
                 <span>•</span>
                 <span className="font-bold text-forest-green">{person.shoesDistributed.toLocaleString()}+ Shoes Impacted</span>
@@ -73,8 +73,8 @@ export default function VolunteerSpotlightSection({ onSpotlightClick }: Voluntee
               </p>
 
               {/* Quote */}
-              <div className="bg-blue-50/70 p-4 rounded-2xl border-l-4 border-[#2563eb] relative mb-6">
-                <QuoteIcon size={16} className="text-[#2563eb]/20 absolute top-2 right-2" />
+              <div className="bg-slate-50/70 p-4 rounded-2xl border-l-4 border-[#09090b] relative mb-6">
+                <QuoteIcon size={16} className="text-[#f97316]/20 absolute top-2 right-2" />
                 <p className="font-body italic text-xs text-gray-700 leading-relaxed">
                   &ldquo;{person.quote}&rdquo;
                 </p>
@@ -85,7 +85,7 @@ export default function VolunteerSpotlightSection({ onSpotlightClick }: Voluntee
             <button
               type="button"
               onClick={() => onSpotlightClick(person)}
-              className="w-full py-3 px-4 rounded-xl bg-gray-50 text-[#2563eb] hover:bg-[#2563eb] hover:text-white font-bold text-xs transition-all duration-300 inline-flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
+              className="w-full py-3 px-4 rounded-xl bg-gray-50 text-[#f97316] hover:bg-[#09090b] hover:text-white font-bold text-xs transition-all duration-300 inline-flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
             >
               <span>Read Full Spotlight</span>
               <ArrowRightIcon size={13} />

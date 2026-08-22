@@ -70,11 +70,11 @@ export default function ArticlesGrid({ articles, onReadStory, onAuthorClick, onR
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-[#2563eb] opacity-80 group-hover:opacity-60 transition-opacity" />
+                  <div className="absolute inset-0 bg-[#09090b] opacity-80 group-hover:opacity-60 transition-opacity" />
 
                   {/* Badges */}
                   <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-                    <span className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#2563eb] font-bold text-xs shadow-md">
+                    <span className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#f97316] font-bold text-xs shadow-md">
                       {article.category}
                     </span>
                     {article.isNew && (

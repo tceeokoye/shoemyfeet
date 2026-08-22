@@ -9,10 +9,10 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 const staticParticles = [
   { width: 6, height: 6, left: "12%", top: "20%", color: "#f97316", duration: 4.2, delay: 0 },
   { width: 8, height: 8, left: "78%", top: "15%", color: "#fbbf24", duration: 5.1, delay: 0.6 },
-  { width: 5, height: 5, left: "35%", top: "75%", color: "#2563eb", duration: 3.8, delay: 1.1 },
+  { width: 5, height: 5, left: "35%", top: "75%", color: "#f97316", duration: 3.8, delay: 1.1 },
   { width: 7, height: 7, left: "88%", top: "60%", color: "#f97316", duration: 4.7, delay: 0.3 },
   { width: 4, height: 4, left: "8%",  top: "82%", color: "#fbbf24", duration: 3.5, delay: 1.4 },
-  { width: 9, height: 9, left: "52%", top: "10%", color: "#2563eb", duration: 5.5, delay: 0.8 },
+  { width: 9, height: 9, left: "52%", top: "10%", color: "#f97316", duration: 5.5, delay: 0.8 },
   { width: 6, height: 6, left: "25%", top: "40%", color: "#f97316", duration: 4.0, delay: 0.2 },
   { width: 5, height: 5, left: "68%", top: "88%", color: "#fbbf24", duration: 4.3, delay: 0.9 },
 ];
@@ -59,15 +59,15 @@ export default function DonateHero() {
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           className="absolute top-10 left-8 w-[450px] h-[450px] rounded-full opacity-25 animate-blob"
-          style={{ background: "#2563eb" }}
+          style={{ background: "#f97316" }}
         />
         <motion.div
           className="absolute bottom-12 right-12 w-[380px] h-[380px] rounded-full opacity-20 animate-blob-slow"
-          style={{ background: "#2563eb" }}
+          style={{ background: "#f97316" }}
         />
         <motion.div
           className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full opacity-15"
-          style={{ background: "#2563eb" }}
+          style={{ background: "#f97316" }}
           animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -143,7 +143,7 @@ export default function DonateHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={isReady ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: HEADLINE_WORDS.length * 0.08 + 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="text-base sm:text-lg text-blue-100/90 font-body max-w-xl leading-relaxed"
+              className="text-base sm:text-lg text-neutral-200/90 font-body max-w-xl leading-relaxed"
             >
               Your generosity provides more than a pair of shoes — it gives a child confidence, protection, dignity, and the opportunity to learn, play, and dream without limits.
             </motion.p>
@@ -183,7 +183,7 @@ export default function DonateHero() {
                 { icon: "💳", label: "Paystack & Stripe" },
                 { icon: "🧾", label: "Receipt Provided" },
               ].map((badge) => (
-                <span key={badge.label} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs text-blue-100 font-body font-semibold shadow-sm">
+                <span key={badge.label} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs text-neutral-200 font-body font-semibold shadow-sm">
                   {badge.icon} {badge.label}
                 </span>
               ))}
@@ -199,7 +199,7 @@ export default function DonateHero() {
               className="relative w-full max-w-sm mx-auto"
             >
               {/* Glow background */}
-              <div className="absolute inset-0 bg-[#2563eb] rounded-3xl blur-3xl scale-110" />
+              <div className="absolute inset-0 bg-[#09090b] rounded-3xl blur-3xl scale-110" />
 
               {/* Main card */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-white p-8">
@@ -209,7 +209,7 @@ export default function DonateHero() {
                   animate={{ scale: [1, 1.06, 1] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <div className="w-24 h-24 rounded-full bg-[#2563eb] flex items-center justify-center shadow-2xl shadow-orange-500/30">
+                  <div className="w-24 h-24 rounded-full bg-[#09090b] flex items-center justify-center shadow-2xl shadow-orange-500/30">
                     <span className="text-5xl">❤️</span>
                   </div>
                 </motion.div>
@@ -231,7 +231,7 @@ export default function DonateHero() {
                       whileHover={{ scale: 1.04 }}
                     >
                       <span className="text-2xl">{stat.icon}</span>
-                      <div className="font-heading font-bold text-lg text-[#1e40af] leading-none mt-1">{stat.value}</div>
+                      <div className="font-heading font-bold text-lg text-[#0a0a0a] leading-none mt-1">{stat.value}</div>
                       <div className="text-[10px] text-slate-800 font-body font-semibold mt-0.5">{stat.label}</div>
                     </motion.div>
                   ))}
@@ -246,7 +246,7 @@ export default function DonateHero() {
               >
                 <span className="text-xl">🎉</span>
                 <div>
-                  <div className="font-heading font-bold text-[#1e40af] text-xs">New Donor</div>
+                  <div className="font-heading font-bold text-[#0a0a0a] text-xs">New Donor</div>
                   <div className="text-[10px] text-slate-700 font-body font-medium">Just donated ₦10,000</div>
                 </div>
               </motion.div>
@@ -257,7 +257,7 @@ export default function DonateHero() {
               >
                 <span className="text-xl">🙏</span>
                 <div>
-                  <div className="font-heading font-bold text-[#1e40af] text-xs">Thank You!</div>
+                  <div className="font-heading font-bold text-[#0a0a0a] text-xs">Thank You!</div>
                   <div className="text-[10px] text-slate-700 font-body font-medium">1 child helped today</div>
                 </div>
               </motion.div>
@@ -272,7 +272,7 @@ export default function DonateHero() {
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <span className="text-[10px] text-blue-200/80 font-body tracking-widest uppercase font-semibold">Scroll to give</span>
+          <span className="text-[10px] text-neutral-300/80 font-body tracking-widest uppercase font-semibold">Scroll to give</span>
           <ChevronDownIcon size={16} className="text-warm-orange" />
         </motion.div>
       </div>

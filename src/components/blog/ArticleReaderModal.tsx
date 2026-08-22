@@ -181,21 +181,21 @@ export default function ArticleReaderModal({
                 <button
                   type="button"
                   onClick={() => setFontSize("sm")}
-                  className={`px-2 py-0.5 rounded cursor-pointer ${fontSize === "sm" ? "bg-white text-[#2563eb] shadow-xs" : "opacity-60"}`}
+                  className={`px-2 py-0.5 rounded cursor-pointer ${fontSize === "sm" ? "bg-white text-[#f97316] shadow-xs" : "opacity-60"}`}
                 >
                   A-
                 </button>
                 <button
                   type="button"
                   onClick={() => setFontSize("base")}
-                  className={`px-2 py-0.5 rounded cursor-pointer ${fontSize === "base" ? "bg-white text-[#2563eb] shadow-xs" : "opacity-60"}`}
+                  className={`px-2 py-0.5 rounded cursor-pointer ${fontSize === "base" ? "bg-white text-[#f97316] shadow-xs" : "opacity-60"}`}
                 >
                   A
                 </button>
                 <button
                   type="button"
                   onClick={() => setFontSize("lg")}
-                  className={`px-2 py-0.5 rounded cursor-pointer ${fontSize === "lg" ? "bg-white text-[#2563eb] shadow-xs" : "opacity-60"}`}
+                  className={`px-2 py-0.5 rounded cursor-pointer ${fontSize === "lg" ? "bg-white text-[#f97316] shadow-xs" : "opacity-60"}`}
                 >
                   A+
                 </button>
@@ -210,7 +210,7 @@ export default function ArticleReaderModal({
               >
                 {themeMode === "light" && <SunIcon size={16} className="text-amber-500" />}
                 {themeMode === "sepia" && <SparklesIcon size={16} className="text-amber-700" />}
-                {themeMode === "dark" && <MoonIcon size={16} className="text-blue-400" />}
+                {themeMode === "dark" && <MoonIcon size={16} className="text-orange-400" />}
               </button>
 
               {/* Bookmark Button */}
@@ -322,7 +322,7 @@ export default function ArticleReaderModal({
 
                   case "pullQuote":
                     return (
-                      <div key={idx} className="my-8 p-6 rounded-2xl bg-[#2563eb] border-l-4 border-warm-orange relative">
+                      <div key={idx} className="my-8 p-6 rounded-2xl bg-[#09090b] border-l-4 border-warm-orange relative">
                         <QuoteIcon size={28} className="text-warm-orange/30 absolute top-4 right-4" />
                         <p className="font-heading font-bold italic text-lg sm:text-xl text-warm-orange-dark mb-2 leading-relaxed">
                           &ldquo;{block.quote}&rdquo;
@@ -339,8 +339,8 @@ export default function ArticleReaderModal({
                     return (
                       <div key={idx} className="grid sm:grid-cols-3 gap-4 my-8">
                         {block.stats.map((stat, sIdx) => (
-                          <div key={sIdx} className="bg-blue-50/80 p-5 rounded-2xl text-center border border-blue-100 shadow-sm">
-                            <span className="font-heading font-bold text-2xl text-[#2563eb] block mb-1">{stat.value}</span>
+                          <div key={sIdx} className="bg-slate-50/80 p-5 rounded-2xl text-center border border-slate-100 shadow-sm">
+                            <span className="font-heading font-bold text-2xl text-[#f97316] block mb-1">{stat.value}</span>
                             <span className="font-bold text-xs text-warm-orange block mb-1">{stat.label}</span>
                             <span className="text-[11px] opacity-75 block">{stat.description}</span>
                           </div>
@@ -385,7 +385,7 @@ export default function ArticleReaderModal({
             </div>
 
             {/* Author Profile Bio Box */}
-            <div className="bg-[#2563eb] text-white p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center gap-6">
+            <div className="bg-[#09090b] text-white p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center gap-6">
               <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 shrink-0">
                 <Image src={article.author.avatar} alt={article.author.name} fill className="object-cover" />
               </div>
@@ -394,8 +394,8 @@ export default function ArticleReaderModal({
                   About The Author
                 </span>
                 <h3 className="font-heading font-bold text-xl text-white mb-1">{article.author.name}</h3>
-                <span className="text-xs text-blue-200 font-body block mb-3">{article.author.role}</span>
-                <p className="text-xs text-blue-100 font-body leading-relaxed mb-4">{article.author.bio}</p>
+                <span className="text-xs text-neutral-300 font-body block mb-3">{article.author.role}</span>
+                <p className="text-xs text-neutral-200 font-body leading-relaxed mb-4">{article.author.bio}</p>
 
                 <button
                   type="button"

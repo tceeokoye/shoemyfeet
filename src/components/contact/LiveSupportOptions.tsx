@@ -38,9 +38,9 @@ const supportChannels = [
     cta: "Book Video Call",
     href: "#visit-office",
     badge: "1-on-1",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
+    border: "border-slate-100",
   },
   {
     id: "email",
@@ -50,7 +50,7 @@ const supportChannels = [
     cta: "Email Support",
     href: "mailto:hello@shoemyfeet.org",
     badge: "< 4hrs Reply",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-purple-50",
     border: "border-purple-100",
   },
@@ -71,7 +71,7 @@ export default function LiveSupportOptions() {
   };
 
   return (
-    <section className="section-padding bg-[#2563eb] relative overflow-hidden" aria-label="Live support options">
+    <section className="section-padding bg-[#09090b] relative overflow-hidden" aria-label="Live support options">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -86,7 +86,7 @@ export default function LiveSupportOptions() {
             🎧 Live Assistance
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">
-            Interactive <span className="text-royal-blue">Support Options</span>
+            Interactive <span className="text-[#f97316]">Support Options</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Need real-time help? Connect with our team through any of our live support channels.
@@ -189,7 +189,7 @@ export default function LiveSupportOptions() {
                       placeholder="e.g. Obinna Johnson"
                       value={callbackData.name}
                       onChange={(e) => setCallbackData({ ...callbackData, name: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-royal-blue"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
                     />
                   </div>
 
@@ -201,7 +201,7 @@ export default function LiveSupportOptions() {
                       placeholder="+234 800 000 0000"
                       value={callbackData.phone}
                       onChange={(e) => setCallbackData({ ...callbackData, phone: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-royal-blue"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
                     />
                   </div>
 
@@ -210,7 +210,7 @@ export default function LiveSupportOptions() {
                     <select
                       value={callbackData.topic}
                       onChange={(e) => setCallbackData({ ...callbackData, topic: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-royal-blue"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
                     >
                       <option value="General Enquiry">General Enquiry</option>
                       <option value="Volunteering">Volunteering Opportunities</option>

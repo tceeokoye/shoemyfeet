@@ -37,9 +37,9 @@ const emergencyCases = [
     cta: "Connect CSR Director",
     href: "https://wa.me/2348140009988",
     badge: "Direct Line",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
+    border: "border-slate-100",
   },
   {
     icon: "💬",

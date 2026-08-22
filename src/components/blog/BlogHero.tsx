@@ -12,7 +12,7 @@ interface BlogHeroProps {
 
 const floatingStats = [
   { icon: HeartIcon, value: "14,000+", label: "Children Shod", color: "bg-[#f97316]", delay: 0 },
-  { icon: GraduationCapIcon, value: "35", label: "Cobblers Trained", color: "bg-[#2563eb]", delay: 0.6 },
+  { icon: GraduationCapIcon, value: "35", label: "Cobblers Trained", color: "bg-[#09090b]", delay: 0.6 },
   { icon: UsersIcon, value: "48+", label: "Field Volunteers", color: "bg-[#15803d]", delay: 1.2 },
 ];
 
@@ -48,7 +48,7 @@ export default function BlogHero({ onReadLatestClick, onExploreCategoriesClick }
           variants={floatSlow}
           initial="initial"
           animate="animate"
-          className="absolute top-10 right-10 w-96 h-96 rounded-full bg-blue-400/15 blur-3xl"
+          className="absolute top-10 right-10 w-96 h-96 rounded-full bg-slate-800/15 blur-3xl"
         />
         <motion.div
           animate={{ y: [-12, 12, -12], opacity: [0.3, 0.7, 0.3] }}
@@ -130,7 +130,7 @@ export default function BlogHero({ onReadLatestClick, onExploreCategoriesClick }
               {/* Supporting text */}
               <motion.p
                 variants={fadeUp}
-                className="text-base sm:text-lg text-blue-100/90 font-body leading-relaxed max-w-xl"
+                className="text-base sm:text-lg text-neutral-200/90 font-body leading-relaxed max-w-xl"
               >
                 Discover inspiring stories, outreach highlights, educational resources, and the latest news from{" "}
                 <span className="text-amber-300 font-bold">Shoe My Feet Foundation</span>. Every article reflects our mission to bring hope, dignity, and opportunity to children through the gift of proper footwear.
@@ -141,7 +141,7 @@ export default function BlogHero({ onReadLatestClick, onExploreCategoriesClick }
                 <button
                   type="button"
                   onClick={onReadLatestClick}
-                  className="group relative overflow-hidden px-8 py-4 rounded-full bg-[#2563eb] text-white font-bold text-sm shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2.5 cursor-pointer"
+                  className="group relative overflow-hidden px-8 py-4 rounded-full bg-[#09090b] text-white font-bold text-sm shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2.5 cursor-pointer"
                 >
                   <div className="absolute inset-0 bg-white/20 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-full" />
                   <span className="relative z-10">Read Latest Stories</span>
@@ -185,7 +185,7 @@ export default function BlogHero({ onReadLatestClick, onExploreCategoriesClick }
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 + stat.delay, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                  className="bg-[#1e40af] rounded-2xl p-5 flex items-center gap-5 shadow-2xl border border-white/30 hover:border-white/50 transition-all duration-300 hover:-translate-y-1 cursor-default"
+                  className="bg-[#09090b] rounded-2xl p-5 flex items-center gap-5 shadow-2xl border border-white/30 hover:border-white/50 transition-all duration-300 hover:-translate-y-1 cursor-default"
                 >
                   <div className={`w-14 h-14 rounded-2xl stat.color flex items-center justify-center shadow-lg shrink-0 group-hover:scale-110 transition-transform duration-300`}>
                     <Icon size={26} className="text-white" />
@@ -194,7 +194,7 @@ export default function BlogHero({ onReadLatestClick, onExploreCategoriesClick }
                     <span className="block text-3xl font-heading font-bold text-white leading-none mb-1">
                       {stat.value}
                     </span>
-                    <span className="text-xs text-blue-100/80 font-body font-medium uppercase tracking-wider">
+                    <span className="text-xs text-neutral-200/80 font-body font-medium uppercase tracking-wider">
                       {stat.label}
                     </span>
                   </div>
@@ -234,7 +234,7 @@ export default function BlogHero({ onReadLatestClick, onExploreCategoriesClick }
             >
               <div className="w-1 h-2 rounded-full bg-white/50" />
             </motion.div>
-            <span className="text-[#1e40af]">Scroll to explore</span>
+            <span className="text-[#0a0a0a]">Scroll to explore</span>
           </div>
         </motion.div>
       </div>

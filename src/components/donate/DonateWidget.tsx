@@ -66,11 +66,11 @@ export default function DonateWidget() {
   const annualTotal = finalAmount * FREQUENCY_MULTIPLIER[frequency];
 
   return (
-    <section id="donate-widget" className="section-padding bg-[#1e40af] relative overflow-hidden" aria-label="Make a donation">
+    <section id="donate-widget" className="section-padding bg-[#09090b] relative overflow-hidden" aria-label="Make a donation">
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-80 h-80 rounded-full opacity-10 blur-3xl bg-orange-500" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-10 blur-3xl bg-blue-500" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-10 blur-3xl bg-black" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,7 +83,7 @@ export default function DonateWidget() {
             Give a Child{" "}
             <span className="text-warm-orange">Their Next Step</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-blue-100/90 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          <motion.p variants={fadeUp} className="text-neutral-200/90 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Choose your giving amount and frequency. Every donation is 100% secure and goes directly to children who need it most.
           </motion.p>
         </motion.div>
@@ -98,7 +98,7 @@ export default function DonateWidget() {
           >
             <div className="bg-white rounded-4xl shadow-2xl shadow-blue-900/8 border border-gray-100 overflow-hidden">
               {/* Step Indicator */}
-              <div className="bg-[#2563eb] px-6 py-5">
+              <div className="bg-[#09090b] px-6 py-5">
                 <div className="flex items-center gap-3 justify-center">
                   {[1, 2, 3].map((s) => (
                     <div key={s} className="flex items-center gap-3">
@@ -143,8 +143,8 @@ export default function DonateWidget() {
                               onClick={() => setFrequency(freq.id)}
                               className={`relative px-3 py-3 rounded-2xl text-sm font-bold font-body border-2 transition-all text-center cursor-pointer ${
                                 frequency === freq.id
-                                  ? "bg-[#2563eb] text-white border-royal-blue shadow-lg shadow-blue-900/20"
-                                  : "bg-gray-50 text-gray-600 border-gray-200 hover:border-royal-blue/40"
+                                  ? "bg-[#09090b] text-white border-[#09090b] shadow-lg shadow-blue-900/20"
+                                  : "bg-gray-50 text-gray-600 border-gray-200 hover:border-[#09090b]/40"
                               }`}
                             >
                               {freq.label}
@@ -181,7 +181,7 @@ export default function DonateWidget() {
                                 }}
                                 className={`relative rounded-2xl p-4 text-left border-2 transition-all cursor-pointer group ${
                                   isSelected
-                                    ? "bg-[#2563eb] border-warm-orange shadow-lg shadow-orange-500/15"
+                                    ? "bg-[#09090b] border-warm-orange shadow-lg shadow-orange-500/15"
                                     : "bg-gray-50 border-gray-100 hover:border-orange-200"
                                 }`}
                               >
@@ -234,12 +234,12 @@ export default function DonateWidget() {
                         <motion.div
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
-                          className="bg-[#2563eb] rounded-2xl p-4 border border-blue-100"
+                          className="bg-[#09090b] rounded-2xl p-4 border border-slate-100"
                         >
                           <div className="flex items-center justify-between">
                             <div>
                               <div className="text-sm text-gray-500 font-body font-medium">Your {frequency} donation</div>
-                              <div className="font-heading font-bold text-2xl text-royal-blue">{formatAmount(finalAmount)}</div>
+                              <div className="font-heading font-bold text-2xl text-[#f97316]">{formatAmount(finalAmount)}</div>
                             </div>
                             {frequency !== "one-time" && (
                               <div className="text-right">
@@ -275,14 +275,14 @@ export default function DonateWidget() {
                     >
                       <div className="p-3 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-between">
                         <div className="text-sm font-body font-semibold text-gray-600">Donating <span className="text-warm-orange-dark font-bold">{formatAmount(finalAmount)}</span> ({frequency})</div>
-                        <button onClick={() => setStep(1)} className="text-xs text-royal-blue font-bold font-body hover:underline cursor-pointer">Change</button>
+                        <button onClick={() => setStep(1)} className="text-xs text-[#f97316] font-bold font-body hover:underline cursor-pointer">Change</button>
                       </div>
 
                       {/* Anonymous toggle */}
                       <div className="flex items-center gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-100">
                         <button
                           onClick={() => setIsAnonymous(!isAnonymous)}
-                          className={`relative w-12 h-6 rounded-full transition-colors cursor-pointer ${isAnonymous ? "bg-royal-blue" : "bg-gray-300"}`}
+                          className={`relative w-12 h-6 rounded-full transition-colors cursor-pointer ${isAnonymous ? "bg-[#09090b]" : "bg-gray-300"}`}
                         >
                           <motion.span
                             animate={{ x: isAnonymous ? 24 : 2 }}
@@ -307,7 +307,7 @@ export default function DonateWidget() {
                                 placeholder={field.placeholder}
                                 value={form[field.key as keyof typeof form]}
                                 onChange={(e) => setForm({ ...form, [field.key]: e.target.value })}
-                                className="w-full px-4 py-3 rounded-2xl border-2 border-gray-100 bg-gray-50 font-body text-sm text-[#1a1a2e] focus:outline-none focus:border-royal-blue/50 focus:bg-white transition-all"
+                                className="w-full px-4 py-3 rounded-2xl border-2 border-gray-100 bg-gray-50 font-body text-sm text-[#1a1a2e] focus:outline-none focus:border-[#09090b]/50 focus:bg-white transition-all"
                               />
                             </div>
                           ))}
@@ -322,7 +322,7 @@ export default function DonateWidget() {
                           placeholder="e.g. In memory of Grandma Ada..."
                           value={form.dedication}
                           onChange={(e) => setForm({ ...form, dedication: e.target.value })}
-                          className="w-full px-4 py-3 rounded-2xl border-2 border-gray-100 bg-gray-50 font-body text-sm text-[#1a1a2e] focus:outline-none focus:border-royal-blue/50 focus:bg-white transition-all"
+                          className="w-full px-4 py-3 rounded-2xl border-2 border-gray-100 bg-gray-50 font-body text-sm text-[#1a1a2e] focus:outline-none focus:border-[#09090b]/50 focus:bg-white transition-all"
                         />
                       </div>
 
@@ -334,7 +334,7 @@ export default function DonateWidget() {
                           placeholder="Share a word of encouragement for the children..."
                           value={form.message}
                           onChange={(e) => setForm({ ...form, message: e.target.value })}
-                          className="w-full px-4 py-3 rounded-2xl border-2 border-gray-100 bg-gray-50 font-body text-sm text-[#1a1a2e] focus:outline-none focus:border-royal-blue/50 focus:bg-white transition-all resize-none"
+                          className="w-full px-4 py-3 rounded-2xl border-2 border-gray-100 bg-gray-50 font-body text-sm text-[#1a1a2e] focus:outline-none focus:border-[#09090b]/50 focus:bg-white transition-all resize-none"
                         />
                       </div>
 
@@ -365,7 +365,7 @@ export default function DonateWidget() {
                     >
                       <div className="p-3 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-between">
                         <div className="text-sm font-body font-semibold text-gray-600">Donating <span className="text-warm-orange-dark font-bold">{formatAmount(finalAmount)}</span> ({frequency})</div>
-                        <button onClick={() => setStep(1)} className="text-xs text-royal-blue font-bold font-body hover:underline cursor-pointer">Change</button>
+                        <button onClick={() => setStep(1)} className="text-xs text-[#f97316] font-bold font-body hover:underline cursor-pointer">Change</button>
                       </div>
 
                       <label className="block text-sm font-bold text-[#1a1a2e] font-body">Choose Payment Method</label>
@@ -402,10 +402,10 @@ export default function DonateWidget() {
                           <span className="font-heading font-bold text-emerald-700 text-lg">Ready to complete your gift</span>
                         </div>
                         <div className="space-y-1.5 text-sm font-body">
-                          <div className="flex justify-between"><span className="text-slate-600 font-medium">Amount</span><span className="font-bold text-[#1e40af]">{formatAmount(finalAmount)}</span></div>
-                          <div className="flex justify-between"><span className="text-slate-600 font-medium">Frequency</span><span className="font-bold text-[#1e40af] capitalize">{frequency}</span></div>
-                          <div className="flex justify-between"><span className="text-slate-600 font-medium">Payment</span><span className="font-bold text-[#1e40af]">{paymentMethods.find(p => p.id === paymentMethod)?.label}</span></div>
-                          {!isAnonymous && form.fullName && <div className="flex justify-between"><span className="text-slate-600 font-medium">Donor</span><span className="font-bold text-[#1e40af]">{form.fullName}</span></div>}
+                          <div className="flex justify-between"><span className="text-slate-600 font-medium">Amount</span><span className="font-bold text-[#0a0a0a]">{formatAmount(finalAmount)}</span></div>
+                          <div className="flex justify-between"><span className="text-slate-600 font-medium">Frequency</span><span className="font-bold text-[#0a0a0a] capitalize">{frequency}</span></div>
+                          <div className="flex justify-between"><span className="text-slate-600 font-medium">Payment</span><span className="font-bold text-[#0a0a0a]">{paymentMethods.find(p => p.id === paymentMethod)?.label}</span></div>
+                          {!isAnonymous && form.fullName && <div className="flex justify-between"><span className="text-slate-600 font-medium">Donor</span><span className="font-bold text-[#0a0a0a]">{form.fullName}</span></div>}
                         </div>
                       </div>
 
@@ -441,7 +441,7 @@ export default function DonateWidget() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", delay: 0.2, stiffness: 250, damping: 18 }}
-                className="w-28 h-28 rounded-full bg-[#2563eb] flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-green-500/30"
+                className="w-28 h-28 rounded-full bg-[#09090b] flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-green-500/30"
               >
                 <span className="text-5xl">🎉</span>
               </motion.div>

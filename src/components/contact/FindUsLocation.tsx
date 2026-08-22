@@ -24,11 +24,11 @@ export default function FindUsLocation() {
           viewport={viewportConfig}
           className="text-center mb-14"
         >
-          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 border border-blue-200 text-royal-blue font-bold text-sm mb-4">
+          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-slate-200 text-[#f97316] font-bold text-sm mb-4">
             🗺️ Our Head Office Location
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">
-            Find Us in <span className="text-royal-blue">Enugu, Nigeria</span>
+            Find Us in <span className="text-[#f97316]">Enugu, Nigeria</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Our central headquarters is conveniently located in the heart of Enugu State. Visitors and partners are always welcome!
@@ -44,7 +44,7 @@ export default function FindUsLocation() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="lg:col-span-7 rounded-4xl overflow-hidden shadow-2xl border-4 border-white ring-1 ring-gray-200 relative min-h-[400px] bg-blue-50 flex items-center justify-center"
+            className="lg:col-span-7 rounded-4xl overflow-hidden shadow-2xl border-4 border-white ring-1 ring-gray-200 relative min-h-[400px] bg-slate-50 flex items-center justify-center"
           >
             {/* Embedded Map / Styled Map Representation */}
             <iframe
@@ -65,7 +65,7 @@ export default function FindUsLocation() {
                 <MapPinIcon size={20} />
               </div>
               <div>
-                <div className="font-heading font-bold text-royal-blue text-sm">Shoe My Feet HQ</div>
+                <div className="font-heading font-bold text-[#f97316] text-sm">Shoe My Feet HQ</div>
                 <div className="text-[11px] text-gray-600 font-body">Independence Layout, Enugu</div>
               </div>
             </div>
@@ -79,8 +79,8 @@ export default function FindUsLocation() {
             viewport={viewportConfig}
             className="lg:col-span-5 space-y-6"
           >
-            <motion.div variants={fadeUp} className="bg-[#2563eb] p-6 rounded-3xl border border-blue-100 shadow-sm">
-              <h3 className="font-heading font-bold text-xl text-royal-blue mb-2 flex items-center gap-2">
+            <motion.div variants={fadeUp} className="bg-[#09090b] p-6 rounded-3xl border border-slate-100 shadow-sm">
+              <h3 className="font-heading font-bold text-xl text-[#f97316] mb-2 flex items-center gap-2">
                 <MapPinIcon size={22} className="text-warm-orange" />
                 Office Address
               </h3>

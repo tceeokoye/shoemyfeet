@@ -21,12 +21,12 @@ export default function VolunteerFinalCTA() {
   return (
     <section
       id="volunteer-cta"
-      className="relative section-padding bg-[#2563eb] overflow-hidden"
+      className="relative section-padding bg-[#09090b] overflow-hidden"
     >
       {/* Ambient glows */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-1/3 left-1/5 w-[500px] h-[500px] rounded-full bg-[#f97316]/12 blur-[150px]" />
-        <div className="absolute bottom-1/3 right-1/5 w-[400px] h-[400px] rounded-full bg-[#38bdf8]/8 blur-[130px]" />
+        <div className="absolute bottom-1/3 right-1/5 w-[400px] h-[400px] rounded-full bg-[#f97316]/8 blur-[130px]" />
         <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-amber-400/8 blur-[100px]" />
       </div>
 
@@ -103,7 +103,7 @@ export default function VolunteerFinalCTA() {
           </h2>
 
           {/* Subtext */}
-          <p className="font-body text-blue-100/80 text-lg sm:text-xl leading-relaxed max-w-2xl mb-10">
+          <p className="font-body text-neutral-200/80 text-lg sm:text-xl leading-relaxed max-w-2xl mb-10">
             One volunteer. One child. One step. That&apos;s all it takes to begin. The children of Nigeria are waiting — and they&apos;re worth every moment you give.
           </p>
 
@@ -146,7 +146,7 @@ export default function VolunteerFinalCTA() {
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="font-heading text-2xl sm:text-3xl font-extrabold text-white">{stat.value}</p>
-                <p className="font-body text-blue-300/70 text-xs font-semibold">{stat.label}</p>
+                <p className="font-body text-orange-300/70 text-xs font-semibold">{stat.label}</p>
               </div>
             ))}
           </motion.div>

@@ -9,11 +9,11 @@ const reports = [
     title: "Annual Impact Report",
     description: "Our comprehensive 2024 impact report documenting shoe distributions, community outreach events, children's empowerment outcomes, and financial transparency.",
     icon: "📊",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
+    border: "border-slate-100",
     badge: "Full Report",
-    badgeColor: "bg-blue-100 text-blue-700",
+    badgeColor: "bg-orange-100 text-[#0a0a0a]",
   },
   {
     year: "2024",
@@ -42,7 +42,7 @@ const reports = [
     title: "Partnership Report",
     description: "An overview of our corporate and institutional partnerships, CSR outcomes, and the collective impact driven by collaboration.",
     icon: "🤝",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-purple-50",
     border: "border-purple-100",
     badge: "Partnerships",
@@ -73,7 +73,7 @@ export default function ImpactReports() {
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
           >
             Open, Accountable,{" "}
-            <span className="text-royal-blue">Transparent</span>
+            <span className="text-[#f97316]">Transparent</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -136,7 +136,7 @@ export default function ImpactReports() {
         >
           <p className="font-body text-gray-500 text-sm">
             🔒 Shoe My Feet Foundation is a{" "}
-            <span className="font-bold text-royal-blue">CAC-Registered Incorporated Trustee</span>. All reports are verified and published annually.
+            <span className="font-bold text-[#f97316]">CAC-Registered Incorporated Trustee</span>. All reports are verified and published annually.
           </p>
         </motion.div>
       </div>

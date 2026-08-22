@@ -38,7 +38,7 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs sm:text-sm font-bold mb-3 border border-blue-200"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold mb-3 border border-slate-200"
           >
             <FilterIcon size={14} className="text-warm-orange" />
             Interactive Visual Collection
@@ -71,13 +71,13 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                   className={`relative shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-heading font-bold transition-all duration-300 ${
                     isActive
                       ? "text-white shadow-md scale-105"
-                      : "bg-gray-100/90 text-gray-600 hover:bg-gray-200/90 hover:text-royal-blue"
+                      : "bg-gray-100/90 text-gray-600 hover:bg-gray-200/90 hover:text-[#f97316]"
                   }`}
                 >
                   {isActive && (
                     <motion.div
                       layoutId="activeMediaTab"
-                      className="absolute inset-0 rounded-full bg-[#2563eb]"
+                      className="absolute inset-0 rounded-full bg-[#09090b]"
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -129,7 +129,7 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                     />
 
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-[#2563eb] opacity-80 group-hover:opacity-90 transition-opacity" />
+                    <div className="absolute inset-0 bg-[#09090b] opacity-80 group-hover:opacity-90 transition-opacity" />
 
                     {/* Top Badges */}
                     <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
@@ -137,7 +137,7 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                         className={`px-3 py-1 rounded-full text-[11px] font-heading font-bold shadow-md ${
                           isVideo
                             ? "bg-warm-orange text-white"
-                            : "bg-white/90 text-royal-blue backdrop-blur-md"
+                            : "bg-white/90 text-[#f97316] backdrop-blur-md"
                         }`}
                       >
                         {isVideo ? `VIDEO · ${item.duration}` : "PHOTO"}
@@ -169,7 +169,7 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                       <div className="text-[11px] font-bold text-warm-orange uppercase tracking-wider mb-1">
                         {item.event}
                       </div>
-                      <h3 className="font-heading text-lg font-bold text-[#1a1a2e] group-hover:text-royal-blue transition-colors line-clamp-1 mb-2">
+                      <h3 className="font-heading text-lg font-bold text-[#1a1a2e] group-hover:text-[#f97316] transition-colors line-clamp-1 mb-2">
                         {item.title}
                       </h3>
                       <p className="font-body text-xs text-gray-600 line-clamp-2 leading-relaxed mb-4">
@@ -182,7 +182,7 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                         <CalendarIcon size={13} className="text-gray-400" />
                         {item.date}
                       </span>
-                      <span className="font-bold text-royal-blue group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                      <span className="font-bold text-[#f97316] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                         {isVideo ? "Watch Video" : "View Photo"} →
                       </span>
                     </div>

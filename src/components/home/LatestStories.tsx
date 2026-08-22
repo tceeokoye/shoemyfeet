@@ -14,8 +14,8 @@ const posts = [
     date: "June 2024",
     readTime: "5 min read",
     emoji: "📖",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ const posts = [
 
 export default function LatestStories() {
   return (
-    <section className="section-padding bg-[#2563eb] overflow-hidden">
+    <section className="section-padding bg-[#09090b] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -59,14 +59,14 @@ export default function LatestStories() {
               Latest Stories
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e]">
-              Field Notes & <span className="text-royal-blue">Impact News</span>
+              Field Notes & <span className="text-[#f97316]">Impact News</span>
             </motion.h2>
           </div>
 
           <motion.div variants={fadeUp}>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-[#2563eb] text-royal-blue font-bold text-sm hover:bg-[#2563eb] hover:text-white transition-all font-body whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-[#09090b] text-[#f97316] font-bold text-sm hover:bg-[#09090b] hover:text-white transition-all font-body whitespace-nowrap"
             >
               <span>View All Stories</span>
               <ArrowRightIcon size={15} />
@@ -117,7 +117,7 @@ export default function LatestStories() {
                     </span>
                   </div>
 
-                  <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-3 group-hover:text-royal-blue transition-colors leading-snug">
+                  <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-3 group-hover:text-[#f97316] transition-colors leading-snug">
                     {post.title}
                   </h3>
 
@@ -131,7 +131,7 @@ export default function LatestStories() {
               <div className="px-6 pb-6 pt-0">
                 <Link
                   href="/blog"
-                  className="inline-flex items-center gap-1.5 text-sm font-bold text-royal-blue group-hover: text-warm-orange-dark transition-colors font-body group/link"
+                  className="inline-flex items-center gap-1.5 text-sm font-bold text-[#f97316] group-hover: text-warm-orange-dark transition-colors font-body group/link"
                 >
                   <span>Read Full Story</span>
                   <ArrowRightIcon size={15} className="group-hover/link:translate-x-1 transition-transform" />

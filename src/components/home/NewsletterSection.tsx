@@ -22,18 +22,18 @@ export default function NewsletterSection() {
       <div className="max-w-4xl mx-auto">
         
         <motion.div
-          className="relative bg-[#2563eb] rounded-3xl p-8 sm:p-14 text-center text-white overflow-hidden shadow-2xl"
+          className="relative bg-[#09090b] rounded-3xl p-8 sm:p-14 text-center text-white overflow-hidden shadow-2xl"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
         >
           {/* Background Ambient Orbs */}
-          <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-blue-400/10 blur-3xl" />
+          <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-slate-800/10 blur-3xl" />
           <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-orange-500/10 blur-3xl" />
 
           <div className="relative z-10 max-w-xl mx-auto">
-            <motion.div variants={fadeUp} className="w-14 h-14 rounded-2xl bg-[#2563eb] flex items-center justify-center text-2xl mx-auto mb-6 shadow-lg">
+            <motion.div variants={fadeUp} className="w-14 h-14 rounded-2xl bg-[#09090b] flex items-center justify-center text-2xl mx-auto mb-6 shadow-lg">
               ✉️
             </motion.div>
 
@@ -41,7 +41,7 @@ export default function NewsletterSection() {
               Stay Connected to <span className="text-warm-orange">Our Mission</span>
             </motion.h2>
 
-            <motion.p variants={fadeUp} className="text-blue-200 font-body text-sm sm:text-base mb-8 leading-relaxed">
+            <motion.p variants={fadeUp} className="text-neutral-300 font-body text-sm sm:text-base mb-8 leading-relaxed">
               Receive quarterly impact updates, heartwarming outreach stories, and announcements directly in your inbox.
             </motion.p>
 
@@ -55,7 +55,7 @@ export default function NewsletterSection() {
                   <CheckCircle2Icon size={20} />
                   <span>Thank you for subscribing!</span>
                 </div>
-                <p className="text-xs text-blue-200 font-body">
+                <p className="text-xs text-neutral-300 font-body">
                   Welcome to the Shoe My Feet Foundation family.
                 </p>
               </motion.div>
@@ -89,7 +89,7 @@ export default function NewsletterSection() {
               </motion.form>
             )}
 
-            <motion.p variants={fadeUp} className="text-[11px] text-blue-300/80 font-body mt-4">
+            <motion.p variants={fadeUp} className="text-[11px] text-orange-300/80 font-body mt-4">
               We respect your privacy. Unsubscribe at any time.
             </motion.p>
           </div>

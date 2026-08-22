@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white text-[#1a1a2e] flex flex-col font-sans selection:bg-[#fbbf24] selection:text-royal-blue">
+    <div className="min-h-screen bg-white text-[#1a1a2e] flex flex-col font-sans selection:bg-[#fbbf24] selection:text-[#f97316]">
       {/* Global Navbar */}
       <Navbar />
 

@@ -29,7 +29,7 @@ export default function VolunteerOpportunities() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs sm:text-sm font-bold border border-blue-200 mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold border border-slate-200 mb-4"
           >
             Find Your Role
           </motion.span>
@@ -38,7 +38,7 @@ export default function VolunteerOpportunities() {
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
           >
             Volunteer{" "}
-            <span className="text-royal-blue">Opportunities</span>
+            <span className="text-[#f97316]">Opportunities</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -125,7 +125,7 @@ export default function VolunteerOpportunities() {
                         {role.commitment}
                       </span>
                       <span className="flex items-center gap-1.5">
-                        <MapPinIcon size={12} className="text-royal-blue" />
+                        <MapPinIcon size={12} className="text-[#f97316]" />
                         {role.location}
                       </span>
                     </div>
@@ -135,7 +135,7 @@ export default function VolunteerOpportunities() {
                       {role.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="px-2.5 py-1 rounded-full bg-blue-100/80 text-[#1e40af] text-xs font-bold font-body border border-blue-200"
+                          className="px-2.5 py-1 rounded-full bg-orange-100/80 text-[#0a0a0a] text-xs font-bold font-body border border-slate-200"
                         >
                           {skill}
                         </span>

@@ -7,11 +7,11 @@ import { HeartIcon, ArrowRightIcon } from "@/components/ui/Icons";
 
 export default function ProgramsCTA() {
   return (
-    <section className="section-padding bg-[#2563eb] overflow-hidden relative">
+    <section className="section-padding bg-[#09090b] overflow-hidden relative">
       {/* Glowing backgrounds */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full bg-[#f97316]/15 blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-[#38bdf8]/12 blur-[140px]" />
+        <div className="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-[#f97316]/12 blur-[140px]" />
       </div>
 
       {/* Animated footprint trail decorations */}
@@ -80,7 +80,7 @@ export default function ProgramsCTA() {
 
           <motion.p
             variants={fadeUp}
-            className="text-blue-100/90 text-lg sm:text-xl font-body leading-relaxed max-w-2xl mb-10"
+            className="text-neutral-200/90 text-lg sm:text-xl font-body leading-relaxed max-w-2xl mb-10"
           >
             Your generosity helps children walk confidently toward education, health,
             and a brighter future. Every contribution — no matter the size — leaves a lasting footprint.

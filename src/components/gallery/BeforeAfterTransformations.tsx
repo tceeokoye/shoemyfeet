@@ -77,7 +77,7 @@ function ComparisonSlider({ item }: { item: TransformationItem }) {
         className="absolute top-0 bottom-0 w-1 bg-white shadow-2xl z-20 pointer-events-none"
         style={{ left: `${sliderPosition}%` }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white text-royal-blue shadow-2xl flex items-center justify-center border-2 border-warm-orange">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white text-[#f97316] shadow-2xl flex items-center justify-center border-2 border-warm-orange">
           <SlidersIcon size={16} />
         </div>
       </div>
@@ -139,7 +139,7 @@ export default function BeforeAfterTransformations({ onPlayVideo }: BeforeAfterT
                 {/* Child Details & Story */}
                 <div className="mt-6">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-heading text-xl font-bold text-royal-blue">
+                    <h3 className="font-heading text-xl font-bold text-[#f97316]">
                       {item.childName}, Age {item.age}
                     </h3>
                     <span className="text-xs font-semibold text-gray-500 bg-white px-2.5 py-1 rounded-full border border-gray-200">

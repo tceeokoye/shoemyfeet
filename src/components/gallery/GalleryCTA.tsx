@@ -15,11 +15,11 @@ const leadingFootprints = [
 
 export default function GalleryCTA() {
   return (
-    <section className="section-padding bg-[#2563eb] text-white relative overflow-hidden">
+    <section className="section-padding bg-[#09090b] text-white relative overflow-hidden">
       {/* Background Orbs */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-orange-500/10 blur-[150px]" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-blue-400/10 blur-[150px]" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-slate-800/10 blur-[150px]" />
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -51,7 +51,7 @@ export default function GalleryCTA() {
           {/* Supporting text */}
           <motion.p
             variants={fadeUp}
-            className="text-base sm:text-xl text-blue-100/95 font-body leading-relaxed max-w-3xl mx-auto mb-10"
+            className="text-base sm:text-xl text-neutral-200/95 font-body leading-relaxed max-w-3xl mx-auto mb-10"
           >
             These moments are made possible by generous supporters, dedicated volunteers, and caring partners. Join us in creating even more life-changing memories.
           </motion.p>

@@ -82,7 +82,7 @@ export default function WhyVolunteer() {
 
         {/* Bottom quote strip */}
         <motion.div
-          className="mt-16 rounded-3xl bg-[#2563eb] p-8 sm:p-10 text-center relative overflow-hidden"
+          className="mt-16 rounded-3xl bg-[#09090b] p-8 sm:p-10 text-center relative overflow-hidden"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -90,14 +90,14 @@ export default function WhyVolunteer() {
         >
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#f97316]/10 blur-[100px]" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#38bdf8]/8 blur-[100px]" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#f97316]/8 blur-[100px]" />
           </div>
           <div className="relative z-10">
             <div className="text-4xl mb-4">❤️</div>
             <p className="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-relaxed max-w-3xl mx-auto">
               "Volunteers don't get paid — not because they're worthless, but because they're <span className="text-warm-orange">priceless</span>."
             </p>
-            <p className="font-body text-blue-300 mt-4 text-sm font-semibold">— Sherry Anderson</p>
+            <p className="font-body text-orange-300 mt-4 text-sm font-semibold">— Sherry Anderson</p>
           </div>
         </motion.div>
       </div>

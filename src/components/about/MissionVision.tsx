@@ -7,12 +7,12 @@ const cards = [
   {
     label: "Our Mission",
     icon: "🎯",
-    gradient: "bg-[#2563eb]",
-    border: "border-blue-200 hover:border-blue-400",
-    bg: "bg-blue-50/60",
+    gradient: "bg-[#09090b]",
+    border: "border-slate-200 hover:border-slate-300",
+    bg: "bg-slate-50/60",
     text: "To provide quality school shoes that protect children's health, restore their dignity, and empower them to pursue education, confidence, and brighter futures without physical or social barriers.",
     tag: "What Drives Us Daily",
-    tagColor: "bg-blue-100 text-royal-blue",
+    tagColor: "bg-orange-100 text-[#f97316]",
   },
   {
     label: "Our Vision",

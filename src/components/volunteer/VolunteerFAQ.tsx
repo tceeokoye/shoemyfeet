@@ -91,7 +91,7 @@ export default function VolunteerFAQ() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs sm:text-sm font-bold border border-blue-200 mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold border border-slate-200 mb-4"
           >
             Frequently Asked Questions
           </motion.span>
@@ -154,7 +154,7 @@ export default function VolunteerFAQ() {
 
         {/* Still have questions */}
         <motion.div
-          className="mt-12 text-center rounded-3xl bg-[#2563eb] p-8 relative overflow-hidden"
+          className="mt-12 text-center rounded-3xl bg-[#09090b] p-8 relative overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -162,12 +162,12 @@ export default function VolunteerFAQ() {
         >
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-orange-400/10 blur-[80px]" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-blue-400/8 blur-[80px]" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-slate-800/8 blur-[80px]" />
           </div>
           <div className="relative z-10">
             <div className="text-3xl mb-3">💬</div>
             <h3 className="font-heading text-xl font-bold text-white mb-2">Still Have Questions?</h3>
-            <p className="font-body text-blue-200/80 text-sm mb-5">
+            <p className="font-body text-neutral-300/80 text-sm mb-5">
               Our volunteer team responds within 24 hours. Don't hesitate to reach out!
             </p>
             <a href="/contact" className="btn-orange inline-flex items-center gap-2 px-6 py-3 text-sm">

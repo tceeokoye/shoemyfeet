@@ -17,7 +17,7 @@ export default function SuccessStories() {
   const story = STORIES[activeIndex];
 
   return (
-    <section className="section-padding bg-[#2563eb] overflow-hidden">
+    <section className="section-padding bg-[#09090b] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -52,7 +52,7 @@ export default function SuccessStories() {
             >
               {/* Image Side */}
               <div className="lg:col-span-5 relative">
-                <div className="absolute inset-0 bg-[#2563eb] rounded-3xl blur-2xl scale-105" />
+                <div className="absolute inset-0 bg-[#09090b] rounded-3xl blur-2xl scale-105" />
                 <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white">
                   <Image
                     src={`/images/story${(activeIndex % 2) + 1}.jpg`}
@@ -61,7 +61,7 @@ export default function SuccessStories() {
                     height={400}
                     className="w-full h-72 sm:h-80 object-cover"
                   />
-                  <div className="absolute inset-0 bg-[#2563eb]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <span className="glass px-3 py-1 rounded-full text-white text-xs font-bold font-body border border-white/30">
                       {story.year} · {story.location}
@@ -82,7 +82,7 @@ export default function SuccessStories() {
                   </blockquote>
 
                   <div>
-                    <h4 className="font-heading font-bold text-xl text-royal-blue">{story.name}</h4>
+                    <h4 className="font-heading font-bold text-xl text-[#f97316]">{story.name}</h4>
                     <p className="text-sm text-gray-500 font-body">{story.role} · {story.location}</p>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export default function SuccessStories() {
                   <div className="flex items-center gap-3">
                     <button
                       onClick={prev}
-                      className="w-11 h-11 rounded-full border-2 border-gray-200 hover:border-[#2563eb] hover:bg-[#2563eb] hover:text-white text-gray-700 flex items-center justify-center transition-all"
+                      className="w-11 h-11 rounded-full border-2 border-gray-200 hover:border-[#09090b] hover:bg-[#09090b] hover:text-white text-gray-700 flex items-center justify-center transition-all"
                       aria-label="Previous story"
                     >
                       <ChevronLeftIcon size={20} />
@@ -114,7 +114,7 @@ export default function SuccessStories() {
 
                     <button
                       onClick={next}
-                      className="w-11 h-11 rounded-full border-2 border-gray-200 hover:border-[#2563eb] hover:bg-[#2563eb] hover:text-white text-gray-700 flex items-center justify-center transition-all"
+                      className="w-11 h-11 rounded-full border-2 border-gray-200 hover:border-[#09090b] hover:bg-[#09090b] hover:text-white text-gray-700 flex items-center justify-center transition-all"
                       aria-label="Next story"
                     >
                       <ChevronRightIcon size={20} />
@@ -124,7 +124,7 @@ export default function SuccessStories() {
                   {/* Read Story Link */}
                   <Link
                     href="/blog"
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-royal-blue hover: text-warm-orange-dark transition-colors font-body group"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#f97316] hover: text-warm-orange-dark transition-colors font-body group"
                   >
                     <span>Read Story</span>
                     <ArrowRightIcon size={15} className="group-hover:translate-x-1 transition-transform" />

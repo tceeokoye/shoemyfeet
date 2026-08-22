@@ -29,7 +29,7 @@ export default function ProgramsHero() {
       {/* Ambient glows */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full bg-[#f97316]/15 blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/6 w-[450px] h-[450px] rounded-full bg-[#38bdf8]/12 blur-[140px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/6 w-[450px] h-[450px] rounded-full bg-[#f97316]/12 blur-[140px] animate-pulse" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-emerald-400/8 blur-[160px]" />
       </div>
 
@@ -95,7 +95,7 @@ export default function ProgramsHero() {
           {/* Subtext */}
           <motion.p
             variants={fadeUp}
-            className="text-blue-100/95 text-lg sm:text-xl lg:text-2xl font-body leading-relaxed max-w-3xl mb-10"
+            className="text-neutral-200/95 text-lg sm:text-xl lg:text-2xl font-body leading-relaxed max-w-3xl mb-10"
           >
             Discover the programs through which Shoe My Feet Foundation brings hope, dignity, and opportunity
             to children by providing proper footwear and community support.

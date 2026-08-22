@@ -20,14 +20,14 @@ export default function NewsletterSection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[#2563eb]" />
+      <div className="absolute inset-0 bg-[#09090b]" />
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-blue-500/15 animate-blob-slow" />
+        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-black/15 animate-blob-slow" />
         <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-orange-500/15 animate-blob" />
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-5"
           style={{
-            backgroundColor: "#2563eb",
+            backgroundColor: "#f97316",
             backgroundSize: "48px 48px"
           }}
         />
@@ -50,7 +50,7 @@ export default function NewsletterSection() {
             <span className="text-warm-orange">Our Mission</span>
           </motion.h2>
 
-          <motion.p variants={fadeUp} className="text-blue-200 font-body mb-8 leading-relaxed">
+          <motion.p variants={fadeUp} className="text-neutral-300 font-body mb-8 leading-relaxed">
             Get impact reports, outreach stories, volunteer opportunities, and updates
             on how your support is changing children&apos;s lives across Nigeria.
           </motion.p>
@@ -63,7 +63,7 @@ export default function NewsletterSection() {
             >
               <span className="text-4xl mb-3 block">🎉</span>
               <p className="font-heading font-bold text-white text-xl">Thank you!</p>
-              <p className="text-blue-200 font-body text-sm mt-2">
+              <p className="text-neutral-300 font-body text-sm mt-2">
                 You&apos;re now part of our community. Welcome to the Shoe My Feet family!
               </p>
             </motion.div>
@@ -96,7 +96,7 @@ export default function NewsletterSection() {
             </motion.form>
           )}
 
-          <motion.p variants={fadeUp} className="text-blue-400 font-body text-xs mt-4">
+          <motion.p variants={fadeUp} className="text-orange-400 font-body text-xs mt-4">
             No spam, ever. Unsubscribe anytime. We respect your privacy.
           </motion.p>
         </motion.div>

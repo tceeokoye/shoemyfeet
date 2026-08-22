@@ -25,7 +25,7 @@ export default function ContactNewsletter() {
     <section className="section-padding bg-white relative overflow-hidden" aria-label="Newsletter invitation">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="bg-[#2563eb] rounded-4xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+        <div className="bg-[#09090b] rounded-4xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
           
           {/* Background Ambient Circles */}
           <div className="absolute top-0 right-0 w-80 h-80 rounded-full opacity-20 bg-white blur-3xl pointer-events-none" />
@@ -74,7 +74,7 @@ export default function ContactNewsletter() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="px-6 py-3.5 rounded-2xl bg-[#1e40af] text-white font-bold font-body text-sm hover:bg-[#2563eb] transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                    className="px-6 py-3.5 rounded-2xl bg-[#09090b] text-white font-bold font-body text-sm hover:bg-[#09090b] transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                   >
                     {loading ? (
                       <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />

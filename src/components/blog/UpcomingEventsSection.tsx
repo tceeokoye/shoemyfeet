@@ -94,11 +94,11 @@ export default function UpcomingEventsSection({ onRSVPClick }: UpcomingEventsPro
                 {/* Image Cover & Live Countdown */}
                 <div className="relative h-48 overflow-hidden">
                   <Image src={event.coverImage} alt={event.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-[#2563eb]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
                   {/* Category & State Overlay */}
                   <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#2563eb] font-bold text-xs shadow-md">
+                    <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#f97316] font-bold text-xs shadow-md">
                       {event.state}
                     </span>
                   </div>
@@ -128,7 +128,7 @@ export default function UpcomingEventsSection({ onRSVPClick }: UpcomingEventsPro
 
                   {/* Location & Map Link */}
                   <div className="flex items-start gap-2 text-xs font-body text-gray-600 mb-4">
-                    <MapPinIcon size={16} className="text-royal-blue shrink-0 mt-0.5" />
+                    <MapPinIcon size={16} className="text-[#f97316] shrink-0 mt-0.5" />
                     <span>
                       {event.location} (
                       <a href={event.mapUrl} target="_blank" rel="noopener noreferrer" className="text-warm-orange hover:underline font-bold">

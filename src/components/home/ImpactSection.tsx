@@ -54,7 +54,7 @@ export default function ImpactSection() {
     <section className="bg-[#09090b] border-y border-white/10 text-white relative overflow-hidden">
       {/* Subtle Glow */}
       <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-60 h-60 bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-60 h-60 bg-black/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-2 sm:grid-cols-4 divide-x-0 sm:divide-x divide-white/10">

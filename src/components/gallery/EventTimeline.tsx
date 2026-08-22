@@ -16,7 +16,7 @@ export default function EventTimeline({ onPlayVideo }: EventTimelineProps) {
       {/* Background Glow Orbs */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-1/3 left-10 w-96 h-96 rounded-full bg-orange-500/10 blur-[150px]" />
-        <div className="absolute bottom-1/3 right-10 w-96 h-96 rounded-full bg-blue-500/5 blur-[150px]" />
+        <div className="absolute bottom-1/3 right-10 w-96 h-96 rounded-full bg-black/5 blur-[150px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -55,7 +55,7 @@ export default function EventTimeline({ onPlayVideo }: EventTimelineProps) {
         {/* Timeline Path */}
         <div className="relative">
           {/* Center Vertical Line */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#2563eb] -translate-x-1/2 rounded-full opacity-40" />
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#09090b] -translate-x-1/2 rounded-full opacity-40" />
 
           <div className="space-y-12 lg:space-y-16">
             {TIMELINE_EVENTS.map((event, idx) => {
@@ -82,7 +82,7 @@ export default function EventTimeline({ onPlayVideo }: EventTimelineProps) {
                         className="object-cover group-hover:scale-105 transition-transform duration-700"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
-                      <div className="absolute inset-0 bg-[#2563eb]" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
                       {/* Video Play Trigger Overlay */}
                       {event.mediaType === "video" && onPlayVideo && (
@@ -116,7 +116,7 @@ export default function EventTimeline({ onPlayVideo }: EventTimelineProps) {
                         </span>
                       </div>
 
-                      <div className="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between text-xs text-blue-200 font-body">
+                      <div className="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between text-xs text-neutral-300 font-body">
                         <span className="flex items-center gap-1">
                           <MapPinIcon size={12} className="text-warm-orange" />
                           {event.location}
@@ -146,7 +146,7 @@ export default function EventTimeline({ onPlayVideo }: EventTimelineProps) {
                         {event.title}
                       </h3>
 
-                      <p className="font-body text-sm text-blue-100/90 leading-relaxed mb-4">
+                      <p className="font-body text-sm text-neutral-200/90 leading-relaxed mb-4">
                         {event.description}
                       </p>
 

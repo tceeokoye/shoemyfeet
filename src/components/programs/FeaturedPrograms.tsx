@@ -11,7 +11,7 @@ const programs = [
     id: "shoe-distribution",
     title: "Shoe Distribution Initiative",
     tagline: "Core Program",
-    tagColor: "bg-blue-100 text-royal-blue border-blue-200",
+    tagColor: "bg-orange-100 text-[#f97316] border-slate-200",
     icon: "👟",
     image: "/images/distribution.jpg",
     description:
@@ -22,8 +22,8 @@ const programs = [
       "Ensure proper fitting for every child",
       "Reduce school absenteeism due to lack of footwear",
     ],
-    accentColor: "bg-[#2563eb]",
-    topBar: "bg-[#2563eb]",
+    accentColor: "bg-[#09090b]",
+    topBar: "bg-[#09090b]",
     href: "/donate",
     cta: "Support This Program",
   },
@@ -82,8 +82,8 @@ const programs = [
       "Train school staff on distribution protocols",
       "Track and report impact data from each partner school",
     ],
-    accentColor: "bg-[#2563eb]",
-    topBar: "bg-[#2563eb]",
+    accentColor: "bg-[#09090b]",
+    topBar: "bg-[#09090b]",
     href: "/contact",
     cta: "Partner With Us",
   },
@@ -177,7 +177,7 @@ function ProgramCard({ program, index }: { program: typeof programs[0]; index: n
         <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">
           {program.title}
         </h3>
-        <p className="font-body text-blue-100/90 text-base leading-relaxed mb-6">
+        <p className="font-body text-neutral-200/90 text-base leading-relaxed mb-6">
           {program.description}
         </p>
 
@@ -186,7 +186,7 @@ function ProgramCard({ program, index }: { program: typeof programs[0]; index: n
           {program.objectives.map((obj) => (
             <div key={obj} className="flex items-start gap-3">
               <CheckCircleIcon size={18} className="text-emerald-400 shrink-0 mt-0.5" />
-              <p className="font-body text-blue-100 text-sm">{obj}</p>
+              <p className="font-body text-neutral-200 text-sm">{obj}</p>
             </div>
           ))}
         </div>

@@ -34,9 +34,9 @@ const benefits = [
     description:
       "Lack of required footwear leads to school expulsion, shame, or missing classes due to foot injuries. Providing shoes increases regular attendance by over 30%.",
     stat: "+30% Attendance",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
-    border: "border-blue-100 hover:border-blue-300",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
+    border: "border-slate-100 hover:border-slate-200",
   },
   {
     icon: "✨",
@@ -45,7 +45,7 @@ const benefits = [
     description:
       "Wearing clean, fitted school shoes inspires pride and self-assurance. Children participate more eagerly in classroom activities and sports without feeling inferior.",
     stat: "High Self-Worth",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-purple-50",
     border: "border-purple-100 hover:border-purple-300",
   },
@@ -104,7 +104,7 @@ export default function WhyShoesMatterAbout() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs sm:text-sm font-bold font-body mb-3 border border-blue-200"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold font-body mb-3 border border-slate-200"
           >
             Why Shoes Matter
           </motion.span>
@@ -112,7 +112,7 @@ export default function WhyShoesMatterAbout() {
             variants={fadeUp}
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
           >
-            More Than Footwear — A Gateway to <span className="text-royal-blue">Life Transformation</span>
+            More Than Footwear — A Gateway to <span className="text-[#f97316]">Life Transformation</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}

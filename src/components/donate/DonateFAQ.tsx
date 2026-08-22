@@ -53,7 +53,7 @@ export default function DonateFAQ() {
 
   return (
     <section className="section-padding bg-[#f8fafc] relative overflow-hidden" aria-label="Frequently asked questions">
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#2563eb]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-[#09090b]" />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -63,7 +63,7 @@ export default function DonateFAQ() {
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-5">
             Frequently Asked{" "}
-            <span className="text-royal-blue">Questions</span>
+            <span className="text-[#f97316]">Questions</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
             Everything you need to know about donating to Shoe My Feet Foundation, safely, securely, and transparently.
@@ -85,28 +85,28 @@ export default function DonateFAQ() {
                 key={index}
                 variants={fadeUp}
                 className={`rounded-2xl border transition-all overflow-hidden ${
-                  isOpen ? "border-royal-blue/30 shadow-md shadow-blue-900/8" : "border-gray-100 bg-white shadow-sm"
+                  isOpen ? "border-[#09090b]/30 shadow-md shadow-blue-900/8" : "border-gray-100 bg-white shadow-sm"
                 }`}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className={`w-full flex items-start gap-4 px-5 py-4 text-left transition-colors cursor-pointer ${
-                    isOpen ? "bg-[#2563eb]" : "bg-white hover:bg-gray-50"
+                    isOpen ? "bg-[#09090b]" : "bg-white hover:bg-gray-50"
                   }`}
                   aria-expanded={isOpen}
                 >
                   <span className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-bold transition-colors ${
-                    isOpen ? "bg-royal-blue text-white" : "bg-gray-100 text-gray-500"
+                    isOpen ? "bg-[#09090b] text-white" : "bg-gray-100 text-gray-500"
                   }`}>
                     {index + 1}
                   </span>
-                  <span className={`flex-1 font-body font-bold text-sm sm:text-base ${isOpen ? "text-royal-blue" : "text-[#1a1a2e]"}`}>
+                  <span className={`flex-1 font-body font-bold text-sm sm:text-base ${isOpen ? "text-[#f97316]" : "text-[#1a1a2e]"}`}>
                     {faq.q}
                   </span>
                   <motion.div
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.25 }}
-                    className={`flex-shrink-0 mt-0.5 ${isOpen ? "text-royal-blue" : "text-gray-400"}`}
+                    className={`flex-shrink-0 mt-0.5 ${isOpen ? "text-[#f97316]" : "text-gray-400"}`}
                   >
                     <ChevronDownIcon size={18} />
                   </motion.div>
@@ -137,7 +137,7 @@ export default function DonateFAQ() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="mt-10 p-6 rounded-3xl bg-[#2563eb] border border-orange-100 text-center"
+          className="mt-10 p-6 rounded-3xl bg-[#09090b] border border-orange-100 text-center"
         >
           <p className="font-body text-gray-600 mb-4">Still have questions? Our team is here to help.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

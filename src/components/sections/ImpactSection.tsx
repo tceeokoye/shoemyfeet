@@ -13,8 +13,8 @@ const metrics = [
     label: "Pairs of School Shoes",
     sublabel: "Distributed to children in need",
     icon: "👟",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
   },
   {
     value: 18,
@@ -43,7 +43,7 @@ const metrics = [
     label: "Nigerian States",
     sublabel: "And growing",
     icon: "🗺️",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-purple-50",
   },
   {
@@ -63,8 +63,8 @@ const metrics = [
     label: "Years of Impact",
     sublabel: "Since our founding in 2022",
     icon: "📅",
-    color: "bg-[#2563eb]",
-    bg: "bg-sky-50",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-100",
   },
 ];
 
@@ -110,11 +110,11 @@ function MetricCard({ metric, index }: { metric: typeof metrics[0]; index: numbe
 
 export default function ImpactSection() {
   return (
-    <section id="impact" className="section-padding bg-[#2563eb] overflow-hidden relative">
+    <section id="impact" className="section-padding bg-[#09090b] overflow-hidden relative">
 
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-blue-500/10 animate-blob-slow" />
+        <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-black/10 animate-blob-slow" />
         <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-orange-500/10 animate-blob" />
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -149,7 +149,7 @@ export default function ImpactSection() {
             Numbers That Tell a{" "}
             <span className="text-warm-orange">Story of Hope</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-lg text-blue-200 font-body leading-relaxed">
+          <motion.p variants={fadeUp} className="text-lg text-neutral-300 font-body leading-relaxed">
             Every number represents a real child, a real family, a real community
             whose lives have been touched by the power of a simple pair of shoes.
           </motion.p>
@@ -178,7 +178,7 @@ export default function ImpactSection() {
         >
           <div className="text-center mb-6">
             <h3 className="font-heading text-2xl font-bold text-white mb-2">Geographic Reach</h3>
-            <p className="text-blue-200 font-body text-sm">States where Shoe My Feet Foundation has made an impact</p>
+            <p className="text-neutral-300 font-body text-sm">States where Shoe My Feet Foundation has made an impact</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {[
@@ -194,7 +194,7 @@ export default function ImpactSection() {
               >
                 <span className="text-2xl mb-2 block">{item.emoji}</span>
                 <h4 className="font-heading font-bold text-white text-base">{item.state}</h4>
-                <p className="text-blue-300 text-xs font-body mt-1">{item.detail}</p>
+                <p className="text-orange-300 text-xs font-body mt-1">{item.detail}</p>
               </motion.div>
             ))}
           </div>
@@ -204,7 +204,7 @@ export default function ImpactSection() {
             whileInView={{ opacity: 1 }}
             viewport={viewportConfig}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-blue-200 text-sm font-body">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-neutral-300 text-sm font-body">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               Actively expanding to more Nigerian states
             </div>

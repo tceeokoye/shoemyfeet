@@ -19,7 +19,7 @@ const footprintPositions = [
 
 const floatingStats = [
   { label: "Active Volunteers", value: "480+", icon: "🙋", color: "bg-[#f97316]" },
-  { label: "Hours Contributed", value: "24K+", icon: "⏱️", color: "bg-[#2563eb]" },
+  { label: "Hours Contributed", value: "24K+", icon: "⏱️", color: "bg-[#09090b]" },
   { label: "Communities Served", value: "62+", icon: "🏘️", color: "bg-[#15803d]" },
 ];
 
@@ -46,7 +46,7 @@ export default function VolunteerHero() {
       {/* Ambient glow overlays */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-1/4 left-1/5 w-[500px] h-[500px] rounded-full bg-[#f97316]/15 blur-[140px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/5 w-[400px] h-[400px] rounded-full bg-[#38bdf8]/10 blur-[130px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/5 w-[400px] h-[400px] rounded-full bg-[#f97316]/10 blur-[130px] animate-pulse" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#fbbf24]/5 blur-[180px]" />
       </div>
 
@@ -133,7 +133,7 @@ export default function VolunteerHero() {
           {/* Subtext */}
           <motion.p
             variants={fadeUp}
-            className="text-blue-100/90 text-lg sm:text-xl lg:text-2xl font-body leading-relaxed max-w-3xl mb-12"
+            className="text-neutral-200/90 text-lg sm:text-xl lg:text-2xl font-body leading-relaxed max-w-3xl mb-12"
           >
             Join a community of passionate changemakers who give their time, skills, and heart to put shoes on the feet of children who deserve to walk tall and dream big.
           </motion.p>

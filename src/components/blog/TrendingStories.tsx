@@ -34,11 +34,11 @@ export default function TrendingStories({ articles, onReadStory }: TrendingStori
   const trendingList = getFilteredArticles();
 
   return (
-    <section className="mb-16 bg-[#2563eb] p-6 sm:p-10 rounded-3xl border border-blue-100/80 relative overflow-hidden">
+    <section className="mb-16 bg-[#09090b] p-6 sm:p-10 rounded-3xl border border-slate-100/80 relative overflow-hidden">
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-gray-200/60 pb-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/80 text-royal-blue text-xs font-bold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100/80 text-[#f97316] text-xs font-bold uppercase tracking-wider mb-2">
             <TrendingUpIcon size={14} className="text-warm-orange" />
             <span>Popular & Essential Reads</span>
           </div>
@@ -63,13 +63,13 @@ export default function TrendingStories({ articles, onReadStory }: TrendingStori
                 type="button"
                 onClick={() => setActiveTab(tab.id as FilterCriterion)}
                 className={`relative px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5 ${
-                  isActive ? "text-white shadow-md" : "text-gray-600 hover:text-[#2563eb]"
+                  isActive ? "text-white shadow-md" : "text-gray-600 hover:text-[#f97316]"
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="trendingTabBackground"
-                    className="absolute inset-0 rounded-full bg-[#2563eb]"
+                    className="absolute inset-0 rounded-full bg-[#09090b]"
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 )}
@@ -112,7 +112,7 @@ export default function TrendingStories({ articles, onReadStory }: TrendingStori
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover group-hover:scale-108 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-[#2563eb]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
                   {/* Rank badge */}
                   <span className="absolute top-3 left-3 w-8 h-8 rounded-full bg-[#f97316] text-white font-heading font-bold text-xs flex items-center justify-center shadow-lg border border-white/40">
@@ -128,7 +128,7 @@ export default function TrendingStories({ articles, onReadStory }: TrendingStori
                 <div className="p-5">
                   <div className="flex items-center justify-between text-[11px] font-body text-gray-500 mb-2">
                     <span>{article.publishedAt}</span>
-                    <span className="flex items-center gap-1 font-semibold text-royal-blue">
+                    <span className="flex items-center gap-1 font-semibold text-[#f97316]">
                       <EyeIcon size={12} /> {(article.viewsCount / 1000).toFixed(1)}k
                     </span>
                   </div>
@@ -148,7 +148,7 @@ export default function TrendingStories({ articles, onReadStory }: TrendingStori
                 <button
                   type="button"
                   onClick={() => onReadStory(article)}
-                  className="w-full py-2 px-4 rounded-xl bg-blue-50 text-[#2563eb] hover:bg-[#2563eb] hover:text-white font-bold text-xs transition-all duration-300 inline-flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full py-2 px-4 rounded-xl bg-slate-50 text-[#f97316] hover:bg-[#09090b] hover:text-white font-bold text-xs transition-all duration-300 inline-flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <span>Read Story</span>
                   <ArrowRightIcon size={13} />

@@ -44,7 +44,7 @@ export default function ShareYourStory({ onOpenUpload }: ShareYourStoryProps) {
           {/* Supporting text */}
           <motion.p
             variants={fadeUp}
-            className="text-base sm:text-xl text-blue-100/90 font-body leading-relaxed max-w-2xl mx-auto mb-8"
+            className="text-base sm:text-xl text-neutral-200/90 font-body leading-relaxed max-w-2xl mx-auto mb-8"
           >
             If you attended one of our outreach events, share your photos or videos and help inspire others to join the mission.
           </motion.p>

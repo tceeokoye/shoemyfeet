@@ -21,10 +21,10 @@ const footprintTrail = [
 
 export default function ContactFinalCTA() {
   return (
-    <section className="relative section-padding bg-[#1e40af] text-white overflow-hidden" aria-label="Final call to action">
+    <section className="relative section-padding bg-[#09090b] text-white overflow-hidden" aria-label="Final call to action">
       {/* Background layers */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl bg-blue-400" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl bg-slate-800" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full opacity-10 blur-3xl bg-orange-400" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-5 blur-3xl bg-white" />
 
@@ -88,7 +88,7 @@ export default function ContactFinalCTA() {
             <span className="text-warm-orange">a Child&apos;s Future</span>
           </motion.h2>
 
-          <motion.p variants={fadeUp} className="text-blue-200 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          <motion.p variants={fadeUp} className="text-neutral-300 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Whether you&apos;re reaching out to ask a question, offer support, volunteer your time, or partner with us, we&apos;re excited to connect with you. Together, we can ensure every child walks confidently toward a brighter future.
           </motion.p>
 
@@ -107,7 +107,7 @@ export default function ContactFinalCTA() {
             </Link>
           </motion.div>
 
-          <motion.p variants={fadeUp} className="text-xs text-blue-400 font-body">
+          <motion.p variants={fadeUp} className="text-xs text-orange-400 font-body">
             🔒 CAC Registered Nonprofit Organization in Nigeria. All inquiries strictly confidential.
           </motion.p>
         </motion.div>

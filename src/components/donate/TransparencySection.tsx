@@ -10,9 +10,9 @@ const reports = [
     title: "Annual Reports",
     description: "Comprehensive yearly overview of our programs, reach, financials, and strategic goals.",
     cta: "Download 2025 Report",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
+    border: "border-slate-100",
   },
   {
     icon: "💰",
@@ -37,7 +37,7 @@ const reports = [
     title: "Governance",
     description: "Our board structure, bylaws, and commitment to ethical nonprofit management.",
     cta: "View Governance",
-    color: "bg-[#2563eb]",
+    color: "bg-[#09090b]",
     bg: "bg-purple-50",
     border: "border-purple-100",
   },
@@ -72,8 +72,8 @@ const certifications = [
 
 export default function TransparencySection() {
   return (
-    <section className="section-padding bg-[#2563eb] relative overflow-hidden" aria-label="Transparency and accountability">
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#2563eb]" />
+    <section className="section-padding bg-[#09090b] relative overflow-hidden" aria-label="Transparency and accountability">
+      <div className="absolute top-0 left-0 right-0 h-px bg-[#09090b]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -83,7 +83,7 @@ export default function TransparencySection() {
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-5">
             Trust is Our{" "}
-            <span className="text-royal-blue">Foundation</span>
+            <span className="text-[#f97316]">Foundation</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             We believe donors deserve full visibility into how their funds are used. Access all our reports, policies, and governance documents below.
@@ -114,7 +114,7 @@ export default function TransparencySection() {
               <p className="text-sm text-gray-600 font-body leading-relaxed mb-5">{report.description}</p>
               <a
                 href="/contact"
-                className="inline-flex items-center gap-1.5 text-sm font-bold font-body text-royal-blue hover:gap-3 transition-all"
+                className="inline-flex items-center gap-1.5 text-sm font-bold font-body text-[#f97316] hover:gap-3 transition-all"
               >
                 {report.cta} <ArrowRightIcon size={14} />
               </a>

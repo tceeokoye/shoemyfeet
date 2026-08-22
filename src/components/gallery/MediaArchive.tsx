@@ -60,7 +60,7 @@ export default function MediaArchive({ onSelectPhoto, onSelectVideo }: MediaArch
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs sm:text-sm font-bold mb-3 border border-blue-200"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold mb-3 border border-slate-200"
           >
             <FilterIcon size={14} className="text-warm-orange" />
             Digital History Museum
@@ -92,7 +92,7 @@ export default function MediaArchive({ onSelectPhoto, onSelectVideo }: MediaArch
               placeholder="Search by keywords, school name, event title, or state..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3.5 rounded-2xl border border-gray-200 bg-white focus:outline-none focus:border-royal-blue text-sm text-gray-900 font-body shadow-sm"
+              className="w-full pl-12 pr-4 py-3.5 rounded-2xl border border-gray-200 bg-white focus:outline-none focus:border-[#09090b] text-sm text-gray-900 font-body shadow-sm"
             />
             {searchTerm && (
               <button
@@ -111,7 +111,7 @@ export default function MediaArchive({ onSelectPhoto, onSelectVideo }: MediaArch
               <select
                 value={selectedYear}
                 onChange={(e) => setSelectedYear(e.target.value)}
-                className="w-full px-4 py-3 rounded-2xl border border-gray-200 bg-white font-semibold text-gray-800 appearance-none focus:outline-none focus:border-royal-blue cursor-pointer"
+                className="w-full px-4 py-3 rounded-2xl border border-gray-200 bg-white font-semibold text-gray-800 appearance-none focus:outline-none focus:border-[#09090b] cursor-pointer"
               >
                 <option value="All Years">All Years (2022 – 2026)</option>
                 <option value="2026">2026 Campaigns</option>
@@ -128,7 +128,7 @@ export default function MediaArchive({ onSelectPhoto, onSelectVideo }: MediaArch
               <select
                 value={selectedLocation}
                 onChange={(e) => setSelectedLocation(e.target.value)}
-                className="w-full px-4 py-3 rounded-2xl border border-gray-200 bg-white font-semibold text-gray-800 appearance-none focus:outline-none focus:border-royal-blue cursor-pointer"
+                className="w-full px-4 py-3 rounded-2xl border border-gray-200 bg-white font-semibold text-gray-800 appearance-none focus:outline-none focus:border-[#09090b] cursor-pointer"
               >
                 <option value="All Locations">All Locations</option>
                 <option value="Enugu">Enugu State</option>
@@ -143,7 +143,7 @@ export default function MediaArchive({ onSelectPhoto, onSelectVideo }: MediaArch
               <select
                 value={selectedType}
                 onChange={(e) => setSelectedType(e.target.value)}
-                className="w-full px-4 py-3 rounded-2xl border border-gray-200 bg-white font-semibold text-gray-800 appearance-none focus:outline-none focus:border-royal-blue cursor-pointer"
+                className="w-full px-4 py-3 rounded-2xl border border-gray-200 bg-white font-semibold text-gray-800 appearance-none focus:outline-none focus:border-[#09090b] cursor-pointer"
               >
                 <option value="All Types">All Media Formats</option>
                 <option value="Photo">Photos Only</option>
@@ -182,7 +182,7 @@ export default function MediaArchive({ onSelectPhoto, onSelectVideo }: MediaArch
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-[#2563eb]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
                   <div className="absolute top-3 left-3 right-3 flex justify-between z-10">
                     <span className="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] font-bold">
@@ -217,7 +217,7 @@ export default function MediaArchive({ onSelectPhoto, onSelectVideo }: MediaArch
                       {item.date}
                     </span>
                   </div>
-                  <h4 className="font-heading text-base font-bold text-royal-blue group-hover:text-warm-orange transition-colors line-clamp-1">
+                  <h4 className="font-heading text-base font-bold text-[#f97316] group-hover:text-warm-orange transition-colors line-clamp-1">
                     {item.title}
                   </h4>
                 </div>

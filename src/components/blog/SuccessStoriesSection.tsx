@@ -13,7 +13,7 @@ interface SuccessStoriesSectionProps {
 
 export default function SuccessStoriesSection({ articles, onReadStory }: SuccessStoriesSectionProps) {
   return (
-    <section className="my-20 py-16 px-6 sm:px-10 rounded-3xl bg-[#2563eb] border border-blue-100 relative overflow-hidden">
+    <section className="my-20 py-16 px-6 sm:px-10 rounded-3xl bg-[#09090b] border border-slate-100 relative overflow-hidden">
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-16">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 text-warm-orange-dark font-bold text-xs uppercase tracking-wider mb-4">
@@ -48,10 +48,10 @@ export default function SuccessStoriesSection({ articles, onReadStory }: Success
               {/* Image Column */}
               <div className={`md:col-span-6 relative min-h-[300px] sm:min-h-[360px] ${isEven ? "md:order-1" : "md:order-2"}`}>
                 <Image src={story.coverImage} alt={story.childName} fill className="object-cover" />
-                <div className="absolute inset-0 bg-[#2563eb]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
                 {/* Location Badge Overlay */}
-                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#2563eb] font-bold text-xs shadow-md">
+                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#f97316] font-bold text-xs shadow-md">
                   <MapPinIcon size={14} className="text-warm-orange" />
                   <span>{story.community}, {story.state}</span>
                 </div>

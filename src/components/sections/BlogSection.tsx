@@ -13,8 +13,8 @@ const blogPosts = [
     date: "June 2024",
     readTime: "5 min read",
     emoji: "📖",
-    color: "bg-[#2563eb]",
-    bg: "bg-blue-50",
+    color: "bg-[#09090b]",
+    bg: "bg-slate-50",
   },
   {
     id: 2,
@@ -59,13 +59,13 @@ export default function BlogSection() {
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-heading text-4xl font-bold text-[#1a1a2e]">
               Stories of{" "}
-              <span className="text-royal-blue">Transformation</span>
+              <span className="text-[#f97316]">Transformation</span>
             </motion.h2>
           </div>
           <motion.a
             variants={fadeUp}
             href="#"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-[#2563eb] text-royal-blue font-bold text-sm hover:bg-[#2563eb] hover:text-white transition-all font-body whitespace-nowrap"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-[#09090b] text-[#f97316] font-bold text-sm hover:bg-[#09090b] hover:text-white transition-all font-body whitespace-nowrap"
           >
             View All Stories
             <ArrowRightIcon size={14} />
@@ -117,7 +117,7 @@ export default function BlogSection() {
                   </span>
                 </div>
 
-                <h3 className="font-heading font-bold text-lg text-[#1a1a2e] mb-3 group-hover:text-royal-blue transition-colors leading-snug">
+                <h3 className="font-heading font-bold text-lg text-[#1a1a2e] mb-3 group-hover:text-[#f97316] transition-colors leading-snug">
                   {post.title}
                 </h3>
 
@@ -125,7 +125,7 @@ export default function BlogSection() {
                   {post.excerpt}
                 </p>
 
-                <div className="flex items-center gap-1 text-sm font-bold text-royal-blue font-body group-hover:gap-2 transition-all">
+                <div className="flex items-center gap-1 text-sm font-bold text-[#f97316] font-body group-hover:gap-2 transition-all">
                   Read Story
                   <ArrowRightIcon size={14} className="group-hover:translate-x-1 transition-transform" />
                 </div>
