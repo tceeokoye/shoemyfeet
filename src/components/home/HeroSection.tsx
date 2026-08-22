@@ -4,7 +4,6 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import FastImage from "@/components/ui/FastImage";
-import ProtectedImage from "@/assets/protecting_little.jpg";
 import {
   ArrowRightIcon,
   PlayIcon,
@@ -43,7 +42,7 @@ const HERO_SLIDES: SlideData[] = [
   },
   {
     id: 2,
-    image: ProtectedImage,
+    image: "/images/protecting_little.jpg",
     badge: "Health & Dignity Protected",
     headlineLines: ["Protecting Little Soles", "From Pain &"],
     highlightWord: "Infection.",
