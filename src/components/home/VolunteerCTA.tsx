@@ -60,17 +60,21 @@ export default function VolunteerCTA() {
             </motion.p>
 
             {/* 3D Volunteer Role Cards */}
-            <motion.div variants={staggerContainer} className="grid grid-cols-2 gap-4">
+            <motion.div variants={staggerContainer} className="grid grid-cols-2 gap-2.5 sm:gap-4">
               {roles.map((r) => (
                 <motion.div
                   key={r.title}
                   variants={fadeUp}
-                  className="bg-white rounded-2xl p-4 border border-slate-200/80 card-3d flex items-start gap-3"
+                  className="bg-white rounded-2xl p-3 sm:p-4 border border-slate-200/80 card-3d flex flex-col sm:flex-row items-start gap-2 sm:gap-3"
                 >
-                  <span className="text-3xl">{r.icon}</span>
-                  <div>
-                    <h4 className="font-heading font-bold text-base text-[#0a0a0a]">{r.title}</h4>
-                    <p className="text-xs text-slate-500 font-body">{r.desc}</p>
+                  <span className="text-2xl sm:text-3xl shrink-0">{r.icon}</span>
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-heading font-bold text-xs sm:text-sm md:text-base text-[#0a0a0a] leading-tight mb-0.5">
+                      {r.title}
+                    </h4>
+                    <p className="text-[11px] sm:text-xs text-slate-500 font-body leading-tight">
+                      {r.desc}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -217,7 +221,7 @@ export default function VolunteerCTA() {
                       placeholder="Your email address"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-11 pr-4 py-3.5 rounded-xl bg-white/10 border border-white/30 text-white placeholder-blue-200/60 text-sm font-body focus:outline-none focus:border-white transition-colors"
+                      className="w-full pl-11 pr-4 py-3.5 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 text-sm font-body focus:outline-none focus:border-white transition-colors"
                     />
                   </div>
                   <button

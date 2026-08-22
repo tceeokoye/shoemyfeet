@@ -81,7 +81,7 @@ const HERO_SLIDES: SlideData[] = [
   },
 ];
 
-const SLIDE_DURATION = 4000; // ms
+const SLIDE_DURATION = 7500; // 7.5s gives ample time to read content comfortably
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -116,7 +116,7 @@ export default function HeroSection() {
     setCurrentSlide(index);
   };
 
-  // Continuous Autoplay Timer
+  // Continuous Autoplay Timer (resets timer when currentSlide changes)
   useEffect(() => {
     if (!isReady) return;
 
@@ -125,7 +125,7 @@ export default function HeroSection() {
     }, SLIDE_DURATION);
 
     return () => clearInterval(timer);
-  }, [nextSlide, isReady]);
+  }, [nextSlide, isReady, currentSlide]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
@@ -182,19 +182,18 @@ export default function HeroSection() {
             }}
             className="absolute inset-0 w-full h-full"
           >
-            {/* Image layer continuously moving like cinematography */}
+            {/* Image layer continuously moving like cinematography without stopping */}
             <motion.div
-              initial={{ scale: 1.18, x: 0, y: 0 }}
+              key={`cinematic-img-${slide.id}`}
+              initial={{ scale: slide.id % 2 === 0 ? 1.18 : 1.06 }}
               animate={{
-                scale: [1.18, 1.03],
-                x: [0, -25],
-                y: [0, -15],
+                scale: slide.id % 2 === 0 ? 1.06 : 1.18,
               }}
               transition={{
-                duration: SLIDE_DURATION / 1000,
-                ease: "easeInOut",
+                duration: (SLIDE_DURATION + 1500) / 1000,
+                ease: "linear",
               }}
-              className="relative w-full h-full"
+              className="relative w-full h-full origin-center"
             >
               <FastImage
                 key={`hero-slide-${slide.id}`}
@@ -202,7 +201,7 @@ export default function HeroSection() {
                 alt={slide.badge}
                 fill
                 priority
-                className=" object-cover md:w-full md:h-full object-center transform-gpu"
+                className="object-cover w-full h-full object-center transform-gpu"
                 sizes="100vw"
               />
             </motion.div>

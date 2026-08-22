@@ -28,20 +28,23 @@ export default function PageLoader() {
     <AnimatePresence>
       {loading && (
         <motion.div
-          className="fixed inset-0 z-[100] bg-[#081c13] flex flex-col items-center justify-center select-none pointer-events-none"
+          className="fixed inset-0 z-[100] bg-[#09090b] flex flex-col items-center justify-center select-none pointer-events-none"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
+          {/* Subtle background glow */}
+          <div className="absolute w-72 h-72 rounded-full bg-[#f97316]/10 blur-[120px] pointer-events-none" />
+
           {/* Logo mark */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col items-center mb-12"
+            className="flex flex-col items-center mb-12 relative z-10"
           >
             {/* Shoe icon */}
-            <div className="w-16 h-16 rounded-2xl bg-[#d97706] flex items-center justify-center shadow-xl mb-5">
+            <div className="w-16 h-16 rounded-2xl bg-[#f97316] flex items-center justify-center shadow-2xl mb-5 shadow-orange-500/20">
               <svg viewBox="0 0 40 40" className="w-10 h-10" fill="none">
                 <path
                   d="M5 22c1-4 4-7 8-7 3 0 5.5 2 8 2.5 2 .4 4-.5 5.5-.5 2 0 3.5 1.2 3.5 3v1.5H5V22z"
@@ -58,21 +61,21 @@ export default function PageLoader() {
             <h1 className="font-heading font-bold text-2xl text-white tracking-tight">
               Shoe My Feet
             </h1>
-            <p className="text-[11px] text-[#d97706] font-body font-semibold tracking-widest uppercase mt-1">
+            <p className="text-[11px] text-[#f97316] font-body font-bold tracking-widest uppercase mt-1">
               Foundation
             </p>
           </motion.div>
 
           {/* Progress bar */}
-          <div className="w-48">
-            <div className="h-0.5 bg-white/10 rounded-full overflow-hidden">
+          <div className="w-48 relative z-10">
+            <div className="h-1 bg-white/10 rounded-full overflow-hidden">
               <motion.div
-                className="h-full bg-[#d97706] rounded-full origin-left"
+                className="h-full bg-[#f97316] rounded-full origin-left"
                 style={{ scaleX: progress / 100 }}
                 transition={{ duration: 0.1 }}
               />
             </div>
-            <p className="text-center text-[11px] text-white/40 font-body mt-3 tracking-wider">
+            <p className="text-center text-[11px] text-white/50 font-body mt-3 tracking-wider">
               Every step changes a life
             </p>
           </div>
