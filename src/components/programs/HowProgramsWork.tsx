@@ -10,7 +10,7 @@ const steps = [
     title: "Community Assessment",
     desc: "We partner with local leaders, schools, and health workers to assess communities and identify children in greatest need of footwear support.",
     icon: "🔍",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
     border: "border-blue-100",
   },
@@ -37,7 +37,7 @@ const steps = [
     title: "Prepare and Sort Supplies",
     desc: "Our volunteers carefully inspect, clean, sort by size, and package every pair to ensure a dignified, perfectly-fitting shoe for each child.",
     icon: "📦",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-purple-50",
     border: "border-purple-100",
   },
@@ -133,7 +133,7 @@ export default function HowProgramsWork() {
                   {/* Circle Indicator (desktop) */}
                   <div
                     className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full border-4 border-white shadow-2xl items-center justify-center font-heading font-extrabold text-white text-lg z-10"
-                    style={{ background: "#1a3a6b" }}
+                    style={{ background: "#2563eb" }}
                   >
                     {step.number}
                   </div>

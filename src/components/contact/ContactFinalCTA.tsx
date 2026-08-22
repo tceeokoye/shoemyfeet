@@ -21,7 +21,7 @@ const footprintTrail = [
 
 export default function ContactFinalCTA() {
   return (
-    <section className="relative section-padding bg-[#0f2347] text-white overflow-hidden" aria-label="Final call to action">
+    <section className="relative section-padding bg-[#1e40af] text-white overflow-hidden" aria-label="Final call to action">
       {/* Background layers */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl bg-blue-400" />
@@ -103,7 +103,6 @@ export default function ContactFinalCTA() {
               Become a Volunteer
             </Link>
             <Link href="/donate" className="flex-1 py-4 px-8 rounded-full font-bold font-body text-base text-white border-2 border-white/10 hover:bg-white/5 hover:border-white/20 transition-all flex items-center justify-center gap-2">
-              <HeartIcon size={16} className="fill-white" />
               Donate Now
             </Link>
           </motion.div>

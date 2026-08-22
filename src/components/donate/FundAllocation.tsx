@@ -5,16 +5,16 @@ import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 const allocations = [
   { label: "Shoe Procurement", pct: 55, color: "bg-[#f97316]", icon: "👟", detail: "Direct purchase of quality shoes for children" },
-  { label: "Transportation", pct: 15, color: "bg-[#1a3a6b]", icon: "🚚", detail: "Logistics and delivery to communities" },
+  { label: "Transportation", pct: 15, color: "bg-[#2563eb]", icon: "🚚", detail: "Logistics and delivery to communities" },
   { label: "Community Outreach", pct: 12, color: "bg-[#15803d]", icon: "🏘️", detail: "Events, coordination, and community engagement" },
-  { label: "Volunteer Support", pct: 8, color: "bg-[#1a3a6b]", icon: "🙌", detail: "Training, coordination, and volunteer resources" },
+  { label: "Volunteer Support", pct: 8, color: "bg-[#2563eb]", icon: "🙌", detail: "Training, coordination, and volunteer resources" },
   { label: "Education Materials", pct: 5, color: "bg-[#15803d]", icon: "📚", detail: "Complementary school supplies and materials" },
   { label: "Administrative", pct: 5, color: "bg-slate-700", icon: "🏢", detail: "Operations, reporting, and governance" },
 ];
 
 export default function FundAllocation() {
   return (
-    <section className="section-padding bg-[#0f2347] text-white relative overflow-hidden" aria-label="Where your money goes">
+    <section className="section-padding bg-[#09090b] text-white relative overflow-hidden border-t border-white/10" aria-label="Where your money goes">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-96 h-96 rounded-full opacity-5 bg-blue-400 -translate-x-1/2 -translate-y-1/2" />

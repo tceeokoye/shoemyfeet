@@ -90,7 +90,7 @@ export default function ContactFormSection() {
   };
 
   return (
-    <section id="contact-form" className="section-padding bg-[#1a3a6b] relative overflow-hidden" aria-label="Send us a message">
+    <section id="contact-form" className="section-padding bg-[#2563eb] relative overflow-hidden" aria-label="Send us a message">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

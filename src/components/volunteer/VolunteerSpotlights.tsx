@@ -60,8 +60,8 @@ function StoryCard({ story, index }: { story: typeof VOLUNTEER_STORIES[0]; index
               <p className="font-heading font-bold text-[#1a1a2e] text-base">{story.name}</p>
               <p className="font-body text-xs text-warm-orange-dark font-semibold">{story.role}</p>
               <div className="flex items-center gap-1 mt-0.5">
-                <MapPinIcon size={11} className="text-gray-400" />
-                <p className="font-body text-xs text-gray-400">{story.location}</p>
+                <MapPinIcon size={11} className="text-slate-600" />
+                <p className="font-body text-xs text-slate-700 font-medium">{story.location}</p>
               </div>
             </div>
             <button

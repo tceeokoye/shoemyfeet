@@ -42,7 +42,7 @@ export default function VolunteerSpotlightSection({ onSpotlightClick }: Voluntee
             className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
           >
             {/* Top decorative gradient bar */}
-            <div className="absolute top-0 left-0 right-0 h-2 bg-[#1a3a6b]" />
+            <div className="absolute top-0 left-0 right-0 h-2 bg-[#2563eb]" />
 
             <div>
               {/* Header: Portrait & Role */}
@@ -73,8 +73,8 @@ export default function VolunteerSpotlightSection({ onSpotlightClick }: Voluntee
               </p>
 
               {/* Quote */}
-              <div className="bg-blue-50/70 p-4 rounded-2xl border-l-4 border-[#1a3a6b] relative mb-6">
-                <QuoteIcon size={16} className="text-[#1a3a6b]/20 absolute top-2 right-2" />
+              <div className="bg-blue-50/70 p-4 rounded-2xl border-l-4 border-[#2563eb] relative mb-6">
+                <QuoteIcon size={16} className="text-[#2563eb]/20 absolute top-2 right-2" />
                 <p className="font-body italic text-xs text-gray-700 leading-relaxed">
                   &ldquo;{person.quote}&rdquo;
                 </p>
@@ -85,7 +85,7 @@ export default function VolunteerSpotlightSection({ onSpotlightClick }: Voluntee
             <button
               type="button"
               onClick={() => onSpotlightClick(person)}
-              className="w-full py-3 px-4 rounded-xl bg-gray-50 text-[#1a3a6b] hover:bg-[#1a3a6b] hover:text-white font-bold text-xs transition-all duration-300 inline-flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
+              className="w-full py-3 px-4 rounded-xl bg-gray-50 text-[#2563eb] hover:bg-[#2563eb] hover:text-white font-bold text-xs transition-all duration-300 inline-flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
             >
               <span>Read Full Spotlight</span>
               <ArrowRightIcon size={13} />

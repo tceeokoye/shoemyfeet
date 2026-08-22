@@ -20,7 +20,7 @@ const programImages = [
 
 export default function ProgramsSection() {
   return (
-    <section id="programs" className="section-padding bg-[#1a3a6b] overflow-hidden">
+    <section id="programs" className="section-padding bg-[#2563eb] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -63,7 +63,7 @@ export default function ProgramsSection() {
                 className={index % 2 === 1 ? "md:order-2" : ""}
               >
                 <div className="relative rounded-3xl overflow-hidden shadow-xl group">
-                  <div className="absolute inset-0 bg-[#1a3a6b] blur-xl scale-105 z-[-1]" />
+                  <div className="absolute inset-0 bg-[#2563eb] blur-xl scale-105 z-[-1]" />
                   <Image
                     src={programImages[index]}
                     alt={program.title}
@@ -71,7 +71,7 @@ export default function ProgramsSection() {
                     height={380}
                     className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-[#1a3a6b]" />
+                  <div className="absolute inset-0 bg-[#2563eb]" />
 
                   {/* Floating stat */}
                   <motion.div

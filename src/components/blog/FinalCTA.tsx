@@ -8,7 +8,7 @@ import { HeartIcon, FootprintsIcon, SparklesIcon, ArrowRightIcon, UsersIcon, Hea
 export default function FinalCTA() {
   return (
     <section className="my-24 relative overflow-hidden">
-      <div className="bg-[#1a3a6b] rounded-3xl p-10 sm:p-14 lg:p-20 text-white relative shadow-2xl overflow-hidden border border-white/10 text-center">
+      <div className="bg-[#09090b] rounded-3xl p-10 sm:p-14 lg:p-20 text-white relative shadow-2xl overflow-hidden border border-white/10 text-center">
         {/* Animated footprints leading toward the CTA buttons */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <motion.div variants={float} initial="initial" animate="animate" className="absolute top-0 left-1/4 w-80 h-80 rounded-full bg-blue-400/10 blur-3xl" />
@@ -66,7 +66,6 @@ export default function FinalCTA() {
               href="/donate"
               className="btn-orange text-sm px-8 py-4 rounded-full font-bold shadow-xl hover:shadow-orange-500/30 inline-flex items-center gap-2 cursor-pointer"
             >
-              <HeartIcon size={18} className="fill-white" />
               <span>Donate Today</span>
               <ArrowRightIcon size={16} />
             </Link>
@@ -81,9 +80,8 @@ export default function FinalCTA() {
 
             <Link
               href="/contact"
-              className="px-7 py-4 rounded-full bg-white text-[#1a3a6b] hover:bg-blue-50 font-bold text-sm shadow-md transition-all inline-flex items-center gap-2"
+              className="px-7 py-4 rounded-full bg-white text-[#2563eb] hover:bg-blue-50 font-bold text-sm shadow-md transition-all inline-flex items-center gap-2"
             >
-              <HeartHandshakeIcon size={18} className="text-warm-orange" />
               <span>Partner With Us</span>
             </Link>
           </div>

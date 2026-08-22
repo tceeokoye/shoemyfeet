@@ -7,14 +7,14 @@ import CountUp from "react-countup";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 
 const stats = [
-  { value: 6500, suffix: "+", label: "Children Supported", icon: "👶", color: "bg-[#1a3a6b]", bg: "bg-blue-50", border: "border-blue-100" },
+  { value: 6500, suffix: "+", label: "Children Supported", icon: "👶", color: "bg-[#2563eb]", bg: "bg-blue-50", border: "border-blue-100" },
   { value: 6500, suffix: "+", label: "Pairs of Shoes Distributed", icon: "👟", color: "bg-[#f97316]", bg: "bg-orange-50", border: "border-orange-100" },
   { value: 18, suffix: "+", label: "Communities Reached", icon: "🏘️", color: "bg-[#15803d]", bg: "bg-emerald-50", border: "border-emerald-100" },
-  { value: 12, suffix: "+", label: "Schools Partnered With", icon: "🏫", color: "bg-[#1a3a6b]", bg: "bg-purple-50", border: "border-purple-100" },
+  { value: 12, suffix: "+", label: "Schools Partnered With", icon: "🏫", color: "bg-[#2563eb]", bg: "bg-purple-50", border: "border-purple-100" },
   { value: 300, suffix: "+", label: "Volunteers Mobilized", icon: "🙌", color: "bg-[#f97316]", bg: "bg-rose-50", border: "border-rose-100" },
   { value: 6, suffix: "+", label: "Corporate Partners", icon: "🤝", color: "bg-[#f59e0b]", bg: "bg-amber-50", border: "border-amber-100" },
   { value: 25, suffix: "+", label: "Outreach Events Conducted", icon: "🎉", color: "bg-[#15803d]", bg: "bg-teal-50", border: "border-teal-100" },
-  { value: 4, suffix: "", label: "Years of Impact", icon: "⭐", color: "bg-[#1a3a6b]", bg: "bg-indigo-50", border: "border-indigo-100" },
+  { value: 4, suffix: "", label: "Years of Impact", icon: "⭐", color: "bg-[#2563eb]", bg: "bg-indigo-50", border: "border-indigo-100" },
 ];
 
 function StatCard({ stat, index }: { stat: typeof stats[0]; index: number }) {
@@ -27,12 +27,9 @@ function StatCard({ stat, index }: { stat: typeof stats[0]; index: number }) {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.55, delay: index * 0.06, ease: [0.16, 1, 0.3, 1] }}
-      whileHover={{ y: -8, scale: 1.03, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-      className={`relative group ${stat.bg} ${stat.border} border rounded-3xl p-6 text-center overflow-hidden cursor-default shadow-sm hover:shadow-xl transition-shadow duration-500`}
+      whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+      className="bg-white border border-slate-100 rounded-3xl p-6 text-center overflow-hidden cursor-default shadow-md hover:shadow-xl transition-all duration-300"
     >
-      {/* Background glow on hover */}
-      <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 stat.color rounded-3xl`} style={{ opacity: 0 }} />
-      
       {/* Icon */}
       <motion.div
         className="text-4xl mb-3 relative z-10"
@@ -43,23 +40,13 @@ function StatCard({ stat, index }: { stat: typeof stats[0]; index: number }) {
       </motion.div>
 
       {/* Counter */}
-      <div className={`font-heading text-4xl sm:text-5xl font-extrabold stat.color bg-clip-text text-transparent mb-2 relative z-10 leading-none`}>
+      <div className="font-heading text-4xl sm:text-5xl font-extrabold text-[#0a0a0a] mb-2 relative z-10 leading-none">
         {inView ? <CountUp end={stat.value} duration={2.2} separator="," /> : "0"}
-        {stat.suffix}
+        <span className="text-[#f97316]">{stat.suffix}</span>
       </div>
 
       {/* Label */}
-      <p className="font-body text-gray-600 text-sm font-semibold leading-tight relative z-10">{stat.label}</p>
-
-      {/* Animated underline bar */}
-      <motion.div
-        className={`absolute bottom-0 left-0 h-1 stat.color rounded-b-3xl`}
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: index * 0.06 + 0.3, ease: [0.22, 1, 0.36, 1] }}
-        style={{ originX: 0, width: "100%" }}
-      />
+      <p className="font-body text-slate-600 text-sm font-semibold leading-tight relative z-10">{stat.label}</p>
     </motion.div>
   );
 }
@@ -106,7 +93,7 @@ export default function ImpactNumbers() {
 
         {/* Quote strip */}
         <motion.div
-          className="mt-16 rounded-3xl bg-[#1a3a6b] p-8 sm:p-10 text-center relative overflow-hidden"
+          className="mt-16 rounded-3xl bg-[#2563eb] p-8 sm:p-10 text-center relative overflow-hidden"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}

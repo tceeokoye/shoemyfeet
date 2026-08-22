@@ -48,10 +48,10 @@ export default function ImpactStats() {
   const inView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section className="section-padding overflow-hidden relative" style={{ background: "linear-gradient(135deg, #022c22 0%, #014032 50%, #022c22 100%)" }}>
+    <section className="section-padding overflow-hidden relative bg-[#09090b] border-y border-white/10 text-white">
       {/* Background Glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(217,119,6,0.12) 0%, transparent 70%)" }} />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(4,120,87,0.15) 0%, transparent 70%)" }} />
+      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none bg-orange-500/10 blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full pointer-events-none bg-blue-500/5 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}

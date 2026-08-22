@@ -32,12 +32,12 @@ export default function OurStory() {
                 className="object-cover hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-[#1a3a6b]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
 
             {/* Floating stat card */}
             <motion.div
-              className="absolute -bottom-6 -right-4 sm:right-6 bg-white/95 backdrop-blur-xl rounded-2xl p-5 shadow-2xl border border-blue-100 flex items-center gap-4 z-10"
+              className="absolute -bottom-6 -right-4 sm:right-6 bg-white/95 backdrop-blur-xl rounded-2xl p-5 shadow-2xl border border-slate-100 flex items-center gap-4 z-10"
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={imgInView ? { opacity: 1, scale: 1, y: 0 } : {}}
               transition={{ type: "spring" as const, stiffness: 120, damping: 18, delay: 0.5 }}
@@ -46,8 +46,8 @@ export default function OurStory() {
                 👟
               </div>
               <div>
-                <p className="font-heading font-extrabold text-2xl sm:text-3xl text-royal-blue">6,500+</p>
-                <p className="font-body text-xs font-semibold text-gray-500">Lives Transformed & Fitted</p>
+                <p className="font-heading font-extrabold text-2xl sm:text-3xl text-[#0a0a0a]">6,500+</p>
+                <p className="font-body text-xs font-semibold text-slate-500">Lives Transformed & Fitted</p>
               </div>
             </motion.div>
 
@@ -65,7 +65,7 @@ export default function OurStory() {
           >
             <motion.span
               variants={fadeUp}
-              className="inline-block px-4 py-1.5 rounded-full bg-orange-100  text-warm-orange-dark text-xs font-bold font-body mb-4 border border-orange-200"
+              className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs font-bold font-body mb-4 border border-orange-200"
             >
               Our Story
             </motion.span>
@@ -73,21 +73,21 @@ export default function OurStory() {
             {/* Requested Title */}
             <motion.h2
               variants={fadeUp}
-              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-6 leading-tight"
+              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a0a0a] mb-6 leading-tight"
             >
-              How It All <span className="text-royal-blue">Began</span>
+              How It All <span className="text-[#f97316]">Began</span>
             </motion.h2>
 
             {/* Requested Compelling Story */}
-            <motion.p variants={fadeUp} className="font-body text-gray-600 text-base sm:text-lg leading-relaxed mb-4">
-              Shoe My Feet Foundation was born out of a profound realization on International Women&apos;s Day in March 2022. Our founder, <strong className="text-royal-blue">Philomena Nwajagu</strong>, recognized that thousands of children across Nigerian communities were walking kilometres to school barefoot — exposing their vulnerable feet to severe injuries, soil-borne infections, and reduced confidence.
+            <motion.p variants={fadeUp} className="font-body text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+              Shoe My Feet Foundation was born out of a profound realization on International Women&apos;s Day in March 2022. Our founder, <strong className="text-[#0a0a0a]">Philomena Nwajagu</strong>, recognized that thousands of children across Nigerian communities were walking kilometres to school barefoot — exposing their vulnerable feet to severe injuries, soil-borne infections, and reduced confidence.
             </motion.p>
 
-            <motion.p variants={fadeUp} className="font-body text-gray-600 text-base sm:text-lg leading-relaxed mb-4">
+            <motion.p variants={fadeUp} className="font-body text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
               Many pupils missed classes simply because they lacked proper dress-code school shoes, or felt embarrassed standing beside their peers. Determined to break this cycle, Philomena mobilized her personal savings and family support to purchase and hand-fit the first 100 pairs of school shoes for local children.
             </motion.p>
 
-            <motion.p variants={fadeUp} className="font-body text-gray-600 text-base sm:text-lg leading-relaxed mb-6 font-semibold text-royal-blue">
+            <motion.p variants={fadeUp} className="font-body text-slate-600 text-base sm:text-lg leading-relaxed mb-6 font-semibold text-[#f97316]">
               What started as a single act of kindness rapidly grew into a national movement — providing over 6,500 pairs of shoes, launching child shoemaking academies, and restoring hope and dignity to thousands of children across Nigeria.
             </motion.p>
 

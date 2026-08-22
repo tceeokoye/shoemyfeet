@@ -10,7 +10,7 @@ const partners = [
     type: "Corporate Partner",
     description: "CSR funding for 1,000+ shoe distributions",
     initials: "AB",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-red-50",
     border: "border-red-200",
     year: "Since 2023",
@@ -30,7 +30,7 @@ const partners = [
     type: "NGO Alliance",
     description: "Child welfare alignment & community access",
     initials: "UN",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
     border: "border-blue-200",
     year: "Partner",
@@ -40,7 +40,7 @@ const partners = [
     type: "Government Partner",
     description: "Northern Nigeria outreach facilitation",
     initials: "KM",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-purple-50",
     border: "border-purple-200",
     year: "2024–Present",
@@ -60,7 +60,7 @@ const partners = [
     type: "Health Ally",
     description: "Jigger & hookworm prevention in communities",
     initials: "NA",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-sky-50",
     border: "border-sky-200",
     year: "Partner",
@@ -70,7 +70,7 @@ const partners = [
     type: "Government Partner",
     description: "2026 expansion into Benin City schools",
     initials: "ED",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-amber-50",
     border: "border-amber-200",
     year: "2026 Partner",
@@ -80,7 +80,7 @@ const partners = [
     type: "Regulatory Body",
     description: "Official registration & compliance oversight",
     initials: "CA",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-gray-50",
     border: "border-gray-200",
     year: "Registered NGO",
@@ -93,7 +93,7 @@ const testimonials = [
     name: "Corporate Affairs Director",
     org: "Access Bank Nigeria",
     initials: "AB",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
   },
   {
     quote: "The results speak for themselves — school attendance improved noticeably in every community where Shoe My Feet distributed shoes. A simple intervention with profound results.",
@@ -191,7 +191,7 @@ export default function PartnersSection() {
             <motion.div
               key={i}
               variants={fadeUp}
-              className="bg-[#1a3a6b] rounded-2xl p-6 border border-blue-100 relative"
+              className="bg-[#2563eb] rounded-2xl p-6 border border-blue-100 relative"
             >
               {/* Quote mark */}
               <div className="absolute top-4 right-5 text-4xl font-serif text-blue-200 leading-none select-none">"</div>
@@ -214,7 +214,7 @@ export default function PartnersSection() {
 
         {/* Become a partner CTA */}
         <motion.div
-          className="relative bg-[#1a3a6b] rounded-3xl p-8 md:p-12 text-center overflow-hidden"
+          className="relative bg-[#2563eb] rounded-3xl p-8 md:p-12 text-center overflow-hidden"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

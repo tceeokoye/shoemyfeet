@@ -26,7 +26,7 @@ export default function NewsletterSection() {
 
   return (
     <section className="my-20 relative overflow-hidden" id="newsletter-section">
-      <div className="bg-[#1a3a6b] rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative shadow-2xl overflow-hidden border border-white/10">
+      <div className="bg-[#2563eb] rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative shadow-2xl overflow-hidden border border-white/10">
         {/* Background glow and floating footprints */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <motion.div variants={float} initial="initial" animate="animate" className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/5 blur-3xl" />

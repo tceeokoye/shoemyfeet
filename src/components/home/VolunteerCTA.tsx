@@ -48,7 +48,7 @@ export default function VolunteerCTA() {
               </span>
             </motion.div>
 
-            <motion.h2 variants={fadeUp} className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#0b1933] tracking-tight">
+            <motion.h2 variants={fadeUp} className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#0a0a0a] tracking-tight">
               Become a{" "}
               <span className="text-[#f97316]">Change-Maker</span> Today
             </motion.h2>
@@ -69,7 +69,7 @@ export default function VolunteerCTA() {
                 >
                   <span className="text-3xl">{r.icon}</span>
                   <div>
-                    <h4 className="font-heading font-bold text-base text-[#0b1933]">{r.title}</h4>
+                    <h4 className="font-heading font-bold text-base text-[#0a0a0a]">{r.title}</h4>
                     <p className="text-xs text-slate-500 font-body">{r.desc}</p>
                   </div>
                 </motion.div>
@@ -78,7 +78,6 @@ export default function VolunteerCTA() {
 
             <motion.div variants={fadeUp} className="pt-2">
               <Link href="/volunteer" className="btn-orange group text-base shadow-xl">
-                <HeartIcon size={18} className="fill-white group-hover:scale-110 transition-transform" />
                 <span>Join as a Volunteer</span>
                 <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -108,14 +107,14 @@ export default function VolunteerCTA() {
             <motion.div
               animate={{ y: [-6, 6, -6] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -right-4 bg-[#0b1933] text-white rounded-2xl p-4 shadow-2xl border border-white/20 flex items-center gap-3 card-3d-dark"
+              className="absolute -bottom-6 -right-4 bg-black text-white rounded-2xl p-4 shadow-2xl border border-white/20 flex items-center gap-3 card-3d-dark shadow-black/80"
             >
               <div className="w-12 h-12 rounded-xl bg-[#f97316] flex items-center justify-center font-heading font-bold text-lg shadow-md">
                 200+
               </div>
               <div>
                 <div className="font-heading font-bold text-white text-base leading-none">Active Volunteers</div>
-                <div className="text-xs text-blue-200 font-body mt-1">Across 3 States</div>
+                <div className="text-xs text-neutral-300 font-body mt-1">Across 3 States</div>
               </div>
             </motion.div>
           </motion.div>
@@ -123,7 +122,7 @@ export default function VolunteerCTA() {
 
         {/* Unified Donate + Newsletter Banner */}
         <motion.div
-          className="bg-[#0b1933] rounded-3xl overflow-hidden relative shadow-2xl border border-white/15 card-3d-dark text-white"
+          className="bg-[#09090b] rounded-3xl overflow-hidden relative shadow-2xl border border-white/15 card-3d-dark text-white shadow-black/80"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -170,7 +169,6 @@ export default function VolunteerCTA() {
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <Link href="/donate" className="btn-orange text-base font-bold shadow-xl">
-                  <HeartIcon size={18} className="fill-white" />
                   <span>Donate Now</span>
                   <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
                 </Link>

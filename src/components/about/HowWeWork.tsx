@@ -13,7 +13,7 @@ const fourSteps = [
     description:
       "We collaborate closely with school administrators, community elders, and local leaders to identify primary schools where children lack adequate footwear and face severe hardship.",
     icon: "🔍",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
     border: "border-blue-100",
     details: ["School registration & verification", "Child shoe sizing audits", "Local stakeholder meetings"],
@@ -49,7 +49,7 @@ const fourSteps = [
     description:
       "We host joyous distribution events at schools where volunteers personally fit each child with new shoes, celebrate their educational journey, and instill confidence.",
     icon: "✨",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-purple-50",
     border: "border-purple-100",
     details: ["Personal shoe fitting events", "Child empowerment sessions", "Impact tracking & teacher follow-up"],
@@ -75,31 +75,31 @@ export default function HowWeWork() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-700 text-xs sm:text-sm font-bold font-body mb-3 border border-emerald-200"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold font-body mb-3 border border-orange-200"
           >
             How We Work
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a0a0a] mb-4 leading-tight"
           >
-            Our 4-Step <span className="text-royal-blue">Distribution Model</span>
+            Our 4-Step <span className="text-[#f97316]">Distribution Model</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="text-base sm:text-lg text-gray-600 font-body leading-relaxed mb-8"
+            className="text-base sm:text-lg text-slate-600 font-body leading-relaxed mb-8"
           >
             From identifying children in remote communities to personal fitting events, every step is executed with care, transparency, and dignity.
           </motion.p>
 
           {/* Toggle buttons */}
-          <motion.div variants={fadeUp} className="inline-flex p-1.5 rounded-full bg-gray-100 border border-gray-200 shadow-inner">
+          <motion.div variants={fadeUp} className="inline-flex p-1.5 rounded-full bg-slate-100 border border-slate-200 shadow-inner">
             <button
               onClick={() => setActiveTab("process")}
               className={`px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold font-body transition-all duration-300 ${
                 activeTab === "process"
-                  ? "bg-[#1a3a6b] text-white shadow-md"
-                  : "text-gray-600 hover:text-royal-blue"
+                  ? "bg-black text-white shadow-md"
+                  : "text-slate-600 hover:text-black"
               }`}
             >
               4-Step Workflow
@@ -108,8 +108,8 @@ export default function HowWeWork() {
               onClick={() => setActiveTab("timeline")}
               className={`px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold font-body transition-all duration-300 ${
                 activeTab === "timeline"
-                  ? "bg-[#1a3a6b] text-white shadow-md"
-                  : "text-gray-600 hover:text-royal-blue"
+                  ? "bg-black text-white shadow-md"
+                  : "text-slate-600 hover:text-black"
               }`}
             >
               Foundation History
@@ -121,7 +121,7 @@ export default function HowWeWork() {
         {activeTab === "process" && (
           <div ref={ref} className="relative max-w-5xl mx-auto">
             {/* Connecting Line across steps on Desktop */}
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#1a3a6b] -translate-x-1/2 rounded-full" />
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-slate-200 -translate-x-1/2 rounded-full" />
 
             <div className="flex flex-col gap-12 lg:gap-16">
               {fourSteps.map((item, i) => {
@@ -138,31 +138,27 @@ export default function HowWeWork() {
                   >
                     {/* Content Card */}
                     <div className="w-full lg:w-[calc(50%-3rem)]">
-                      <div
-                        className={`group bg-white rounded-3xl p-8 border ${item.border} shadow-xl hover:shadow-2xl transition-all duration-500 relative overflow-hidden`}
-                      >
-                        <div className={`absolute top-0 left-0 right-0 h-1.5 item.color`} />
-                        
+                      <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden">
                         <div className="flex items-center justify-between mb-4">
-                          <span className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-extrabold font-body ${item.bg} text-gray-800 border border-black/5`}>
+                          <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-extrabold font-body bg-slate-100 text-slate-700">
                             <span>Step {item.step}</span>
                           </span>
                           <span className="text-3xl">{item.icon}</span>
                         </div>
 
-                        <h3 className="font-heading font-bold text-2xl text-[#1a1a2e] mb-2 group-hover:text-royal-blue transition-colors">
+                        <h3 className="font-heading font-bold text-2xl text-[#0a0a0a] mb-2">
                           {item.title}
                         </h3>
-                        <p className="text-xs font-bold  text-warm-orange-dark uppercase tracking-wider mb-4 font-body">
+                        <p className="text-xs font-bold text-[#f97316] uppercase tracking-wider mb-4 font-body">
                           {item.subtitle}
                         </p>
-                        <p className="font-body text-gray-600 text-sm leading-relaxed mb-6">
+                        <p className="font-body text-slate-600 text-sm leading-relaxed mb-6">
                           {item.description}
                         </p>
 
-                        <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
+                        <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
                           {item.details.map((detail) => (
-                            <span key={detail} className="text-[11px] font-semibold text-gray-500 bg-gray-50 px-2.5 py-1 rounded-md">
+                            <span key={detail} className="text-[11px] font-semibold text-slate-600 bg-slate-50 px-2.5 py-1 rounded-md">
                               ✓ {detail}
                             </span>
                           ))}
@@ -171,8 +167,8 @@ export default function HowWeWork() {
                     </div>
 
                     {/* Step Number Circle Indicator (Desktop Center) */}
-                    <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-white border-4 border-white shadow-2xl items-center justify-center font-heading font-extrabold text-white text-lg z-10"
-                      style={{ background: "#1a3a6b" }}
+                    <div
+                      className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-black border-4 border-white shadow-xl items-center justify-center font-heading font-extrabold text-white text-lg z-10"
                     >
                       {item.step}
                     </div>
@@ -189,7 +185,7 @@ export default function HowWeWork() {
         {/* Tab 2: Foundation Journey Timeline */}
         {activeTab === "timeline" && (
           <div className="relative max-w-4xl mx-auto">
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#1a3a6b] hidden lg:block" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#2563eb] hidden lg:block" />
 
             <div className="flex flex-col gap-10">
               {TIMELINE.map((item, i) => {
@@ -215,7 +211,7 @@ export default function HowWeWork() {
                       </div>
                     </div>
 
-                    <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full border-4 border-white shadow-lg items-center justify-center text-xs text-white z-10 bg-[#1a3a6b]">
+                    <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full border-4 border-white shadow-lg items-center justify-center text-xs text-white z-10 bg-[#2563eb]">
                       •
                     </div>
 

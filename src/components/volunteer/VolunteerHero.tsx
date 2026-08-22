@@ -19,7 +19,7 @@ const footprintPositions = [
 
 const floatingStats = [
   { label: "Active Volunteers", value: "480+", icon: "🙋", color: "bg-[#f97316]" },
-  { label: "Hours Contributed", value: "24K+", icon: "⏱️", color: "bg-[#1a3a6b]" },
+  { label: "Hours Contributed", value: "24K+", icon: "⏱️", color: "bg-[#2563eb]" },
   { label: "Communities Served", value: "62+", icon: "🏘️", color: "bg-[#15803d]" },
 ];
 
@@ -28,7 +28,7 @@ export default function VolunteerHero() {
   const inView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section className="relative min-h-[96vh] flex items-center justify-center overflow-hidden bg-[#0d1f3c]">
+    <section className="relative min-h-[96vh] flex items-center justify-center overflow-hidden bg-[#09090b]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -36,12 +36,11 @@ export default function VolunteerHero() {
           alt="Passionate volunteers working together for Shoe My Feet Foundation"
           fill
           priority
-          className="object-cover object-center scale-105 brightness-75"
+          className="object-cover object-center scale-105"
           sizes="100vw"
         />
-        {/* Deep navy → orange gradient overlay */}
-        <div className="absolute inset-0 bg-[#1a3a6b]" />
-        <div className="absolute inset-0 bg-[#1a3a6b]" />
+        {/* Black cinematic gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />
       </div>
 
       {/* Ambient glow overlays */}
@@ -145,7 +144,6 @@ export default function VolunteerHero() {
               href="#volunteer-form"
               className="btn-orange text-base sm:text-lg px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 justify-center group"
             >
-              <HeartIcon size={20} className="fill-white/30 group-hover:fill-white transition-colors" />
               <span>Become a Volunteer</span>
             </a>
             <a
@@ -165,7 +163,7 @@ export default function VolunteerHero() {
             {floatingStats.map((stat, i) => (
               <motion.div
                 key={stat.label}
-                className="flex-1 bg-[#0d1f3c] rounded-2xl px-5 py-4 flex items-center gap-3 hover:scale-105 transition-transform duration-300 cursor-default "
+                className="flex-1 bg-black/75 backdrop-blur-xl border border-white/15 rounded-2xl px-5 py-4 flex items-center gap-3 hover:scale-105 transition-transform duration-300 cursor-default shadow-xl"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3.5 + i * 0.5, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }}
               >

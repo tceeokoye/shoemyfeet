@@ -182,7 +182,7 @@ export default function MediaArchive({ onSelectPhoto, onSelectVideo }: MediaArch
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-[#1a3a6b]" />
+                  <div className="absolute inset-0 bg-[#2563eb]" />
 
                   <div className="absolute top-3 left-3 right-3 flex justify-between z-10">
                     <span className="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] font-bold">

@@ -21,7 +21,7 @@ const footprintTrail = [
 
 export default function DonateFinalCTA() {
   return (
-    <section className="relative section-padding bg-[#0f2347] text-white overflow-hidden" aria-label="Final call to action">
+    <section className="relative section-padding bg-[#1e40af] text-white overflow-hidden" aria-label="Final call to action">
       {/* Background layers */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Glows */}
@@ -117,7 +117,6 @@ export default function DonateFinalCTA() {
           {/* CTA Buttons */}
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-xl">
             <Link href="#donate-widget" className="btn-orange text-base py-4 px-8 flex-1 justify-center group">
-              <HeartIcon size={18} className="fill-white text-white group-hover:scale-110 transition-transform" />
               Donate Now
               <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
             </Link>

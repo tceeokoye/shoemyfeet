@@ -6,9 +6,9 @@ import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 const partners = [
   { name: "Access Bank", type: "CSR Sponsor", initials: "AB", color: "bg-[#f97316]" },
   { name: "The Rose Project", type: "Initiative Partner", initials: "RP", color: "bg-[#f97316]" },
-  { name: "UBA Her Progress", type: "Recognition Partner", initials: "UB", color: "bg-[#1a3a6b]" },
+  { name: "UBA Her Progress", type: "Recognition Partner", initials: "UB", color: "bg-[#2563eb]" },
   { name: "iF Design Award", type: "Global Recognition", initials: "iF", color: "bg-[#f59e0b]" },
-  { name: "Häagen-Dazs Initiative", type: "Supporting Partner", initials: "HD", color: "bg-[#1a3a6b]" },
+  { name: "Häagen-Dazs Initiative", type: "Supporting Partner", initials: "HD", color: "bg-[#2563eb]" },
   { name: "Kaduna Education Ministry", type: "State Partner", initials: "KM", color: "bg-[#15803d]" },
   { name: "Enugu State Govt", type: "State Partner", initials: "ES", color: "bg-[#15803d]" },
   { name: "CAC Nigeria", type: "Regulatory Trustee", initials: "CA", color: "bg-slate-700" },
@@ -16,7 +16,7 @@ const partners = [
 
 export default function PartnersSupporters() {
   return (
-    <section className="py-20 bg-[#1a3a6b] overflow-hidden border-t border-gray-100 relative">
+    <section className="py-20 bg-[#09090b] overflow-hidden border-t border-white/10 relative text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center mb-12">
         <motion.div
           variants={staggerContainer}
@@ -27,19 +27,19 @@ export default function PartnersSupporters() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs font-bold font-body mb-3 border border-blue-200"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-500/20 text-amber-300 text-xs font-bold font-body mb-3 border border-orange-500/40"
           >
-            Partners & Supporters
+            Partners &amp; Supporters
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl font-bold text-[#1a1a2e] mb-4"
+            className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4"
           >
-            Powered by <span className="text-royal-blue">Generosity & Collaboration</span>
+            Powered by <span className="text-[#f59e0b]">Generosity &amp; Collaboration</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="text-base sm:text-lg text-gray-600 font-body leading-relaxed max-w-2xl mx-auto"
+            className="text-base sm:text-lg text-neutral-300 font-body leading-relaxed max-w-2xl mx-auto"
           >
             We extend our deepest gratitude to all partner organizations, CSR sponsors, selfless volunteers, and generous individual donors whose unwavering support empowers thousands of children to walk forward with pride.
           </motion.p>
@@ -49,8 +49,8 @@ export default function PartnersSupporters() {
       {/* Marquee Track */}
       <div className="relative flex overflow-x-hidden group py-4">
         {/* Gradient Fade Overlays */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-[#1a3a6b] z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-[#1a3a6b] z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-[#09090b] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-[#09090b] to-transparent z-10 pointer-events-none" />
 
         {/* Marquee Row 1 */}
         <div className="flex shrink-0 animate-marquee group-hover:[animation-play-state:paused] items-center gap-8 py-2">

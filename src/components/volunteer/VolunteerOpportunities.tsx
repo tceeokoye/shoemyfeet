@@ -135,7 +135,7 @@ export default function VolunteerOpportunities() {
                       {role.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="px-2.5 py-1 rounded-full bg-blue-50 text-royal-blue text-xs font-semibold font-body border border-blue-100"
+                          className="px-2.5 py-1 rounded-full bg-blue-100/80 text-[#1e40af] text-xs font-bold font-body border border-blue-200"
                         >
                           {skill}
                         </span>

@@ -10,7 +10,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="section-padding bg-[#1a3a6b] overflow-hidden">
+    <section id="faq" className="section-padding bg-[#2563eb] overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -54,7 +54,7 @@ export default function FAQSection() {
               >
                 <div className="flex items-start gap-3">
                   <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
-                    openIndex === index ? "bg-[#1a3a6b] text-white" : "bg-blue-50 text-royal-blue group-hover:bg-blue-100"
+                    openIndex === index ? "bg-[#2563eb] text-white" : "bg-blue-50 text-royal-blue group-hover:bg-blue-100"
                   }`}>
                     <HelpCircleIcon size={16} />
                   </div>
@@ -102,13 +102,13 @@ export default function FAQSection() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <div className="bg-[#1a3a6b] rounded-2xl px-8 py-6 border border-blue-100">
+          <div className="bg-[#2563eb] rounded-2xl px-8 py-6 border border-blue-100">
             <p className="font-body text-gray-600 mb-3">
               Still have questions? We&apos;d love to hear from you.
             </p>
             <a
               href="mailto:hello@shoemyfeet.org"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-royal-blue border-2 border-[#1a3a6b] hover:bg-[#1a3a6b] hover:text-white transition-all text-sm font-body"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-royal-blue border-2 border-[#2563eb] hover:bg-[#2563eb] hover:text-white transition-all text-sm font-body"
             >
               Contact Us →
             </a>

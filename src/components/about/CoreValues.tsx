@@ -25,7 +25,7 @@ const values = [
     icon: "🛡️",
     title: "Integrity",
     desc: "We maintain absolute transparency in every dollar donated, operating with accountability to our supporters and communities.",
-    gradient: "bg-[#1a3a6b]",
+    gradient: "bg-[#2563eb]",
     border: "border-blue-100 hover:border-blue-300",
     bg: "bg-blue-50/50",
   },
@@ -41,7 +41,7 @@ const values = [
     icon: "🌱",
     title: "Hope",
     desc: "We believe every child carries immense potential. A simple pair of shoes unlocks their confidence to step forward.",
-    gradient: "bg-[#1a3a6b]",
+    gradient: "bg-[#2563eb]",
     border: "border-purple-100 hover:border-purple-300",
     bg: "bg-purple-50/50",
   },
@@ -84,18 +84,18 @@ export default function CoreValues() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold font-body mb-3 border border-purple-200">
+          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs font-bold font-body mb-3 border border-orange-200">
             Our Core Values
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] leading-tight">
-            The Principles That <span className="text-royal-blue">Guide Us</span>
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a0a0a] leading-tight">
+            The Principles That <span className="text-[#f97316]">Guide Us</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-gray-600 font-body text-base mt-4 leading-relaxed">
+          <motion.p variants={fadeUp} className="text-slate-600 font-body text-base mt-4 leading-relaxed">
             Six unwavering commitments that shape how we serve children, partner with communities, and steward resources.
           </motion.p>
         </motion.div>
 
-        {/* 6 Grid Cards */}
+        {/* 6 Clean White Cards */}
         <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {values.map((v, i) => (
             <motion.div
@@ -104,26 +104,20 @@ export default function CoreValues() {
               variants={cardVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              whileHover={{ y: -8, scale: 1.02, transition: { type: "spring" as const, stiffness: 280, damping: 22 } }}
-              className={`group relative bg-white rounded-3xl p-8 border ${v.border} shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-default flex flex-col justify-between`}
+              whileHover={{ y: -6, transition: { type: "spring" as const, stiffness: 280, damping: 22 } }}
+              className="bg-white rounded-3xl p-8 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
-              {/* Soft glowing overlay on hover */}
-              <div className={`absolute inset-0 v.gradient opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl pointer-events-none`} />
-
               <div>
                 {/* Icon Container */}
-                <div className={`w-14 h-14 rounded-2xl v.gradient flex items-center justify-center text-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300 text-white`}>
+                <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-2xl shadow-sm mb-6">
                   {v.icon}
                 </div>
 
-                <h3 className="font-heading font-bold text-2xl text-[#1a1a2e] mb-3 group-hover:text-royal-blue transition-colors">
+                <h3 className="font-heading font-bold text-2xl text-[#0a0a0a] mb-3">
                   {v.title}
                 </h3>
-                <p className="font-body text-gray-600 text-sm leading-relaxed">{v.desc}</p>
+                <p className="font-body text-slate-600 text-sm leading-relaxed">{v.desc}</p>
               </div>
-
-              {/* Bottom growing color bar */}
-              <div className={`h-1.5 w-10 rounded-full v.gradient mt-6 group-hover:w-full transition-all duration-500`} />
             </motion.div>
           ))}
         </div>

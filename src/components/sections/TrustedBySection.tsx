@@ -40,8 +40,8 @@ export default function TrustedBySection() {
       {/* Marquee */}
       <div className="relative">
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-[#1a3a6b] z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-[#1a3a6b] z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-[#2563eb] z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-[#2563eb] z-10" />
 
         <div className="flex overflow-hidden">
           <div className="flex gap-8 animate-marquee shrink-0">
@@ -54,7 +54,7 @@ export default function TrustedBySection() {
               >
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-sm font-heading shadow-sm group-hover:shadow-md transition-shadow"
-                  style={{ background: "#1a3a6b" }}
+                  style={{ background: "#2563eb" }}
                 >
                   {partner.initial}
                 </div>

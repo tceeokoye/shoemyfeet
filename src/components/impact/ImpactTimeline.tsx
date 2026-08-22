@@ -32,7 +32,7 @@ function TimelineItem({
       {/* Connector line – only before last item */}
       {index < total - 1 && (
         <motion.div
-          className="absolute left-1/2 top-1/2 w-0.5 bg-[#1a3a6b]"
+          className="absolute left-1/2 top-1/2 w-0.5 bg-[#2563eb]"
           style={{ height: "calc(100% + 2rem)", translateX: "-50%", top: "50%" }}
           initial={{ scaleY: 0 }}
           animate={inView ? { scaleY: 1 } : {}}
@@ -96,7 +96,7 @@ function TimelineItem({
 
 export default function ImpactTimeline() {
   return (
-    <section className="section-padding bg-[#1a3a6b] overflow-hidden">
+    <section className="section-padding bg-[#2563eb] overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -121,7 +121,7 @@ export default function ImpactTimeline() {
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="text-base sm:text-lg text-gray-600 font-body leading-relaxed"
+            className="text-base sm:text-lg text-[#D97706] font-body leading-relaxed"
           >
             From a single act of kindness to a national movement — discover the milestones that shaped our growing impact.
           </motion.p>
@@ -158,7 +158,7 @@ export default function ImpactTimeline() {
           <div className="hidden md:block space-y-16 relative">
             {/* Vertical center line */}
             <motion.div
-              className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#1a3a6b] -translate-x-1/2"
+              className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#2563eb] -translate-x-1/2"
               initial={{ scaleY: 0 }}
               whileInView={{ scaleY: 1 }}
               viewport={{ once: true, amount: 0.1 }}

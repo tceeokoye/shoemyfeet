@@ -16,7 +16,7 @@ const testimonials = [
     quote: "I used to hide my feet in class because my shoes had big holes. Now I walk in front proudly. My teacher says I'm the first to raise my hand!",
     image: "/images/story1.jpg",
     stars: 5,
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const testimonials = [
     quote: "Class attendance jumped by nearly 30% after Shoe My Feet visited our school. The children are more focused, confident, and eager to learn.",
     image: "/images/story2.jpg",
     stars: 5,
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ const testimonials = [
     quote: "Our partnership with Shoe My Feet is one of the most impactful CSR initiatives we've undertaken. The transparency and dedication are unmatched.",
     image: "/images/founder.jpg",
     stars: 5,
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
   },
 ];
 

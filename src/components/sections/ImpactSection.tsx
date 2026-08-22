@@ -13,7 +13,7 @@ const metrics = [
     label: "Pairs of School Shoes",
     sublabel: "Distributed to children in need",
     icon: "👟",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
   },
   {
@@ -43,7 +43,7 @@ const metrics = [
     label: "Nigerian States",
     sublabel: "And growing",
     icon: "🗺️",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-purple-50",
   },
   {
@@ -63,7 +63,7 @@ const metrics = [
     label: "Years of Impact",
     sublabel: "Since our founding in 2022",
     icon: "📅",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-sky-50",
   },
 ];
@@ -110,7 +110,7 @@ function MetricCard({ metric, index }: { metric: typeof metrics[0]; index: numbe
 
 export default function ImpactSection() {
   return (
-    <section id="impact" className="section-padding bg-[#1a3a6b] overflow-hidden relative">
+    <section id="impact" className="section-padding bg-[#2563eb] overflow-hidden relative">
 
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">

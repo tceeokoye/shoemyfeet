@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import FastImage from "@/components/ui/FastImage";
+import ProtectedImage from "@/assets/protecting_little.jpg";
 import {
   ArrowRightIcon,
   PlayIcon,
@@ -15,7 +16,7 @@ import {
 
 interface SlideData {
   id: number;
-  image: string;
+  image: any;
   badge: string;
   headlineLines: string[];
   highlightWord: string;
@@ -23,12 +24,13 @@ interface SlideData {
   primaryCta: { label: string; href: string };
   secondaryCta: { label: string; href?: string; isVideo?: boolean };
   floatStat?: { number: string; text: string; location: string };
+  objectPosition?: string;
 }
 
 const HERO_SLIDES: SlideData[] = [
   {
     id: 1,
-    image: "/images/hero.webp",
+    image: "/images/everychild.jpg",
     badge: "Every Step Changes a Life",
     headlineLines: ["Every Child Deserves", "To Walk With"],
     highlightWord: "Confidence.",
@@ -37,10 +39,11 @@ const HERO_SLIDES: SlideData[] = [
     primaryCta: { label: "Donate Now", href: "/donate" },
     secondaryCta: { label: "Watch Our Story", isVideo: true },
     floatStat: { number: "6,500+", text: "Pairs Gifted to Children", location: "Lagos & Ogun State" },
+    objectPosition: "object-[center_20%]",
   },
   {
     id: 2,
-    image: "/images/distribution.webp",
+    image: ProtectedImage,
     badge: "Health & Dignity Protected",
     headlineLines: ["Protecting Little Soles", "From Pain &"],
     highlightWord: "Infection.",
@@ -49,10 +52,11 @@ const HERO_SLIDES: SlideData[] = [
     primaryCta: { label: "Support Outreach", href: "/donate" },
     secondaryCta: { label: "Explore Our Impact", href: "/impact" },
     floatStat: { number: "100%", text: "Parasite Protection Rate", location: "Enugu Outreach" },
+    objectPosition: "object-[center_top]",
   },
   {
     id: 3,
-    image: "/images/children_walking_school.webp",
+    image: "/images/keeping-children.jpg",
     badge: "Equal Access to Education",
     headlineLines: ["Keeping Children in Class,", "One Step at a"],
     highlightWord: "Time.",
@@ -61,10 +65,11 @@ const HERO_SLIDES: SlideData[] = [
     primaryCta: { label: "Sponsor a Child", href: "/donate" },
     secondaryCta: { label: "View Our Programs", href: "/programs" },
     floatStat: { number: "+30%", text: "Increase in Attendance", location: "Primary Schools" },
+    objectPosition: "object-[center_top]",
   },
   {
     id: 4,
-    image: "/images/shoemaking.webp",
+    image: "/images/crafting9.jpeg",
     badge: "Kids Shoemaking & Craftsmanship",
     headlineLines: ["Building Sustainable", "Futures Through"],
     highlightWord: "Craftsmanship.",
@@ -73,23 +78,23 @@ const HERO_SLIDES: SlideData[] = [
     primaryCta: { label: "Empower Kids", href: "/volunteer" },
     secondaryCta: { label: "Our Story", href: "/about" },
     floatStat: { number: "137+", text: "Kids Trained in Shoemaking", location: "Footwear Academy" },
+    objectPosition: "object-center",
   },
 ];
 
-const SLIDE_DURATION = 7500; // ms
+const SLIDE_DURATION = 4000; // ms
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState(1);
-  const [isPaused, setIsPaused] = useState(false);
   const [isPlayingVideo, setIsPlayingVideo] = useState(false);
-  const [isReady, setIsReady] = useState(false);
+  const [isReady, setIsReady] = useState(true);
   const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     const handleLoaderComplete = () => setIsReady(true);
     window.addEventListener("page-loader-complete", handleLoaderComplete);
-    const timer = setTimeout(() => setIsReady(true), 600);
+    const timer = setTimeout(() => setIsReady(true), 300);
 
     return () => {
       window.removeEventListener("page-loader-complete", handleLoaderComplete);
@@ -114,14 +119,14 @@ export default function HeroSection() {
 
   // Continuous Autoplay Timer
   useEffect(() => {
-    if (isPaused || !isReady) return;
+    if (!isReady) return;
 
     const timer = setInterval(() => {
       nextSlide();
     }, SLIDE_DURATION);
 
     return () => clearInterval(timer);
-  }, [nextSlide, isPaused, isReady, currentSlide]);
+  }, [nextSlide, isReady]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
@@ -151,30 +156,19 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#0b1933] pt-28 sm:pt-32 pb-10 select-none"
+      className="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#09090b] pt-28 sm:pt-32 pb-10 select-none"
       aria-label="Hero section"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
       {/* Background Glow Lights */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-[140px] pointer-events-none z-0" />
-      <div className="absolute bottom-10 right-10 w-[30rem] h-[30rem] bg-blue-500/20 rounded-full blur-[160px] pointer-events-none z-0" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-[70px] pointer-events-none z-0" />
+      <div className="absolute bottom-10 right-10 w-[30rem] h-[30rem] bg-blue-500/5 rounded-full blur-[80px] pointer-events-none z-0" />
 
       {/* CONTINUOUS CINEMATOGRAPHY SLOW MOTION BACKGROUND CAROUSEL */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Base Image Layer to eliminate black flash */}
-        <div className="absolute inset-0 w-full h-full">
-          <FastImage
-            src={HERO_SLIDES[0].image}
-            alt="Hero background base"
-            fill
-            priority
-            className="object-cover object-center transform-gpu scale-105"
-            sizes="100vw"
-          />
-        </div>
+        {/* Base Image Layer */}
+        <div className="absolute inset-0 w-full h-full bg-[#09090b]" />
 
         {/* Seamless Cross-fade with Continuous Slow Motion Cinematography (scale & pan) */}
         <AnimatePresence initial={false} custom={direction}>
@@ -191,6 +185,7 @@ export default function HeroSection() {
           >
             {/* Image layer continuously moving like cinematography */}
             <motion.div
+              initial={{ scale: 1.18, x: 0, y: 0 }}
               animate={{
                 scale: [1.18, 1.03],
                 x: [0, -25],
@@ -203,17 +198,18 @@ export default function HeroSection() {
               className="relative w-full h-full"
             >
               <FastImage
+                key={`hero-slide-${slide.id}`}
                 src={slide.image}
                 alt={slide.badge}
                 fill
                 priority
-                className="object-cover object-center transform-gpu"
+                className=" object-cover md:w-full md:h-full object-center transform-gpu"
                 sizes="100vw"
               />
             </motion.div>
 
-            {/* Dark Gradient Overlay ensuring 100% text legibility */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0b1933]/95 via-[#0f2347]/85 to-[#0b1933]/70 backdrop-brightness-95" />
+            {/* High-Contrast Black Cinematic Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />
           </motion.div>
         </AnimatePresence>
       </div>
@@ -238,9 +234,9 @@ export default function HeroSection() {
                 initial={{ opacity: 0, scale: 0.85 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.15 }}
-                className="inline-flex items-center gap-2.5 self-start px-4 py-2 rounded-full bg-[#f97316] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-lg shadow-orange-600/30 font-heading border border-amber-300/40"
+                className="inline-flex items-center gap-2.5 self-start px-4 py-2 rounded-full bg-black/80 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-xl shadow-black/50 font-heading border border-white/20 backdrop-blur-md"
               >
-                <span className="w-2.5 h-2.5 rounded-full bg-white animate-pulse" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#f97316] animate-pulse" />
                 <span>{slide.badge}</span>
               </motion.div>
 
@@ -258,20 +254,16 @@ export default function HeroSection() {
               </h1>
 
               {/* Description Subtitle */}
-              <p className="text-base sm:text-lg md:text-xl text-blue-100/90 font-body leading-relaxed max-w-2xl font-normal drop-shadow">
+              <p className="text-base sm:text-lg md:text-xl text-neutral-200 font-body leading-relaxed max-w-2xl font-normal drop-shadow">
                 {slide.description}
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-wrap gap-4 items-center pt-2">
+              <div className="flex flex-wrap gap-4 items-center pt-6 md:pt-2">
                 <Link
                   href={slide.primaryCta.href}
                   className="btn-orange text-base sm:text-lg font-bold group shadow-2xl"
                 >
-                  <HeartIcon
-                    size={20}
-                    className="fill-white text-white group-hover:scale-110 transition-transform"
-                  />
                   <span>{slide.primaryCta.label}</span>
                   <ArrowRightIcon
                     size={18}
@@ -282,7 +274,7 @@ export default function HeroSection() {
                 {slide.secondaryCta.isVideo ? (
                   <button
                     onClick={() => setIsPlayingVideo(true)}
-                    className="flex items-center gap-3.5 px-6 py-3.5 rounded-full font-bold text-white bg-white/10 hover:bg-white/20 border border-white/30 transition-all font-heading text-base cursor-pointer backdrop-blur-md group shadow-md"
+                    className="flex items-center gap-3.5 px-6 py-3.5 rounded-full font-bold text-white bg-black/70 hover:bg-black/90 border border-white/25 transition-all font-heading text-base cursor-pointer backdrop-blur-md group shadow-xl shadow-black/40"
                   >
                     <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-[#f97316] text-white shadow-md group-hover:scale-110 transition-transform">
                       <PlayIcon size={14} className="ml-0.5 fill-white text-white" />
@@ -292,7 +284,7 @@ export default function HeroSection() {
                 ) : (
                   <Link
                     href={slide.secondaryCta.href || "#"}
-                    className="flex items-center gap-2 px-6 py-3.5 rounded-full font-bold text-white bg-white/10 hover:bg-white/20 border border-white/30 transition-all font-heading text-base backdrop-blur-md group"
+                    className="flex items-center gap-2 px-6 py-3.5 rounded-full font-bold text-white bg-black/70 hover:bg-black/90 border border-white/25 transition-all font-heading text-base backdrop-blur-md group shadow-xl shadow-black/40"
                   >
                     <span>{slide.secondaryCta.label}</span>
                     <ArrowRightIcon
@@ -325,9 +317,9 @@ export default function HeroSection() {
                 repeat: Infinity,
                 repeatType: "mirror",
               }}
-              className="bg-[#0f2347]/90 backdrop-blur-2xl border-2 border-white/20 rounded-3xl p-6 shadow-2xl max-w-xs text-white relative overflow-hidden group hover:border-[#f97316]/60 transition-all card-3d-dark"
+              className="bg-black/80 backdrop-blur-2xl border border-white/20 rounded-3xl p-6 shadow-2xl max-w-xs text-white relative overflow-hidden group hover:border-[#f97316]/60 transition-all card-3d-dark shadow-black/70"
             >
-              <div className="absolute -top-10 -right-10 w-28 h-28 bg-orange-500/20 rounded-full blur-xl" />
+              <div className="absolute -top-10 -right-10 w-28 h-28 bg-orange-500/15 rounded-full blur-xl" />
               
               <div className="flex items-center gap-3 mb-3">
                 <span className="w-10 h-10 rounded-2xl bg-orange-500/20 border border-orange-500/40 flex items-center justify-center text-amber-300">
@@ -337,7 +329,7 @@ export default function HeroSection() {
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-300 block font-heading">
                     Verified Field Impact
                   </span>
-                  <span className="text-xs text-blue-100 font-body">
+                  <span className="text-xs text-neutral-300 font-body">
                     {slide.floatStat.location}
                   </span>
                 </div>
@@ -347,11 +339,11 @@ export default function HeroSection() {
                 {slide.floatStat.number}
               </div>
 
-              <p className="text-xs text-blue-100 font-body leading-relaxed">
+              <p className="text-xs text-neutral-300 font-body leading-relaxed">
                 {slide.floatStat.text}
               </p>
 
-              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-blue-200">
+              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-neutral-400">
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-orange-400 animate-ping" />
                   Live Field Data
@@ -368,7 +360,7 @@ export default function HeroSection() {
         <div className="flex items-center justify-between gap-4 pb-4 border-b border-white/15">
           {/* Swiper Indicators */}
           <div className="flex items-center gap-4">
-            <span className="text-xs font-bold text-blue-200 font-heading tracking-widest">
+            <span className="text-xs font-bold text-neutral-300 font-heading tracking-widest">
               0{currentSlide + 1} / 0{HERO_SLIDES.length}
             </span>
 
@@ -387,10 +379,10 @@ export default function HeroSection() {
                 >
                   {idx === currentSlide && (
                     <motion.div
-                      key={`progress-${currentSlide}-${isPaused}`}
+                      key={`progress-${currentSlide}`}
                       className="absolute inset-0 bg-amber-400 origin-left"
                       initial={{ scaleX: 0 }}
-                      animate={{ scaleX: isPaused ? 0 : 1 }}
+                      animate={{ scaleX: 1 }}
                       transition={{
                         duration: SLIDE_DURATION / 1000,
                         ease: "linear",
@@ -407,14 +399,14 @@ export default function HeroSection() {
             <button
               onClick={prevSlide}
               aria-label="Previous slide"
-              className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#f97316] border border-white/25 text-white flex items-center justify-center transition-all duration-200 cursor-pointer shadow-md hover:scale-105 active:scale-95"
+              className="w-10 h-10 rounded-full bg-black/60 hover:bg-[#f97316] border border-white/25 text-white flex items-center justify-center transition-all duration-200 cursor-pointer shadow-md hover:scale-105 active:scale-95"
             >
               <ChevronLeftIcon size={20} />
             </button>
             <button
               onClick={nextSlide}
               aria-label="Next slide"
-              className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#f97316] border border-white/25 text-white flex items-center justify-center transition-all duration-200 cursor-pointer shadow-md hover:scale-105 active:scale-95"
+              className="w-10 h-10 rounded-full bg-black/60 hover:bg-[#f97316] border border-white/25 text-white flex items-center justify-center transition-all duration-200 cursor-pointer shadow-md hover:scale-105 active:scale-95"
             >
               <ChevronRightIcon size={20} />
             </button>
@@ -426,7 +418,7 @@ export default function HeroSection() {
       <AnimatePresence mode="wait">
         {isPlayingVideo && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -434,7 +426,7 @@ export default function HeroSection() {
           >
             <motion.div
               onClick={(e) => e.stopPropagation()}
-              className="bg-[#0b1933] border border-white/20 rounded-3xl p-3 max-w-4xl w-full shadow-2xl overflow-hidden relative"
+              className="bg-[#09090b] border border-white/20 rounded-3xl p-3 max-w-4xl w-full shadow-2xl overflow-hidden relative shadow-black/80"
               initial={{ opacity: 0, scale: 0.9, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}

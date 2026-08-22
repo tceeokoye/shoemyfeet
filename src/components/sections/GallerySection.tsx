@@ -166,7 +166,7 @@ export default function GallerySection() {
                 />
 
                 {/* Gradient */}
-                <div className="absolute inset-0 bg-[#1a3a6b] pointer-events-none" />
+                <div className="absolute inset-0 bg-[#2563eb] pointer-events-none" />
 
                 {/* Featured top badges */}
                 {isFeatured && (

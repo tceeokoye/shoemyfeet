@@ -39,11 +39,11 @@ export default function DonationCalculator() {
   const presets = [5000, 10000, 25000, 50000, 100000, 250000];
 
   return (
-    <section id="impact-calculator" className="section-padding bg-[#1a3a6b] relative overflow-hidden" aria-label="Donation impact calculator">
+    <section id="impact-calculator" className="section-padding bg-[#2563eb] relative overflow-hidden" aria-label="Donation impact calculator">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 right-10 w-72 h-72 rounded-full opacity-8 blur-3xl bg-[#1a3a6b]" />
-        <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full opacity-8 blur-3xl bg-[#1a3a6b]" />
+        <div className="absolute top-10 right-10 w-72 h-72 rounded-full opacity-8 blur-3xl bg-[#2563eb]" />
+        <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full opacity-8 blur-3xl bg-[#2563eb]" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,7 +92,7 @@ export default function DonationCalculator() {
                 onChange={(e) => setAmount(Number(e.target.value))}
                 className="w-full h-3 rounded-full appearance-none cursor-pointer"
                 style={{
-                  background: "#1a3a6b",
+                  background: "#2563eb",
                 }}
               />
             </div>
@@ -132,7 +132,7 @@ export default function DonationCalculator() {
                 label: "Pairs of Shoes",
                 value: shoes,
                 suffix: "",
-                color: "bg-[#1a3a6b]",
+                color: "bg-[#2563eb]",
                 bg: "bg-blue-50",
                 border: "border-blue-100",
               },
@@ -150,7 +150,7 @@ export default function DonationCalculator() {
                 label: "Outreach Funded",
                 value: outreachPct,
                 suffix: "%",
-                color: "bg-[#1a3a6b]",
+                color: "bg-[#2563eb]",
                 bg: "bg-purple-50",
                 border: "border-purple-100",
               },
@@ -166,7 +166,7 @@ export default function DonationCalculator() {
                 <div className="font-heading text-2xl sm:text-3xl font-bold text-[#1a1a2e]">
                   <AnimatedNumber value={typeof stat.value === "number" ? Math.round(stat.value * 100) / 100 : stat.value} suffix={stat.suffix} />
                 </div>
-                <div className="text-xs text-gray-500 font-body font-medium mt-1">{stat.label}</div>
+                <div className="text-xs text-slate-800 font-body font-bold mt-1">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -174,7 +174,7 @@ export default function DonationCalculator() {
           {/* Impact Statement */}
           <motion.div
             layout
-            className="mt-6 p-4 rounded-2xl bg-[#1a3a6b] border border-blue-100 text-center"
+            className="mt-6 p-4 rounded-2xl bg-[#2563eb] border border-blue-100 text-center"
           >
             <p className="text-sm text-gray-700 font-body leading-relaxed">
               Your donation of{" "}

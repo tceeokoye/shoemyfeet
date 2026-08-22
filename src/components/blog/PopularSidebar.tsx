@@ -83,7 +83,7 @@ export default function PopularSidebar({
                 onClick={() => onSelectTag(tag)}
                 className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
                   isSelected
-                    ? "bg-[#1a3a6b] text-white shadow-md"
+                    ? "bg-[#2563eb] text-white shadow-md"
                     : "bg-gray-100 text-gray-600 hover:bg-orange-100 hover:text-warm-orange-dark"
                 }`}
               >
@@ -95,7 +95,7 @@ export default function PopularSidebar({
       </div>
 
       {/* Quick Newsletter Widget */}
-      <div className="bg-[#1a3a6b] rounded-3xl p-6 text-white relative overflow-hidden shadow-xl">
+      <div className="bg-[#2563eb] rounded-3xl p-6 text-white relative overflow-hidden shadow-xl">
         <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white/10 blur-2xl pointer-events-none" />
         <div className="relative z-10">
           <div className="w-10 h-10 rounded-2xl bg-white/10 flex items-center justify-center mb-4 backdrop-blur-xs">
@@ -117,7 +117,7 @@ export default function PopularSidebar({
       </div>
 
       {/* Impact Stat Banner */}
-      <div className="bg-[#1a3a6b] rounded-3xl p-6 border border-amber-200/60">
+      <div className="bg-[#2563eb] rounded-3xl p-6 border border-amber-200/60">
         <div className="flex items-center gap-2 mb-2 text-warm-orange-dark font-bold text-xs">
           <HeartIcon size={14} className="fill-warm-orange text-warm-orange" />
           <span>Our Field Impact</span>

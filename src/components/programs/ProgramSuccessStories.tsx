@@ -110,7 +110,7 @@ export default function ProgramSuccessStories() {
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-[#1a3a6b]" />
+                <div className="absolute inset-0 bg-[#2563eb]" />
                 <div className="absolute bottom-3 left-3">
                   <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${story.tagColor} font-body`}>
                     {story.program}

@@ -22,8 +22,8 @@ const programs = [
       "Ensure proper fitting for every child",
       "Reduce school absenteeism due to lack of footwear",
     ],
-    accentColor: "bg-[#1a3a6b]",
-    topBar: "bg-[#1a3a6b]",
+    accentColor: "bg-[#2563eb]",
+    topBar: "bg-[#2563eb]",
     href: "/donate",
     cta: "Support This Program",
   },
@@ -82,8 +82,8 @@ const programs = [
       "Train school staff on distribution protocols",
       "Track and report impact data from each partner school",
     ],
-    accentColor: "bg-[#1a3a6b]",
-    topBar: "bg-[#1a3a6b]",
+    accentColor: "bg-[#2563eb]",
+    topBar: "bg-[#2563eb]",
     href: "/contact",
     cta: "Partner With Us",
   },
@@ -156,12 +156,12 @@ function ProgramCard({ program, index }: { program: typeof programs[0]; index: n
           className="object-cover group-hover:scale-105 transition-transform duration-700"
           sizes="(max-width: 1024px) 100vw, 50vw"
         />
-        <div className="absolute inset-0 bg-[#1a3a6b]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent" />
         <div className="absolute bottom-4 left-4">
           <span className="text-4xl">{program.icon}</span>
         </div>
         {/* Colored top bar accent */}
-        <div className={`absolute top-0 left-0 right-0 h-1.5 program.topBar`} />
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#f97316]" />
       </motion.div>
 
       {/* Content */}
@@ -171,13 +171,13 @@ function ProgramCard({ program, index }: { program: typeof programs[0]; index: n
         transition={{ type: "spring" as const, stiffness: 60, damping: 18, delay: 0.2 }}
         className={isEven ? "" : "lg:order-first"}
       >
-        <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold font-body border mb-4 ${program.tagColor}`}>
+        <span className="inline-block px-3 py-1 rounded-full text-xs font-bold font-body border mb-4 bg-orange-500/20 text-amber-300 border-orange-500/40">
           {program.tagline}
         </span>
-        <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#1a1a2e] mb-4 leading-tight">
+        <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">
           {program.title}
         </h3>
-        <p className="font-body text-gray-600 text-base leading-relaxed mb-6">
+        <p className="font-body text-blue-100/90 text-base leading-relaxed mb-6">
           {program.description}
         </p>
 
@@ -185,15 +185,15 @@ function ProgramCard({ program, index }: { program: typeof programs[0]; index: n
         <div className="space-y-2.5 mb-7">
           {program.objectives.map((obj) => (
             <div key={obj} className="flex items-start gap-3">
-              <CheckCircleIcon size={18} className="text-emerald-500 shrink-0 mt-0.5" />
-              <p className="font-body text-gray-700 text-sm">{obj}</p>
+              <CheckCircleIcon size={18} className="text-emerald-400 shrink-0 mt-0.5" />
+              <p className="font-body text-blue-100 text-sm">{obj}</p>
             </div>
           ))}
         </div>
 
         <Link
           href={program.href}
-          className={`inline-flex items-center gap-2 px-6 py-3 rounded-full text-white font-bold font-body text-sm program.accentColor shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group`}
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white font-bold font-body text-sm btn-orange shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group"
         >
           <span>{program.cta}</span>
           <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -205,7 +205,7 @@ function ProgramCard({ program, index }: { program: typeof programs[0]; index: n
 
 export default function FeaturedPrograms() {
   return (
-    <section className="section-padding bg-[#1a3a6b] overflow-hidden">
+    <section className="section-padding bg-[#09090b] text-white overflow-hidden border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -215,13 +215,13 @@ export default function FeaturedPrograms() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs sm:text-sm font-bold border border-blue-200 mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-orange-500/20 text-amber-300 text-xs sm:text-sm font-bold border border-orange-500/40 mb-4">
             What We Do
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight">
-            Our Featured <span className="text-royal-blue">Programs</span>
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+            Our Featured <span className="text-[#f59e0b]">Programs</span>
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 font-body leading-relaxed">
+          <p className="text-base sm:text-lg text-neutral-300 font-body leading-relaxed">
             Six targeted programs designed to give children the shoes — and the future — they deserve.
           </p>
         </motion.div>

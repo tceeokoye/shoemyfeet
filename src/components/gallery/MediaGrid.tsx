@@ -77,7 +77,7 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                   {isActive && (
                     <motion.div
                       layoutId="activeMediaTab"
-                      className="absolute inset-0 rounded-full bg-[#1a3a6b]"
+                      className="absolute inset-0 rounded-full bg-[#2563eb]"
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -129,7 +129,7 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                     />
 
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-[#1a3a6b] opacity-80 group-hover:opacity-90 transition-opacity" />
+                    <div className="absolute inset-0 bg-[#2563eb] opacity-80 group-hover:opacity-90 transition-opacity" />
 
                     {/* Top Badges */}
                     <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">

@@ -117,7 +117,7 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
       >
         <motion.div
           ref={containerRef}
-          className="relative w-full max-w-5xl bg-[#0f2347] rounded-3xl overflow-hidden shadow-2xl border border-white/15 flex flex-col max-h-[90vh]"
+          className="relative w-full max-w-5xl bg-[#1e40af] rounded-3xl overflow-hidden shadow-2xl border border-white/15 flex flex-col max-h-[90vh]"
           initial={{ scale: 0.9, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -231,7 +231,7 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
           </div>
 
           {/* Description Footer */}
-          <div className="px-6 py-4 bg-[#0d1f3c] border-t border-white/10 text-white">
+          <div className="px-6 py-4 bg-[#1e40af] border-t border-white/10 text-white">
             <p className="text-sm font-body text-blue-100 leading-relaxed">
               {video.caption}
             </p>

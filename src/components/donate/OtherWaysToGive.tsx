@@ -22,7 +22,7 @@ const otherWays = [
     description: "Fund an entire outreach event for a community. Your sponsorship covers shoes, transportation, and coordination for hundreds of children.",
     cta: "Sponsor Community",
     href: "/contact",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
     border: "border-blue-100",
     accent: "text-blue-600",
@@ -44,7 +44,7 @@ const otherWays = [
     description: "Integrate giving into your company's CSR strategy. We offer customizable partnership packages with brand visibility and impact reporting.",
     cta: "Corporate Partnership",
     href: "/contact",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-purple-50",
     border: "border-purple-100",
     accent: "text-purple-700",
@@ -77,7 +77,7 @@ export default function OtherWaysToGive() {
   return (
     <section className="section-padding bg-white relative overflow-hidden" aria-label="Other ways to give">
       {/* Subtle section divider */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#1a3a6b]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-[#2563eb]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -145,9 +145,9 @@ export default function OtherWaysToGive() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="mt-10 p-6 rounded-3xl bg-[#1a3a6b] border border-blue-100 flex items-start gap-4 max-w-2xl mx-auto"
+          className="mt-10 p-6 rounded-3xl bg-[#2563eb] border border-blue-100 flex items-start gap-4 max-w-2xl mx-auto"
         >
-          <div className="w-10 h-10 rounded-xl bg-[#1a3a6b] flex items-center justify-center flex-shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-[#2563eb] flex items-center justify-center flex-shrink-0">
             <ShieldCheckIcon size={20} className="text-white" />
           </div>
           <div>

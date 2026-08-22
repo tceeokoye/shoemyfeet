@@ -12,11 +12,11 @@ interface EventTimelineProps {
 
 export default function EventTimeline({ onPlayVideo }: EventTimelineProps) {
   return (
-    <section className="section-padding bg-[#0d1f3c] text-white relative overflow-hidden">
+    <section className="section-padding bg-[#09090b] text-white relative overflow-hidden border-t border-white/10">
       {/* Background Glow Orbs */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-1/3 left-10 w-96 h-96 rounded-full bg-blue-500/10 blur-[150px]" />
-        <div className="absolute bottom-1/3 right-10 w-96 h-96 rounded-full bg-orange-500/10 blur-[150px]" />
+        <div className="absolute top-1/3 left-10 w-96 h-96 rounded-full bg-orange-500/10 blur-[150px]" />
+        <div className="absolute bottom-1/3 right-10 w-96 h-96 rounded-full bg-blue-500/5 blur-[150px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -31,9 +31,9 @@ export default function EventTimeline({ onPlayVideo }: EventTimelineProps) {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/10 text-hope-yellow text-xs sm:text-sm font-bold mb-3 border border-white/20"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-500/20 text-amber-300 text-xs sm:text-sm font-bold mb-3 border border-orange-500/40"
           >
-            <SparklesIcon size={14} className="text-warm-orange" />
+            <SparklesIcon size={14} className="text-[#f97316]" />
             Chronological Journey
           </motion.span>
 
@@ -41,12 +41,12 @@ export default function EventTimeline({ onPlayVideo }: EventTimelineProps) {
             variants={fadeUp}
             className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4"
           >
-            Our Outreach <span className="text-warm-orange">Timeline</span>
+            Our Outreach <span className="text-[#f59e0b]">Timeline</span>
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
-            className="text-base sm:text-lg text-blue-100/90 font-body leading-relaxed"
+            className="text-base sm:text-lg text-neutral-300 font-body leading-relaxed"
           >
             Follow our growth from a single 100-pair outreach in 2022 to a multi-state nonprofit powering shoes and children's empowerment across Nigeria.
           </motion.p>
@@ -55,7 +55,7 @@ export default function EventTimeline({ onPlayVideo }: EventTimelineProps) {
         {/* Timeline Path */}
         <div className="relative">
           {/* Center Vertical Line */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#1a3a6b] -translate-x-1/2 rounded-full opacity-40" />
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#2563eb] -translate-x-1/2 rounded-full opacity-40" />
 
           <div className="space-y-12 lg:space-y-16">
             {TIMELINE_EVENTS.map((event, idx) => {
@@ -82,7 +82,7 @@ export default function EventTimeline({ onPlayVideo }: EventTimelineProps) {
                         className="object-cover group-hover:scale-105 transition-transform duration-700"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
-                      <div className="absolute inset-0 bg-[#1a3a6b]" />
+                      <div className="absolute inset-0 bg-[#2563eb]" />
 
                       {/* Video Play Trigger Overlay */}
                       {event.mediaType === "video" && onPlayVideo && (
@@ -130,7 +130,7 @@ export default function EventTimeline({ onPlayVideo }: EventTimelineProps) {
                   </div>
 
                   {/* Timeline Badge Node */}
-                  <div className="hidden lg:flex shrink-0 w-12 h-12 rounded-full bg-[#f97316] text-white items-center justify-center font-heading font-extrabold text-sm shadow-xl z-20 border-4 border-[#0d1f3c]">
+                  <div className="hidden lg:flex shrink-0 w-12 h-12 rounded-full bg-[#f97316] text-white items-center justify-center font-heading font-extrabold text-sm shadow-xl z-20 border-4 border-[#09090b]">
                     {idx + 1}
                   </div>
 

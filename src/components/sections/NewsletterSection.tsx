@@ -20,14 +20,14 @@ export default function NewsletterSection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[#1a3a6b]" />
+      <div className="absolute inset-0 bg-[#2563eb]" />
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-blue-500/15 animate-blob-slow" />
         <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-orange-500/15 animate-blob" />
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-5"
           style={{
-            backgroundColor: "#1a3a6b",
+            backgroundColor: "#2563eb",
             backgroundSize: "48px 48px"
           }}
         />

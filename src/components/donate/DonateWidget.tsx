@@ -66,24 +66,24 @@ export default function DonateWidget() {
   const annualTotal = finalAmount * FREQUENCY_MULTIPLIER[frequency];
 
   return (
-    <section id="donate-widget" className="section-padding bg-[#1a3a6b] relative overflow-hidden" aria-label="Make a donation">
+    <section id="donate-widget" className="section-padding bg-[#1e40af] relative overflow-hidden" aria-label="Make a donation">
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-80 h-80 rounded-full opacity-10 blur-3xl bg-[#1a3a6b]" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-10 blur-3xl bg-[#1a3a6b]" />
+        <div className="absolute top-0 right-0 w-80 h-80 rounded-full opacity-10 blur-3xl bg-orange-500" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-10 blur-3xl bg-blue-500" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-center mb-14">
-          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 border border-blue-200 text-royal-blue font-bold text-sm mb-4">
+          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/40 text-amber-300 font-bold text-sm mb-4">
             💙 Make a Donation
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-5">
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
             Give a Child{" "}
-            <span className="text-royal-blue">Their Next Step</span>
+            <span className="text-warm-orange">Their Next Step</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          <motion.p variants={fadeUp} className="text-blue-100/90 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Choose your giving amount and frequency. Every donation is 100% secure and goes directly to children who need it most.
           </motion.p>
         </motion.div>
@@ -98,7 +98,7 @@ export default function DonateWidget() {
           >
             <div className="bg-white rounded-4xl shadow-2xl shadow-blue-900/8 border border-gray-100 overflow-hidden">
               {/* Step Indicator */}
-              <div className="bg-[#1a3a6b] px-6 py-5">
+              <div className="bg-[#2563eb] px-6 py-5">
                 <div className="flex items-center gap-3 justify-center">
                   {[1, 2, 3].map((s) => (
                     <div key={s} className="flex items-center gap-3">
@@ -143,7 +143,7 @@ export default function DonateWidget() {
                               onClick={() => setFrequency(freq.id)}
                               className={`relative px-3 py-3 rounded-2xl text-sm font-bold font-body border-2 transition-all text-center cursor-pointer ${
                                 frequency === freq.id
-                                  ? "bg-[#1a3a6b] text-white border-royal-blue shadow-lg shadow-blue-900/20"
+                                  ? "bg-[#2563eb] text-white border-royal-blue shadow-lg shadow-blue-900/20"
                                   : "bg-gray-50 text-gray-600 border-gray-200 hover:border-royal-blue/40"
                               }`}
                             >
@@ -181,7 +181,7 @@ export default function DonateWidget() {
                                 }}
                                 className={`relative rounded-2xl p-4 text-left border-2 transition-all cursor-pointer group ${
                                   isSelected
-                                    ? "bg-[#1a3a6b] border-warm-orange shadow-lg shadow-orange-500/15"
+                                    ? "bg-[#2563eb] border-warm-orange shadow-lg shadow-orange-500/15"
                                     : "bg-gray-50 border-gray-100 hover:border-orange-200"
                                 }`}
                               >
@@ -234,7 +234,7 @@ export default function DonateWidget() {
                         <motion.div
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
-                          className="bg-[#1a3a6b] rounded-2xl p-4 border border-blue-100"
+                          className="bg-[#2563eb] rounded-2xl p-4 border border-blue-100"
                         >
                           <div className="flex items-center justify-between">
                             <div>
@@ -258,7 +258,6 @@ export default function DonateWidget() {
                         disabled={finalAmount <= 0}
                         className="w-full btn-orange py-4 text-base justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        <HeartIcon size={18} className="fill-white text-white" />
                         Continue to Details
                         <ArrowRightIcon size={16} />
                       </motion.button>
@@ -379,8 +378,8 @@ export default function DonateWidget() {
                             onClick={() => setPaymentMethod(pm.id)}
                             className={`p-4 rounded-2xl border-2 font-body text-sm font-bold transition-all text-center cursor-pointer flex flex-col items-center gap-1 ${
                               paymentMethod === pm.id
-                                ? "bg-[#1a3a6b] border-royal-blue text-royal-blue shadow-md shadow-blue-900/10"
-                                : "bg-gray-50 border-gray-100 text-gray-600 hover:border-gray-200"
+                                ? "bg-orange-50 border-[#f97316] text-[#ea580c] shadow-md shadow-orange-500/10"
+                                : "bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300"
                             }`}
                           >
                             <span className="text-2xl">{pm.icon}</span>
@@ -392,26 +391,26 @@ export default function DonateWidget() {
                       {/* Security badges */}
                       <div className="flex flex-wrap gap-2 justify-center py-2">
                         {["🔒 SSL Encrypted", "✅ PCI Compliant", "🛡️ Fraud Protected"].map((badge) => (
-                          <span key={badge} className="text-xs text-gray-500 font-body bg-gray-50 border border-gray-100 rounded-full px-3 py-1">{badge}</span>
+                          <span key={badge} className="text-xs text-slate-700 font-body font-medium bg-slate-50 border border-slate-200 rounded-full px-3 py-1">{badge}</span>
                         ))}
                       </div>
 
                       {/* Final summary */}
-                      <div className="bg-[#1a3a6b] rounded-2xl p-5 border border-green-100">
+                      <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200">
                         <div className="flex items-center gap-2 mb-3">
                           <span className="text-xl">🎉</span>
-                          <span className="font-heading font-bold text-green-700 text-lg">Ready to complete your gift</span>
+                          <span className="font-heading font-bold text-emerald-700 text-lg">Ready to complete your gift</span>
                         </div>
                         <div className="space-y-1.5 text-sm font-body">
-                          <div className="flex justify-between"><span className="text-gray-500">Amount</span><span className="font-bold text-[#1a1a2e]">{formatAmount(finalAmount)}</span></div>
-                          <div className="flex justify-between"><span className="text-gray-500">Frequency</span><span className="font-bold text-[#1a1a2e] capitalize">{frequency}</span></div>
-                          <div className="flex justify-between"><span className="text-gray-500">Payment</span><span className="font-bold text-[#1a1a2e]">{paymentMethods.find(p => p.id === paymentMethod)?.label}</span></div>
-                          {!isAnonymous && form.fullName && <div className="flex justify-between"><span className="text-gray-500">Donor</span><span className="font-bold text-[#1a1a2e]">{form.fullName}</span></div>}
+                          <div className="flex justify-between"><span className="text-slate-600 font-medium">Amount</span><span className="font-bold text-[#1e40af]">{formatAmount(finalAmount)}</span></div>
+                          <div className="flex justify-between"><span className="text-slate-600 font-medium">Frequency</span><span className="font-bold text-[#1e40af] capitalize">{frequency}</span></div>
+                          <div className="flex justify-between"><span className="text-slate-600 font-medium">Payment</span><span className="font-bold text-[#1e40af]">{paymentMethods.find(p => p.id === paymentMethod)?.label}</span></div>
+                          {!isAnonymous && form.fullName && <div className="flex justify-between"><span className="text-slate-600 font-medium">Donor</span><span className="font-bold text-[#1e40af]">{form.fullName}</span></div>}
                         </div>
                       </div>
 
                       <div className="flex gap-3">
-                        <button onClick={() => setStep(2)} className="px-6 py-4 rounded-2xl border-2 border-gray-200 text-gray-600 font-bold font-body text-base hover:bg-gray-50 transition-all cursor-pointer">
+                        <button onClick={() => setStep(2)} className="px-6 py-4 rounded-2xl border-2 border-slate-200 text-slate-700 font-bold font-body text-base hover:bg-slate-100 transition-all cursor-pointer">
                           ← Back
                         </button>
                         <motion.button
@@ -420,7 +419,6 @@ export default function DonateWidget() {
                           onClick={handleSubmit}
                           className="flex-1 btn-orange py-4 text-base justify-center"
                         >
-                          <HeartIcon size={18} className="fill-white text-white" />
                           Complete Donation {formatAmount(finalAmount)}
                         </motion.button>
                       </div>
@@ -443,7 +441,7 @@ export default function DonateWidget() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", delay: 0.2, stiffness: 250, damping: 18 }}
-                className="w-28 h-28 rounded-full bg-[#1a3a6b] flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-green-500/30"
+                className="w-28 h-28 rounded-full bg-[#2563eb] flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-green-500/30"
               >
                 <span className="text-5xl">🎉</span>
               </motion.div>

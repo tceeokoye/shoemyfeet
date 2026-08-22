@@ -28,7 +28,7 @@ export default function VisitOfficeSection() {
   return (
     <section id="visit-office" className="section-padding bg-white relative overflow-hidden" aria-label="Visit our office">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#1a3a6b] rounded-4xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+        <div className="bg-[#2563eb] rounded-4xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
           
           {/* Background Ambient Elements */}
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 bg-orange-400 blur-3xl pointer-events-none" />

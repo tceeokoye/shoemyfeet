@@ -27,7 +27,7 @@ const stories = [
     before: "Frequently sent home from school for not wearing proper footwear.",
     after: "Top student in his class, aspires to become a doctor.",
     emoji: "👦",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
     border: "border-blue-100",
   },
@@ -40,7 +40,7 @@ const stories = [
     before: "Suffered from recurring hookworm infections due to walking barefoot.",
     after: "Free from infection for 8 months, reading above her grade level.",
     emoji: "👧",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-purple-50",
     border: "border-purple-100",
   },
@@ -49,7 +49,7 @@ const stories = [
 export default function DonorSuccessStories() {
   return (
     <section className="section-padding bg-white relative overflow-hidden" aria-label="Success stories">
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#1a3a6b]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-[#2563eb]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}

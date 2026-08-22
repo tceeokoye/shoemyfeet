@@ -22,7 +22,7 @@ export default function ImpactHero() {
   const inView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#0d1f3c]">
+    <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#09090b]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -33,8 +33,7 @@ export default function ImpactHero() {
           className="object-cover object-center scale-105 brightness-90"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[#1a3a6b]" />
-        <div className="absolute inset-0 bg-[#0d1f3c]/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />
       </div>
 
       {/* Ambient glow overlays */}
@@ -130,7 +129,6 @@ export default function ImpactHero() {
               href="#impact-numbers"
               className="btn-orange text-base sm:text-lg px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 justify-center group"
             >
-              <HeartIcon size={20} className="fill-white/30 group-hover:fill-white transition-colors" />
               <span>View Our Impact</span>
             </a>
             <Link

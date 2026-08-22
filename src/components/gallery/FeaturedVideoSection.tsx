@@ -48,7 +48,7 @@ export default function FeaturedVideoSection({ onPlayVideo }: FeaturedVideoSecti
 
         {/* Cinematic Video Card */}
         <motion.div
-          className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#0f2347] border border-gray-200/80 group cursor-pointer"
+          className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#1e40af] border border-gray-200/80 group cursor-pointer"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportConfig}
@@ -67,7 +67,7 @@ export default function FeaturedVideoSection({ onPlayVideo }: FeaturedVideoSecti
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 sizes="(max-width: 1024px) 100vw, 60vw"
               />
-              <div className="absolute inset-0 bg-[#1a3a6b] lg: lg:from-transparent lg:to-[#0f2347]" />
+              <div className="absolute inset-0 bg-[#2563eb] lg: lg:from-transparent lg:to-[#1e40af]" />
 
               {/* Pulsing Custom Play Button */}
               <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -75,7 +75,7 @@ export default function FeaturedVideoSection({ onPlayVideo }: FeaturedVideoSecti
                   <div className="ripple" />
                   <div className="ripple ripple-delay" />
                   <button
-                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#1a3a6b] text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 relative z-20"
+                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#2563eb] text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 relative z-20"
                     aria-label="Play Featured Video"
                   >
                     <PlayIcon size={32} className="ml-1 fill-white" />

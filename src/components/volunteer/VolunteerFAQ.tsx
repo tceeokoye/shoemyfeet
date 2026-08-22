@@ -154,7 +154,7 @@ export default function VolunteerFAQ() {
 
         {/* Still have questions */}
         <motion.div
-          className="mt-12 text-center rounded-3xl bg-[#1a3a6b] p-8 relative overflow-hidden"
+          className="mt-12 text-center rounded-3xl bg-[#2563eb] p-8 relative overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}

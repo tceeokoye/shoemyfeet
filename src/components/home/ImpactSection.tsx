@@ -25,22 +25,24 @@ function Counter({ metric, index }: { metric: typeof metrics[0]; index: number }
     >
       {/* Divider (except first) */}
       {index > 0 && (
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-10 w-px bg-[#0a2e1f]/10 hidden sm:block" />
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-10 w-px bg-white/10 hidden sm:block" />
       )}
 
-      <span className="text-3xl mb-2">{metric.icon}</span>
+      <span className="text-3xl mb-2 filter drop-shadow">{metric.icon}</span>
 
-      <div className="font-heading font-extrabold text-[#0a2e1f] leading-none mb-1"
-           style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)" }}>
+      <div
+        className="font-heading font-extrabold text-white leading-none mb-1 drop-shadow-sm flex items-center justify-center gap-0.5"
+        style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)" }}
+      >
         {inView ? (
           <CountUp end={metric.value} duration={2.2} separator="," />
         ) : (
           "0"
         )}
-        {metric.suffix}
+        <span className="text-[#f97316]">{metric.suffix}</span>
       </div>
 
-      <p className="font-body text-sm text-[#047857] font-semibold tracking-wide">
+      <p className="font-body text-xs sm:text-sm text-neutral-300 font-semibold tracking-wide uppercase">
         {metric.label}
       </p>
     </motion.div>
@@ -49,9 +51,13 @@ function Counter({ metric, index }: { metric: typeof metrics[0]; index: number }
 
 export default function ImpactSection() {
   return (
-    <section className="bg-[#fafaf9] border-y border-[#0a2e1f]/8">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 sm:grid-cols-4 divide-x-0 sm:divide-x divide-[#0a2e1f]/8">
+    <section className="bg-[#09090b] border-y border-white/10 text-white relative overflow-hidden">
+      {/* Subtle Glow */}
+      <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-60 h-60 bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 divide-x-0 sm:divide-x divide-white/10">
           {metrics.map((m, i) => (
             <Counter key={m.label} metric={m} index={i} />
           ))}

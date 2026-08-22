@@ -33,7 +33,7 @@ export default function OurStoryPreview() {
             <div className="h-px w-10 bg-[#f97316]" />
           </motion.div>
 
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0b1933] mb-4">
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a0a0a] mb-4">
             One Act of Kindness That{" "}
             <span className="text-[#f97316]">Started a Movement</span>
           </motion.h2>
@@ -55,7 +55,7 @@ export default function OurStoryPreview() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white card-3d">
               <FastImage
-                src="/images/founder.webp"
+                src="/images/MrPhilo.jpeg"
                 alt="Philomena Nwajagu, Founder of Shoe My Feet Foundation"
                 width={550}
                 height={450}
@@ -64,21 +64,21 @@ export default function OurStoryPreview() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               
               <div className="absolute bottom-5 left-5 right-5">
-                <div className="rounded-2xl p-4 border border-white/20 bg-[#0b1933]/90 backdrop-blur-md shadow-lg">
+                <div className="rounded-2xl p-4 border border-white/20 bg-black/90 backdrop-blur-md shadow-lg shadow-black/60">
                   <p className="font-heading font-bold text-white text-xl drop-shadow-md">Philomena Nwajagu</p>
                   <p className="text-amber-400 text-xs font-body font-semibold tracking-wide mt-0.5">Founder &amp; Social Entrepreneur</p>
                 </div>
               </div>
             </div>
 
-            <motion.div
+            {/* <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -top-6 -right-4 hidden sm:flex items-center gap-2 bg-[#f97316] text-white px-4 py-2.5 rounded-2xl shadow-xl font-heading font-bold text-xs border border-amber-300"
             >
               <span>👟</span>
               <span>100 Pairs in 2022</span>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Founder Quote */}
@@ -89,11 +89,11 @@ export default function OurStoryPreview() {
             whileInView="visible"
             viewport={viewportConfig}
           >
-            <div className="w-14 h-14 rounded-2xl bg-[#0f2347] flex items-center justify-center text-amber-300 shadow-xl text-3xl font-heading">
+            <div className="w-14 h-14 rounded-2xl bg-black flex items-center justify-center text-[#f97316] shadow-xl text-3xl font-heading border border-white/10">
               ❝
             </div>
-            <blockquote className="font-heading text-2xl sm:text-3xl text-[#0b1933] leading-snug font-semibold">
-              &ldquo;I started with 100 pairs of shoes and a belief that every child deserves to walk into school with dignity. Today, that belief has grown into a movement.&rdquo;
+            <blockquote className="font-heading text-2xl sm:text-3xl text-[#0a0a0a] leading-snug font-semibold">
+             I started with 100 pairs of shoes and a belief that every child deserves to walk into school with dignity. Today, that belief has grown into a movement.
             </blockquote>
             <p className="font-body text-slate-600 leading-relaxed text-base">
               Without proper footwear, children face health risks, severe discomfort, and social embarrassment. Shoe My Feet Foundation is dedicated to removing this obstacle, empowering kids through craftsmanship, and inspiring lasting community growth.
@@ -109,19 +109,19 @@ export default function OurStoryPreview() {
         </div>
 
         {/* 3D Milestone Cards */}
-        <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-slate-100">
+        <div className="bg-[#09090b] rounded-3xl p-8 sm:p-10 shadow-2xl border border-white/10 text-white">
           <div className="text-center mb-10">
-            <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#0b1933] mb-2">
+            <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-2">
               Key Journey Milestones
             </h3>
-            <p className="text-slate-500 font-body text-sm">Highlights from our path of impact since 2022</p>
+            <p className="text-neutral-400 font-body text-sm">Highlights from our path of impact since 2022</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 relative">
             {milestones.map((item) => (
               <motion.div
                 key={item.title}
-                className="relative bg-[#0f2347] text-white rounded-2xl p-6 border border-white/10 card-3d-dark flex flex-col justify-between group"
+                className="relative bg-[#121214] text-white rounded-2xl p-6 border border-white/10 card-3d-dark flex flex-col justify-between group hover:border-[#f97316]/50 transition-colors shadow-xl"
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"

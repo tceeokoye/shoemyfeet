@@ -15,7 +15,7 @@ const leadingFootprints = [
 
 export default function GalleryCTA() {
   return (
-    <section className="section-padding bg-[#1a3a6b] text-white relative overflow-hidden">
+    <section className="section-padding bg-[#2563eb] text-white relative overflow-hidden">
       {/* Background Orbs */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-orange-500/10 blur-[150px]" />
@@ -87,7 +87,6 @@ export default function GalleryCTA() {
               href="/donate"
               className="btn-orange text-base sm:text-lg px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
             >
-              <HeartIcon size={20} className="fill-white" />
               <span>Donate Now</span>
             </Link>
 
@@ -103,7 +102,6 @@ export default function GalleryCTA() {
               href="/contact"
               className="px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-heading font-bold text-base border border-white/20 hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
             >
-              <HeartHandshakeIcon size={20} className="text-hope-yellow" />
               <span>Partner With Us</span>
             </Link>
           </motion.div>

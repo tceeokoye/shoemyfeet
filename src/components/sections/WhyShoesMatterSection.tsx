@@ -70,7 +70,7 @@ export default function WhyShoesMatterSection() {
 
               {/* Gradient border effect */}
               <div className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                style={{ background: "#1a3a6b", boxShadow: `inset 0 0 0 1.5px rgba(26,58,107,0.1)` }}
+                style={{ background: "#2563eb", boxShadow: `inset 0 0 0 1.5px rgba(26,58,107,0.1)` }}
               />
 
               {/* Icon */}
@@ -117,7 +117,7 @@ export default function WhyShoesMatterSection() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <div className="inline-block bg-[#1a3a6b] rounded-2xl px-8 py-6 border border-blue-100">
+          <div className="inline-block bg-[#2563eb] rounded-2xl px-8 py-6 border border-blue-100">
             <p className="font-body text-gray-600 mb-4">
               <span className="font-bold text-royal-blue">$20 can provide 1 pair of shoes</span>{" "}
               and change a child&apos;s world forever.

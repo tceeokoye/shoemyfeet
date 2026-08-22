@@ -76,19 +76,19 @@ export default function Testimonials() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-rose-100 text-rose-600 text-xs sm:text-sm font-bold font-body mb-3 border border-rose-200"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold font-body mb-3 border border-orange-200"
           >
             Heartfelt Testimonials
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a0a0a] leading-tight"
           >
-            Stories That <span className="text-royal-blue">Touch the Heart</span>
+            Stories That <span className="text-[#f97316]">Touch the Heart</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="text-gray-600 font-body text-base mt-4 leading-relaxed"
+            className="text-slate-600 font-body text-base mt-4 leading-relaxed"
           >
             Hear directly from the children, parents, teachers, and volunteers whose lives have been transformed.
           </motion.p>
@@ -103,25 +103,22 @@ export default function Testimonials() {
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: -50, scale: 0.98 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-white rounded-3xl p-8 sm:p-14 border border-blue-100 shadow-2xl relative overflow-hidden text-center flex flex-col items-center justify-between"
+              className="bg-white rounded-3xl p-8 sm:p-14 border border-slate-100 shadow-xl relative overflow-hidden text-center flex flex-col items-center justify-between"
             >
-              {/* Decorative top strip */}
-              <div className="absolute top-0 left-0 right-0 h-2 bg-[#1a3a6b]" />
-
               {/* Large quote icon in background */}
-              <div className="absolute -top-4 right-8 text-9xl font-serif text-blue-500/10 pointer-events-none select-none">
+              <div className="absolute -top-4 right-8 text-9xl font-serif text-slate-100 pointer-events-none select-none">
                 “
               </div>
 
               {/* Star Rating */}
-              <div className="flex gap-1.5 mb-6 text-[#fbbf24] text-xl">
+              <div className="flex gap-1.5 mb-6 text-[#f59e0b] text-xl">
                 {[...Array(current.rating)].map((_, i) => (
                   <span key={i}>★</span>
                 ))}
               </div>
 
               {/* Quote */}
-              <blockquote className="font-body text-gray-700 text-lg sm:text-2xl leading-relaxed italic mb-10 max-w-2xl relative z-10">
+              <blockquote className="font-body text-slate-700 text-lg sm:text-2xl leading-relaxed italic mb-10 max-w-2xl relative z-10">
                 &ldquo;{current.quote}&rdquo;
               </blockquote>
 
@@ -137,9 +134,9 @@ export default function Testimonials() {
                   />
                 </div>
                 <div>
-                  <p className="font-heading font-bold text-xl text-[#1a1a2e]">{current.name}</p>
-                  <p className="font-body text-sm font-semibold  text-warm-orange-dark">{current.role}</p>
-                  <p className="font-body text-xs text-gray-400">{current.location}</p>
+                  <p className="font-heading font-bold text-xl text-[#0a0a0a]">{current.name}</p>
+                  <p className="font-body text-sm font-semibold text-[#f97316]">{current.role}</p>
+                  <p className="font-body text-xs text-slate-400">{current.location}</p>
                 </div>
               </div>
             </motion.div>
@@ -149,7 +146,7 @@ export default function Testimonials() {
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
               onClick={() => setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-              className="w-11 h-11 rounded-full bg-white border border-gray-200 text-royal-blue flex items-center justify-center shadow-md hover:bg-[#1a3a6b] hover:text-white transition-all"
+              className="w-11 h-11 rounded-full bg-white border border-slate-200 text-black flex items-center justify-center shadow-md hover:bg-black hover:text-white transition-all cursor-pointer"
               aria-label="Previous Testimonial"
             >
               ←
@@ -161,7 +158,7 @@ export default function Testimonials() {
                   key={t.id}
                   onClick={() => setActive(idx)}
                   className={`h-3 rounded-full transition-all duration-300 ${
-                    idx === active ? "w-8 bg-[#f97316]" : "w-3 bg-gray-300 hover:bg-gray-400"
+                    idx === active ? "w-8 bg-[#f97316]" : "w-3 bg-slate-300 hover:bg-slate-400"
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
@@ -170,7 +167,7 @@ export default function Testimonials() {
 
             <button
               onClick={() => setActive((prev) => (prev + 1) % testimonials.length)}
-              className="w-11 h-11 rounded-full bg-white border border-gray-200 text-royal-blue flex items-center justify-center shadow-md hover:bg-[#1a3a6b] hover:text-white transition-all"
+              className="w-11 h-11 rounded-full bg-white border border-slate-200 text-black flex items-center justify-center shadow-md hover:bg-black hover:text-white transition-all cursor-pointer"
               aria-label="Next Testimonial"
             >
               →

@@ -22,7 +22,7 @@ export default function NewsletterSection() {
       <div className="max-w-4xl mx-auto">
         
         <motion.div
-          className="relative bg-[#1a3a6b] rounded-3xl p-8 sm:p-14 text-center text-white overflow-hidden shadow-2xl"
+          className="relative bg-[#2563eb] rounded-3xl p-8 sm:p-14 text-center text-white overflow-hidden shadow-2xl"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -33,7 +33,7 @@ export default function NewsletterSection() {
           <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-orange-500/10 blur-3xl" />
 
           <div className="relative z-10 max-w-xl mx-auto">
-            <motion.div variants={fadeUp} className="w-14 h-14 rounded-2xl bg-[#1a3a6b] flex items-center justify-center text-2xl mx-auto mb-6 shadow-lg">
+            <motion.div variants={fadeUp} className="w-14 h-14 rounded-2xl bg-[#2563eb] flex items-center justify-center text-2xl mx-auto mb-6 shadow-lg">
               ✉️
             </motion.div>
 

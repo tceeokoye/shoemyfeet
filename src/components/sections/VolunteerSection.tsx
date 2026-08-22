@@ -9,7 +9,7 @@ export default function VolunteerSection() {
   return (
     <section id="volunteer" className="section-padding overflow-hidden relative">
       {/* Background */}
-      <div className="absolute inset-0 bg-[#1a3a6b]" />
+      <div className="absolute inset-0 bg-[#2563eb]" />
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-emerald-200/30 animate-blob-slow" />
         <div className="absolute bottom-20 left-20 w-48 h-48 rounded-full bg-orange-200/30 animate-blob" />
@@ -69,11 +69,10 @@ export default function VolunteerSection() {
 
             <motion.div variants={fadeUp} className="flex flex-wrap gap-3 pt-2">
               <button className="btn-primary group">
-                <HeartIcon size={18} className="group-hover:scale-110 transition-transform" />
                 Apply to Volunteer
                 <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="px-5 py-3 rounded-full font-bold text-royal-blue border-2 border-[#1a3a6b] hover:bg-[#1a3a6b] hover:text-white transition-all font-body">
+              <button className="px-5 py-3 rounded-full font-bold text-royal-blue border-2 border-[#2563eb] hover:bg-[#2563eb] hover:text-white transition-all font-body">
                 Corporate Volunteering
               </button>
             </motion.div>
@@ -87,7 +86,7 @@ export default function VolunteerSection() {
             viewport={viewportConfig}
             className="relative"
           >
-            <div className="absolute inset-0 bg-[#1a3a6b] rounded-3xl blur-2xl scale-105" />
+            <div className="absolute inset-0 bg-[#2563eb] rounded-3xl blur-2xl scale-105" />
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/volunteers.jpg"
@@ -96,7 +95,7 @@ export default function VolunteerSection() {
                 height={480}
                 className="w-full h-96 object-cover"
               />
-              <div className="absolute inset-0 bg-[#1a3a6b]" />
+              <div className="absolute inset-0 bg-[#2563eb]" />
             </div>
 
             {/* Stats */}
@@ -106,7 +105,7 @@ export default function VolunteerSection() {
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#1a3a6b] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#2563eb] flex items-center justify-center">
                   <GlobeIcon size={18} className="text-white" />
                 </div>
                 <div>

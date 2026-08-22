@@ -7,7 +7,7 @@ const cards = [
   {
     label: "Our Mission",
     icon: "🎯",
-    gradient: "bg-[#1a3a6b]",
+    gradient: "bg-[#2563eb]",
     border: "border-blue-200 hover:border-blue-400",
     bg: "bg-blue-50/60",
     text: "To provide quality school shoes that protect children's health, restore their dignity, and empower them to pursue education, confidence, and brighter futures without physical or social barriers.",
@@ -38,15 +38,15 @@ export default function MissionVision() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs font-bold font-body mb-3 border border-blue-200">
-            Mission & Vision
+          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs font-bold font-body mb-3 border border-orange-200">
+            Mission &amp; Vision
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] leading-tight">
-            Guided by Purpose & <span className="text-royal-blue">Deep Compassion</span>
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a0a0a] leading-tight">
+            Guided by Purpose &amp; <span className="text-[#f97316]">Deep Compassion</span>
           </motion.h2>
         </motion.div>
 
-        {/* 2 Premium Cards */}
+        {/* 2 Clean White Cards */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {cards.map((card, i) => (
             <motion.div
@@ -55,29 +55,23 @@ export default function MissionVision() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ type: "spring" as const, stiffness: 80, damping: 18, delay: i * 0.15 }}
-              whileHover={{ y: -8, scale: 1.01, transition: { type: "spring" as const, stiffness: 300, damping: 20 } }}
-              className={`group relative rounded-3xl p-8 sm:p-10 border ${card.border} ${card.bg} shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between`}
+              whileHover={{ y: -6, transition: { type: "spring" as const, stiffness: 300, damping: 20 } }}
+              className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
-              {/* Top Accent Strip */}
-              <div className={`absolute top-0 left-0 right-0 h-2 card.gradient rounded-t-3xl`} />
-
               <div>
                 {/* Header Badge */}
                 <div className="flex items-center justify-between mb-6">
-                  <span className={`inline-block text-xs font-extrabold font-body px-3.5 py-1 rounded-full ${card.tagColor}`}>
+                  <span className="inline-block text-xs font-extrabold font-body px-3.5 py-1 rounded-full bg-slate-100 text-slate-700">
                     {card.tag}
                   </span>
-                  <div className={`w-14 h-14 rounded-2xl card.gradient flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition-transform duration-300 text-white`}>
+                  <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-3xl shadow-sm">
                     {card.icon}
                   </div>
                 </div>
 
-                <h3 className="font-heading text-3xl font-bold text-[#1a1a2e] mb-4">{card.label}</h3>
-                <p className="font-body text-gray-700 text-base sm:text-lg leading-relaxed">{card.text}</p>
+                <h3 className="font-heading text-3xl font-bold text-[#0a0a0a] mb-4">{card.label}</h3>
+                <p className="font-body text-slate-600 text-base sm:text-lg leading-relaxed">{card.text}</p>
               </div>
-
-              {/* Bottom Growing Indicator */}
-              <div className={`h-1.5 w-12 rounded-full card.gradient mt-8 group-hover:w-full transition-all duration-500`} />
             </motion.div>
           ))}
         </div>

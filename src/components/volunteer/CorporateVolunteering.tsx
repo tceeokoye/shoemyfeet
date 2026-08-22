@@ -102,7 +102,7 @@ export default function CorporateVolunteering() {
 
         {/* CSR highlight blurb */}
         <motion.div
-          className="mt-14 rounded-3xl bg-[#1a3a6b] p-8 sm:p-10 text-center relative overflow-hidden"
+          className="mt-14 rounded-3xl bg-[#2563eb] p-8 sm:p-10 text-center relative overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}

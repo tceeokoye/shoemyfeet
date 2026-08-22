@@ -3,7 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Play, Heart, ChevronDown } from "lucide-react";
+import { ArrowRight, Play, ChevronDown } from "lucide-react";
 import { fadeUp, staggerContainer, float, blurReveal, viewportConfig } from "@/lib/animations";
 import { IMPACT_STATS } from "@/lib/constants";
 import CountUp from "react-countup";
@@ -70,15 +70,15 @@ export default function HeroSection() {
         {/* Blobs */}
         <motion.div
           className="absolute top-10 left-10 w-96 h-96 rounded-full opacity-30 animate-blob"
-          style={{ x: blob1X, y: blob1Y, background: "#1a3a6b" }}
+          style={{ x: blob1X, y: blob1Y, background: "#2563eb" }}
         />
         <motion.div
           className="absolute bottom-20 right-20 w-80 h-80 rounded-full opacity-25 animate-blob-slow"
-          style={{ x: blob2X, y: blob2Y, background: "#1a3a6b" }}
+          style={{ x: blob2X, y: blob2Y, background: "#2563eb" }}
           />
         <motion.div
           className="absolute top-1/2 left-1/3 w-48 h-48 rounded-full opacity-20 animate-blob"
-          style={{ background: "#1a3a6b", animationDelay: "3s" }}
+          style={{ background: "#2563eb", animationDelay: "3s" }}
         />
 
         {/* Animated footprints */}
@@ -93,7 +93,7 @@ export default function HeroSection() {
             animate={{ opacity: [0.05, 0.2, 0.05], y: [0, -15, 0] }}
             transition={{ duration: 3, repeat: Infinity, delay: i * 0.5, ease: "easeInOut" }}
           >
-            <svg viewBox="0 0 24 32" className="w-6 h-8 fill-[#1a3a6b]">
+            <svg viewBox="0 0 24 32" className="w-6 h-8 fill-[#2563eb]">
               <ellipse cx="12" cy="10" rx="7" ry="9" />
               <ellipse cx="7" cy="22" rx="3.5" ry="4" />
               <ellipse cx="17" cy="22" rx="3.5" ry="4" />
@@ -111,7 +111,7 @@ export default function HeroSection() {
               height: Math.random() * 6 + 3,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              background: i % 3 === 0 ? "#1a3a6b" : i % 3 === 1 ? "#f97316" : "#fbbf24",
+              background: i % 3 === 0 ? "#2563eb" : i % 3 === 1 ? "#f97316" : "#fbbf24",
               opacity: 0.3,
             }}
             animate={{
@@ -184,7 +184,6 @@ export default function HeroSection() {
               className="flex flex-wrap gap-3 items-center"
             >
               <Link href="#donate" className="btn-orange group">
-                <Heart size={18} className="group-hover:scale-110 transition-transform" />
                 Donate Now
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -194,7 +193,7 @@ export default function HeroSection() {
               </Link>
               <button className="flex items-center gap-2 px-5 py-3 rounded-full font-bold text-gray-700 hover:text-royal-blue hover:bg-blue-50 transition-all group">
                 <span className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-md border border-gray-100 group-hover:shadow-lg transition-shadow">
-                  <Play size={14} className="ml-0.5 fill-[#1a3a6b] text-royal-blue" />
+                  <Play size={14} className="ml-0.5 fill-[#2563eb] text-royal-blue" />
                 </span>
                 Watch Our Story
               </button>
@@ -222,7 +221,7 @@ export default function HeroSection() {
             {/* Main illustration frame */}
             <div className="relative w-full max-w-lg">
               {/* Background glow */}
-              <div className="absolute inset-0 bg-[#1a3a6b] rounded-3xl blur-3xl scale-110" />
+              <div className="absolute inset-0 bg-[#2563eb] rounded-3xl blur-3xl scale-110" />
 
               {/* Main image */}
               <motion.div
@@ -239,7 +238,7 @@ export default function HeroSection() {
                   priority
                 />
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-[#1a3a6b]" />
+                <div className="absolute inset-0 bg-[#2563eb]" />
               </motion.div>
 
               {/* Floating glass card - Impact */}
@@ -249,7 +248,7 @@ export default function HeroSection() {
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#1a3a6b] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#2563eb] flex items-center justify-center">
                     <span className="text-lg">👟</span>
                   </div>
                   <div>
@@ -266,7 +265,7 @@ export default function HeroSection() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#1a3a6b] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#2563eb] flex items-center justify-center">
                     <span className="text-lg">🏘️</span>
                   </div>
                   <div>

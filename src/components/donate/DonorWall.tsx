@@ -24,16 +24,16 @@ const donors = {
 
 const recognitionLevels = [
   { badge: "🌱 Friend", threshold: "₦1,000 – ₦9,999", color: "bg-[#15803d]", border: "border-green-100", text: "text-green-700" },
-  { badge: "⭐ Supporter", threshold: "₦10,000 – ₦49,999", color: "bg-[#1a3a6b]", border: "border-blue-100", text: "text-blue-700" },
+  { badge: "⭐ Supporter", threshold: "₦10,000 – ₦49,999", color: "bg-[#2563eb]", border: "border-blue-100", text: "text-blue-700" },
   { badge: "🥈 Champion", threshold: "₦50,000 – ₦99,999", color: "bg-slate-700", border: "border-gray-200", text: "text-gray-700" },
   { badge: "🥇 Silver", threshold: "₦100,000 – ₦249,999", color: "bg-[#f59e0b]", border: "border-amber-100", text: "text-amber-700" },
   { badge: "💛 Gold", threshold: "₦250,000 – ₦499,999", color: "bg-[#f59e0b]", border: "border-yellow-200", text: "text-yellow-700" },
-  { badge: "💎 Platinum", threshold: "₦500,000+", color: "bg-[#1a3a6b]", border: "border-indigo-100", text: "text-indigo-700" },
+  { badge: "💎 Platinum", threshold: "₦500,000+", color: "bg-[#2563eb]", border: "border-indigo-100", text: "text-indigo-700" },
 ];
 
 export default function DonorWall() {
   return (
-    <section className="section-padding bg-[#1a3a6b] relative overflow-hidden" aria-label="Donor wall">
+    <section className="section-padding bg-[#2563eb] relative overflow-hidden" aria-label="Donor wall">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-center mb-14">
@@ -84,7 +84,7 @@ export default function DonorWall() {
                   whileHover={{ x: 4, scale: 1.01 }}
                   className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all group"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-[#1a3a6b] border border-orange-100 flex items-center justify-center text-xl flex-shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-[#2563eb] border border-orange-100 flex items-center justify-center text-xl flex-shrink-0">
                     {donor.anonymous ? "🙈" : donor.type === "Corporate" ? "🏢" : donor.type === "Faith Community" ? "⛪" : donor.type === "School" ? "🏫" : "😊"}
                   </div>
                   <div className="flex-1 min-w-0">
@@ -112,7 +112,7 @@ export default function DonorWall() {
                   variants={fadeUp}
                   className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all"
                 >
-                  <div className="w-10 h-10 rounded-full bg-[#1a3a6b] flex items-center justify-center text-xl flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#2563eb] flex items-center justify-center text-xl flex-shrink-0">
                     {donor.emoji}
                   </div>
                   <div className="flex-1 min-w-0">
@@ -125,7 +125,7 @@ export default function DonorWall() {
             </div>
 
             {/* Join the wall CTA */}
-            <motion.div variants={fadeUp} className="mt-6 p-5 rounded-2xl bg-[#1a3a6b] border border-orange-100 text-center">
+            <motion.div variants={fadeUp} className="mt-6 p-5 rounded-2xl bg-[#2563eb] border border-orange-100 text-center">
               <p className="text-sm text-gray-600 font-body mb-3">Join our growing community of generous hearts</p>
               <a href="#donate-widget" className="btn-orange text-sm py-3 px-6 justify-center w-full">
                 Add Your Name to the Wall ❤️

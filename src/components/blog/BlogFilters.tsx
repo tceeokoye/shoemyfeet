@@ -95,7 +95,7 @@ export default function BlogFilters({
               onChange={(e) => onSearchChange(e.target.value)}
               onFocus={() => setIsSearchFocused(true)}
               placeholder="Search articles, topics, locations, or authors..."
-              className="w-full pl-11 pr-10 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-sm text-[#1a1a2e] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1a3a6b]/30 focus:border-[#1a3a6b] transition-all"
+              className="w-full pl-11 pr-10 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-sm text-[#1a1a2e] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition-all"
             />
             {searchQuery && (
               <button
@@ -205,7 +205,7 @@ export default function BlogFilters({
             <select
               value={selectedYear}
               onChange={(e) => onSelectYear(e.target.value)}
-              className="w-full appearance-none pl-3 pr-8 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-xs font-semibold text-[#1a1a2e] focus:outline-none focus:border-[#1a3a6b] cursor-pointer"
+              className="w-full appearance-none pl-3 pr-8 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-xs font-semibold text-[#1a1a2e] focus:outline-none focus:border-[#2563eb] cursor-pointer"
             >
               <option value="all">All Years</option>
               <option value="2026">2026</option>
@@ -220,7 +220,7 @@ export default function BlogFilters({
             <select
               value={selectedMonth}
               onChange={(e) => onSelectMonth(e.target.value)}
-              className="w-full appearance-none pl-3 pr-8 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-xs font-semibold text-[#1a1a2e] focus:outline-none focus:border-[#1a3a6b] cursor-pointer"
+              className="w-full appearance-none pl-3 pr-8 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-xs font-semibold text-[#1a1a2e] focus:outline-none focus:border-[#2563eb] cursor-pointer"
             >
               <option value="all">All Months</option>
               <option value="July">July</option>
@@ -236,7 +236,7 @@ export default function BlogFilters({
             <select
               value={sortBy}
               onChange={(e) => onSortChange(e.target.value as "latest" | "oldest" | "popular")}
-              className="w-full appearance-none pl-3 pr-8 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-xs font-semibold text-[#1a1a2e] focus:outline-none focus:border-[#1a3a6b] cursor-pointer"
+              className="w-full appearance-none pl-3 pr-8 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-xs font-semibold text-[#1a1a2e] focus:outline-none focus:border-[#2563eb] cursor-pointer"
             >
               <option value="latest">Sort: Latest</option>
               <option value="oldest">Sort: Oldest</option>
@@ -260,13 +260,13 @@ export default function BlogFilters({
                 className={`relative shrink-0 px-5 py-2.5 rounded-full text-xs font-bold transition-all cursor-pointer whitespace-nowrap ${
                   isActive
                     ? "text-white shadow-md"
-                    : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300 hover:text-[#1a3a6b]"
+                    : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300 hover:text-[#2563eb]"
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="categoryTabBackground"
-                    className="absolute inset-0 rounded-full bg-[#1a3a6b]"
+                    className="absolute inset-0 rounded-full bg-[#2563eb]"
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 )}
@@ -284,12 +284,12 @@ export default function BlogFilters({
           animate={{ opacity: 1, y: 0 }}
           className="flex flex-wrap items-center gap-2 pt-2 border-t border-gray-200/60 text-xs font-body"
         >
-          <span className="font-bold text-[#1a3a6b] flex items-center gap-1">
+          <span className="font-bold text-[#2563eb] flex items-center gap-1">
             <SlidersIcon size={13} /> Active Filters:
           </span>
 
           {selectedCategory !== "All Posts" && (
-            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-blue-100 text-[#1a3a6b] font-semibold">
+            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-blue-100 text-[#2563eb] font-semibold">
               Category: {selectedCategory}
               <button type="button" onClick={() => onSelectCategory("All Posts")} className="hover:text-red-500 cursor-pointer ml-1">
                 <XIcon size={12} />

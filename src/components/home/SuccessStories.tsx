@@ -17,7 +17,7 @@ export default function SuccessStories() {
   const story = STORIES[activeIndex];
 
   return (
-    <section className="section-padding bg-[#1a3a6b] overflow-hidden">
+    <section className="section-padding bg-[#2563eb] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -52,7 +52,7 @@ export default function SuccessStories() {
             >
               {/* Image Side */}
               <div className="lg:col-span-5 relative">
-                <div className="absolute inset-0 bg-[#1a3a6b] rounded-3xl blur-2xl scale-105" />
+                <div className="absolute inset-0 bg-[#2563eb] rounded-3xl blur-2xl scale-105" />
                 <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white">
                   <Image
                     src={`/images/story${(activeIndex % 2) + 1}.jpg`}
@@ -61,7 +61,7 @@ export default function SuccessStories() {
                     height={400}
                     className="w-full h-72 sm:h-80 object-cover"
                   />
-                  <div className="absolute inset-0 bg-[#1a3a6b]" />
+                  <div className="absolute inset-0 bg-[#2563eb]" />
                   <div className="absolute bottom-4 left-4">
                     <span className="glass px-3 py-1 rounded-full text-white text-xs font-bold font-body border border-white/30">
                       {story.year} · {story.location}
@@ -93,7 +93,7 @@ export default function SuccessStories() {
                   <div className="flex items-center gap-3">
                     <button
                       onClick={prev}
-                      className="w-11 h-11 rounded-full border-2 border-gray-200 hover:border-[#1a3a6b] hover:bg-[#1a3a6b] hover:text-white text-gray-700 flex items-center justify-center transition-all"
+                      className="w-11 h-11 rounded-full border-2 border-gray-200 hover:border-[#2563eb] hover:bg-[#2563eb] hover:text-white text-gray-700 flex items-center justify-center transition-all"
                       aria-label="Previous story"
                     >
                       <ChevronLeftIcon size={20} />
@@ -114,7 +114,7 @@ export default function SuccessStories() {
 
                     <button
                       onClick={next}
-                      className="w-11 h-11 rounded-full border-2 border-gray-200 hover:border-[#1a3a6b] hover:bg-[#1a3a6b] hover:text-white text-gray-700 flex items-center justify-center transition-all"
+                      className="w-11 h-11 rounded-full border-2 border-gray-200 hover:border-[#2563eb] hover:bg-[#2563eb] hover:text-white text-gray-700 flex items-center justify-center transition-all"
                       aria-label="Next story"
                     >
                       <ChevronRightIcon size={20} />

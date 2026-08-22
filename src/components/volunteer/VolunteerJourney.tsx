@@ -6,7 +6,7 @@ import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 
 export default function VolunteerJourney() {
   return (
-    <section id="volunteer-journey" className="section-padding bg-[#1a3a6b] overflow-hidden">
+    <section id="volunteer-journey" className="section-padding bg-[#2563eb] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -40,7 +40,7 @@ export default function VolunteerJourney() {
         {/* Desktop: Horizontal Timeline */}
         <div className="hidden lg:block relative">
           {/* Connecting animated line */}
-          <div className="absolute top-12 left-0 right-0 h-0.5 bg-[#1a3a6b] mx-24" />
+          <div className="absolute top-12 left-0 right-0 h-0.5 bg-[#2563eb] mx-24" />
           <motion.div
             className="absolute top-12 left-24 right-24 h-0.5 bg-[#f97316] origin-left"
             initial={{ scaleX: 0 }}

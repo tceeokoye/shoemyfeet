@@ -9,10 +9,10 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 const staticParticles = [
   { width: 6, height: 6, left: "10%", top: "25%", color: "#f97316", duration: 4.2, delay: 0 },
   { width: 8, height: 8, left: "82%", top: "18%", color: "#fbbf24", duration: 5.0, delay: 0.5 },
-  { width: 5, height: 5, left: "38%", top: "72%", color: "#1a3a6b", duration: 3.6, delay: 1.0 },
+  { width: 5, height: 5, left: "38%", top: "72%", color: "#2563eb", duration: 3.6, delay: 1.0 },
   { width: 7, height: 7, left: "90%", top: "65%", color: "#f97316", duration: 4.5, delay: 0.3 },
   { width: 4, height: 4, left: "6%", top: "80%", color: "#fbbf24", duration: 3.8, delay: 1.2 },
-  { width: 9, height: 9, left: "55%", top: "12%", color: "#1a3a6b", duration: 5.2, delay: 0.7 },
+  { width: 9, height: 9, left: "55%", top: "12%", color: "#2563eb", duration: 5.2, delay: 0.7 },
 ];
 
 const footprintPositions = [
@@ -44,18 +44,18 @@ export default function ContactHero() {
 
   return (
     <section
-      className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#f8fafc] pt-28 pb-16 sm:pt-32 lg:py-24"
+      className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#09090b] pt-28 pb-16 sm:pt-32 lg:py-24"
       aria-label="Contact hero section"
     >
       {/* Background Glows & Floating Particles */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           className="absolute top-10 left-8 w-[450px] h-[450px] rounded-full opacity-25 animate-blob"
-          style={{ background: "#1a3a6b" }}
+          style={{ background: "#f97316" }}
         />
         <motion.div
           className="absolute bottom-12 right-12 w-[380px] h-[380px] rounded-full opacity-20 animate-blob-slow"
-          style={{ background: "#1a3a6b" }}
+          style={{ background: "#38bdf8" }}
         />
 
         {staticParticles.map((p, i) => (
@@ -90,21 +90,21 @@ export default function ContactHero() {
               initial={{ opacity: 0, y: -20 }}
               animate={isReady ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 border border-blue-200 text-royal-blue font-bold text-sm w-fit"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/40 text-amber-300 font-bold text-sm w-fit"
             >
-              <MailIcon size={14} className="text-royal-blue" />
+              <MailIcon size={14} className="text-amber-300" />
               We&apos;re Here to Listen & Help
             </motion.div>
 
             {/* Animated Headline */}
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-[#1a1a2e] flex flex-wrap gap-x-[0.25em] gap-y-1">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-white flex flex-wrap gap-x-[0.25em] gap-y-1">
               {HEADLINE_WORDS.map((item, index) => (
                 <motion.span
                   key={`${item.word}-${isReady}`}
                   initial={{ opacity: 0, x: item.direction.x, y: item.direction.y, rotate: item.direction.rotate, scale: 0.5, filter: "blur(8px)" }}
                   animate={isReady ? { opacity: 1, x: 0, y: 0, rotate: 0, scale: 1, filter: "blur(0px)" } : {}}
                   transition={{ duration: 0.85, delay: 0.2 + index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-                  className={`inline-block relative will-change-transform ${item.gradient ? "text-warm-orange" : ""} ${item.highlight ? "text-warm-orange-dark" : ""}`}
+                  className={`inline-block relative will-change-transform ${item.gradient ? "text-warm-orange" : ""} ${item.highlight ? "text-amber-400" : ""}`}
                 >
                   {item.word}
                   {item.highlight && (
@@ -125,7 +125,7 @@ export default function ContactHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={isReady ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: HEADLINE_WORDS.length * 0.08 + 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="text-base sm:text-lg text-gray-600 font-body max-w-xl leading-relaxed"
+              className="text-base sm:text-lg text-blue-100/90 font-body max-w-xl leading-relaxed"
             >
               Whether you want to volunteer, donate, partner with us, request assistance, or simply learn more about our mission, we&apos;d love to hear from you. Every conversation is another opportunity to change a child&apos;s life.
             </motion.p>
@@ -142,8 +142,8 @@ export default function ContactHero() {
                 Send a Message
                 <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#location" className="px-6 py-3 rounded-full font-bold text-royal-blue border-2 border-royal-blue/20 hover:border-royal-blue/50 hover:bg-blue-50 transition-all group font-body text-base flex items-center gap-2">
-                <MapPinIcon size={18} className="text-royal-blue" />
+              <a href="#location" className="btn-outline text-base text-white border-2 border-white/30 hover:bg-white/10 transition-all font-body flex items-center gap-2">
+                <MapPinIcon size={18} className="text-white" />
                 View Our Location
               </a>
             </motion.div>
@@ -153,10 +153,10 @@ export default function ContactHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={isReady ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1 }}
-              className="flex items-center gap-4 pt-4 border-t border-gray-200/60 mt-2 text-xs font-body text-gray-500"
+              className="flex items-center gap-4 pt-4 border-t border-white/15 mt-2 text-xs font-body text-blue-100/80"
             >
-              <span className="flex items-center gap-1.5 font-semibold text-green-700 bg-green-50 px-3 py-1 rounded-full border border-green-200">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="flex items-center gap-1.5 font-semibold text-emerald-300 bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-500/30">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 Average response time: &lt; 4 hours
               </span>
               <span>Mon – Fri (8am – 5pm WAT)</span>
@@ -171,10 +171,10 @@ export default function ContactHero() {
               transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-full max-w-sm mx-auto"
             >
-              <div className="absolute inset-0 bg-[#1a3a6b] rounded-3xl blur-3xl scale-110" />
+              <div className="absolute inset-0 bg-[#2563eb] rounded-3xl blur-3xl scale-110" />
 
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-white p-8">
-                <div className="w-20 h-20 rounded-2xl bg-[#1a3a6b] flex items-center justify-center mx-auto mb-5 shadow-xl text-3xl text-white">
+                <div className="w-20 h-20 rounded-2xl bg-[#2563eb] flex items-center justify-center mx-auto mb-5 shadow-xl text-3xl text-white">
                   💬
                 </div>
                 <h2 className="font-heading text-2xl font-bold text-[#1a1a2e] text-center mb-2">Connect With Us</h2>

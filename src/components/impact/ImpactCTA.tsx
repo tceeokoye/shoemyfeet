@@ -19,7 +19,7 @@ const footprintPositions = [
 
 export default function ImpactCTA() {
   return (
-    <section className="section-padding bg-[#1a3a6b] overflow-hidden relative">
+    <section className="section-padding bg-[#2563eb] overflow-hidden relative">
       {/* Glowing backgrounds */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full bg-[#f97316]/15 blur-[120px]" />
@@ -99,7 +99,6 @@ export default function ImpactCTA() {
               href="/donate"
               className="btn-orange text-base sm:text-lg px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 justify-center group"
             >
-              <HeartIcon size={20} className="fill-white/30 group-hover:fill-white transition-colors" />
               <span>Donate Now</span>
             </Link>
             <Link

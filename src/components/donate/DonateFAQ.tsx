@@ -53,7 +53,7 @@ export default function DonateFAQ() {
 
   return (
     <section className="section-padding bg-[#f8fafc] relative overflow-hidden" aria-label="Frequently asked questions">
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#1a3a6b]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-[#2563eb]" />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -91,7 +91,7 @@ export default function DonateFAQ() {
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className={`w-full flex items-start gap-4 px-5 py-4 text-left transition-colors cursor-pointer ${
-                    isOpen ? "bg-[#1a3a6b]" : "bg-white hover:bg-gray-50"
+                    isOpen ? "bg-[#2563eb]" : "bg-white hover:bg-gray-50"
                   }`}
                   aria-expanded={isOpen}
                 >
@@ -137,7 +137,7 @@ export default function DonateFAQ() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="mt-10 p-6 rounded-3xl bg-[#1a3a6b] border border-orange-100 text-center"
+          className="mt-10 p-6 rounded-3xl bg-[#2563eb] border border-orange-100 text-center"
         >
           <p className="font-body text-gray-600 mb-4">Still have questions? Our team is here to help.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

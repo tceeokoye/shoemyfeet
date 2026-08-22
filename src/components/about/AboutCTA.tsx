@@ -11,11 +11,11 @@ export default function AboutCTA() {
   const inView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section className="section-padding relative overflow-hidden bg-[#1a3a6b] text-white">
+    <section className="section-padding relative overflow-hidden bg-[#09090b] text-white border-t border-white/10">
       {/* Background ambient lighting */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 rounded-full bg-orange-500/20 blur-[130px] animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-sky-400/20 blur-[110px] animate-pulse" />
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 rounded-full bg-orange-500/10 blur-[130px] animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-blue-500/5 blur-[110px] animate-pulse" />
       </div>
 
       {/* Floating subtle animated shapes */}
@@ -78,7 +78,6 @@ export default function AboutCTA() {
               href="/donate"
               className="btn-orange text-base sm:text-lg px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 justify-center group"
             >
-              <HeartIcon size={20} className="fill-white" />
               <span>Donate Now</span>
               <ArrowRightIcon size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>

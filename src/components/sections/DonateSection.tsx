@@ -50,7 +50,7 @@ export default function DonateSection() {
             viewport={viewportConfig}
           >
             {/* Top gradient bar */}
-            <div className="h-2 bg-[#1a3a6b]" />
+            <div className="h-2 bg-[#2563eb]" />
 
             <div className="p-8">
               <h3 className="font-heading text-xl font-bold text-[#1a1a2e] mb-6">
@@ -65,14 +65,14 @@ export default function DonateSection() {
                     onClick={() => { setSelectedAmount(donation.amount); setIsCustom(false); }}
                     className={`relative p-3 rounded-2xl border-2 text-center transition-all font-body ${
                       !isCustom && selectedAmount === donation.amount
-                        ? "border-[#1a3a6b] bg-blue-50 text-royal-blue"
+                        ? "border-[#2563eb] bg-blue-50 text-royal-blue"
                         : "border-gray-200 hover:border-blue-200 text-gray-700"
                     } ${donation.highlight ? "ring-2 ring-orange-400/30" : ""}`}
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.97 }}
                   >
                     {donation.highlight && (
-                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-[#1a3a6b] text-white text-[9px] font-bold whitespace-nowrap">
+                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-[#2563eb] text-white text-[9px] font-bold whitespace-nowrap">
                         POPULAR
                       </div>
                     )}
@@ -80,7 +80,7 @@ export default function DonateSection() {
                     <div className="font-heading font-bold text-lg">${donation.amount}</div>
                     <div className="text-[10px] text-gray-500 leading-tight">{donation.impact}</div>
                     {!isCustom && selectedAmount === donation.amount && (
-                      <div className="absolute top-2 right-2 w-4 h-4 rounded-full bg-[#1a3a6b] flex items-center justify-center">
+                      <div className="absolute top-2 right-2 w-4 h-4 rounded-full bg-[#2563eb] flex items-center justify-center">
                         <CheckIcon size={10} className="text-white" />
                       </div>
                     )}
@@ -93,7 +93,7 @@ export default function DonateSection() {
                 onClick={() => setIsCustom(true)}
                 className={`w-full py-3 rounded-xl border-2 text-sm font-bold transition-all font-body mb-6 ${
                   isCustom
-                    ? "border-[#1a3a6b] bg-blue-50 text-royal-blue"
+                    ? "border-[#2563eb] bg-blue-50 text-royal-blue"
                     : "border-dashed border-gray-200 text-gray-500 hover:border-blue-200"
                 }`}
               >
@@ -114,7 +114,7 @@ export default function DonateSection() {
               {/* Impact Calculator */}
               {effectiveAmount > 0 && (
                 <motion.div
-                  className="bg-[#1a3a6b] rounded-2xl p-4 mb-6 border border-blue-100"
+                  className="bg-[#2563eb] rounded-2xl p-4 mb-6 border border-blue-100"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -154,7 +154,6 @@ export default function DonateSection() {
                 whileHover={{ y: -2, scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <HeartIcon size={18} />
                 Donate ${effectiveAmount || 0} Now
                 <ArrowRightIcon size={16} />
               </motion.button>
@@ -185,7 +184,7 @@ export default function DonateSection() {
             </motion.div>
 
             {[
-              { pct: "85%", label: "Direct Program Costs", desc: "Shoes, training materials, community outreach", color: "bg-[#1a3a6b]", width: "85%" },
+              { pct: "85%", label: "Direct Program Costs", desc: "Shoes, training materials, community outreach", color: "bg-[#2563eb]", width: "85%" },
               { pct: "10%", label: "Operations", desc: "Coordination, volunteer management, logistics", color: "bg-[#f97316]", width: "10%" },
               { pct: "5%", label: "Administration", desc: "Reporting, compliance, strategic growth", color: "bg-[#15803d]", width: "5%" },
             ].map((item, i) => (
@@ -210,7 +209,7 @@ export default function DonateSection() {
             {/* Testimonial */}
             <motion.div
               variants={fadeUp}
-              className="mt-4 bg-[#1a3a6b] rounded-2xl p-5 border border-blue-100"
+              className="mt-4 bg-[#2563eb] rounded-2xl p-5 border border-blue-100"
             >
               <p className="font-body text-gray-700 text-sm italic leading-relaxed mb-3">
                 &ldquo;Access Bank&apos;s partnership helped us distribute 1,000 pairs of shoes
@@ -218,7 +217,7 @@ export default function DonateSection() {
                 were attending school who hadn&apos;t been before.&rdquo;
               </p>
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-[#1a3a6b] flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-[#2563eb] flex items-center justify-center">
                   <span className="text-white font-bold text-xs">AB</span>
                 </div>
                 <div>
@@ -236,7 +235,7 @@ export default function DonateSection() {
                   <a
                     key={way}
                     href="#volunteer"
-                    className="px-3 py-1.5 rounded-full border border-gray-200 text-xs font-bold text-gray-600 hover:border-[#1a3a6b] hover:text-royal-blue transition-all font-body"
+                    className="px-3 py-1.5 rounded-full border border-gray-200 text-xs font-bold text-gray-600 hover:border-[#2563eb] hover:text-royal-blue transition-all font-body"
                   >
                     {way}
                   </a>

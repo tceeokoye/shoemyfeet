@@ -12,14 +12,14 @@ export default function DonationCTA() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <motion.div
-          className="relative bg-[#022c22] rounded-3xl overflow-hidden shadow-2xl p-8 sm:p-12 lg:p-16 text-white border border-white/10"
+          className="relative bg-[#09090b] rounded-3xl overflow-hidden shadow-2xl p-8 sm:p-12 lg:p-16 text-white border border-white/15 shadow-black/80"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
         >
           {/* Background Image Layer with opacity */}
-          <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <div className="absolute inset-0 opacity-25 pointer-events-none">
             <FastImage
               src="/images/children_walking_school.webp"
               alt="Nigerian children walking to school"
@@ -29,43 +29,43 @@ export default function DonationCTA() {
           </div>
 
           {/* Ambient Glow Orbs */}
-          <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-amber-500/20 blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-emerald-500/20 blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-orange-500/15 blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" />
 
           <div className="relative z-10 grid lg:grid-cols-12 gap-10 items-center">
             
             {/* Headline & Description */}
             <div className="lg:col-span-7 flex flex-col gap-6">
-              <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 text-amber-300 text-xs sm:text-sm font-bold border border-amber-500/30 w-fit">
+              <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/80 text-amber-300 text-xs sm:text-sm font-bold border border-white/15 w-fit shadow-md">
                 <HeartIcon size={14} className="fill-amber-400 text-amber-400" />
                 Make a Direct Impact Today
               </motion.span>
 
               <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white">
                 Your Gift Helps a Child Walk into School with{" "}
-                <span className="text-amber-400">Confidence</span>
+                <span className="text-[#f59e0b]">Confidence</span>
               </motion.h2>
 
-              <motion.p variants={fadeUp} className="text-base sm:text-lg text-emerald-100/90 font-body leading-relaxed max-w-xl">
+              <motion.p variants={fadeUp} className="text-base sm:text-lg text-neutral-300 font-body leading-relaxed max-w-xl">
                 $20 provides a durable pair of shoes. $100 fits an entire classroom. Join us in breaking the cycle of discomfort and absenteeism today.
               </motion.p>
 
               {/* Trust highlights */}
-              <motion.div variants={fadeUp} className="flex flex-wrap gap-4 text-xs font-body text-emerald-100/90">
+              <motion.div variants={fadeUp} className="flex flex-wrap gap-4 text-xs font-body text-neutral-300">
                 <span className="flex items-center gap-1.5">
-                  <CheckCircle2Icon size={15} className="text-amber-400" /> 100% Direct Program Delivery
+                  <CheckCircle2Icon size={15} className="text-[#f97316]" /> 100% Direct Program Delivery
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <CheckCircle2Icon size={15} className="text-amber-400" /> Registered CAC NGO
+                  <CheckCircle2Icon size={15} className="text-[#f97316]" /> Registered CAC NGO
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <CheckCircle2Icon size={15} className="text-amber-400" /> Transparent Financial Reports
+                  <CheckCircle2Icon size={15} className="text-[#f97316]" /> Transparent Financial Reports
                 </span>
               </motion.div>
             </div>
 
             {/* Action Buttons Box */}
-            <motion.div variants={fadeUp} className="lg:col-span-5 flex flex-col gap-4 bg-[#044e3b]/90 backdrop-blur-xl p-8 rounded-3xl border border-white/20 shadow-2xl">
+            <motion.div variants={fadeUp} className="lg:col-span-5 flex flex-col gap-4 bg-black/80 backdrop-blur-xl p-8 rounded-3xl border border-white/15 shadow-2xl shadow-black/80">
               <h3 className="font-heading font-bold text-xl text-white mb-2 text-center">
                 Choose How You Give
               </h3>
@@ -75,7 +75,6 @@ export default function DonationCTA() {
                 href="/donate"
                 className="w-full btn-orange justify-center py-4 text-base rounded-2xl shadow-xl group font-body"
               >
-                <HeartIcon size={18} className="fill-white group-hover:scale-110 transition-transform" />
                 <span>Donate Once Now</span>
                 <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -83,13 +82,13 @@ export default function DonationCTA() {
               {/* Monthly Supporter Button */}
               <Link
                 href="/donate"
-                className="w-full py-4 rounded-2xl border-2 border-white/25 hover:border-amber-400 bg-white/10 hover:bg-white/20 text-white font-bold text-center transition-all font-body text-base flex items-center justify-center gap-2 group"
+                className="w-full py-4 rounded-2xl border border-white/20 hover:border-amber-400 bg-white/5 hover:bg-white/10 text-white font-bold text-center transition-all font-body text-base flex items-center justify-center gap-2 group"
               >
                 <SparklesIcon size={18} className="text-amber-300" />
                 <span>Become a Monthly Partner</span>
               </Link>
 
-              <p className="text-[11px] text-center text-emerald-100/90 font-body mt-2">
+              <p className="text-[11px] text-center text-neutral-400 font-body mt-2">
                 Tax-deductible contributions • Full financial transparency
               </p>
             </motion.div>

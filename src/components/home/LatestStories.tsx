@@ -14,7 +14,7 @@ const posts = [
     date: "June 2024",
     readTime: "5 min read",
     emoji: "📖",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
   },
   {
@@ -43,7 +43,7 @@ const posts = [
 
 export default function LatestStories() {
   return (
-    <section className="section-padding bg-[#1a3a6b] overflow-hidden">
+    <section className="section-padding bg-[#2563eb] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -66,7 +66,7 @@ export default function LatestStories() {
           <motion.div variants={fadeUp}>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-[#1a3a6b] text-royal-blue font-bold text-sm hover:bg-[#1a3a6b] hover:text-white transition-all font-body whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-[#2563eb] text-royal-blue font-bold text-sm hover:bg-[#2563eb] hover:text-white transition-all font-body whitespace-nowrap"
             >
               <span>View All Stories</span>
               <ArrowRightIcon size={15} />

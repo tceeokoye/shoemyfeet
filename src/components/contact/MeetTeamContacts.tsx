@@ -12,7 +12,7 @@ const teamMembers = [
     email: "chidubem@shoemyfeet.org",
     bio: "Leads global strategy, vision, and governance for Shoe My Feet Foundation.",
     avatar: "👨‍💼",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
   },
   {
     name: "Dr. Amaka Eze",
@@ -30,7 +30,7 @@ const teamMembers = [
     email: "emeka@shoemyfeet.org",
     bio: "Manages CSR partnerships, corporate sponsors, and major donor relationships.",
     avatar: "👨‍💼",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
   },
   {
     name: "Blessing Johnson",

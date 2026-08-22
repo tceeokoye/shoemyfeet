@@ -61,7 +61,7 @@ export default function DonorTestimonials() {
 
   return (
     <section className="section-padding bg-white relative overflow-hidden" aria-label="Donor testimonials">
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#1a3a6b]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-[#2563eb]" />
       <div className="absolute bottom-0 left-0 w-80 h-80 opacity-5 blur-3xl rounded-full bg-blue-400 pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,7 +88,7 @@ export default function DonorTestimonials() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.97 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-[#1a3a6b] rounded-4xl border border-gray-100 shadow-xl p-8 sm:p-10 relative overflow-hidden"
+              className="bg-[#2563eb] rounded-4xl border border-gray-100 shadow-xl p-8 sm:p-10 relative overflow-hidden"
             >
               {/* Quote mark */}
               <div className="absolute top-6 right-8 opacity-10">
@@ -97,7 +97,7 @@ export default function DonorTestimonials() {
 
               <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center mb-6">
                 {/* Avatar */}
-                <div className="w-20 h-20 rounded-2xl bg-[#1a3a6b] flex items-center justify-center text-4xl flex-shrink-0 border border-blue-100 shadow-sm">
+                <div className="w-20 h-20 rounded-2xl bg-[#2563eb] flex items-center justify-center text-4xl flex-shrink-0 border border-blue-100 shadow-sm">
                   {testimonials[active].avatar}
                 </div>
                 <div>

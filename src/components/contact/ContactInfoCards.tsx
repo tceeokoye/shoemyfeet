@@ -26,7 +26,7 @@ const contactCards: ContactCardCategory[] = [
   {
     category: "Head Office",
     icon: "📍",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
     border: "border-blue-100",
     items: [
@@ -71,7 +71,7 @@ const contactCards: ContactCardCategory[] = [
   {
     category: "Office Hours",
     icon: "⏰",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-purple-50",
     border: "border-purple-100",
     items: [
@@ -130,62 +130,53 @@ export default function ContactInfoCards() {
               key={card.category}
               variants={fadeUp}
               custom={index}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover={{ y: -6 }}
               transition={{ type: "spring", stiffness: 280, damping: 22 }}
-              className={`rounded-3xl p-6 border ${card.border} card.bg shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between relative overflow-hidden`}
+              className="bg-white rounded-3xl p-6 border border-slate-100 shadow-md hover:shadow-xl transition-all flex flex-col justify-between relative overflow-hidden"
             >
               <div>
-                <div className={`w-14 h-14 rounded-2xl card.color flex items-center justify-center text-2xl shadow-md mb-5 text-white group-hover:scale-110 transition-transform`}>
+                <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-2xl shadow-sm mb-5">
                   {card.icon}
                 </div>
 
-                <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-4">{card.category}</h3>
+                <h3 className="font-heading font-bold text-xl text-[#0a0a0a] mb-4">{card.category}</h3>
 
                 <div className="space-y-3">
                   {card.items.map((item) => (
                     <div key={item.label} className="group/item">
-                      <div className="text-[11px] text-gray-500 font-body font-medium">{item.label}</div>
+                      <div className="text-[11px] text-slate-500 font-body font-medium">{item.label}</div>
                       {item.clickable ? (
                         <div className="flex items-center justify-between gap-1">
                           <a
                             href={item.clickable}
-                            className="font-body font-bold text-sm text-royal-blue hover:text-warm-orange transition-colors truncate"
+                            className="font-body font-bold text-sm text-[#0a0a0a] hover:text-[#f97316] transition-colors truncate"
                           >
                             {item.value}
                           </a>
                           <button
                             onClick={() => copyToClipboard(item.value)}
-                            className="text-xs text-gray-400 hover:text-royal-blue p-1 rounded transition-colors cursor-pointer"
+                            className="text-xs text-slate-400 hover:text-black p-1 rounded transition-colors cursor-pointer"
                             title="Copy to clipboard"
                           >
                             {copiedItem === item.value ? <CheckIcon size={12} className="text-green-600" /> : "📋"}
                           </button>
                         </div>
                       ) : (
-                        <div className="font-body font-semibold text-sm text-[#1a1a2e]">{item.value}</div>
+                        <div className="font-body font-semibold text-sm text-[#0a0a0a]">{item.value}</div>
                       )}
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-black/5">
+              <div className="pt-6 mt-6 border-t border-slate-100">
                 <a
                   href={card.actionHref}
-                  className="w-full py-2.5 px-4 rounded-xl bg-white border border-gray-200 text-royal-blue font-bold font-body text-xs text-center inline-block hover:bg-royal-blue hover:text-white transition-all shadow-xs"
+                  className="w-full py-2.5 px-4 rounded-xl bg-slate-50 border border-slate-200 text-[#0a0a0a] font-bold font-body text-xs text-center inline-block hover:bg-black hover:text-white transition-all shadow-xs"
                 >
                   {card.actionLabel} →
                 </a>
               </div>
-
-              {/* Bottom accent */}
-              <motion.div
-                className={`absolute bottom-0 left-0 h-0.5 card.color`}
-                initial={{ width: "0%" }}
-                whileInView={{ width: "100%" }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: index * 0.1 + 0.2 }}
-              />
             </motion.div>
           ))}
         </motion.div>

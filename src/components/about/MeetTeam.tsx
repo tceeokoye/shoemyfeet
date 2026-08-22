@@ -9,7 +9,7 @@ const team = [
   {
     name: "Philomena Nwajagu",
     position: "Founder & Executive Director",
-    photo: "/images/founder.jpg",
+    photo: "/images/MrPhilo.jpeg",
     quote: "Providing shoes is not just charity — it's giving a child the dignity and confidence to step boldly into their future.",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
@@ -80,19 +80,19 @@ export default function MeetTeam() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-royal-blue text-xs sm:text-sm font-bold font-body mb-3 border border-blue-200"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold font-body mb-3 border border-orange-200"
           >
-            Leadership & Volunteers
+            Leadership &amp; Volunteers
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a0a0a] mb-4 leading-tight"
           >
-            Meet the Hearts Behind <span className="text-royal-blue">the Mission</span>
+            Meet the Hearts Behind <span className="text-[#f97316]">the Mission</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="text-base sm:text-lg text-gray-600 font-body leading-relaxed"
+            className="text-base sm:text-lg text-slate-600 font-body leading-relaxed"
           >
             A passionate team of changemakers, educators, and volunteers dedicated to serving underserved children across Nigeria.
           </motion.p>
@@ -107,11 +107,11 @@ export default function MeetTeam() {
               variants={cardVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              whileHover={{ y: -8, scale: 1.02, transition: { type: "spring" as const, stiffness: 280, damping: 22 } }}
-              className="group relative bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col justify-between"
+              whileHover={{ y: -6, transition: { type: "spring" as const, stiffness: 280, damping: 22 } }}
+              className="group relative bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               {/* Top Image Container */}
-              <div className="relative w-full h-72 overflow-hidden bg-gray-100">
+              <div className="relative w-full h-72 overflow-hidden bg-slate-100">
                 <Image
                   src={member.photo}
                   alt={member.name}
@@ -119,10 +119,10 @@ export default function MeetTeam() {
                   className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-[#1a3a6b] opacity-60 group-hover:opacity-40 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 
                 {/* Role Badge */}
-                <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-royal-blue font-body text-xs font-bold shadow-md">
+                <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/80 text-white font-body text-xs font-bold shadow-md border border-white/20">
                   {member.tag}
                 </span>
               </div>
@@ -130,14 +130,14 @@ export default function MeetTeam() {
               {/* Card Body */}
               <div className="p-6 flex flex-col flex-1 justify-between">
                 <div>
-                  <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-1 group-hover:text-royal-blue transition-colors">
+                  <h3 className="font-heading font-bold text-xl text-[#0a0a0a] mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-xs font-bold  text-warm-orange-dark font-body uppercase tracking-wider mb-4">
+                  <p className="text-xs font-bold text-[#f97316] font-body uppercase tracking-wider mb-4">
                     {member.position}
                   </p>
 
-                  <p className="text-gray-600 font-body text-xs leading-relaxed italic mb-6 relative pl-3 border-l-2 border-[#f97316]">
+                  <p className="text-slate-600 font-body text-xs leading-relaxed italic mb-6 relative pl-3 border-l-2 border-[#f97316]">
                     &ldquo;{member.quote}&rdquo;
                   </p>
                 </div>
@@ -148,7 +148,7 @@ export default function MeetTeam() {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#1a3a6b] hover:text-white transition-colors"
+                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#2563eb] hover:text-white transition-colors"
                     aria-label={`${member.name} LinkedIn`}
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">

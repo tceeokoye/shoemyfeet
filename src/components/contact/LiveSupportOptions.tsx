@@ -38,7 +38,7 @@ const supportChannels = [
     cta: "Book Video Call",
     href: "#visit-office",
     badge: "1-on-1",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
     border: "border-blue-100",
   },
@@ -50,7 +50,7 @@ const supportChannels = [
     cta: "Email Support",
     href: "mailto:hello@shoemyfeet.org",
     badge: "< 4hrs Reply",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-purple-50",
     border: "border-purple-100",
   },
@@ -71,7 +71,7 @@ export default function LiveSupportOptions() {
   };
 
   return (
-    <section className="section-padding bg-[#1a3a6b] relative overflow-hidden" aria-label="Live support options">
+    <section className="section-padding bg-[#2563eb] relative overflow-hidden" aria-label="Live support options">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

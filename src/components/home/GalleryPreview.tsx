@@ -62,7 +62,7 @@ export default function GalleryPreview() {
 
           <motion.h2
             variants={fadeUp}
-            className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#0b1933] mb-4 tracking-tight"
+            className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#0a0a0a] mb-4 tracking-tight"
           >
             Hope &amp; Dignity{" "}
             <span className="text-[#f97316]">In Pictures</span>
@@ -87,56 +87,35 @@ export default function GalleryPreview() {
           }}
         >
           {galleryData.map((item, i) => {
-            const featured = i === 0;
             return (
               <motion.div
                 key={item.id}
                 custom={i}
                 variants={itemVariants}
                 style={{ gridArea: AREA_NAMES[i] }}
-                className={`relative overflow-hidden group card-3d cursor-pointer ${
-                  featured ? "rounded-3xl border-2 border-[#f97316]" : "rounded-2xl border-2 border-white"
-                }`}
+                className="relative overflow-hidden group card-3d cursor-pointer rounded-2xl border-2 border-white"
               >
                 <FastImage
                   src={item.src}
                   alt={item.alt}
                   fill
-                  priority={featured}
                   className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
-                  sizes={featured ? "45vw" : "22vw"}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
-
-                {featured && (
-                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-20">
-                    <span className="px-3.5 py-1.5 rounded-full bg-[#f97316] text-white text-xs font-heading font-bold shadow-lg flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                      FEATURED OUTREACH
-                    </span>
-                    <span className="flex items-center gap-1 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full text-white text-xs font-body border border-white/30">
-                      <MapPinIcon size={12} className="text-orange-400" />
-                      {item.location}
-                    </span>
-                  </div>
-                )}
-
-                <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
-                  <h3 className={`font-heading font-bold text-white leading-snug drop-shadow-md ${featured ? "text-xl sm:text-2xl" : "text-sm line-clamp-1"}`}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <span className="text-[11px] text-orange-400 font-bold font-heading uppercase tracking-wider block mb-1">
+                    {item.location}
+                  </span>
+                  <p className="font-heading font-bold text-base leading-snug drop-shadow-sm">
                     {item.caption}
-                  </h3>
-                  {!featured && (
-                    <p className="text-orange-300 text-xs font-body mt-0.5 font-semibold">
-                      {item.location}
-                    </p>
-                  )}
+                  </p>
                 </div>
               </motion.div>
             );
           })}
         </motion.div>
 
-        {/* Mobile grid */}
+        {/* Mobile vertical cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 md:hidden">
           {galleryData.map((item) => (
             <div key={item.id} className="relative h-60 rounded-2xl overflow-hidden shadow-lg border border-slate-200">
@@ -156,14 +135,14 @@ export default function GalleryPreview() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-[#0f2347] rounded-3xl p-8 sm:p-10 mb-8 relative overflow-hidden card-3d-dark border border-white/15 text-white"
+          className="bg-[#09090b] rounded-3xl p-8 sm:p-10 mb-8 relative overflow-hidden card-3d-dark border border-white/10 text-white shadow-2xl shadow-black/60"
         >
-          <div className="absolute top-4 right-6 text-8xl font-heading text-white/10 leading-none select-none">❝</div>
+          <div className="absolute top-4 right-6 text-8xl font-heading text-white/5 leading-none select-none">❝</div>
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <p className="font-heading font-bold text-xl sm:text-2xl text-white mb-4 leading-snug">
               "{story.quote}"
             </p>
-            <p className="font-heading text-sm text-amber-300 font-bold">
+            <p className="font-heading text-sm text-[#f59e0b] font-bold">
               — {story.name}, {story.role} · {story.location}
             </p>
           </div>

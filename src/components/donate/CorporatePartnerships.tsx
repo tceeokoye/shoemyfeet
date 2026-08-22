@@ -37,7 +37,7 @@ const packages = [
   {
     name: "Platinum Guardian",
     amount: "₦1,000,000+",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     perks: ["All Gold perks", "School naming rights", "Board observer seat", "National press coverage"],
   },
 ];
@@ -45,8 +45,8 @@ const packages = [
 export default function CorporatePartnerships() {
   return (
     <section className="section-padding bg-white relative overflow-hidden" aria-label="Corporate partnerships">
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#1a3a6b]" />
-      <div className="absolute top-10 right-10 w-80 h-80 rounded-full opacity-5 blur-3xl bg-[#1a3a6b] pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-[#2563eb]" />
+      <div className="absolute top-10 right-10 w-80 h-80 rounded-full opacity-5 blur-3xl bg-[#2563eb] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}

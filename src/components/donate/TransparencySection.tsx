@@ -10,7 +10,7 @@ const reports = [
     title: "Annual Reports",
     description: "Comprehensive yearly overview of our programs, reach, financials, and strategic goals.",
     cta: "Download 2025 Report",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
     border: "border-blue-100",
   },
@@ -37,7 +37,7 @@ const reports = [
     title: "Governance",
     description: "Our board structure, bylaws, and commitment to ethical nonprofit management.",
     cta: "View Governance",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-purple-50",
     border: "border-purple-100",
   },
@@ -72,8 +72,8 @@ const certifications = [
 
 export default function TransparencySection() {
   return (
-    <section className="section-padding bg-[#1a3a6b] relative overflow-hidden" aria-label="Transparency and accountability">
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#1a3a6b]" />
+    <section className="section-padding bg-[#2563eb] relative overflow-hidden" aria-label="Transparency and accountability">
+      <div className="absolute top-0 left-0 right-0 h-px bg-[#2563eb]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}

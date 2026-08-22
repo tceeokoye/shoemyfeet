@@ -51,7 +51,7 @@ export default function ContactFAQ() {
   );
 
   return (
-    <section className="section-padding bg-[#1a3a6b] relative overflow-hidden" aria-label="Contact FAQs">
+    <section className="section-padding bg-[#2563eb] relative overflow-hidden" aria-label="Contact FAQs">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -107,7 +107,7 @@ export default function ContactFAQ() {
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                     className={`w-full flex items-start gap-4 px-5 py-4 text-left transition-colors cursor-pointer ${
-                      isOpen ? "bg-[#1a3a6b]" : "bg-white hover:bg-gray-50"
+                      isOpen ? "bg-[#2563eb]" : "bg-white hover:bg-gray-50"
                     }`}
                     aria-expanded={isOpen}
                   >

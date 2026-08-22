@@ -10,11 +10,11 @@ interface ShareYourStoryProps {
 
 export default function ShareYourStory({ onOpenUpload }: ShareYourStoryProps) {
   return (
-    <section className="section-padding bg-[#0d1f3c] text-white relative overflow-hidden">
+    <section className="section-padding bg-[#09090b] text-white relative overflow-hidden border-t border-white/10">
       {/* Ambient background glows */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 rounded-full bg-[#f97316]/15 blur-[140px]" />
-        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 rounded-full bg-[#fbbf24]/10 blur-[150px]" />
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 rounded-full bg-orange-500/10 blur-[140px]" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 rounded-full bg-amber-500/5 blur-[150px]" />
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">

@@ -20,7 +20,7 @@ export default function GalleryHero() {
   const inView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#0d1f3c] pt-28 pb-20">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#09090b] pt-28 pb-20">
       {/* Background Image Collage Blend */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -28,10 +28,10 @@ export default function GalleryHero() {
           alt="Shoe My Feet Foundation outreach collage"
           fill
           priority
-          className="object-cover object-center scale-105 brightness-[0.45] filter blur-[2px]"
+          className="object-cover object-center scale-105"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[#1a3a6b]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />
       </div>
 
       {/* Background Glow Orbs */}
@@ -146,7 +146,7 @@ export default function GalleryHero() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-[#1a3a6b]" />
+                  <div className="absolute inset-0 bg-[#2563eb]" />
                   <span className="absolute bottom-3 left-3 text-xs font-heading font-bold text-white">
                     Enugu Distribution
                   </span>
@@ -158,7 +158,7 @@ export default function GalleryHero() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-[#1a3a6b]" />
+                  <div className="absolute inset-0 bg-[#2563eb]" />
                   <span className="absolute bottom-3 left-3 text-xs font-heading font-bold text-white">
                     kids Workshop
                   </span>
@@ -173,7 +173,7 @@ export default function GalleryHero() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-[#1a3a6b]" />
+                  <div className="absolute inset-0 bg-[#2563eb]" />
                   <span className="absolute bottom-3 left-3 text-xs font-heading font-bold text-white">
                     School Visits
                   </span>
@@ -185,7 +185,7 @@ export default function GalleryHero() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-[#1a3a6b]" />
+                  <div className="absolute inset-0 bg-[#2563eb]" />
                   <span className="absolute bottom-3 left-3 text-xs font-heading font-bold text-white">
                     15,000+ Smiles
                   </span>
@@ -194,7 +194,7 @@ export default function GalleryHero() {
 
               {/* Floating Center Badge */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                <div className="w-16 h-16 rounded-full bg-[#f97316] flex items-center justify-center text-white shadow-2xl border-4 border-[#0d1f3c] animate-bounce">
+                <div className="w-16 h-16 rounded-full bg-[#f97316] flex items-center justify-center text-white shadow-2xl border-4 border-[#1e40af] animate-bounce">
                   <CameraIcon size={24} />
                 </div>
               </div>

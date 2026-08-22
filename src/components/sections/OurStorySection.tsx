@@ -17,7 +17,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function OurStorySection() {
   return (
-    <section id="story" className="section-padding bg-[#1a3a6b] overflow-hidden">
+    <section id="story" className="section-padding bg-[#2563eb] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -54,7 +54,7 @@ export default function OurStorySection() {
             variants={fadeLeft}
             className="relative"
           >
-            <div className="absolute inset-0 bg-[#1a3a6b] rounded-3xl blur-2xl scale-105" />
+            <div className="absolute inset-0 bg-[#2563eb] rounded-3xl blur-2xl scale-105" />
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/founder.jpg"
@@ -63,9 +63,9 @@ export default function OurStorySection() {
                 height={450}
                 className="w-full h-80 object-cover object-center"
               />
-              <div className="absolute inset-0 bg-[#1a3a6b]" />
+              <div className="absolute inset-0 bg-[#2563eb]" />
               <div className="absolute bottom-4 left-4 right-4">
-                <div className="rounded-xl px-4 py-3 border border-white/20 bg-[#0d1f3c]/80 backdrop-blur-md">
+                <div className="rounded-xl px-4 py-3 border border-white/20 bg-[#1e40af]/80 backdrop-blur-md">
                   <p className="font-heading font-bold text-white text-lg drop-shadow-md">Philomena Nwajagu</p>
                   <p className="text-amber-300 text-sm font-body font-semibold tracking-wide">Founder &amp; Social Entrepreneur</p>
                 </div>
@@ -107,7 +107,7 @@ export default function OurStorySection() {
         {/* Timeline */}
         <div className="relative">
           {/* Center line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#1a3a6b] -translate-x-1/2" />
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#2563eb] -translate-x-1/2" />
 
           <div className="flex flex-col gap-10">
             {TIMELINE.map((item, index) => (

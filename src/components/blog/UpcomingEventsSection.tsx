@@ -94,11 +94,11 @@ export default function UpcomingEventsSection({ onRSVPClick }: UpcomingEventsPro
                 {/* Image Cover & Live Countdown */}
                 <div className="relative h-48 overflow-hidden">
                   <Image src={event.coverImage} alt={event.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-[#1a3a6b]" />
+                  <div className="absolute inset-0 bg-[#2563eb]" />
 
                   {/* Category & State Overlay */}
                   <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#1a3a6b] font-bold text-xs shadow-md">
+                    <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#2563eb] font-bold text-xs shadow-md">
                       {event.state}
                     </span>
                   </div>

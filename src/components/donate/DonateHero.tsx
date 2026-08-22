@@ -3,16 +3,16 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { HeartIcon, ArrowRightIcon, ChevronDownIcon } from "@/components/ui/Icons";
+import { HeartIcon, ArrowRightIcon, ChevronDownIcon, SparklesIcon } from "@/components/ui/Icons";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const staticParticles = [
   { width: 6, height: 6, left: "12%", top: "20%", color: "#f97316", duration: 4.2, delay: 0 },
   { width: 8, height: 8, left: "78%", top: "15%", color: "#fbbf24", duration: 5.1, delay: 0.6 },
-  { width: 5, height: 5, left: "35%", top: "75%", color: "#1a3a6b", duration: 3.8, delay: 1.1 },
+  { width: 5, height: 5, left: "35%", top: "75%", color: "#2563eb", duration: 3.8, delay: 1.1 },
   { width: 7, height: 7, left: "88%", top: "60%", color: "#f97316", duration: 4.7, delay: 0.3 },
   { width: 4, height: 4, left: "8%",  top: "82%", color: "#fbbf24", duration: 3.5, delay: 1.4 },
-  { width: 9, height: 9, left: "52%", top: "10%", color: "#1a3a6b", duration: 5.5, delay: 0.8 },
+  { width: 9, height: 9, left: "52%", top: "10%", color: "#2563eb", duration: 5.5, delay: 0.8 },
   { width: 6, height: 6, left: "25%", top: "40%", color: "#f97316", duration: 4.0, delay: 0.2 },
   { width: 5, height: 5, left: "68%", top: "88%", color: "#fbbf24", duration: 4.3, delay: 0.9 },
 ];
@@ -52,22 +52,22 @@ export default function DonateHero() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#f8fafc] pt-28 pb-16 sm:pt-32 lg:py-24"
+      className="relative min-h-screen flex items-center overflow-hidden bg-[#09090b] pt-28 pb-16 sm:pt-32 lg:py-24"
       aria-label="Donate hero section"
     >
       {/* Background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           className="absolute top-10 left-8 w-[450px] h-[450px] rounded-full opacity-25 animate-blob"
-          style={{ background: "#1a3a6b" }}
+          style={{ background: "#2563eb" }}
         />
         <motion.div
           className="absolute bottom-12 right-12 w-[380px] h-[380px] rounded-full opacity-20 animate-blob-slow"
-          style={{ background: "#1a3a6b" }}
+          style={{ background: "#2563eb" }}
         />
         <motion.div
           className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full opacity-15"
-          style={{ background: "#1a3a6b" }}
+          style={{ background: "#2563eb" }}
           animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -108,21 +108,21 @@ export default function DonateHero() {
               initial={{ opacity: 0, y: -20 }}
               animate={isReady ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 text-warm-orange-dark font-bold text-sm w-fit"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/40 text-amber-300 font-bold text-sm w-fit"
             >
-              <HeartIcon size={14} className="fill-warm-orange text-warm-orange" />
+              <SparklesIcon size={14} className="text-amber-300" />
               Make a Difference Today
             </motion.div>
 
             {/* Headline */}
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-[#1a1a2e] flex flex-wrap gap-x-[0.25em] gap-y-1">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-white flex flex-wrap gap-x-[0.25em] gap-y-1">
               {HEADLINE_WORDS.map((item, index) => (
                 <motion.span
                   key={`${item.word}-${isReady}`}
                   initial={{ opacity: 0, x: item.direction.x, y: item.direction.y, rotate: item.direction.rotate, scale: 0.5, filter: "blur(8px)" }}
                   animate={isReady ? { opacity: 1, x: 0, y: 0, rotate: 0, scale: 1, filter: "blur(0px)" } : {}}
                   transition={{ duration: 0.85, delay: 0.2 + index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-                  className={`inline-block relative will-change-transform ${item.gradient ? "text-warm-orange" : ""} ${item.highlight ? "text-warm-orange-dark" : ""}`}
+                  className={`inline-block relative will-change-transform ${item.gradient ? "text-warm-orange" : ""} ${item.highlight ? "text-amber-400" : ""}`}
                 >
                   {item.word}
                   {item.highlight && (
@@ -143,7 +143,7 @@ export default function DonateHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={isReady ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: HEADLINE_WORDS.length * 0.08 + 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="text-base sm:text-lg text-gray-600 font-body max-w-xl leading-relaxed"
+              className="text-base sm:text-lg text-blue-100/90 font-body max-w-xl leading-relaxed"
             >
               Your generosity provides more than a pair of shoes — it gives a child confidence, protection, dignity, and the opportunity to learn, play, and dream without limits.
             </motion.p>
@@ -159,13 +159,12 @@ export default function DonateHero() {
                 href="#donate-widget"
                 className="btn-orange text-base group"
               >
-                <HeartIcon size={18} className="fill-white text-white group-hover:scale-110 transition-transform" />
                 Donate Now
                 <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#impact-calculator"
-                className="px-6 py-3 rounded-full font-bold text-royal-blue border-2 border-royal-blue/20 hover:border-royal-blue/50 hover:bg-blue-50 transition-all group font-body text-base"
+                className="btn-outline text-base text-white border-2 border-white/30 hover:bg-white/10 transition-all font-body"
               >
                 See Your Impact
               </a>
@@ -176,7 +175,7 @@ export default function DonateHero() {
               initial={{ opacity: 0, y: 25 }}
               animate={isReady ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: HEADLINE_WORDS.length * 0.08 + 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-wrap gap-3 pt-4 border-t border-gray-200/60 mt-2"
+              className="flex flex-wrap gap-3 pt-4 border-t border-white/15 mt-2"
             >
               {[
                 { icon: "🔒", label: "SSL Secured" },
@@ -184,7 +183,7 @@ export default function DonateHero() {
                 { icon: "💳", label: "Paystack & Stripe" },
                 { icon: "🧾", label: "Receipt Provided" },
               ].map((badge) => (
-                <span key={badge.label} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 border border-gray-200 text-xs text-gray-600 font-body font-semibold shadow-sm">
+                <span key={badge.label} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs text-blue-100 font-body font-semibold shadow-sm">
                   {badge.icon} {badge.label}
                 </span>
               ))}
@@ -200,7 +199,7 @@ export default function DonateHero() {
               className="relative w-full max-w-sm mx-auto"
             >
               {/* Glow background */}
-              <div className="absolute inset-0 bg-[#1a3a6b] rounded-3xl blur-3xl scale-110" />
+              <div className="absolute inset-0 bg-[#2563eb] rounded-3xl blur-3xl scale-110" />
 
               {/* Main card */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-white p-8">
@@ -210,7 +209,7 @@ export default function DonateHero() {
                   animate={{ scale: [1, 1.06, 1] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <div className="w-24 h-24 rounded-full bg-[#1a3a6b] flex items-center justify-center shadow-2xl shadow-orange-500/30">
+                  <div className="w-24 h-24 rounded-full bg-[#2563eb] flex items-center justify-center shadow-2xl shadow-orange-500/30">
                     <span className="text-5xl">❤️</span>
                   </div>
                 </motion.div>
@@ -228,12 +227,12 @@ export default function DonateHero() {
                   ].map((stat) => (
                     <motion.div
                       key={stat.label}
-                      className="bg-[#1a3a6b] rounded-2xl p-3 text-center border border-gray-100"
+                      className="bg-slate-50 rounded-2xl p-3 text-center border border-slate-100"
                       whileHover={{ scale: 1.04 }}
                     >
                       <span className="text-2xl">{stat.icon}</span>
-                      <div className="font-heading font-bold text-lg text-royal-blue leading-none mt-1">{stat.value}</div>
-                      <div className="text-[10px] text-gray-500 font-body font-medium mt-0.5">{stat.label}</div>
+                      <div className="font-heading font-bold text-lg text-[#1e40af] leading-none mt-1">{stat.value}</div>
+                      <div className="text-[10px] text-slate-800 font-body font-semibold mt-0.5">{stat.label}</div>
                     </motion.div>
                   ))}
                 </div>
@@ -247,8 +246,8 @@ export default function DonateHero() {
               >
                 <span className="text-xl">🎉</span>
                 <div>
-                  <div className="font-heading font-bold text-royal-blue text-xs">New Donor</div>
-                  <div className="text-[10px] text-gray-500 font-body">Just donated ₦10,000</div>
+                  <div className="font-heading font-bold text-[#1e40af] text-xs">New Donor</div>
+                  <div className="text-[10px] text-slate-700 font-body font-medium">Just donated ₦10,000</div>
                 </div>
               </motion.div>
               <motion.div
@@ -258,8 +257,8 @@ export default function DonateHero() {
               >
                 <span className="text-xl">🙏</span>
                 <div>
-                  <div className="font-heading font-bold text-royal-blue text-xs">Thank You!</div>
-                  <div className="text-[10px] text-gray-500 font-body">1 child helped today</div>
+                  <div className="font-heading font-bold text-[#1e40af] text-xs">Thank You!</div>
+                  <div className="text-[10px] text-slate-700 font-body font-medium">1 child helped today</div>
                 </div>
               </motion.div>
             </motion.div>
@@ -273,7 +272,7 @@ export default function DonateHero() {
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <span className="text-[10px] text-gray-400 font-body tracking-widest uppercase font-semibold">Scroll to give</span>
+          <span className="text-[10px] text-blue-200/80 font-body tracking-widest uppercase font-semibold">Scroll to give</span>
           <ChevronDownIcon size={16} className="text-warm-orange" />
         </motion.div>
       </div>

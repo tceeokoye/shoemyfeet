@@ -34,7 +34,7 @@ const benefits = [
     description:
       "Lack of required footwear leads to school expulsion, shame, or missing classes due to foot injuries. Providing shoes increases regular attendance by over 30%.",
     stat: "+30% Attendance",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
     border: "border-blue-100 hover:border-blue-300",
   },
@@ -45,7 +45,7 @@ const benefits = [
     description:
       "Wearing clean, fitted school shoes inspires pride and self-assurance. Children participate more eagerly in classroom activities and sports without feeling inferior.",
     stat: "High Self-Worth",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-purple-50",
     border: "border-purple-100 hover:border-purple-300",
   },
@@ -131,39 +131,31 @@ export default function WhyShoesMatterAbout() {
               variants={cardVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 280, damping: 22 } }}
-              className={`group relative bg-white rounded-3xl p-8 border ${benefit.border} shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-between overflow-hidden cursor-default`}
+              whileHover={{ y: -6, transition: { type: "spring", stiffness: 280, damping: 22 } }}
+              className="bg-white rounded-3xl p-8 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
-              {/* Soft glow background on hover */}
-              <div className={`absolute inset-0 benefit.color opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl pointer-events-none`} />
-
               <div>
                 {/* Header row with Icon and Stat Chip */}
                 <div className="flex items-center justify-between mb-6">
-                  <div
-                    className={`w-14 h-14 rounded-2xl benefit.color flex items-center justify-center text-2xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                  >
+                  <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-2xl shadow-sm">
                     {benefit.icon}
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-bold font-body ${benefit.bg} text-gray-700 border border-black/5`}>
+                  <span className="px-3 py-1 rounded-full text-xs font-bold font-body bg-slate-100 text-slate-700">
                     {benefit.stat}
                   </span>
                 </div>
 
-                <h3 className="font-heading font-bold text-2xl text-[#1a1a2e] mb-1 group-hover:text-royal-blue transition-colors">
+                <h3 className="font-heading font-bold text-2xl text-[#0a0a0a] mb-1">
                   {benefit.title}
                 </h3>
-                <p className="text-xs font-bold text-gray-400 font-body uppercase tracking-wider mb-4">
+                <p className="text-xs font-bold text-slate-400 font-body uppercase tracking-wider mb-4">
                   {benefit.subtitle}
                 </p>
 
-                <p className="text-gray-600 font-body text-sm leading-relaxed">
+                <p className="text-slate-600 font-body text-sm leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
-
-              {/* Bottom decorative grow bar */}
-              <div className={`h-1.5 w-12 rounded-full benefit.color mt-6 group-hover:w-full transition-all duration-500`} />
             </motion.div>
           ))}
         </div>

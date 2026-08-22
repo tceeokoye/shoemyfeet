@@ -16,7 +16,7 @@ const reasons = [
     icon: "🎓",
     title: "Supports School Attendance",
     description: "With proper footwear, children can attend school regularly — no longer turned away at the gate or missing days due to foot pain.",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
     border: "border-blue-100",
   },
@@ -32,7 +32,7 @@ const reasons = [
     icon: "✨",
     title: "Restores Confidence",
     description: "A new pair of shoes transforms a child's self-esteem. They walk taller, participate more actively, and dream bigger when they feel valued.",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-purple-50",
     border: "border-purple-100",
   },
@@ -58,8 +58,8 @@ export default function WhyDonate() {
   return (
     <section className="section-padding bg-white relative overflow-hidden" aria-label="Why your donation matters">
       {/* Subtle background */}
-      <div className="absolute inset-0 bg-[#1a3a6b] pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-[#1a3a6b]" />
+      <div className="absolute inset-0 bg-[#2563eb] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-[#2563eb]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

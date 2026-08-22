@@ -79,7 +79,7 @@ export default function FindUsLocation() {
             viewport={viewportConfig}
             className="lg:col-span-5 space-y-6"
           >
-            <motion.div variants={fadeUp} className="bg-[#1a3a6b] p-6 rounded-3xl border border-blue-100 shadow-sm">
+            <motion.div variants={fadeUp} className="bg-[#2563eb] p-6 rounded-3xl border border-blue-100 shadow-sm">
               <h3 className="font-heading font-bold text-xl text-royal-blue mb-2 flex items-center gap-2">
                 <MapPinIcon size={22} className="text-warm-orange" />
                 Office Address

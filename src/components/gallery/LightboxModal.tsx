@@ -150,7 +150,7 @@ export default function LightboxModal({ photos, currentIndex, onClose, onNavigat
 
         {/* Bottom Details Caption Bar */}
         <motion.div
-          className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-[#1a3a6b] z-30 pointer-events-auto flex flex-col sm:flex-row sm:items-end justify-between gap-4 max-w-6xl mx-auto"
+          className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-[#2563eb] z-30 pointer-events-auto flex flex-col sm:flex-row sm:items-end justify-between gap-4 max-w-6xl mx-auto"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           onClick={(e) => e.stopPropagation()}

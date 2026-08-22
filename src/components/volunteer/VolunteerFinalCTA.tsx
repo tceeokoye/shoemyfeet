@@ -21,7 +21,7 @@ export default function VolunteerFinalCTA() {
   return (
     <section
       id="volunteer-cta"
-      className="relative section-padding bg-[#1a3a6b] overflow-hidden"
+      className="relative section-padding bg-[#2563eb] overflow-hidden"
     >
       {/* Ambient glows */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -113,7 +113,6 @@ export default function VolunteerFinalCTA() {
               href="#volunteer-form"
               className="btn-orange text-base sm:text-lg px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 justify-center inline-flex items-center gap-2"
             >
-              <HeartIcon size={20} className="fill-white/30" />
               Apply to Volunteer
             </a>
             <a

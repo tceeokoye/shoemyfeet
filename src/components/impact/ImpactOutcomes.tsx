@@ -20,7 +20,7 @@ const outcomes = [
     value: 30,
     unit: "%",
     description: "Average increase in school attendance recorded in partner schools after shoe distribution.",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-blue-50",
     border: "border-blue-100",
     progress: 75,
@@ -53,7 +53,7 @@ const outcomes = [
     value: 300,
     unit: "+",
     description: "Active volunteers mobilized across all states, growing year on year as our community expands.",
-    color: "bg-[#1a3a6b]",
+    color: "bg-[#2563eb]",
     bg: "bg-purple-50",
     border: "border-purple-100",
     progress: 60,
@@ -93,37 +93,38 @@ function OutcomeCard({ outcome, index }: { outcome: typeof outcomes[0]; index: n
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 22 } }}
-      className={`${outcome.bg} ${outcome.border} border rounded-3xl p-6 relative overflow-hidden group card-hover`}
+      className="bg-white border border-slate-100 rounded-3xl p-6 relative overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
     >
-      {/* Background decoration */}
-      <div className={`absolute -top-8 -right-8 w-24 h-24 rounded-full outcome.color opacity-10 group-hover:opacity-20 transition-opacity duration-500`} />
+      <div>
+        {/* Icon */}
+        <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center shadow-sm mb-4 text-[#f97316]">
+          <Icon size={22} className="text-[#f97316]" />
+        </div>
 
-      {/* Icon */}
-      <div className={`w-12 h-12 rounded-2xl outcome.color flex items-center justify-center shadow-lg mb-4 text-white`}>
-        <Icon size={22} className="text-white" />
+        {/* Title */}
+        <h3 className="font-heading text-lg font-bold text-[#0a0a0a] mb-2">{outcome.title}</h3>
+
+        {/* Big number */}
+        <div className="font-heading text-4xl font-extrabold text-[#0a0a0a] mb-2">
+          {outcome.value}<span className="text-[#f97316]">{outcome.unit}</span>
+        </div>
+
+        {/* Description */}
+        <p className="font-body text-slate-600 text-sm leading-relaxed mb-5">{outcome.description}</p>
       </div>
-
-      {/* Title */}
-      <h3 className="font-heading text-lg font-bold text-[#1a1a2e] mb-2">{outcome.title}</h3>
-
-      {/* Big number */}
-      <div className={`font-heading text-4xl font-extrabold outcome.color bg-clip-text text-transparent mb-2`}>
-        {outcome.value}{outcome.unit}
-      </div>
-
-      {/* Description */}
-      <p className="font-body text-gray-600 text-sm leading-relaxed mb-5">{outcome.description}</p>
 
       {/* Progress bar */}
-      <div className="relative h-2 rounded-full bg-gray-200 overflow-hidden">
-        <motion.div
-          className={`absolute inset-y-0 left-0 rounded-full outcome.color`}
-          initial={{ width: 0 }}
-          animate={inView ? { width: `${outcome.progress}%` } : {}}
-          transition={{ duration: 1.2, delay: index * 0.07 + 0.3, ease: [0.22, 1, 0.36, 1] }}
-        />
+      <div>
+        <div className="relative h-2 rounded-full bg-slate-100 overflow-hidden">
+          <motion.div
+            className="absolute inset-y-0 left-0 rounded-full bg-[#f97316]"
+            initial={{ width: 0 }}
+            animate={inView ? { width: `${outcome.progress}%` } : {}}
+            transition={{ duration: 1.2, delay: index * 0.07 + 0.3, ease: [0.22, 1, 0.36, 1] }}
+          />
+        </div>
+        <p className="font-body text-xs text-slate-400 mt-1.5">{outcome.progress}% impact achieved toward goal</p>
       </div>
-      <p className="font-body text-xs text-gray-400 mt-1.5">{outcome.progress}% impact achieved toward goal</p>
     </motion.div>
   );
 }
@@ -142,20 +143,20 @@ export default function ImpactOutcomes() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-700 text-xs sm:text-sm font-bold border border-emerald-200 mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold border border-orange-200 mb-4"
           >
             Measuring Success
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a0a0a] mb-4 leading-tight"
           >
             The Outcomes That{" "}
-            <span className="text-royal-blue">Prove Our Impact</span>
+            <span className="text-[#f97316]">Prove Our Impact</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="text-base sm:text-lg text-gray-600 font-body leading-relaxed"
+            className="text-base sm:text-lg text-slate-600 font-body leading-relaxed"
           >
             Our work is measured not just in shoes distributed, but in real, lasting changes to education, health, confidence, and community wellbeing.
           </motion.p>

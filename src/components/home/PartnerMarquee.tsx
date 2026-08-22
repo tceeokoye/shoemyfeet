@@ -6,7 +6,7 @@ const partners = [
   { name: "Access Bank CSR", type: "Community Partner", initials: "AB", color: "bg-[#f97316]" },
   { name: "Enugu State Ministry", type: "Education Partner", initials: "ES", color: "bg-emerald-600" },
   { name: "UNICEF Nigeria", type: "Child Welfare", initials: "UN", color: "bg-blue-600" },
-  { name: "Kaduna State Outreach", type: "Northern Partner", initials: "KM", color: "bg-[#0f2347]" },
+  { name: "Kaduna State Outreach", type: "Northern Partner", initials: "KM", color: "bg-[#1e40af]" },
   { name: "GTBank Foundation", type: "kids Partner", initials: "GT", color: "bg-[#f97316]" },
   { name: "NACA Nigeria", type: "Health Protection", initials: "NA", color: "bg-teal-600" },
   { name: "Edo Education Board", type: "Skills Partner", initials: "ED", color: "bg-amber-500" },
@@ -15,9 +15,9 @@ const partners = [
 
 export default function PartnerMarquee() {
   return (
-    <section className="py-6 bg-[#022c22] border-y border-emerald-500/20 overflow-hidden relative">
+    <section className="py-6 bg-[#09090b] border-y border-white/10 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 mb-3 text-center">
-        <p className="text-[11px] font-bold text-emerald-200 uppercase tracking-widest font-heading">
+        <p className="text-[11px] font-bold text-neutral-400 uppercase tracking-widest font-heading">
           Trusted &amp; Supported By Leading Organizations Across Nigeria
         </p>
       </div>
@@ -25,8 +25,8 @@ export default function PartnerMarquee() {
       {/* Marquee Track */}
       <div className="relative flex overflow-x-hidden group">
         {/* Gradient Edge Fades */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#022c22] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#022c22] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#09090b] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#09090b] to-transparent z-10 pointer-events-none" />
 
         {/* Animated Marquee Content */}
         <div className="flex shrink-0 animate-marquee items-center gap-6 py-2">

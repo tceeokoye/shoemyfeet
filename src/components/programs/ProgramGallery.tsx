@@ -88,7 +88,7 @@ export default function ProgramGallery() {
                 className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                 sizes={i === 0 ? "(max-width: 768px) 100vw, 60vw" : "(max-width: 768px) 50vw, 25vw"}
               />
-              <div className="absolute inset-0 bg-[#1a3a6b]" />
+              <div className="absolute inset-0 bg-[#2563eb]" />
               {i === 0 && (
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1.5 rounded-full bg-[#f97316] text-white text-xs font-heading font-bold shadow-lg flex items-center gap-1.5">

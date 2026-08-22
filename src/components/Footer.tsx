@@ -53,10 +53,10 @@ function FooterLogo() {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0b1933] text-white relative overflow-hidden">
+    <footer className="bg-[#09090b] text-white relative overflow-hidden border-t border-white/10">
       {/* Ambient Orbs */}
-      <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-blue-500/10 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-orange-500/10 translate-x-1/2 translate-y-1/2 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-orange-500/5 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-blue-500/5 translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -94,7 +94,6 @@ export default function Footer() {
 
                 <motion.div variants={fadeUp}>
                   <Link href="/donate" className="btn-orange text-xs py-2.5 px-5 rounded-full inline-flex items-center gap-1.5 shadow-lg">
-                    <HeartIcon size={14} className="fill-white" />
                     <span>Quick Donate</span>
                     <ArrowRightIcon size={12} />
                   </Link>

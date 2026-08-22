@@ -24,7 +24,7 @@ function TrainingAccordion({ item, index }: { item: typeof TRAINING_ITEMS[0]; in
       <button
         onClick={() => setOpen((p) => !p)}
         className={`w-full flex items-center gap-4 px-6 py-5 text-left transition-colors duration-300 cursor-pointer ${
-          open ? "bg-[#1a3a6b]" : "bg-white hover:bg-orange-50/40"
+          open ? "bg-[#2563eb]" : "bg-white hover:bg-orange-50/40"
         }`}
         aria-expanded={open}
         id={`training-${index}`}
@@ -114,7 +114,7 @@ export default function TrainingSupport() {
 
         {/* Bottom CTA card */}
         <motion.div
-          className="mt-12 rounded-3xl bg-[#1a3a6b] border border-orange-200 p-8 text-center"
+          className="mt-12 rounded-3xl bg-[#2563eb] border border-orange-200 p-8 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}

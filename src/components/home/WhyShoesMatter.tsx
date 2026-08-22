@@ -83,7 +83,7 @@ export default function WhyShoesMatter() {
 
           <motion.h2
             variants={fadeUp}
-            className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#0b1933] mb-4 tracking-tight"
+            className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#0a0a0a] mb-4 tracking-tight"
           >
             A Simple Pair of Shoes Is{" "}
             <span className="text-[#f97316]">More Than Footwear</span>
@@ -95,7 +95,7 @@ export default function WhyShoesMatter() {
           </motion.p>
         </motion.div>
 
-        {/* 4 Interactive 3D Cards */}
+        {/* 4 Clean White Cards */}
         <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, i) => (
             <motion.div
@@ -104,29 +104,20 @@ export default function WhyShoesMatter() {
               variants={cardVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              className="group bg-white rounded-3xl p-7 border border-slate-200/80 card-3d flex flex-col justify-between overflow-hidden cursor-default relative"
+              className="bg-white rounded-3xl p-7 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
-              {/* Top Accent Line */}
-              <div
-                className="h-1.5 w-full rounded-full mb-6 -mx-7 -mt-7 rounded-t-3xl"
-                style={{ background: card.accent, width: "calc(100% + 3.5rem)" }}
-              />
-
               <div>
                 {/* Icon + Stat Badge */}
                 <div className="flex items-start justify-between mb-5">
-                  <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-3xl shadow-md group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14  flex items-center justify-center text-3xl ">
                     {card.icon}
                   </div>
-                  <span
-                    className="text-xs font-bold font-body px-3 py-1 rounded-full shadow-xs"
-                    style={{ background: `${card.accent}18`, color: card.accent }}
-                  >
+                  <span className="text-xs font-bold font-body px-3 py-1 rounded-full bg-slate-100 text-slate-700">
                     {card.stat}
                   </span>
                 </div>
 
-                <h3 className="font-heading font-bold text-2xl text-[#0b1933] mb-0.5 group-hover:text-[#f97316] transition-colors">
+                <h3 className="font-heading font-bold text-2xl text-[#0a0a0a] mb-0.5">
                   {card.title}
                 </h3>
                 <p className="text-xs font-extrabold text-slate-400 uppercase tracking-wider font-body mb-3">
@@ -136,12 +127,6 @@ export default function WhyShoesMatter() {
                   {card.description}
                 </p>
               </div>
-
-              {/* Bottom accent bar */}
-              <div
-                className="h-1.5 rounded-full mt-6 w-10 group-hover:w-full transition-all duration-500"
-                style={{ background: card.accent }}
-              />
             </motion.div>
           ))}
         </div>
@@ -154,8 +139,8 @@ export default function WhyShoesMatter() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div className="inline-flex items-center gap-3 bg-[#0b1933] text-white rounded-2xl px-6 py-4 shadow-2xl text-sm sm:text-base font-body border border-white/10">
-            <span className="text-2xl animate-bounce">👟</span>
+          <div className="inline-flex items-center gap-3 bg-[#09090b] text-white rounded-2xl px-6 py-4 shadow-2xl text-sm sm:text-base font-body border border-white/15 shadow-black/60">
+            {/* <span className="text-2xl animate-bounce">👟</span> */}
             <span>
               <strong className="text-[#f59e0b] font-heading font-bold text-lg">$20</strong>{" "}
               can provide 1 durable pair of school shoes and transform a child's journey.

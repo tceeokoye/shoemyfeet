@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { HeartIcon, MenuIcon, CloseIcon } from "@/components/ui/Icons";
+import { MenuIcon, CloseIcon } from "@/components/ui/Icons";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -69,8 +69,8 @@ export default function Navbar() {
         <motion.nav
           className={`pointer-events-auto w-full max-w-6xl rounded-2xl sm:rounded-3xl transition-all duration-500 ${
             scrolled
-              ? "bg-[#0b1933]/95 backdrop-blur-2xl shadow-2xl shadow-black/40 border border-white/15"
-              : "bg-[#0f2347]/90 backdrop-blur-xl border border-white/10 shadow-xl shadow-black/25"
+              ? "bg-black/92 sm:bg-[#09090b]/95 backdrop-blur-2xl shadow-2xl shadow-black/70 border border-white/20"
+              : "bg-black/80 sm:bg-[#09090b]/85 backdrop-blur-xl border border-white/15 shadow-xl shadow-black/50"
           }`}
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -119,7 +119,6 @@ export default function Navbar() {
                 href="/donate"
                 className="btn-orange text-sm font-extrabold py-2.5 px-5 shadow-lg shadow-orange-600/30"
               >
-                <HeartIcon size={16} className="fill-white text-white" />
                 <span>Donate Now</span>
               </Link>
             </div>
@@ -140,7 +139,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-40 bg-[#0b1933] text-white flex flex-col"
+            className="fixed inset-0 z-40 bg-[#09090b] text-white flex flex-col"
             initial={{ opacity: 0, y: "-100%" }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
@@ -192,13 +191,12 @@ export default function Navbar() {
               </div>
             </nav>
 
-            <div className="p-6 border-t border-white/10 bg-[#0f2347]">
+            <div className="p-6 border-t border-white/10 bg-[#09090b]">
               <Link
                 href="/donate"
                 onClick={() => setIsOpen(false)}
                 className="w-full btn-orange justify-center py-4 text-lg shadow-xl"
               >
-                <HeartIcon size={20} className="fill-white" />
                 <span>Donate Now</span>
               </Link>
             </div>

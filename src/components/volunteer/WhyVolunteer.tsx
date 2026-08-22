@@ -82,7 +82,7 @@ export default function WhyVolunteer() {
 
         {/* Bottom quote strip */}
         <motion.div
-          className="mt-16 rounded-3xl bg-[#1a3a6b] p-8 sm:p-10 text-center relative overflow-hidden"
+          className="mt-16 rounded-3xl bg-[#2563eb] p-8 sm:p-10 text-center relative overflow-hidden"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}

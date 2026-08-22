@@ -14,8 +14,8 @@ const regions = [
     communities: 8,
     schools: 5,
     description: "Our founding state and primary base of operations. Home to our first distribution and ongoing child shoemaking program.",
-    color: "bg-[#1a3a6b]",
-    dotColor: "#1a3a6b",
+    color: "bg-[#2563eb]",
+    dotColor: "#2563eb",
     x: "52%",
     y: "65%",
     highlights: ["First distribution site", "kids shoemaking hub", "8 communities served"],
@@ -126,7 +126,7 @@ export default function ImpactMap() {
   const selected = regions.find((r) => r.id === activeRegion) || regions[0];
 
   return (
-    <section className="section-padding bg-[#1a3a6b] overflow-hidden relative">
+    <section className="section-padding bg-[#2563eb] overflow-hidden relative">
       {/* Background glows */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full bg-[#f97316]/10 blur-[120px]" />

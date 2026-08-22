@@ -23,7 +23,7 @@ function StatCard({ stat, index }: { stat: typeof VOLUNTEER_STATS[0]; index: num
       <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors duration-500 p-6 sm:p-8">
         {/* Animated gradient border */}
         <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 stat.color`} style={{ opacity: 0, padding: "1px" }}>
-          <div className="h-full w-full rounded-2xl bg-[#0d1f3c]" />
+          <div className="h-full w-full rounded-2xl bg-[#09090b]" />
         </div>
 
         {/* Icon */}
@@ -36,13 +36,13 @@ function StatCard({ stat, index }: { stat: typeof VOLUNTEER_STATS[0]; index: num
         </motion.div>
 
         {/* Counter */}
-        <div className={`font-heading text-5xl sm:text-6xl font-extrabold stat.color bg-clip-text text-transparent mb-2 relative z-10 leading-none`}>
+        <div className={`font-heading text-5xl sm:text-6xl font-extrabold text-white mb-2 relative z-10 leading-none`}>
           {inView ? <CountUp end={stat.value} duration={2.5} separator="," /> : "0"}
-          {stat.suffix}
+          <span className="text-[#f97316]">{stat.suffix}</span>
         </div>
 
         {/* Label */}
-        <p className="font-body text-blue-200/80 text-sm font-semibold leading-tight relative z-10 mt-2">{stat.label}</p>
+        <p className="font-body text-neutral-300 text-sm font-semibold leading-tight relative z-10 mt-2">{stat.label}</p>
 
         {/* Bottom glow line */}
         <motion.div
@@ -62,7 +62,7 @@ export default function VolunteerImpact() {
   return (
     <section
       id="volunteer-impact"
-      className="relative section-padding bg-[#1a3a6b] overflow-hidden"
+      className="relative section-padding bg-[#09090b] text-white overflow-hidden border-t border-white/10"
     >
       {/* Decorative floating elements */}
       <div className="absolute inset-0 pointer-events-none z-0">

@@ -157,7 +157,7 @@ export default function ImpactGallery() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm font-bold font-body transition-all duration-300 cursor-pointer ${
                 activeCategory === cat
-                  ? "bg-[#1a3a6b] text-white shadow-lg"
+                  ? "bg-[#2563eb] text-white shadow-lg"
                   : "bg-white text-gray-600 border border-gray-200 hover:border-blue-300 hover:text-royal-blue"
               }`}
             >
@@ -244,7 +244,7 @@ export default function ImpactGallery() {
               >
                 <CloseIcon size={18} />
               </button>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-[#1a3a6b]">
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-[#2563eb]">
                 <p className="text-white text-sm font-body">{lightboxAlt}</p>
               </div>
             </motion.div>

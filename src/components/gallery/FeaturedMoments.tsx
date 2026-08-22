@@ -66,7 +66,7 @@ export default function FeaturedMoments({ onOpenAlbum }: FeaturedMomentsProps) {
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-[#1a3a6b]" />
+                <div className="absolute inset-0 bg-[#2563eb]" />
 
                 {/* Badges */}
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
