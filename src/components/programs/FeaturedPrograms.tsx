@@ -26,7 +26,7 @@ const programs = [
     accentColor: "bg-[#111827]",
     topBar: "bg-[#111827]",
     href: "/donate",
-    pageHref: "/programs/shoe-distribution",
+    pageHref: "/projects/shoe-distribution",
     cta: "Support This Program",
   },
   {
@@ -47,7 +47,7 @@ const programs = [
     accentColor: "bg-[#16A34A]",
     topBar: "bg-[#16A34A]",
     href: "/donate",
-    pageHref: "/programs/back-to-school",
+    pageHref: "/projects/back-to-school",
     cta: "Support This Program",
   },
   {
@@ -68,7 +68,7 @@ const programs = [
     accentColor: "bg-[#1A3A6B]",
     topBar: "bg-[#1A3A6B]",
     href: "/volunteer",
-    pageHref: "/programs/community-outreach",
+    pageHref: "/projects/community-outreach",
     cta: "Join an Outreach",
   },
   {
@@ -89,7 +89,7 @@ const programs = [
     accentColor: "bg-[#111827]",
     topBar: "bg-[#111827]",
     href: "/contact",
-    pageHref: "/programs/school-partnerships",
+    pageHref: "/projects/school-partnerships",
     cta: "Partner With Us",
   },
   {
@@ -131,7 +131,7 @@ const programs = [
     accentColor: "bg-[#1A3A6B]",
     topBar: "bg-[#1A3A6B]",
     href: "/contact",
-    pageHref: "/programs/corporate-partnerships",
+    pageHref: "/projects/corporate-partnerships",
     cta: "Become a Partner",
   },
 ];

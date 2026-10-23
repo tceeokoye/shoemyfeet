@@ -3,6 +3,7 @@ import { DM_Sans, Nunito } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import BubblingHeart from "@/components/ui/BubblingHeart";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -60,6 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${nunito.variable} ${dmSans.variable} scroll-smooth`}>
       <body className="font-sans antialiased relative bg-white [overflow-x:clip]">
+        <ScrollReveal />
         <Link
           aria-label="Donate to Shoe My Feet Foundation"
           className="donate-button-pulse donate-button-pulse--vertical fixed left-0 top-40 z-50 text-sm font-semibold gap-2 flex h-fit py-3 w-12 flex-col items-center justify-between rounded-r-md bg-[#F97316] text-white shadow-md transition-colors hover:bg-[#EA580C] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F97316]"

@@ -6,7 +6,7 @@ import type { FormEvent } from "react";
 
 const siteMapLinks = [
   { label: "Home", href: "/" },
-  { label: "Our Work", href: "/programs" },
+  { label: "Our Work", href: "/projects" },
   { label: "Our Projects", href: "/gallery" },
   { label: "Our Impact", href: "/impact" },
   { label: "Connect With Us", href: "/contact" },

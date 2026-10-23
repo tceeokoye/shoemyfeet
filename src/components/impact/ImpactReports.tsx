@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TitleSplashBackground from "@/components/ui/TitleSplashBackground";
 
 const documentHref = "/SHOE%20MY%20FEET%20FOUNDATION%20BRIEF%20FOR%20WEBSITE.docx";
 
@@ -142,14 +143,8 @@ export default function ImpactReports() {
       >
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto mb-10 max-w-[704px] text-center sm:mb-14">
-            <div className="relative mx-auto flex min-h-[168px] items-center justify-center px-6 py-8 sm:min-h-[208px] sm:px-12 sm:py-10">
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 bg-[length:100%_100%] bg-center bg-no-repeat brightness-0 invert"
-                style={{
-                  backgroundImage: "url('/images/challenge-brush.svg')",
-                }}
-              />
+            <div className="relative mx-auto flex min-h-[184px] max-w-[704px] items-center justify-center px-6 py-8 sm:min-h-[224px] sm:px-12 sm:py-10">
+              <TitleSplashBackground variant={3} light />
               <h2
                 id="publications-heading"
                 className="relative font-heading text-3xl font-bold text-[#1A3A6B] sm:text-4xl"

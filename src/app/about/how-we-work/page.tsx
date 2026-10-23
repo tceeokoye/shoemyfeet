@@ -77,7 +77,7 @@ export default function HowWeWorkPage() {
       </section>
 
       <section
-        className="relative isolate flex min-h-[380px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-scroll px-5 py-20 text-center text-white md:bg-fixed sm:px-8 sm:py-24"
+        className="relative isolate flex min-h-[380px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-fixed px-5 py-20 text-center text-white sm:px-8 sm:py-24"
         style={{ backgroundImage: "url('/images/shoe_distribution.jpg')" }}
       >
         <div aria-hidden="true" className="absolute inset-0 z-0 bg-black/65" />
@@ -129,7 +129,7 @@ export default function HowWeWorkPage() {
       </section>
 
       <section
-        className="relative isolate flex min-h-[320px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-scroll px-5 py-14 text-center text-white md:bg-fixed sm:px-8 sm:py-16"
+        className="relative isolate flex min-h-[320px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-fixed px-5 py-14 text-center text-white sm:px-8 sm:py-16"
         style={{ backgroundImage: "url('/images/shoe_distribution.jpg')" }}
       >
         <div aria-hidden="true" className="absolute inset-0 z-0 bg-black/65" />
@@ -149,7 +149,7 @@ export default function HowWeWorkPage() {
               Support the work <ArrowRightIcon size={16} />
             </Link>
             <Link
-              href="/programs"
+              href="/projects"
               className="inline-flex items-center gap-2 rounded-lg border border-white/50 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
             >
               Explore our programs <ArrowRightIcon size={16} />

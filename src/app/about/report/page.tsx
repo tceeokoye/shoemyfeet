@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "@/components/ui/RealImage";
+import TitleSplashBackground from "@/components/ui/TitleSplashBackground";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 import { ReportDocumentLink } from "@/components/impact/ImpactReports";
 
@@ -73,7 +74,7 @@ export default function DistributionReportPage() {
   return (
     <>
       <section
-        className="relative isolate flex min-h-[520px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-scroll px-5 py-24 text-center text-white md:min-h-[600px] md:bg-fixed sm:px-8 sm:py-28"
+        className="relative isolate flex min-h-[520px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-fixed px-5 py-24 text-center text-white md:min-h-[600px] sm:px-8 sm:py-28"
         style={{ backgroundImage: "url('/images/shoe_distribution.jpg')" }}
       >
         <div aria-hidden="true" className="absolute inset-0 z-0 bg-[#111827]/65" />
@@ -157,9 +158,12 @@ export default function DistributionReportPage() {
       <section className="bg-[#F8F8F7] px-5 py-12 sm:px-8 sm:py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto mb-10 max-w-3xl text-center">
-            <h2 className="font-heading text-2xl font-bold text-[#1A3A6B] sm:text-3xl">
-              Publications
-            </h2>
+            <div className="relative mx-auto flex min-h-[116px] max-w-[560px] items-center justify-center px-6 py-7 sm:min-h-[136px] sm:py-8">
+              <TitleSplashBackground variant={2} light />
+              <h2 className="relative z-10 font-heading text-2xl font-bold text-[#1A3A6B] sm:text-3xl">
+                Publications
+              </h2>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">

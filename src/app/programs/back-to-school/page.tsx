@@ -172,7 +172,7 @@ export default function BackToSchoolPage() {
               Sponsor Now
             </Link>
             <Link
-              href="/programs"
+              href="/projects"
               className="rounded-xl border border-white/40 px-7 py-3.5 text-base font-medium text-white hover:bg-white/10 transition-colors"
             >
               Back to Programs

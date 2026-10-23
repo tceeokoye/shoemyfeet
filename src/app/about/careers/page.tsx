@@ -21,7 +21,7 @@ const waysToContribute = [
     title: "Skills and learning",
     description:
       "Bring your interest in practical learning and youth development to the foundation's shoemaking activities.",
-    href: "/programs/kids-shoemaking",
+    href: "/projects/kids-shoemaking",
     linkLabel: "Explore skills programs",
   },
   {

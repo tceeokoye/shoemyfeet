@@ -8,7 +8,7 @@ import { ArrowRightIcon } from "@/components/ui/Icons";
 export default function SolutionSection() {
   return (
     <section
-      className="relative isolate flex min-h-[520px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-scroll px-4 py-20 text-center text-white md:bg-fixed sm:px-6 lg:px-8"
+      className="relative isolate flex min-h-[520px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-fixed px-4 py-20 text-center text-white sm:px-6 lg:px-8"
       style={{ backgroundImage: "url('/images/shoe_distribution.jpg')" }}
     >
       <div aria-hidden="true" className="absolute inset-0 z-0 bg-black/65" />
@@ -39,7 +39,7 @@ export default function SolutionSection() {
         </motion.p>
         <motion.div variants={fadeUp} className="mt-12">
           <Link
-            href="/programs"
+            href="/projects"
             className="group inline-flex items-center gap-2 text-base font-semibold text-white transition-colors hover:text-[#F97316]"
           >
             Read More

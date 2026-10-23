@@ -53,7 +53,7 @@ export default function PreviousProjectsPage() {
         image="/images/shoe_distribution.jpg"
         imageAlt="Shoes prepared for a school distribution"
       >
-        <Link href="/programs" className="btn-primary">
+        <Link href="/projects" className="btn-primary">
           Explore our programs
         </Link>
         <Link

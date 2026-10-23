@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FastImage from "@/components/ui/FastImage";
+import TitleSplashBackground from "@/components/ui/TitleSplashBackground";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ const resourceSections = [
   {
     id: "school-partnerships",
     title: "School Shoe Distribution",
-    titleShape: "brush",
+    titleShape: 1,
     image: "/images/shoe_distribution.jpg",
     imageAlt: "Schoolchildren gathered with the Shoe My Feet Foundation team",
     introduction:
@@ -23,26 +24,26 @@ const resourceSections = [
         title: "School Partnership Program",
         description:
           "See how school leaders and our team identify pupils who need footwear and coordinate a thoughtful school visit.",
-        href: "/programs/school-partnerships",
+        href: "/projects/school-partnerships",
       },
       {
         title: "Shoe Distribution",
         description:
           "Learn about the fitting, school registration, and community participation that shape our distributions.",
-        href: "/programs/shoe-distribution",
+        href: "/projects/shoe-distribution",
       },
       {
         title: "Back-to-School Campaign",
         description:
           "Find out how footwear support helps children start the school term ready to learn.",
-        href: "/programs/back-to-school",
+        href: "/projects/back-to-school",
       },
     ],
   },
   {
     id: "shoemaking-skills",
     title: "Shoemaking Skills & Youth Empowerment",
-    titleShape: "ribbon",
+    titleShape: 2,
     image: "/images/crafting7.jpeg",
     imageAlt: "Young people learning practical shoemaking skills",
     introduction:
@@ -52,13 +53,13 @@ const resourceSections = [
         title: "Kids Shoemaking & Skills",
         description:
           "Explore hands-on shoemaking activities that introduce young people to footwear production and practical craft.",
-        href: "/programs/kids-shoemaking",
+        href: "/projects/kids-shoemaking",
       },
       {
         title: "Corporate Partnerships",
         description:
           "Partner with us to support shoe distributions, skills training, and opportunities for young people.",
-        href: "/programs/corporate-partnerships",
+        href: "/projects/corporate-partnerships",
       },
       {
         title: "Volunteer With Us",
@@ -71,7 +72,7 @@ const resourceSections = [
   {
     id: "school-community-engagement",
     title: "School & Community Engagement",
-    titleShape: "scallop",
+    titleShape: 3,
     image: "/images/addressing.jpg",
     imageAlt: "Foundation team member engaging with a community audience",
     introduction:
@@ -81,7 +82,7 @@ const resourceSections = [
         title: "Community Outreach",
         description:
           "Learn how we bring footwear support and community participation together through local outreach.",
-        href: "/programs/community-outreach",
+        href: "/projects/community-outreach",
       },
       {
         title: "Volunteer With Us",
@@ -93,14 +94,14 @@ const resourceSections = [
         title: "School Partnership Program",
         description:
           "Learn how educators and school communities help us understand and respond to pupils' needs.",
-        href: "/programs/school-partnerships",
+        href: "/projects/school-partnerships",
       },
     ],
   },
   {
     id: "impact-and-reports",
     title: "Impact & Learning",
-    titleShape: "stamp",
+    titleShape: 4,
     image: "/images/happy-kids.jpeg",
     imageAlt: "Children smiling together at a foundation community event",
     introduction:
@@ -127,27 +128,6 @@ const resourceSections = [
     ],
   },
 ] as const;
-
-const titleShapeStyles = {
-  brush: {
-    backgroundImage: "url('/images/challenge-brush.svg')",
-    backgroundSize: "100% 100%",
-  },
-  ribbon: {
-    backgroundColor: "#F97316",
-    clipPath:
-      "polygon(3% 0, 97% 0, 100% 50%, 97% 100%, 3% 100%, 0 50%)",
-  },
-  scallop: {
-    backgroundColor: "#111827",
-    borderRadius: "2rem 0.4rem 2rem 0.4rem",
-  },
-  stamp: {
-    backgroundColor: "#1A3A6B",
-    clipPath:
-      "polygon(2% 8%, 8% 0, 92% 0, 98% 8%, 100% 50%, 98% 92%, 92% 100%, 8% 100%, 2% 92%, 0 50%)",
-  },
-};
 
 export default function ToolsPage() {
   return (
@@ -184,17 +164,13 @@ export default function ToolsPage() {
           <div
             role="img"
             aria-label={section.imageAlt}
-            className="relative h-80 overflow-hidden bg-[#1A3A6B] bg-cover bg-center bg-scroll sm:h-96 md:bg-fixed lg:h-[30rem]"
+            className="relative h-80 overflow-hidden bg-[#1A3A6B] bg-cover bg-center bg-fixed sm:h-96 lg:h-[30rem]"
             style={{ backgroundImage: `url('${section.image}')` }}
           >
             <div aria-hidden="true" className="absolute inset-0 bg-black/35" />
             <div className="absolute inset-x-5 top-1/2 flex -translate-y-1/2 justify-center sm:inset-x-8">
-              <h2 className="relative isolate inline-flex min-h-[112px] max-w-full items-center justify-center px-8 py-6 text-center font-heading text-xl font-bold uppercase leading-tight tracking-wide text-white sm:px-14 sm:py-7 sm:text-2xl">
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 -z-10"
-                  style={titleShapeStyles[section.titleShape]}
-                />
+              <h2 className="relative isolate inline-flex min-h-[128px] max-w-full items-center justify-center px-8 py-7 text-center font-heading text-xl font-bold uppercase leading-tight tracking-wide text-white sm:min-h-[144px] sm:px-14 sm:py-8 sm:text-2xl">
+                <TitleSplashBackground variant={section.titleShape} />
                 <span className="relative z-10">{section.title}</span>
               </h2>
             </div>

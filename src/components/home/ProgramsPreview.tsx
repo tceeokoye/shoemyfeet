@@ -59,7 +59,7 @@ export default function ProgramsPreview() {
                   </li>
                 ))}
               </ul>
-              <Link href="/programs" className="mt-5 inline-flex items-center gap-2 border-b border-[#1A3A6B] pb-1 text-sm font-medium text-[#1A3A6B] hover:text-[#3f351d]">
+              <Link href="/projects" className="mt-5 inline-flex items-center gap-2 border-b border-[#1A3A6B] pb-1 text-sm font-medium text-[#1A3A6B] hover:text-[#3f351d]">
                 Explore program details <ArrowRightIcon size={15} />
               </Link>
             </motion.article>

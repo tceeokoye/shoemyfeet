@@ -16,7 +16,7 @@ const reachAreas = [
     title: "Schools",
     description:
       "We work with school communities to identify children who need well-fitting footwear and make distribution part of a welcoming school experience.",
-    href: "/programs/school-partnerships",
+    href: "/projects/school-partnerships",
     linkLabel: "Explore school partnerships",
     image: "/images/shoe_distribution.jpg",
     imageAlt: "School shoes prepared for a community distribution",
@@ -25,7 +25,7 @@ const reachAreas = [
     title: "Skills and opportunity",
     description:
       "Our shoemaking activities introduce young people to practical craft skills and create space to learn by making.",
-    href: "/programs/kids-shoemaking",
+    href: "/projects/kids-shoemaking",
     linkLabel: "Explore skills programs",
     image: "/images/crafting6.jpeg",
     imageAlt: "A young person learning shoemaking skills",
@@ -34,7 +34,7 @@ const reachAreas = [
     title: "Communities",
     description:
       "Community outreach brings families, local partners, and volunteers together around children’s wellbeing and access to education.",
-    href: "/programs/community-outreach",
+    href: "/projects/community-outreach",
     linkLabel: "Explore community outreach",
     image: "/images/happy-kids.jpeg",
     imageAlt: "Children smiling together at a community event",

@@ -12,7 +12,7 @@ export default function ImpactReportsPage() {
   return (
     <>
       <section
-        className="relative isolate flex min-h-[520px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-scroll px-5 py-24 text-center text-white md:min-h-[600px] md:bg-fixed sm:px-8 sm:py-28"
+        className="relative isolate flex min-h-[520px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-fixed px-5 py-24 text-center text-white md:min-h-[600px] sm:px-8 sm:py-28"
         style={{ backgroundImage: "url('/images/shoe_distribution.jpg')" }}
       >
         <div aria-hidden="true" className="absolute inset-0 z-0 bg-[#111827]/65" />

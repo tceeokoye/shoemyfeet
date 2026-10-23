@@ -22,9 +22,9 @@ const aboutLinks = [
 ];
 
 const projectsLinks = [
-  { label: "Projects", href: "/programs" },
-  { label: "Previous Projects", href: "/programs/previous-projects" },
-  { label: "Our Partners", href: "/programs/corporate-partnerships" },
+  { label: "Projects", href: "/projects" },
+  { label: "Previous Projects", href: "/projects/previous-projects" },
+  { label: "Our Partners", href: "/projects/corporate-partnerships" },
 ];
 
 const connectLinks = [
@@ -35,7 +35,7 @@ const connectLinks = [
 
 const desktopDropdowns = [
   { id: "work", label: "Our Work", href: "/about/how-we-work", links: aboutLinks },
-  { id: "projects", label: "Our Projects", href: "/programs", links: projectsLinks },
+  { id: "projects", label: "Our Projects", href: "/projects", links: projectsLinks },
   { id: "impact", label: "Our Impact", href: "/impact", links: impactLinks },
   { id: "connect", label: "Connect with Us", href: "/contact", links: connectLinks },
 ];
@@ -51,7 +51,6 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  useEffect(() => setIsOpen(false), [pathname]);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -71,8 +70,20 @@ export default function Navbar() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="flex items-center justify-between px-4 sm:px-6 py-3">
-            {/* Logo */}
-            <Image src="/shoe-my-fit-logo.png" alt="Shoe My Feet Foundation" height={48} width={48} className="object-contain" />
+            <Link
+              href="/"
+              aria-label="Shoe My Feet Foundation home"
+              className="shrink-0 rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A3A6B]"
+            >
+              <Image
+                src="/shoe-my-fit-logo.png"
+                alt=""
+                height={48}
+                width={48}
+                priority
+                className="h-8 w-8 object-contain md:h-12 md:w-12"
+              />
+            </Link>
 
             {/* Desktop Nav Links */}
             <div className="hidden flex-1 items-center justify-evenly gap-1 mx-auto max-w-[760px] lg:flex">
@@ -170,11 +181,11 @@ export default function Navbar() {
 
             {/* Mobile Toggle */}
             <button
-              className="lg:hidden p-2.5 rounded-xl bg-black/5 hover:bg-black/10 text-[#111827] transition-colors cursor-pointer border border-black/10"
+              className="lg:hidden  text-[#111827] transition-colors cursor-pointer"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
-              {isOpen ? <CloseIcon size={22} /> : <MenuIcon size={22} />}
+              {isOpen ? <CloseIcon size={32} /> : <MenuIcon size={32} />}
             </button>
           </div>
         </motion.nav>
@@ -191,8 +202,22 @@ export default function Navbar() {
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-black/10">
-              <Image src="/shoe-my-fit-logo.png" alt="Shoe My Feet Foundation" height={48} width={48} className="object-contain" />
+              <Link
+                href="/"
+                aria-label="Shoe My Feet Foundation home"
+                onClick={() => setIsOpen(false)}
+                className="rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A3A6B]"
+              >
+                <Image
+                  src="/shoe-my-fit-logo.png"
+                  alt=""
+                  height={48}
+                  width={48}
+                  className="object-contain"
+                />
+              </Link>
               <button
+                aria-label="Close menu"
                 className="p-2.5 rounded-xl bg-black/5 text-[#111827]"
                 onClick={() => setIsOpen(false)}
               >

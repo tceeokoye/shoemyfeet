@@ -80,7 +80,7 @@ export default function OurStoryPreview() {
               future.
             </p>
             <Link
-              href="/programs/kids-shoemaking"
+              href="/projects/kids-shoemaking"
               className="group inline-flex items-center gap-2 font-body text-base font-semibold text-white transition-colors hover:text-[#F97316]"
             >
               Read More

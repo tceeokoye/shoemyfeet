@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Heart } from "lucide-react";
 import { fadeUp, viewportConfig } from "@/lib/animations";
+import TitleSplashBackground from "@/components/ui/TitleSplashBackground";
 
 export default function WhyShoesMatter() {
   return (
@@ -20,13 +21,9 @@ export default function WhyShoesMatter() {
       >
         <motion.h2
           variants={fadeUp}
-          className="relative mx-auto mb-8 flex h-[84px] w-full max-w-[704px] items-center justify-center font-heading text-xl font-bold uppercase leading-tight text-white sm:mb-10 sm:text-[21px]"
+          className="relative mx-auto mb-8 flex h-[120px] w-full max-w-[704px] items-center justify-center font-heading text-xl font-bold uppercase leading-tight text-white sm:mb-10 sm:h-[140px] sm:text-[21px]"
         >
-          <span
-            aria-hidden="true"
-            className="absolute inset-0 z-0 bg-[length:100%_100%] bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/challenge-brush.svg')" }}
-          />
+          <TitleSplashBackground variant={4} />
           <span className="relative z-10">The Challenge</span>
         </motion.h2>
 
