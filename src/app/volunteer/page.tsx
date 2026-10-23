@@ -2,18 +2,9 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VolunteerHero from "@/components/volunteer/VolunteerHero";
-import WhyVolunteer from "@/components/volunteer/WhyVolunteer";
 import VolunteerOpportunities from "@/components/volunteer/VolunteerOpportunities";
-import VolunteerJourney from "@/components/volunteer/VolunteerJourney";
-import VolunteerSpotlights from "@/components/volunteer/VolunteerSpotlights";
-import VolunteerImpact from "@/components/volunteer/VolunteerImpact";
-import VolunteerGallery from "@/components/volunteer/VolunteerGallery";
-import TrainingSupport from "@/components/volunteer/TrainingSupport";
 import VolunteerFAQ from "@/components/volunteer/VolunteerFAQ";
 import VolunteerRegistrationForm from "@/components/volunteer/VolunteerRegistrationForm";
-import CorporateVolunteering from "@/components/volunteer/CorporateVolunteering";
-import VolunteerRecognition from "@/components/volunteer/VolunteerRecognition";
-import VolunteerFinalCTA from "@/components/volunteer/VolunteerFinalCTA";
 
 export const metadata: Metadata = {
   title: "Volunteer | Shoe My Feet Foundation — Be the Reason a Child Walks With Confidence",
@@ -91,44 +82,10 @@ export default function VolunteerPage() {
 
       <Navbar />
       <main>
-        {/* Hero — Full-bleed with floating stat cards */}
         <VolunteerHero />
-
-        {/* Why Volunteer — 6 benefit cards */}
-        <WhyVolunteer />
-
-        {/* Volunteer Opportunities — 12 role cards with category filter */}
         <VolunteerOpportunities />
-
-        {/* Volunteer Journey — 6-step animated timeline */}
-        <VolunteerJourney />
-
-        {/* Volunteer Spotlights — 6 story cards with inline modals */}
-        <VolunteerSpotlights />
-
-        {/* Volunteer Impact — Dark counter section */}
-        <VolunteerImpact />
-
-        {/* Volunteer Gallery — Masonry grid + lightbox */}
-        <VolunteerGallery />
-
-        {/* Training & Support — Premium accordion */}
-        <TrainingSupport />
-
-        {/* Corporate Volunteering — Group type cards */}
-        <CorporateVolunteering />
-
-        {/* Volunteer Recognition — Recognition cards + Volunteer of the Month */}
-        <VolunteerRecognition />
-
-        {/* Registration Form — 3-step multi-step form */}
         <VolunteerRegistrationForm />
-
-        {/* FAQ — Searchable accordion */}
         <VolunteerFAQ />
-
-        {/* Final CTA — Dark section with footprint trail */}
-        <VolunteerFinalCTA />
       </main>
       <Footer />
     </>

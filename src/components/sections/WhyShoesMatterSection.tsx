@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
@@ -34,12 +34,12 @@ export default function WhyShoesMatterSection() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-sm font-bold mb-4 border border-slate-200">
+          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-sm font-bold mb-4 border border-slate-200">
             Why It Matters
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-4xl sm:text-5xl font-bold text-[#1a1a2e] mb-4">
+          <motion.h2 variants={fadeUp} className="font-heading text-4xl sm:text-5xl font-bold text-[#111827] mb-4">
             A Pair of Shoes Is{" "}
-            <span className="text-[#f97316]">More Than Footwear</span>
+            <span className="text-[#1A3A6B]">More Than Footwear</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-lg text-gray-600 font-body leading-relaxed">
             For millions of Nigerian children, the absence of proper school shoes
@@ -61,21 +61,21 @@ export default function WhyShoesMatterSection() {
               key={item.title}
               variants={fadeUp}
               custom={index}
-              className="group relative bg-white rounded-3xl p-6 border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-default"
+              className="group relative bg-white rounded-2xl p-6 border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-default"
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
             >
               {/* Gradient background on hover */}
-              <div className={`absolute inset-0 item.color opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl`} />
+              <div className={`absolute inset-0 item.color opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`} />
 
               {/* Gradient border effect */}
-              <div className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                style={{ background: "#f97316", boxShadow: `inset 0 0 0 1.5px rgba(26,58,107,0.1)` }}
+              <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                style={{ background: "#1A3A6B", boxShadow: `inset 0 0 0 1.5px rgba(26,58,107,0.1)` }}
               />
 
               {/* Icon */}
               <motion.div
-                className={`w-14 h-14 rounded-2xl item.color flex items-center justify-center mb-5 text-white shadow-lg group-hover:shadow-xl transition-shadow`}
+                className={`w-14 h-14  item.color flex items-center justify-center mb-5 text-white shadow-lg group-hover:shadow-xl transition-shadow`}
                 whileHover={{ rotate: [0, -5, 5, 0] }}
                 transition={{ duration: 0.5 }}
               >
@@ -90,7 +90,7 @@ export default function WhyShoesMatterSection() {
                 </span>
               </div>
 
-              <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-2 group-hover:text-[#f97316] transition-colors">
+              <h3 className="font-heading font-bold text-xl text-[#111827] mb-2 group-hover:text-[#1A3A6B] transition-colors">
                 {item.title}
               </h3>
               <p className="text-gray-600 font-body text-sm leading-relaxed">
@@ -117,12 +117,12 @@ export default function WhyShoesMatterSection() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <div className="inline-block bg-[#09090b] rounded-2xl px-8 py-6 border border-slate-100">
+          <div className="inline-block bg-[#111827]  px-8 py-6 border border-slate-100">
             <p className="font-body text-gray-600 mb-4">
-              <span className="font-bold text-[#f97316]">$20 can provide 1 pair of shoes</span>{" "}
+              <span className="font-bold text-[#1A3A6B]">$20 can provide 1 pair of shoes</span>{" "}
               and change a child&apos;s world forever.
             </p>
-            <a href="#donate" className="btn-orange inline-flex">
+            <a href="#donate" className="btn-primary inline-flex">
               <span>Help a Child Today</span>
               <span className="text-lg">👟</span>
             </a>

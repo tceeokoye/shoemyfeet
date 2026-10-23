@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -84,7 +84,7 @@ export default function BlogFilters({
   return (
     <div className="mb-12 space-y-8" id="blog-filters-section">
       {/* Search & Secondary Filter Dropdowns Bar */}
-      <div className="grid lg:grid-cols-12 gap-4 items-center bg-white p-4 sm:p-5 rounded-2xl border border-gray-100 shadow-lg">
+      <div className="grid lg:grid-cols-12 gap-4 items-center bg-white p-4 sm:p-5  border border-gray-100 shadow-lg">
         {/* Search Bar with Live Suggestions Dropdown */}
         <div className="lg:col-span-6 relative" ref={searchRef}>
           <div className="relative flex items-center">
@@ -95,7 +95,7 @@ export default function BlogFilters({
               onChange={(e) => onSearchChange(e.target.value)}
               onFocus={() => setIsSearchFocused(true)}
               placeholder="Search articles, topics, locations, or authors..."
-              className="w-full pl-11 pr-10 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-sm text-[#1a1a2e] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#f97316]/30 focus:border-[#09090b] transition-all"
+              className="w-full pl-11 pr-10 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-sm text-[#111827] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1A3A6B]/30 focus:border-[#111827] transition-all"
             />
             {searchQuery && (
               <button
@@ -115,7 +115,7 @@ export default function BlogFilters({
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 8 }}
-                className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 z-50 overflow-hidden"
+                className="absolute top-full left-0 right-0 mt-2 bg-white  shadow-2xl border border-gray-100 p-4 z-50 overflow-hidden"
               >
                 {searchQuery.trim() ? (
                   <div>
@@ -134,11 +134,11 @@ export default function BlogFilters({
                             }}
                             className="w-full text-left p-2.5 rounded-xl hover:bg-slate-50/70 transition-colors flex items-start gap-3 cursor-pointer group"
                           >
-                            <span className="px-2 py-0.5 rounded-md bg-orange-100 text-warm-orange-dark font-bold text-[10px] shrink-0 mt-0.5">
+                            <span className="px-2 py-0.5 rounded-md bg-orange-100 text-[#1A3A6B]-dark font-bold text-[10px] shrink-0 mt-0.5">
                               {item.category}
                             </span>
                             <div className="flex-1 min-w-0">
-                              <h6 className="font-heading font-bold text-xs text-[#1a1a2e] group-hover:text-warm-orange transition-colors truncate">
+                              <h6 className="font-heading font-bold text-xs text-[#111827] group-hover:text-[#1A3A6B] transition-colors truncate">
                                 {item.title}
                               </h6>
                               <span className="text-[11px] text-gray-500 font-body block truncate">
@@ -165,7 +165,7 @@ export default function BlogFilters({
                           key={term}
                           type="button"
                           onClick={() => onSearchChange(term)}
-                          className="px-3 py-1 rounded-full bg-gray-100 hover:bg-orange-100 hover:text-warm-orange-dark text-xs text-gray-600 font-body transition-colors cursor-pointer"
+                          className="px-3 py-1 rounded-full bg-gray-100 hover:bg-orange-100 hover:text-[#1A3A6B]-dark text-xs text-gray-600 font-body transition-colors cursor-pointer"
                         >
                           {term}
                         </button>
@@ -183,7 +183,7 @@ export default function BlogFilters({
                               key={term}
                               type="button"
                               onClick={() => onSearchChange(term)}
-                              className="px-2.5 py-1 rounded-md bg-slate-50 text-[#f97316] text-xs font-body hover:bg-orange-100 transition-colors cursor-pointer"
+                              className="px-2.5 py-1 rounded-md bg-slate-50 text-[#1A3A6B] text-xs font-body hover:bg-orange-100 transition-colors cursor-pointer"
                             >
                               {term}
                             </button>
@@ -205,7 +205,7 @@ export default function BlogFilters({
             <select
               value={selectedYear}
               onChange={(e) => onSelectYear(e.target.value)}
-              className="w-full appearance-none pl-3 pr-8 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-xs font-semibold text-[#1a1a2e] focus:outline-none focus:border-[#09090b] cursor-pointer"
+              className="w-full appearance-none pl-3 pr-8 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-xs font-semibold text-[#111827] focus:outline-none focus:border-[#111827] cursor-pointer"
             >
               <option value="all">All Years</option>
               <option value="2026">2026</option>
@@ -220,7 +220,7 @@ export default function BlogFilters({
             <select
               value={selectedMonth}
               onChange={(e) => onSelectMonth(e.target.value)}
-              className="w-full appearance-none pl-3 pr-8 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-xs font-semibold text-[#1a1a2e] focus:outline-none focus:border-[#09090b] cursor-pointer"
+              className="w-full appearance-none pl-3 pr-8 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-xs font-semibold text-[#111827] focus:outline-none focus:border-[#111827] cursor-pointer"
             >
               <option value="all">All Months</option>
               <option value="July">July</option>
@@ -236,7 +236,7 @@ export default function BlogFilters({
             <select
               value={sortBy}
               onChange={(e) => onSortChange(e.target.value as "latest" | "oldest" | "popular")}
-              className="w-full appearance-none pl-3 pr-8 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-xs font-semibold text-[#1a1a2e] focus:outline-none focus:border-[#09090b] cursor-pointer"
+              className="w-full appearance-none pl-3 pr-8 py-3 rounded-xl bg-gray-50 border border-gray-200 font-body text-xs font-semibold text-[#111827] focus:outline-none focus:border-[#111827] cursor-pointer"
             >
               <option value="latest">Sort: Latest</option>
               <option value="oldest">Sort: Oldest</option>
@@ -260,13 +260,13 @@ export default function BlogFilters({
                 className={`relative shrink-0 px-5 py-2.5 rounded-full text-xs font-bold transition-all cursor-pointer whitespace-nowrap ${
                   isActive
                     ? "text-white shadow-md"
-                    : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300 hover:text-[#f97316]"
+                    : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300 hover:text-[#1A3A6B]"
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="categoryTabBackground"
-                    className="absolute inset-0 rounded-full bg-[#09090b]"
+                    className="absolute inset-0 rounded-full bg-[#111827]"
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 )}
@@ -284,12 +284,12 @@ export default function BlogFilters({
           animate={{ opacity: 1, y: 0 }}
           className="flex flex-wrap items-center gap-2 pt-2 border-t border-gray-200/60 text-xs font-body"
         >
-          <span className="font-bold text-[#f97316] flex items-center gap-1">
+          <span className="font-bold text-[#1A3A6B] flex items-center gap-1">
             <SlidersIcon size={13} /> Active Filters:
           </span>
 
           {selectedCategory !== "All Posts" && (
-            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-orange-100 text-[#f97316] font-semibold">
+            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-orange-100 text-[#1A3A6B] font-semibold">
               Category: {selectedCategory}
               <button type="button" onClick={() => onSelectCategory("All Posts")} className="hover:text-red-500 cursor-pointer ml-1">
                 <XIcon size={12} />
@@ -298,7 +298,7 @@ export default function BlogFilters({
           )}
 
           {searchQuery && (
-            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-100 text-amber-900 font-semibold">
+            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#FFFFFF] text-[#1A3A6B] font-semibold">
               Query: &ldquo;{searchQuery}&rdquo;
               <button type="button" onClick={() => onSearchChange("")} className="hover:text-red-500 cursor-pointer ml-1">
                 <XIcon size={12} />
@@ -307,7 +307,7 @@ export default function BlogFilters({
           )}
 
           {selectedTag && (
-            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-orange-100 text-warm-orange-dark font-semibold">
+            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-orange-100 text-[#1A3A6B]-dark font-semibold">
               Tag: #{selectedTag}
               <button type="button" onClick={onClearTag} className="hover:text-red-500 cursor-pointer ml-1">
                 <XIcon size={12} />
@@ -336,7 +336,7 @@ export default function BlogFilters({
           <button
             type="button"
             onClick={handleClearAll}
-            className="text-xs font-bold text-warm-orange hover:underline cursor-pointer ml-auto"
+            className="text-xs font-bold text-[#1A3A6B] hover:underline cursor-pointer ml-auto"
           >
             Clear All Filters
           </button>

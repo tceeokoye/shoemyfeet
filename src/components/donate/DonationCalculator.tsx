@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
-import { motion, useSpring, useTransform, animate } from "framer-motion";
+import { motion, animate } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 function AnimatedNumber({ value, prefix = "", suffix = "" }: { value: number; prefix?: string; suffix?: string }) {
@@ -18,7 +18,7 @@ function AnimatedNumber({ value, prefix = "", suffix = "" }: { value: number; pr
   }, [value]);
 
   return (
-    <span className="font-heading font-bold text-warm-orange-dark tabular-nums">
+    <span className="font-heading font-bold text-[#142E56] tabular-nums">
       {prefix}{display.toLocaleString("en-NG")}{suffix}
     </span>
   );
@@ -39,22 +39,16 @@ export default function DonationCalculator() {
   const presets = [5000, 10000, 25000, 50000, 100000, 250000];
 
   return (
-    <section id="impact-calculator" className="section-padding bg-[#09090b] relative overflow-hidden" aria-label="Donation impact calculator">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 right-10 w-72 h-72 rounded-full opacity-8 blur-3xl bg-[#09090b]" />
-        <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full opacity-8 blur-3xl bg-[#09090b]" />
-      </div>
-
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="impact-calculator" className="section-padding bg-[#FFFFFF]" aria-label="Donation impact calculator">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-center mb-12">
-          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 border border-amber-200 text-amber-700 font-bold text-sm mb-4">
-            🧮 Impact Calculator
+          <motion.span variants={fadeUp} className="text-sm font-semibold uppercase tracking-wide text-[#142E56] mb-4">
+            Impact Calculator
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-5">
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-5">
             See Exactly{" "}
-            <span className="text-warm-orange">What You Give</span>
+            <span className="text-[#1A3A6B]">What You Give</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Move the slider to see in real time exactly how many children, shoes, and communities your donation will impact.
@@ -66,14 +60,14 @@ export default function DonationCalculator() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="bg-white rounded-4xl shadow-2xl shadow-blue-900/8 border border-gray-100 p-6 sm:p-10"
+          className="rounded-xl bg-white p-6 shadow-md sm:p-10"
         >
           {/* Slider + Amount Display */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
               <span className="text-sm text-gray-500 font-body font-medium">₦1,000</span>
               <div className="text-center">
-                <div className="font-heading font-bold text-3xl sm:text-4xl text-[#1a1a2e]">
+                <div className="font-heading font-bold text-3xl sm:text-4xl text-[#111827]">
                   ₦{amount.toLocaleString("en-NG")}
                 </div>
                 <div className="text-xs text-gray-400 font-body mt-1">Your donation amount</div>
@@ -92,7 +86,7 @@ export default function DonationCalculator() {
                 onChange={(e) => setAmount(Number(e.target.value))}
                 className="w-full h-3 rounded-full appearance-none cursor-pointer"
                 style={{
-                  background: "#f97316",
+                  background: "#1A3A6B",
                 }}
               />
             </div>
@@ -103,10 +97,10 @@ export default function DonationCalculator() {
                 <button
                   key={p}
                   onClick={() => setAmount(p)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-bold font-body border transition-all cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-full text-xs font-bold font-body shadow-sm transition-all cursor-pointer ${
                     amount === p
-                      ? "bg-warm-orange text-white border-warm-orange shadow-sm"
-                      : "bg-gray-50 text-gray-600 border-gray-200 hover:border-orange-200"
+                            ? "bg-[#1A3A6B] text-white shadow-sm"
+                            : "bg-white text-gray-600 shadow-sm hover:bg-gray-50"
                   }`}
                 >
                   ₦{p >= 1000 ? `${p / 1000}k` : p}
@@ -119,51 +113,32 @@ export default function DonationCalculator() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
               {
-                icon: "👧",
                 label: "Children Helped",
                 value: children,
                 suffix: "",
-                color: "bg-[#f97316]",
-                bg: "bg-orange-50",
-                border: "border-orange-100",
               },
               {
-                icon: "👟",
                 label: "Pairs of Shoes",
                 value: shoes,
                 suffix: "",
-                color: "bg-[#09090b]",
-                bg: "bg-slate-50",
-                border: "border-slate-100",
               },
               {
-                icon: "🏘️",
                 label: "Communities",
                 value: communities,
                 suffix: communities < 1 ? " partial" : "",
-                color: "bg-[#15803d]",
-                bg: "bg-[#15803d]",
-                border: "border-green-100",
               },
               {
-                icon: "📊",
                 label: "Outreach Funded",
                 value: outreachPct,
                 suffix: "%",
-                color: "bg-[#09090b]",
-                bg: "bg-purple-50",
-                border: "border-purple-100",
               },
-            ].map((stat, i) => (
+            ].map((stat) => (
               <motion.div
                 key={stat.label}
                 layout
-                className={`rounded-2xl p-4 text-center border ${stat.border} stat.bg`}
+                className="rounded-lg bg-white p-4 text-center shadow-sm"
               >
-                <div className={`w-12 h-12 rounded-2xl stat.color flex items-center justify-center text-xl mx-auto mb-3 shadow-md`}>
-                  {stat.icon}
-                </div>
-                <div className="font-heading text-2xl sm:text-3xl font-bold text-[#1a1a2e]">
+                <div className="font-heading text-2xl sm:text-3xl font-bold text-[#111827]">
                   <AnimatedNumber value={typeof stat.value === "number" ? Math.round(stat.value * 100) / 100 : stat.value} suffix={stat.suffix} />
                 </div>
                 <div className="text-xs text-slate-800 font-body font-bold mt-1">{stat.label}</div>
@@ -174,21 +149,21 @@ export default function DonationCalculator() {
           {/* Impact Statement */}
           <motion.div
             layout
-            className="mt-6 p-4 rounded-2xl bg-[#09090b] border border-slate-100 text-center"
+            className="mt-6 rounded-lg bg-white p-4 text-center shadow-sm"
           >
             <p className="text-sm text-gray-700 font-body leading-relaxed">
               Your donation of{" "}
-              <strong className="text-[#f97316]">₦{amount.toLocaleString("en-NG")}</strong>{" "}
+              <strong className="text-[#1A3A6B]">₦{amount.toLocaleString("en-NG")}</strong>{" "}
               will provide{" "}
-              <strong className="text-warm-orange-dark">{shoes} pair{shoes !== 1 ? "s" : ""} of shoes</strong>{" "}
+              <strong className="text-[#142E56]">{shoes} pair{shoes !== 1 ? "s" : ""} of shoes</strong>{" "}
               to{" "}
               <strong className="text-forest-green">{children} child{children !== 1 ? "ren" : ""}</strong>{" "}
-              across Nigerian communities. 🙏
+              across Nigerian communities.
             </p>
           </motion.div>
 
           <div className="mt-6 text-center">
-            <a href="#donate-widget" className="btn-orange text-base">
+            <a href="#donate-widget" className="btn-primary text-base">
               Donate ₦{amount.toLocaleString("en-NG")} Now
             </a>
           </div>

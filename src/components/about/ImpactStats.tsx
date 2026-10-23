@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
@@ -35,12 +35,12 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 }
 
 const aboutPageStats = [
-  { value: 6500,  suffix: "+", label: "Children Helped",      emoji: "👧", accent: "#d97706" },
-  { value: 6500,  suffix: "+", label: "Pairs of Shoes Donated", emoji: "👟", accent: "#047857" },
-  { value: 18,    suffix: "+", label: "Communities Reached",   emoji: "📍", accent: "#059669" },
-  { value: 150,   suffix: "+", label: "Volunteers Engaged",    emoji: "🙌", accent: "#d97706" },
-  { value: 24,    suffix: "+", label: "Schools Supported",     emoji: "🏫", accent: "#047857" },
-  { value: 4,     suffix: "+", label: "Years of Service",      emoji: "📅", accent: "#b45309" },
+  { value: 6500,  suffix: "+", label: "Children Helped",      accent: "#1A3A6B" },
+  { value: 6500,  suffix: "+", label: "Pairs of Shoes Donated", accent: "#047857" },
+  { value: 18,    suffix: "+", label: "Communities Reached",   accent: "#059669" },
+  { value: 150,   suffix: "+", label: "Volunteers Engaged",    accent: "#1A3A6B" },
+  { value: 24,    suffix: "+", label: "Schools Supported",     accent: "#047857" },
+  { value: 4,     suffix: "+", label: "Years of Service",      accent: "#142E56" },
 ];
 
 export default function ImpactStats() {
@@ -48,9 +48,9 @@ export default function ImpactStats() {
   const inView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section className="section-padding overflow-hidden relative bg-[#09090b] border-y border-white/10 text-white">
+    <section className="section-padding overflow-hidden relative bg-[#111827] border-y border-white/10 text-white">
       {/* Background Glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none bg-orange-500/10 blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none bg-[#1A3A6B]/10 blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full pointer-events-none bg-black/5 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -62,19 +62,12 @@ export default function ImpactStats() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <motion.span
-            variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full text-xs font-bold font-body mb-4 border"
-            style={{ background: "rgba(217,119,6,0.15)", color: "#fcd34d", borderColor: "rgba(217,119,6,0.35)" }}
-          >
-            Our Impact in Numbers
-          </motion.span>
           <motion.h2
             variants={fadeUp}
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white"
           >
             Every Number Is a{" "}
-            <span style={{ color: "#fbbf24" }}>Child&apos;s Story</span>
+            <span style={{ color: "#1A3A6B" }}>Child&apos;s Story</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -95,7 +88,7 @@ export default function ImpactStats() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ type: "spring" as const, stiffness: 80, damping: 18, delay: i * 0.1 }}
               whileHover={{ y: -6, scale: 1.02, transition: { type: "spring" as const, stiffness: 280, damping: 22 } }}
-              className="group relative rounded-3xl p-7 text-center overflow-hidden cursor-default"
+              className="group relative rounded-2xl p-7 text-center overflow-hidden cursor-default"
               style={{
                 background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.1)",
@@ -104,22 +97,14 @@ export default function ImpactStats() {
             >
               {/* Hover glow */}
               <div
-                className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 style={{ background: `radial-gradient(circle at 50% 0%, ${stat.accent}22 0%, transparent 70%)` }}
               />
-
-              {/* Emoji icon */}
-              <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-lg mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
-                style={{ background: `${stat.accent}25`, border: `1.5px solid ${stat.accent}60` }}
-              >
-                {stat.emoji}
-              </div>
 
               {/* Count */}
               <div
                 className="font-heading text-4xl sm:text-5xl font-extrabold mb-2 leading-none"
-                style={{ color: stat.accent === "#047857" || stat.accent === "#059669" ? "#6ee7b7" : "#fcd34d" }}
+                style={{ color: stat.accent === "#047857" || stat.accent === "#059669" ? "#6ee7b7" : "#142E56" }}
               >
                 <Counter value={stat.value} suffix={stat.suffix} />
               </div>

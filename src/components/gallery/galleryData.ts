@@ -1,4 +1,4 @@
-export interface MediaItem {
+﻿export interface MediaItem {
   id: string;
   type: "photo" | "video";
   title: string;
@@ -69,11 +69,11 @@ export interface CommunityVoice {
 }
 
 export const GALLERY_STATS = [
-  { label: "Photos Captured", value: 5400, suffix: "+", icon: "camera", color: "bg-[#09090b]" },
-  { label: "Videos Recorded", value: 120, suffix: "+", icon: "video", color: "bg-[#f97316]" },
-  { label: "Outreach Events", value: 85, suffix: "+", icon: "calendar", color: "bg-[#15803d]" },
-  { label: "Communities Visited", value: 42, suffix: "+", icon: "map-pin", color: "bg-[#09090b]" },
-  { label: "Children Reached", value: 15000, suffix: "+", icon: "users", color: "bg-[#f97316]" },
+  { label: "Photos Captured", value: 5400, suffix: "+", icon: "camera", color: "bg-[#111827]" },
+  { label: "Videos Recorded", value: 120, suffix: "+", icon: "video", color: "bg-[#1A3A6B]" },
+  { label: "Outreach Events", value: 85, suffix: "+", icon: "calendar", color: "bg-[#16A34A]" },
+  { label: "Communities Visited", value: 42, suffix: "+", icon: "map-pin", color: "bg-[#111827]" },
+  { label: "Children Reached", value: 15000, suffix: "+", icon: "users", color: "bg-[#1A3A6B]" },
 ];
 
 export const CATEGORY_TABS = [

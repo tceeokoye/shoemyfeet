@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 import { CloseIcon, ZoomInIcon } from "@/components/ui/Icons";
 
@@ -130,10 +130,10 @@ export default function ImpactGallery() {
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
             Moments That{" "}
-            <span className="text-[#f97316]">Define Our Mission</span>
+            <span className="text-[#1A3A6B]">Define Our Mission</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -157,8 +157,8 @@ export default function ImpactGallery() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm font-bold font-body transition-all duration-300 cursor-pointer ${
                 activeCategory === cat
-                  ? "bg-[#09090b] text-white shadow-lg"
-                  : "bg-white text-gray-600 border border-gray-200 hover:border-slate-200 hover:text-[#f97316]"
+                  ? "bg-[#111827] text-white shadow-lg"
+                  : "bg-white text-gray-600 border border-gray-200 hover:border-slate-200 hover:text-[#1A3A6B]"
               }`}
             >
               {cat}
@@ -180,7 +180,7 @@ export default function ImpactGallery() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.85 }}
                 transition={{ duration: 0.4, delay: index * 0.04, ease: [0.22, 1, 0.36, 1] }}
-                className="relative group rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-500 bg-gray-100"
+                className="relative group  overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-500 bg-gray-100"
                 onClick={() => openLightbox(item.src, item.alt)}
               >
                 <Image
@@ -228,7 +228,7 @@ export default function ImpactGallery() {
           >
             <motion.div
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-5xl w-full max-h-[85vh] rounded-3xl overflow-hidden shadow-2xl"
+              className="relative max-w-5xl w-full max-h-[85vh] rounded-2xl overflow-hidden shadow-2xl"
               initial={{ opacity: 0, scale: 0.85, y: 40 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -244,7 +244,7 @@ export default function ImpactGallery() {
               >
                 <CloseIcon size={18} />
               </button>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-[#09090b]">
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-[#111827]">
                 <p className="text-white text-sm font-body">{lightboxAlt}</p>
               </div>
             </motion.div>

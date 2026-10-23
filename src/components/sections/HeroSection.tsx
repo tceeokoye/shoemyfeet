@@ -8,7 +8,7 @@ import { fadeUp, staggerContainer, float, blurReveal, viewportConfig } from "@/l
 import { IMPACT_STATS } from "@/lib/constants";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 
 function StatCard({ stat, index }: { stat: (typeof IMPACT_STATS)[0]; index: number }) {
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
@@ -16,7 +16,7 @@ function StatCard({ stat, index }: { stat: (typeof IMPACT_STATS)[0]; index: numb
   return (
     <motion.div
       ref={ref}
-      className="glass rounded-2xl px-5 py-4 text-center border border-white/30 shadow-lg hover:shadow-xl transition-shadow"
+      className="glass  px-5 py-4 text-center border border-white/30 shadow-lg hover:shadow-xl transition-shadow"
       variants={fadeUp}
       whileHover={{ y: -4, scale: 1.03 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -70,15 +70,15 @@ export default function HeroSection() {
         {/* Blobs */}
         <motion.div
           className="absolute top-10 left-10 w-96 h-96 rounded-full opacity-30 animate-blob"
-          style={{ x: blob1X, y: blob1Y, background: "#f97316" }}
+          style={{ x: blob1X, y: blob1Y, background: "#1A3A6B" }}
         />
         <motion.div
           className="absolute bottom-20 right-20 w-80 h-80 rounded-full opacity-25 animate-blob-slow"
-          style={{ x: blob2X, y: blob2Y, background: "#f97316" }}
+          style={{ x: blob2X, y: blob2Y, background: "#1A3A6B" }}
           />
         <motion.div
           className="absolute top-1/2 left-1/3 w-48 h-48 rounded-full opacity-20 animate-blob"
-          style={{ background: "#f97316", animationDelay: "3s" }}
+          style={{ background: "#1A3A6B", animationDelay: "3s" }}
         />
 
         {/* Animated footprints */}
@@ -93,7 +93,7 @@ export default function HeroSection() {
             animate={{ opacity: [0.05, 0.2, 0.05], y: [0, -15, 0] }}
             transition={{ duration: 3, repeat: Infinity, delay: i * 0.5, ease: "easeInOut" }}
           >
-            <svg viewBox="0 0 24 32" className="w-6 h-8 fill-[#f97316]">
+            <svg viewBox="0 0 24 32" className="w-6 h-8 fill-[#1A3A6B]">
               <ellipse cx="12" cy="10" rx="7" ry="9" />
               <ellipse cx="7" cy="22" rx="3.5" ry="4" />
               <ellipse cx="17" cy="22" rx="3.5" ry="4" />
@@ -111,7 +111,7 @@ export default function HeroSection() {
               height: Math.random() * 6 + 3,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              background: i % 3 === 0 ? "#f97316" : i % 3 === 1 ? "#f97316" : "#fbbf24",
+              background: i % 3 === 0 ? "#1A3A6B" : i % 3 === 1 ? "#1A3A6B" : "#1A3A6B",
               opacity: 0.3,
             }}
             animate={{
@@ -141,8 +141,8 @@ export default function HeroSection() {
           >
             {/* Badge */}
             <motion.div variants={fadeUp} className="inline-flex">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-sm font-bold border border-slate-200">
-                <span className="w-2 h-2 rounded-full bg-[#f97316] animate-pulse" />
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-sm font-bold border border-slate-200">
+                <span className="w-2 h-2 rounded-full bg-[#1A3A6B] animate-pulse" />
                 Nigerian Nonprofit • Founded 2022
               </span>
             </motion.div>
@@ -150,15 +150,15 @@ export default function HeroSection() {
             {/* Headline */}
             <motion.h1
               variants={blurReveal}
-              className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] text-[#1a1a2e]"
+              className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] text-[#111827]"
             >
               Every Child{" "}
-              <span className="text-warm-orange">Deserves</span>{" "}
+              <span className="text-[#1A3A6B]">Deserves</span>{" "}
               To Walk Into{" "}
               <span className="relative inline-block">
                 Their Future
                 <motion.span
-                  className="absolute -bottom-1 left-0 h-1 bg-[#f97316] rounded-full"
+                  className="absolute -bottom-1 left-0 h-1 bg-[#1A3A6B] rounded-full"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ delay: 1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -183,17 +183,17 @@ export default function HeroSection() {
               variants={fadeUp}
               className="flex flex-wrap gap-3 items-center"
             >
-              <Link href="#donate" className="btn-orange group">
+              <Link href="#donate" className="btn-primary group">
                 Donate Now
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link href="#volunteer" className="btn-primary group">
+              <Link href="#volunteer" className="btn-secondary group">
                 Become a Volunteer
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <button className="flex items-center gap-2 px-5 py-3 rounded-full font-bold text-gray-700 hover:text-[#f97316] hover:bg-slate-50 transition-all group">
-                <span className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-md border border-gray-100 group-hover:shadow-lg transition-shadow">
-                  <Play size={14} className="ml-0.5 fill-[#f97316] text-[#f97316]" />
+              <button className="flex items-center gap-2 px-5 py-3 rounded-[10px] font-bold text-gray-700 hover:text-[#1A3A6B] hover:bg-slate-50 transition-all group">
+                <span className="w-10 h-10 flex items-center justify-center rounded-[8px] bg-white shadow-md border border-gray-100 group-hover:shadow-lg transition-shadow">
+                  <Play size={14} className="ml-0.5 fill-[#1A3A6B] text-[#1A3A6B]" />
                 </span>
                 Watch Our Story
               </button>
@@ -221,11 +221,11 @@ export default function HeroSection() {
             {/* Main illustration frame */}
             <div className="relative w-full max-w-lg">
               {/* Background glow */}
-              <div className="absolute inset-0 bg-[#09090b] rounded-3xl blur-3xl scale-110" />
+              <div className="absolute inset-0 bg-[#111827] rounded-2xl blur-3xl scale-110" />
 
               {/* Main image */}
               <motion.div
-                className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50"
+                className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/50"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
               >
@@ -238,21 +238,21 @@ export default function HeroSection() {
                   priority
                 />
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-[#09090b]" />
+                <div className="absolute inset-0 bg-[#111827]" />
               </motion.div>
 
               {/* Floating glass card - Impact */}
               <motion.div
-                className="absolute -bottom-6 -left-6 glass rounded-2xl px-4 py-3 shadow-xl border border-white/40"
+                className="absolute -bottom-6 -left-6 glass  px-4 py-3 shadow-xl border border-white/40"
                 animate={{ y: [-4, 4, -4] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#09090b] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#111827] flex items-center justify-center">
                     <span className="text-lg">👟</span>
                   </div>
                   <div>
-                    <div className="font-heading font-bold text-[#f97316] text-lg">6,500+</div>
+                    <div className="font-heading font-bold text-[#1A3A6B] text-lg">6,500+</div>
                     <div className="text-xs text-gray-500 font-body">Shoes Given</div>
                   </div>
                 </div>
@@ -260,16 +260,16 @@ export default function HeroSection() {
 
               {/* Floating glass card - Community */}
               <motion.div
-                className="absolute -top-4 -right-4 glass rounded-2xl px-4 py-3 shadow-xl border border-white/40"
+                className="absolute -top-4 -right-4 glass  px-4 py-3 shadow-xl border border-white/40"
                 animate={{ y: [4, -4, 4] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#09090b] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#111827] flex items-center justify-center">
                     <span className="text-lg">🏘️</span>
                   </div>
                   <div>
-                    <div className="font-heading font-bold text-[#f97316] text-lg">18+</div>
+                    <div className="font-heading font-bold text-[#1A3A6B] text-lg">18+</div>
                     <div className="text-xs text-gray-500 font-body">Communities</div>
                   </div>
                 </div>
@@ -312,7 +312,7 @@ export default function HeroSection() {
           <span className="text-xs text-gray-400 font-body tracking-widest uppercase">Scroll</span>
           <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center p-1">
             <motion.div
-              className="w-1.5 h-1.5 bg-[#f97316] rounded-full"
+              className="w-1.5 h-1.5 bg-[#1A3A6B] rounded-full"
               animate={{ y: [0, 14, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             />
@@ -325,7 +325,7 @@ export default function HeroSection() {
               animate={{ opacity: [0.2, 0.6, 0.2] }}
               transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
             >
-              <ChevronDown size={14} className="text-[#f97316]" />
+              <ChevronDown size={14} className="text-[#1A3A6B]" />
             </motion.div>
           ))}
         </motion.div>

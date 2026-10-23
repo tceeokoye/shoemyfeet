@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { motion, AnimatePresence } from "framer-motion";
 import { Article } from "@/lib/blogData";
 import { fadeUp, viewportConfig, scaleIn } from "@/lib/animations";
@@ -34,15 +34,15 @@ export default function TrendingStories({ articles, onReadStory }: TrendingStori
   const trendingList = getFilteredArticles();
 
   return (
-    <section className="mb-16 bg-[#09090b] p-6 sm:p-10 rounded-3xl border border-slate-100/80 relative overflow-hidden">
+    <section className="mb-16 bg-[#111827] p-6 sm:p-10 rounded-2xl border border-slate-100/80 relative overflow-hidden">
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-gray-200/60 pb-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100/80 text-[#f97316] text-xs font-bold uppercase tracking-wider mb-2">
-            <TrendingUpIcon size={14} className="text-warm-orange" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100/80 text-[#1A3A6B] text-xs font-bold uppercase tracking-wider mb-2">
+            <TrendingUpIcon size={14} className="text-[#1A3A6B]" />
             <span>Popular & Essential Reads</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-[#1a1a2e]">
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-[#111827]">
             Trending Field Stories
           </h2>
         </div>
@@ -63,13 +63,13 @@ export default function TrendingStories({ articles, onReadStory }: TrendingStori
                 type="button"
                 onClick={() => setActiveTab(tab.id as FilterCriterion)}
                 className={`relative px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5 ${
-                  isActive ? "text-white shadow-md" : "text-gray-600 hover:text-[#f97316]"
+                  isActive ? "text-white shadow-md" : "text-gray-600 hover:text-[#1A3A6B]"
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="trendingTabBackground"
-                    className="absolute inset-0 rounded-full bg-[#09090b]"
+                    className="absolute inset-0 rounded-full bg-[#111827]"
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 )}
@@ -100,7 +100,7 @@ export default function TrendingStories({ articles, onReadStory }: TrendingStori
               animate="visible"
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3, delay: idx * 0.05 }}
-              className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="group bg-white  overflow-hidden border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Image header with Rank badge */}
@@ -115,7 +115,7 @@ export default function TrendingStories({ articles, onReadStory }: TrendingStori
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
                   {/* Rank badge */}
-                  <span className="absolute top-3 left-3 w-8 h-8 rounded-full bg-[#f97316] text-white font-heading font-bold text-xs flex items-center justify-center shadow-lg border border-white/40">
+                  <span className="absolute top-3 left-3 w-8 h-8 rounded-full bg-[#1A3A6B] text-white font-heading font-bold text-xs flex items-center justify-center shadow-lg border border-white/40">
                     #{idx + 1}
                   </span>
 
@@ -128,12 +128,12 @@ export default function TrendingStories({ articles, onReadStory }: TrendingStori
                 <div className="p-5">
                   <div className="flex items-center justify-between text-[11px] font-body text-gray-500 mb-2">
                     <span>{article.publishedAt}</span>
-                    <span className="flex items-center gap-1 font-semibold text-[#f97316]">
+                    <span className="flex items-center gap-1 font-semibold text-[#1A3A6B]">
                       <EyeIcon size={12} /> {(article.viewsCount / 1000).toFixed(1)}k
                     </span>
                   </div>
 
-                  <h3 className="font-heading font-bold text-sm sm:text-base text-[#1a1a2e] mb-2 group-hover:text-warm-orange transition-colors line-clamp-2 leading-snug">
+                  <h3 className="font-heading font-bold text-sm sm:text-base text-[#111827] mb-2 group-hover:text-[#1A3A6B] transition-colors line-clamp-2 leading-snug">
                     {article.title}
                   </h3>
 
@@ -148,7 +148,7 @@ export default function TrendingStories({ articles, onReadStory }: TrendingStori
                 <button
                   type="button"
                   onClick={() => onReadStory(article)}
-                  className="w-full py-2 px-4 rounded-xl bg-slate-50 text-[#f97316] hover:bg-[#09090b] hover:text-white font-bold text-xs transition-all duration-300 inline-flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full py-2 px-4 rounded-xl bg-slate-50 text-[#1A3A6B] hover:bg-[#111827] hover:text-white font-bold text-xs transition-all duration-300 inline-flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <span>Read Story</span>
                   <ArrowRightIcon size={13} />

@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { motion, AnimatePresence } from "framer-motion";
 import { Event } from "@/lib/blogData";
 import { XIcon, CalendarIcon, ClockIcon, MapPinIcon, CheckCircle2Icon, MailIcon, HeartIcon } from "@/components/ui/Icons";
@@ -51,7 +51,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 z-10 flex flex-col max-h-[90vh]"
+          className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 z-10 flex flex-col max-h-[90vh]"
         >
           {/* Header Banner */}
           <div className="relative h-36 overflow-hidden">
@@ -65,7 +65,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
               <XIcon size={18} />
             </button>
             <div className="absolute bottom-4 left-6 right-6 text-white">
-              <span className="px-2.5 py-1 rounded-md bg-warm-orange text-white font-bold text-[10px] uppercase tracking-wider mb-1 inline-block">
+              <span className="px-2.5 py-1 rounded-md bg-[#1A3A6B] text-white font-bold text-[10px] uppercase tracking-wider mb-1 inline-block">
                 RSVP Registration
               </span>
               <h3 className="font-heading font-bold text-lg leading-snug truncate">{event.title}</h3>
@@ -77,13 +77,13 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
             {!isConfirmed ? (
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Event Details Quick Summary */}
-                <div className="bg-slate-50/70 p-4 rounded-2xl border border-slate-100 flex flex-col gap-1.5 text-xs text-gray-700 font-body">
-                  <div className="flex items-center gap-2 font-bold text-[#f97316]">
-                    <CalendarIcon size={14} className="text-warm-orange" />
+                <div className="bg-slate-50/70 p-4  border border-slate-100 flex flex-col gap-1.5 text-xs text-gray-700 font-body">
+                  <div className="flex items-center gap-2 font-bold text-[#1A3A6B]">
+                    <CalendarIcon size={14} className="text-[#1A3A6B]" />
                     <span>{event.displayDate} • {event.time}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <MapPinIcon size={14} className="text-warm-orange" />
+                    <MapPinIcon size={14} className="text-[#1A3A6B]" />
                     <span>{event.location} ({event.state})</span>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     placeholder="e.g. Dr. Ngozi Eze"
-                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#09090b]"
+                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#111827]"
                   />
                 </div>
 
@@ -114,7 +114,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="ngozi@example.com"
-                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#09090b]"
+                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#111827]"
                     />
                   </div>
 
@@ -127,7 +127,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+234 803 123 4567"
-                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#09090b]"
+                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#111827]"
                     />
                   </div>
                 </div>
@@ -139,7 +139,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
                   <select
                     value={ticketsCount}
                     onChange={(e) => setTicketsCount(Number(e.target.value))}
-                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#09090b]"
+                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-body focus:bg-white focus:outline-none focus:border-[#111827]"
                   >
                     <option value={1}>1 Seat</option>
                     <option value={2}>2 Seats</option>
@@ -152,7 +152,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full btn-orange text-sm py-3.5 px-6 rounded-full font-bold shadow-lg hover:shadow-orange-500/25 cursor-pointer mt-4"
+                  className="w-full btn-primary text-sm py-3.5 px-6 rounded-[10px] font-bold shadow-lg hover:shadow-[#F3F4F6]0/25 cursor-pointer mt-4"
                 >
                   {isSubmitting ? "Confirming Spot..." : "Confirm RSVP Registration"}
                 </button>
@@ -162,11 +162,11 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
                 <div className="w-16 h-16 rounded-full bg-forest-green text-white flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <CheckCircle2Icon size={36} />
                 </div>
-                <h3 className="text-2xl font-heading font-bold text-[#1a1a2e] mb-2">
+                <h3 className="text-2xl font-heading font-bold text-[#111827] mb-2">
                   RSVP Confirmed, {fullName}!
                 </h3>
                 <p className="text-gray-600 font-body text-xs sm:text-sm max-w-sm mx-auto mb-6 leading-relaxed">
-                  We have reserved <span className="font-bold text-warm-orange">{ticketsCount} seat(s)</span> for you at <span className="font-bold">{event.title}</span>. A confirmation pass has been sent to <span className="font-bold text-[#f97316]">{email}</span>.
+                  We have reserved <span className="font-bold text-[#1A3A6B]">{ticketsCount} seat(s)</span> for you at <span className="font-bold">{event.title}</span>. A confirmation pass has been sent to <span className="font-bold text-[#1A3A6B]">{email}</span>.
                 </p>
 
                 {/* Add to Calendar Link */}
@@ -175,7 +175,7 @@ export default function EventRSVPModal({ event, onClose }: EventRSVPModalProps) 
                     href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&location=${encodeURIComponent(event.location)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary text-xs py-2.5 px-5 rounded-full inline-flex items-center gap-2"
+                    className="btn-secondary text-xs py-2.5 px-5 rounded-[10px] inline-flex items-center gap-2"
                   >
                     <CalendarIcon size={14} /> Add to Google Calendar
                   </a>

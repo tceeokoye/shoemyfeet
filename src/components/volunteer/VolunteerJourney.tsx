@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { VOLUNTEER_JOURNEY_STEPS } from "@/lib/volunteerData";
@@ -6,7 +6,7 @@ import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 
 export default function VolunteerJourney() {
   return (
-    <section id="volunteer-journey" className="section-padding bg-[#09090b] overflow-hidden">
+    <section id="volunteer-journey" className="section-padding bg-[#111827] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -24,25 +24,25 @@ export default function VolunteerJourney() {
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
-            From <span className="text-[#f97316]">Sign-Up</span> to{" "}
-            <span className="text-warm-orange">Impact</span>
+            From <span className="text-[#1A3A6B]">Sign-Up</span> to{" "}
+            <span className="text-[#1A3A6B]">Impact</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
             className="text-base sm:text-lg text-gray-600 font-body leading-relaxed"
           >
-            We've designed a simple, welcoming process so you can go from interested newcomer to empowered changemaker in just a few steps.
+            We&apos;ve designed a simple, welcoming process so you can go from interested newcomer to empowered changemaker in just a few steps.
           </motion.p>
         </motion.div>
 
         {/* Desktop: Horizontal Timeline */}
         <div className="hidden lg:block relative">
           {/* Connecting animated line */}
-          <div className="absolute top-12 left-0 right-0 h-0.5 bg-[#09090b] mx-24" />
+          <div className="absolute top-12 left-0 right-0 h-0.5 bg-[#111827] mx-24" />
           <motion.div
-            className="absolute top-12 left-24 right-24 h-0.5 bg-[#f97316] origin-left"
+            className="absolute top-12 left-24 right-24 h-0.5 bg-[#1A3A6B] origin-left"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -65,7 +65,7 @@ export default function VolunteerJourney() {
                   transition={{ type: "spring", stiffness: 300, damping: 15 }}
                   className={`relative w-24 h-24 rounded-full step.color flex items-center justify-center text-3xl shadow-xl mb-5 cursor-default`}
                 >
-                  <span className="z-10">{step.icon}</span>
+                  <step.icon className="z-10 text-white" size={30} strokeWidth={1.8} aria-hidden="true" />
                   {/* Ring animation */}
                   <motion.div
                     className={`absolute inset-0 rounded-full step.color opacity-30`}
@@ -73,12 +73,12 @@ export default function VolunteerJourney() {
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: index * 0.4 }}
                   />
                   {/* Step number badge */}
-                  <div className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center text-xs font-extrabold text-[#1a1a2e] shadow-sm">
+                  <div className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center text-xs font-extrabold text-[#111827] shadow-sm">
                     {step.step}
                   </div>
                 </motion.div>
 
-                <h3 className="font-heading text-base font-bold text-[#1a1a2e] mb-2 leading-snug group-hover:text-warm-orange-dark transition-colors duration-300">
+                <h3 className="font-heading text-base font-bold text-[#111827] mb-2 leading-snug group-hover:text-[#1A3A6B]-dark transition-colors duration-300">
                   {step.title}
                 </h3>
                 <p className="font-body text-gray-500 text-xs leading-relaxed">
@@ -92,7 +92,7 @@ export default function VolunteerJourney() {
         {/* Mobile: Vertical Timeline */}
         <div className="lg:hidden relative">
           {/* Vertical line */}
-          <div className="absolute left-7 top-0 bottom-0 w-0.5 bg-[#f97316]" />
+          <div className="absolute left-7 top-0 bottom-0 w-0.5 bg-[#1A3A6B]" />
 
           <div className="space-y-10 relative z-10">
             {VOLUNTEER_JOURNEY_STEPS.map((step, index) => (
@@ -106,15 +106,15 @@ export default function VolunteerJourney() {
               >
                 {/* Step circle */}
                 <div className={`relative shrink-0 w-14 h-14 rounded-full step.color flex items-center justify-center text-2xl shadow-lg`}>
-                  <span>{step.icon}</span>
-                  <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center text-[10px] font-extrabold text-[#1a1a2e]">
+                  <step.icon className="text-white" size={22} strokeWidth={1.8} aria-hidden="true" />
+                  <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center text-[10px] font-extrabold text-[#111827]">
                     {step.step}
                   </div>
                 </div>
 
                 {/* Text */}
                 <div className="pt-2">
-                  <h3 className="font-heading text-lg font-bold text-[#1a1a2e] mb-1">{step.title}</h3>
+                  <h3 className="font-heading text-lg font-bold text-[#111827] mb-1">{step.title}</h3>
                   <p className="font-body text-gray-500 text-sm leading-relaxed">{step.description}</p>
                 </div>
               </motion.div>
@@ -132,7 +132,7 @@ export default function VolunteerJourney() {
         >
           <a
             href="#volunteer-form"
-            className="btn-orange text-base sm:text-lg px-8 py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
+            className="btn-primary text-base sm:text-lg px-8 py-4 rounded-[10px] shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
           >
             Start Your Journey Today →
           </a>

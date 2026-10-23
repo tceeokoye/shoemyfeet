@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 
 const testimonials = [
@@ -76,15 +76,15 @@ export default function Testimonials() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold font-body mb-3 border border-orange-200"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-xs sm:text-sm font-bold font-body mb-3 border border-orange-200"
           >
             Heartfelt Testimonials
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a0a0a] leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] leading-tight"
           >
-            Stories That <span className="text-[#f97316]">Touch the Heart</span>
+            Stories That <span className="text-[#1A3A6B]">Touch the Heart</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -103,7 +103,7 @@ export default function Testimonials() {
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: -50, scale: 0.98 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-white rounded-3xl p-8 sm:p-14 border border-slate-100 shadow-xl relative overflow-hidden text-center flex flex-col items-center justify-between"
+              className="bg-white rounded-2xl p-8 sm:p-14 border border-slate-100 shadow-xl relative overflow-hidden text-center flex flex-col items-center justify-between"
             >
               {/* Large quote icon in background */}
               <div className="absolute -top-4 right-8 text-9xl font-serif text-slate-100 pointer-events-none select-none">
@@ -111,7 +111,7 @@ export default function Testimonials() {
               </div>
 
               {/* Star Rating */}
-              <div className="flex gap-1.5 mb-6 text-[#f59e0b] text-xl">
+              <div className="flex gap-1.5 mb-6 text-[#1A3A6B] text-xl">
                 {[...Array(current.rating)].map((_, i) => (
                   <span key={i}>★</span>
                 ))}
@@ -124,7 +124,7 @@ export default function Testimonials() {
 
               {/* Profile info */}
               <div className="flex items-center gap-4 text-left">
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-4 border-[#f97316]/30 shadow-lg shrink-0">
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-4 border-[#1A3A6B]/30 shadow-lg shrink-0">
                   <Image
                     src={current.image}
                     alt={current.name}
@@ -134,8 +134,8 @@ export default function Testimonials() {
                   />
                 </div>
                 <div>
-                  <p className="font-heading font-bold text-xl text-[#0a0a0a]">{current.name}</p>
-                  <p className="font-body text-sm font-semibold text-[#f97316]">{current.role}</p>
+                  <p className="font-heading font-bold text-xl text-[#111827]">{current.name}</p>
+                  <p className="font-body text-sm font-semibold text-[#1A3A6B]">{current.role}</p>
                   <p className="font-body text-xs text-slate-400">{current.location}</p>
                 </div>
               </div>
@@ -158,7 +158,7 @@ export default function Testimonials() {
                   key={t.id}
                   onClick={() => setActive(idx)}
                   className={`h-3 rounded-full transition-all duration-300 ${
-                    idx === active ? "w-8 bg-[#f97316]" : "w-3 bg-slate-300 hover:bg-slate-400"
+                    idx === active ? "w-8 bg-[#1A3A6B]" : "w-3 bg-slate-300 hover:bg-slate-400"
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />

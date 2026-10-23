@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
+import { DM_Sans, Nunito } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import BubblingHeart from "@/components/ui/BubblingHeart";
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["700", "800"],
+  variable: "--font-nunito",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-dm-sans",
+});
 
 export const metadata: Metadata = {
   title: "Shoe My Feet Foundation | Every Step Changes a Life",
@@ -43,16 +58,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="font-sans antialiased bg-white [overflow-x:clip]">
+    <html lang="en" className={`${nunito.variable} ${dmSans.variable} scroll-smooth`}>
+      <body className="font-sans antialiased relative bg-white [overflow-x:clip]">
+        <Link
+          aria-label="Donate to Shoe My Feet Foundation"
+          className="donate-button-pulse donate-button-pulse--vertical fixed left-0 top-40 z-50 text-sm font-semibold gap-2 flex h-fit py-3 w-12 flex-col items-center justify-between rounded-r-md bg-[#F97316] text-white shadow-md transition-colors hover:bg-[#EA580C] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F97316]"
+          href="/donate"
+        >
+          <span className="rotate-180 [writing-mode:vertical-rl] text-sm font-semibold tracking-wide text-white">
+            Donate
+          </span>
+          <BubblingHeart size={17} className="text-white" rotation={-90} />
+        </Link>
         {children}
       </body>
     </html>

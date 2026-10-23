@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { ChevronRightIcon } from "@/components/ui/Icons";
@@ -14,7 +14,7 @@ export default function Breadcrumbs({ category, articleTitle, onCategoryClick }:
     <nav aria-label="Breadcrumb" className="mb-6">
       <ol className="flex flex-wrap items-center gap-2 text-xs font-body text-gray-500">
         <li>
-          <Link href="/" className="hover:text-[#f97316] transition-colors font-medium">
+          <Link href="/" className="hover:text-[#1A3A6B] transition-colors font-medium">
             Home
           </Link>
         </li>
@@ -23,11 +23,11 @@ export default function Breadcrumbs({ category, articleTitle, onCategoryClick }:
         </li>
         <li>
           {category || articleTitle ? (
-            <Link href="/blog" className="hover:text-[#f97316] transition-colors font-medium">
+            <Link href="/blog" className="hover:text-[#1A3A6B] transition-colors font-medium">
               Blog & Stories
             </Link>
           ) : (
-            <span className="font-bold text-[#f97316]" aria-current="page">
+            <span className="font-bold text-[#1A3A6B]" aria-current="page">
               Blog & Stories
             </span>
           )}
@@ -43,12 +43,12 @@ export default function Breadcrumbs({ category, articleTitle, onCategoryClick }:
                 <button
                   type="button"
                   onClick={() => onCategoryClick && onCategoryClick(category)}
-                  className="hover:text-[#f97316] transition-colors font-medium text-left"
+                  className="hover:text-[#1A3A6B] transition-colors font-medium text-left"
                 >
                   {category}
                 </button>
               ) : (
-                <span className="font-bold text-[#f97316]" aria-current="page">
+                <span className="font-bold text-[#1A3A6B]" aria-current="page">
                   {category}
                 </span>
               )}
@@ -61,7 +61,7 @@ export default function Breadcrumbs({ category, articleTitle, onCategoryClick }:
             <li>
               <ChevronRightIcon size={12} className="text-gray-400" />
             </li>
-            <li className="max-w-[200px] sm:max-w-xs truncate font-bold text-[#f97316]" aria-current="page">
+            <li className="max-w-[200px] sm:max-w-xs truncate font-bold text-[#1A3A6B]" aria-current="page">
               {articleTitle}
             </li>
           </>

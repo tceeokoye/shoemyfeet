@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { FEATURED_MOMENTS, FeaturedMoment } from "./galleryData";
 import { MapPinIcon, CalendarIcon, SparklesIcon, ChevronRightIcon, CameraIcon } from "@/components/ui/Icons";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
@@ -25,17 +25,17 @@ export default function FeaturedMoments({ onOpenAlbum }: FeaturedMomentsProps) {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold mb-3 border border-slate-200"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-xs sm:text-sm font-bold mb-3 border border-slate-200"
           >
-            <SparklesIcon size={14} className="text-warm-orange" />
+            <SparklesIcon size={14} className="text-[#1A3A6B]" />
             Curated Outreaches
           </motion.span>
 
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-5xl font-bold text-[#1a1a2e] mb-4"
+            className="font-heading text-3xl sm:text-5xl font-bold text-[#111827] mb-4"
           >
-            Featured <span className="text-warm-orange">Moments & Albums</span>
+            Featured <span className="text-[#1A3A6B]">Moments & Albums</span>
           </motion.h2>
 
           <motion.p
@@ -55,7 +55,7 @@ export default function FeaturedMoments({ onOpenAlbum }: FeaturedMomentsProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewportConfig}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 card-hover flex flex-col group"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 card-hover flex flex-col group"
             >
               {/* Cover Image */}
               <div className="relative h-60 w-full overflow-hidden bg-gray-100">
@@ -70,7 +70,7 @@ export default function FeaturedMoments({ onOpenAlbum }: FeaturedMomentsProps) {
 
                 {/* Badges */}
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
-                  <span className="px-3 py-1 rounded-full bg-warm-orange text-white text-xs font-bold font-heading shadow-md">
+                  <span className="px-3 py-1 rounded-full bg-[#1A3A6B] text-white text-xs font-bold font-heading shadow-md">
                     {moment.itemCount} Media Items
                   </span>
                   <span className="glass px-3 py-1 rounded-full text-white text-xs font-body flex items-center gap-1">
@@ -80,7 +80,7 @@ export default function FeaturedMoments({ onOpenAlbum }: FeaturedMomentsProps) {
                 </div>
 
                 <div className="absolute bottom-4 left-4 right-4 z-10">
-                  <span className="text-xs font-body text-hope-yellow flex items-center gap-1 mb-1">
+                  <span className="text-xs font-body text-[#142E56] flex items-center gap-1 mb-1">
                     <CalendarIcon size={12} />
                     {moment.date}
                   </span>
@@ -93,7 +93,7 @@ export default function FeaturedMoments({ onOpenAlbum }: FeaturedMomentsProps) {
               {/* Card Body */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <p className="font-body text-xs font-semibold text-[#f97316] mb-2">
+                  <p className="font-body text-xs font-semibold text-[#1A3A6B] mb-2">
                     {moment.subtitle}
                   </p>
                   <p className="font-body text-xs text-gray-600 leading-relaxed line-clamp-3 mb-6">
@@ -112,7 +112,7 @@ export default function FeaturedMoments({ onOpenAlbum }: FeaturedMomentsProps) {
 
                   <button
                     onClick={() => onOpenAlbum(moment)}
-                    className="btn-primary text-xs py-2 px-4 rounded-full inline-flex items-center gap-1.5 shadow-sm group-hover:scale-105 transition-all"
+                    className="btn-secondary text-xs py-2 px-4 rounded-[10px] inline-flex items-center gap-1.5 shadow-sm group-hover:scale-105 transition-all"
                   >
                     <CameraIcon size={13} />
                     <span>View Album</span>

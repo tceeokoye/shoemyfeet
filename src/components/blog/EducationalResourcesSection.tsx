@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { EDUCATIONAL_RESOURCES, EducationalResource } from "@/lib/blogData";
@@ -30,11 +30,11 @@ export default function EducationalResourcesSection({ onResourceClick }: Educati
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-100 text-[#f97316] font-bold text-xs uppercase tracking-wider mb-3 border border-orange-200">
-            <BookOpenIcon size={14} className="text-[#f97316]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] font-bold text-xs uppercase tracking-wider mb-3 border border-orange-200">
+            <BookOpenIcon size={14} className="text-[#1A3A6B]" />
             <span>Educational Field Resources</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-[#0a0a0a]">
+          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-[#111827]">
             Foot Health &amp; School Readiness Guides
           </h2>
         </div>
@@ -58,12 +58,12 @@ export default function EducationalResourcesSection({ onResourceClick }: Educati
             <motion.div
               key={res.id}
               variants={scaleIn}
-              className="bg-white rounded-3xl p-6 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white rounded-2xl p-6 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 {/* Icon & Category */}
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-black text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                  <div className="w-12 h-12  bg-black text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
                     <IconComponent size={24} />
                   </div>
                   <span className="px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 font-bold text-[10px] uppercase">
@@ -72,7 +72,7 @@ export default function EducationalResourcesSection({ onResourceClick }: Educati
                 </div>
 
                 {/* Title */}
-                <h3 className="font-heading font-bold text-base text-[#0a0a0a] mb-3 group-hover:text-[#f97316] transition-colors leading-snug">
+                <h3 className="font-heading font-bold text-base text-[#111827] mb-3 group-hover:text-[#1A3A6B] transition-colors leading-snug">
                   {res.title}
                 </h3>
 
@@ -82,14 +82,14 @@ export default function EducationalResourcesSection({ onResourceClick }: Educati
                 </p>
 
                 {/* Key Takeaways */}
-                <div className="bg-slate-50 p-3 rounded-2xl mb-6 border border-slate-100">
+                <div className="bg-slate-50 p-3  mb-6 border border-slate-100">
                   <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-2 font-heading">
                     Key Highlights
                   </span>
                   <ul className="space-y-1.5">
                     {res.keyTakeaways.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-1.5 text-[11px] font-body text-slate-700">
-                        <CheckCircleIcon size={12} className="text-[#f97316] shrink-0 mt-0.5" />
+                        <CheckCircleIcon size={12} className="text-[#1A3A6B] shrink-0 mt-0.5" />
                         <span className="line-clamp-1">{item}</span>
                       </li>
                     ))}
@@ -105,7 +105,7 @@ export default function EducationalResourcesSection({ onResourceClick }: Educati
                 <button
                   type="button"
                   onClick={() => onResourceClick(res)}
-                  className="btn-black text-xs py-2 px-4 rounded-full inline-flex items-center gap-1.5 cursor-pointer shadow-xs"
+                  className="btn-secondary text-xs py-2 px-4 rounded-[10px] inline-flex items-center gap-1.5 cursor-pointer shadow-xs"
                 >
                   <DownloadIcon size={13} />
                   <span>{res.fileSize}</span>

@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 import { PARTNERS } from "@/lib/constants";
 
 const partnerLogos = [
-  { name: "Access Bank", color: "#FF6B00", initial: "AB" },
+  { name: "Access Bank", color: "#F97316", initial: "AB" },
   { name: "The Rose Project", color: "#E91E8C", initial: "RP" },
   { name: "UBA Her Progress", color: "#D4151A", initial: "UBA" },
   { name: "iF Design Award", color: "#333", initial: "iF" },
@@ -40,21 +40,21 @@ export default function TrustedBySection() {
       {/* Marquee */}
       <div className="relative">
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-[#09090b] z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-[#09090b] z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-[#111827] z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-[#111827] z-10" />
 
         <div className="flex overflow-hidden">
           <div className="flex gap-8 animate-marquee shrink-0">
             {doubled.map((partner, i) => (
               <motion.div
                 key={`logo-${i}`}
-                className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-gray-50 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all cursor-default shrink-0 group"
+                className="flex items-center gap-3 px-6 py-4  bg-gray-50 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all cursor-default shrink-0 group"
                 whileHover={{ y: -3, scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-sm font-heading shadow-sm group-hover:shadow-md transition-shadow"
-                  style={{ background: "#f97316" }}
+                  style={{ background: "#1A3A6B" }}
                 >
                   {partner.initial}
                 </div>

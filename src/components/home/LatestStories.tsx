@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -14,7 +14,7 @@ const posts = [
     date: "June 2024",
     readTime: "5 min read",
     emoji: "📖",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-slate-50",
   },
   {
@@ -25,8 +25,8 @@ const posts = [
     date: "May 2024",
     readTime: "4 min read",
     emoji: "🛠️",
-    color: "bg-[#f97316]",
-    bg: "bg-orange-50",
+    color: "bg-[#1A3A6B]",
+    bg: "bg-[#F3F4F6]",
   },
   {
     id: 3,
@@ -36,14 +36,14 @@ const posts = [
     date: "March 2024",
     readTime: "3 min read",
     emoji: "🤝",
-    color: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
     bg: "bg-emerald-50",
   },
 ];
 
 export default function LatestStories() {
   return (
-    <section className="section-padding bg-[#09090b] overflow-hidden">
+    <section className="section-padding bg-[#111827] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -58,15 +58,15 @@ export default function LatestStories() {
             <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-purple-100 text-purple-700 text-xs sm:text-sm font-bold mb-3 border border-purple-200">
               Latest Stories
             </motion.span>
-            <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e]">
-              Field Notes & <span className="text-[#f97316]">Impact News</span>
+            <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827]">
+              Field Notes & <span className="text-[#1A3A6B]">Impact News</span>
             </motion.h2>
           </div>
 
           <motion.div variants={fadeUp}>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-[#09090b] text-[#f97316] font-bold text-sm hover:bg-[#09090b] hover:text-white transition-all font-body whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-[#111827] text-[#1A3A6B] font-bold text-sm hover:bg-[#111827] hover:text-white transition-all font-body whitespace-nowrap"
             >
               <span>View All Stories</span>
               <ArrowRightIcon size={15} />
@@ -86,7 +86,7 @@ export default function LatestStories() {
             <motion.article
               key={post.id}
               variants={fadeUp}
-              className="group bg-white rounded-3xl border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-400 overflow-hidden flex flex-col justify-between transform-gpu will-change-transform"
+              className="group bg-white rounded-2xl border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-400 overflow-hidden flex flex-col justify-between transform-gpu will-change-transform"
               whileHover={{ y: -6 }}
             >
               <div>
@@ -117,7 +117,7 @@ export default function LatestStories() {
                     </span>
                   </div>
 
-                  <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-3 group-hover:text-[#f97316] transition-colors leading-snug">
+                  <h3 className="font-heading font-bold text-xl text-[#111827] mb-3 group-hover:text-[#1A3A6B] transition-colors leading-snug">
                     {post.title}
                   </h3>
 
@@ -131,7 +131,7 @@ export default function LatestStories() {
               <div className="px-6 pb-6 pt-0">
                 <Link
                   href="/blog"
-                  className="inline-flex items-center gap-1.5 text-sm font-bold text-[#f97316] group-hover: text-warm-orange-dark transition-colors font-body group/link"
+                  className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1A3A6B] group-hover: text-[#1A3A6B]-dark transition-colors font-body group/link"
                 >
                   <span>Read Full Story</span>
                   <ArrowRightIcon size={15} className="group-hover/link:translate-x-1 transition-transform" />

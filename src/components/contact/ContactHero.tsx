@@ -1,232 +1,47 @@
-"use client";
+﻿import Link from "next/link";
+import EditorialHero from "@/components/ui/EditorialHero";
+import { ArrowRightIcon, MailIcon, MapPinIcon } from "@/components/ui/Icons";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { MailIcon, MapPinIcon, ArrowRightIcon, HeartIcon } from "@/components/ui/Icons";
-import { fadeUp, staggerContainer } from "@/lib/animations";
-
-const staticParticles = [
-  { width: 6, height: 6, left: "10%", top: "25%", color: "#f97316", duration: 4.2, delay: 0 },
-  { width: 8, height: 8, left: "82%", top: "18%", color: "#fbbf24", duration: 5.0, delay: 0.5 },
-  { width: 5, height: 5, left: "38%", top: "72%", color: "#f97316", duration: 3.6, delay: 1.0 },
-  { width: 7, height: 7, left: "90%", top: "65%", color: "#f97316", duration: 4.5, delay: 0.3 },
-  { width: 4, height: 4, left: "6%", top: "80%", color: "#fbbf24", duration: 3.8, delay: 1.2 },
-  { width: 9, height: 9, left: "55%", top: "12%", color: "#f97316", duration: 5.2, delay: 0.7 },
-];
-
-const footprintPositions = [
-  { left: "10%", top: "58%", rotate: -15, delay: 0 },
-  { left: "16%", top: "64%", rotate: -18, delay: 0.3 },
-  { left: "22%", top: "60%", rotate: -12, delay: 0.6 },
-  { left: "28%", top: "67%", rotate: -20, delay: 0.9 },
-  { left: "72%", top: "22%", rotate: 10, delay: 0.2 },
-  { left: "78%", top: "16%", rotate: 8, delay: 0.5 },
-  { left: "84%", top: "24%", rotate: 12, delay: 0.8 },
-];
-
-const HEADLINE_WORDS = [
-  { word: "Let's", direction: { x: -70, y: -50, rotate: -12 } },
-  { word: "Make", direction: { x: 80, y: -60, rotate: 14 } },
-  { word: "Every", direction: { x: -80, y: 45, rotate: -18 }, gradient: true },
-  { word: "Step", direction: { x: 60, y: -40, rotate: 10 }, gradient: true },
-  { word: "Count", direction: { x: -60, y: -70, rotate: -10 } },
-  { word: "Together", direction: { x: 90, y: 55, rotate: 16 }, highlight: true },
+const contactDetails = [
+  { label: "Main office", value: "Enugu State, Nigeria" },
+  { label: "General email", value: "hello@shoemyfeet.org", href: "mailto:hello@shoemyfeet.org" },
+  { label: "Helpline", value: "+234 800 746 3693", href: "tel:+2348007463693" },
 ];
 
 export default function ContactHero() {
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsReady(true), 200);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <section
-      className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#09090b] pt-28 pb-16 sm:pt-32 lg:py-24"
-      aria-label="Contact hero section"
-    >
-      {/* Background Glows & Floating Particles */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          className="absolute top-10 left-8 w-[450px] h-[450px] rounded-full opacity-25 animate-blob"
-          style={{ background: "#f97316" }}
-        />
-        <motion.div
-          className="absolute bottom-12 right-12 w-[380px] h-[380px] rounded-full opacity-20 animate-blob-slow"
-          style={{ background: "#f97316" }}
-        />
-
-        {staticParticles.map((p, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full"
-            style={{ width: p.width, height: p.height, left: p.left, top: p.top, background: p.color, opacity: 0.3 }}
-            animate={{ y: [0, -20, 0], opacity: [0.2, 0.55, 0.2] }}
-            transition={{ duration: p.duration, repeat: Infinity, delay: p.delay, ease: "easeInOut" }}
-          />
-        ))}
-
-        {footprintPositions.map((fp, i) => (
-          <motion.div
-            key={`fp-${i}`}
-            className="absolute text-xl select-none"
-            style={{ left: fp.left, top: fp.top, rotate: fp.rotate, opacity: 0 }}
-            animate={{ opacity: [0, 0.2, 0], scale: [0.7, 1.1, 0.9] }}
-            transition={{ duration: 4, repeat: Infinity, delay: fp.delay + 1, ease: "easeInOut" }}
-          >
-            👣
-          </motion.div>
-        ))}
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* Left Column: Text & Buttons */}
-          <div className="lg:col-span-7 flex flex-col gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={isReady ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/40 text-amber-300 font-bold text-sm w-fit"
-            >
-              <MailIcon size={14} className="text-amber-300" />
-              We&apos;re Here to Listen & Help
-            </motion.div>
-
-            {/* Animated Headline */}
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-white flex flex-wrap gap-x-[0.25em] gap-y-1">
-              {HEADLINE_WORDS.map((item, index) => (
-                <motion.span
-                  key={`${item.word}-${isReady}`}
-                  initial={{ opacity: 0, x: item.direction.x, y: item.direction.y, rotate: item.direction.rotate, scale: 0.5, filter: "blur(8px)" }}
-                  animate={isReady ? { opacity: 1, x: 0, y: 0, rotate: 0, scale: 1, filter: "blur(0px)" } : {}}
-                  transition={{ duration: 0.85, delay: 0.2 + index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-                  className={`inline-block relative will-change-transform ${item.gradient ? "text-warm-orange" : ""} ${item.highlight ? "text-amber-400" : ""}`}
-                >
-                  {item.word}
-                  {item.highlight && (
-                    <motion.span
-                      className="absolute -bottom-1.5 left-0 h-1.5 bg-[#f97316] rounded-full"
-                      initial={{ scaleX: 0 }}
-                      animate={isReady ? { scaleX: 1 } : { scaleX: 0 }}
-                      transition={{ delay: HEADLINE_WORDS.length * 0.08 + 0.4, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                      style={{ originX: 0, width: "100%" }}
-                    />
-                  )}
-                </motion.span>
-              ))}
-            </h1>
-
-            {/* Subtitle */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={isReady ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: HEADLINE_WORDS.length * 0.08 + 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="text-base sm:text-lg text-neutral-200/90 font-body max-w-xl leading-relaxed"
-            >
-              Whether you want to volunteer, donate, partner with us, request assistance, or simply learn more about our mission, we&apos;d love to hear from you. Every conversation is another opportunity to change a child&apos;s life.
-            </motion.p>
-
-            {/* Action Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isReady ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: HEADLINE_WORDS.length * 0.08 + 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-wrap gap-3.5 items-center pt-2"
-            >
-              <a href="#contact-form" className="btn-orange text-base group">
-                <MailIcon size={18} className="text-white group-hover:scale-110 transition-transform" />
-                Send a Message
-                <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a href="#location" className="btn-outline text-base text-white border-2 border-white/30 hover:bg-white/10 transition-all font-body flex items-center gap-2">
-                <MapPinIcon size={18} className="text-white" />
-                View Our Location
-              </a>
-            </motion.div>
-
-            {/* Quick response badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isReady ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 1 }}
-              className="flex items-center gap-4 pt-4 border-t border-white/15 mt-2 text-xs font-body text-neutral-200/80"
-            >
-              <span className="flex items-center gap-1.5 font-semibold text-emerald-300 bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-500/30">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                Average response time: &lt; 4 hours
-              </span>
-              <span>Mon – Fri (8am – 5pm WAT)</span>
-            </motion.div>
-          </div>
-
-          {/* Right Column: Visual Card Showcase */}
-          <div className="lg:col-span-5 relative flex items-center justify-center">
-            <motion.div
-              initial={{ opacity: 0, x: 80, scale: 0.9 }}
-              animate={isReady ? { opacity: 1, x: 0, scale: 1 } : {}}
-              transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-sm mx-auto"
-            >
-              <div className="absolute inset-0 bg-[#09090b] rounded-3xl blur-3xl scale-110" />
-
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-white p-8">
-                <div className="w-20 h-20 rounded-2xl bg-[#09090b] flex items-center justify-center mx-auto mb-5 shadow-xl text-3xl text-white">
-                  💬
-                </div>
-                <h2 className="font-heading text-2xl font-bold text-[#1a1a2e] text-center mb-2">Connect With Us</h2>
-                <p className="text-xs text-gray-500 font-body text-center mb-6 leading-relaxed">
-                  We are available across email, phone, WhatsApp, and social channels. Reach out today!
-                </p>
-
-                <div className="space-y-3 text-xs font-body">
-                  <div className="flex items-center justify-between p-3 rounded-xl bg-gray-50 border border-gray-100">
-                    <span className="text-gray-500 font-medium">📍 Main Office</span>
-                    <span className="font-bold text-[#1a1a2e]">Enugu State, Nigeria</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 rounded-xl bg-gray-50 border border-gray-100">
-                    <span className="text-gray-500 font-medium">✉️ General Email</span>
-                    <span className="font-bold text-[#f97316]">hello@shoemyfeet.org</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 rounded-xl bg-gray-50 border border-gray-100">
-                    <span className="text-gray-500 font-medium">📞 Helpline</span>
-                    <span className="font-bold text-forest-green">+234 800 746 3693</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating badges */}
-              <motion.div
-                className="absolute -top-4 -right-4 glass rounded-2xl p-3 shadow-xl border border-white/60 flex items-center gap-2 z-10"
-                animate={{ y: [-5, 5, -5] }}
-                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <span className="text-xl">🤝</span>
-                <div>
-                  <div className="font-heading font-bold text-[#f97316] text-xs">Open for Partnerships</div>
-                  <div className="text-[10px] text-gray-500 font-body">Schools, NGOs & Corporates</div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="absolute -bottom-4 -left-4 glass rounded-2xl p-3 shadow-xl border border-white/60 flex items-center gap-2 z-10"
-                animate={{ y: [5, -5, 5] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              >
-                <span className="text-xl">💚</span>
-                <div>
-                  <div className="font-heading font-bold text-[#f97316] text-xs">Friendly Support</div>
-                  <div className="text-[10px] text-gray-500 font-body">We reply to every query</div>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-
+    <>
+      <EditorialHero
+        eyebrow="Contact Shoe My Feet Foundation"
+        title={<>Let&apos;s Make Every Step <span className="text-[#142E56]">Count Together</span></>}
+        description="Whether you want to volunteer, donate, partner with us, request assistance, or simply learn more about our mission, we&apos;d love to hear from you. Every conversation is another opportunity to change a child&apos;s life."
+        image="/images/volunteers.jpg"
+        imageAlt="Shoe My Feet Foundation volunteers working together"
+      >
+        <a href="#contact-form" className="btn-primary inline-flex items-center gap-2">
+          <MailIcon size={16} /> Send a Message
+        </a>
+        <a href="#location" className="inline-flex items-center gap-2 border-b border-[#1A3A6B] pb-1 text-sm font-medium text-[#1A3A6B]">
+          <MapPinIcon size={16} /> View Our Location <ArrowRightIcon size={15} />
+        </a>
+      </EditorialHero>
+      <section className="border-y border-[#F3F4F6] bg-white">
+        <div className="mx-auto grid max-w-7xl gap-0 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
+          {contactDetails.map((detail) => (
+            <div key={detail.label} className="border-b border-[#F3F4F6] py-5 sm:border-b-0 sm:border-r sm:px-6 sm:py-7 last:border-0 first:sm:pl-0 last:sm:pr-0">
+              <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#142E56]">{detail.label}</p>
+              {detail.href ? (
+                <a href={detail.href} className="mt-1 inline-block text-base font-medium text-[#111827] hover:text-[#1A3A6B]">{detail.value}</a>
+              ) : (
+                <p className="mt-1 text-base font-medium text-[#111827]">{detail.value}</p>
+              )}
+            </div>
+          ))}
         </div>
-      </div>
-    </section>
+        <p className="mx-auto max-w-7xl px-4 pb-4 text-xs text-[#696558] sm:px-6 lg:px-8">
+          Average response time: &lt; 4 hours · Monday–Friday, 8am–5pm WAT
+        </p>
+      </section>
+    </>
   );
 }

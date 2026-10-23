@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 import { SparklesIcon, MapPinIcon } from "@/components/ui/Icons";
 
@@ -47,16 +47,16 @@ export default function ProgramGallery() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold border border-slate-200 mb-4"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-xs sm:text-sm font-bold border border-slate-200 mb-4"
           >
-            <SparklesIcon size={13} className="text-warm-orange" />
+            <SparklesIcon size={13} className="text-[#1A3A6B]" />
             Program Gallery
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
-            Moments of <span className="text-[#f97316]">Transformation</span>
+            Moments of <span className="text-[#1A3A6B]">Transformation</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -79,7 +79,7 @@ export default function ProgramGallery() {
               key={img.src}
               custom={i}
               variants={itemVariants}
-              className={`relative overflow-hidden rounded-2xl group will-change-transform ${i === 0 ? "col-span-2 row-span-2" : ""}`}
+              className={`relative overflow-hidden  group will-change-transform ${i === 0 ? "col-span-2 row-span-2" : ""}`}
             >
               <Image
                 src={img.src}
@@ -91,7 +91,7 @@ export default function ProgramGallery() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               {i === 0 && (
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1.5 rounded-full bg-[#f97316] text-white text-xs font-heading font-bold shadow-lg flex items-center gap-1.5">
+                  <span className="px-3 py-1.5 rounded-full bg-[#1A3A6B] text-white text-xs font-heading font-bold shadow-lg flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                     FEATURED
                   </span>

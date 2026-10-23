@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircleIcon, CheckIcon } from "@/components/ui/Icons";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
@@ -72,8 +72,8 @@ function InputField({
 }) {
   return (
     <div>
-      <label htmlFor={id} className="block font-body text-sm font-semibold text-[#1a1a2e] mb-1.5">
-        {label} {required && <span className="text-warm-orange">*</span>}
+      <label htmlFor={id} className="block font-body text-sm font-semibold text-[#111827] mb-1.5">
+        {label} {required && <span className="text-[#1A3A6B]">*</span>}
       </label>
       <input
         id={id}
@@ -82,7 +82,7 @@ function InputField({
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         required={required}
-        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-warm-orange focus:ring-2 focus:ring-orange-100 font-body text-sm text-[#1a1a2e] bg-white transition-all duration-300"
+        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#1A3A6B] focus:ring-2 focus:ring-orange-100 font-body text-sm text-[#111827] bg-white transition-all duration-300"
       />
     </div>
   );
@@ -153,26 +153,26 @@ export default function VolunteerRegistrationForm() {
       <section id="volunteer-form" className="section-padding bg-[#f8fafc] overflow-hidden">
         <div className="max-w-xl mx-auto px-4 sm:px-6">
           <motion.div
-            className="bg-white rounded-3xl p-10 text-center shadow-2xl border border-emerald-100"
+            className="bg-white rounded-2xl p-10 text-center shadow-2xl border border-emerald-100"
             initial={{ opacity: 0, scale: 0.88 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
           >
             <motion.div
-              className="w-24 h-24 rounded-full bg-[#15803d] flex items-center justify-center mx-auto mb-6 shadow-xl"
+              className="w-24 h-24 rounded-full bg-[#16A34A] flex items-center justify-center mx-auto mb-6 shadow-xl"
               initial={{ scale: 0 }}
               animate={{ scale: 1, rotate: [0, 10, -10, 0] }}
               transition={{ type: "spring", stiffness: 200, damping: 12, delay: 0.2 }}
             >
               <CheckIcon size={40} className="text-white" />
             </motion.div>
-            <h2 className="font-heading text-3xl font-bold text-[#1a1a2e] mb-3">You&apos;re In! 🎉</h2>
+            <h2 className="font-heading text-3xl font-bold text-[#111827] mb-3">You&apos;re In!</h2>
             <p className="font-body text-gray-600 text-base leading-relaxed mb-6">
               Thank you, <strong>{formData.firstName}</strong>! Your volunteer application has been received. Our coordinator will be in touch within 48 hours to welcome you to the Shoe My Feet family.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a href="/impact" className="btn-primary px-6 py-3 text-sm">See Our Impact</a>
-              <a href="/donate" className="btn-orange px-6 py-3 text-sm">Support the Mission</a>
+              <a href="/impact" className="btn-secondary px-6 py-3 text-sm">See Our Impact</a>
+              <a href="/donate" className="btn-primary px-6 py-3 text-sm">Support the Mission</a>
             </div>
           </motion.div>
         </div>
@@ -199,9 +199,9 @@ export default function VolunteerRegistrationForm() {
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
-            Apply to <span className="text-warm-orange">Volunteer</span>
+            Apply to <span className="text-[#1A3A6B]">Volunteer</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -213,7 +213,7 @@ export default function VolunteerRegistrationForm() {
 
         {/* Form Card */}
         <motion.div
-          className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden"
+          className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -225,13 +225,13 @@ export default function VolunteerRegistrationForm() {
               {STEP_LABELS.map((label, i) => (
                 <div key={label} className="flex flex-col items-center gap-1.5">
                   <div className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-500 ${
-                    i < step ? "bg-[#15803d] text-white shadow-md"
-                    : i === step ? "bg-[#f97316] text-white shadow-md"
+                    i < step ? "bg-[#16A34A] text-white shadow-md"
+                    : i === step ? "bg-[#1A3A6B] text-white shadow-md"
                     : "bg-gray-100 text-gray-400"
                   }`}>
                     {i < step ? <CheckIcon size={16} /> : i + 1}
                   </div>
-                  <span className={`font-body text-[10px] font-semibold hidden sm:block ${i === step ? "text-warm-orange-dark" : "text-gray-400"}`}>
+                  <span className={`font-body text-[10px] font-semibold hidden sm:block ${i === step ? "text-[#1A3A6B]-dark" : "text-gray-400"}`}>
                     {label}
                   </span>
                 </div>
@@ -239,7 +239,7 @@ export default function VolunteerRegistrationForm() {
             </div>
             <div className="w-full h-2 bg-gray-100 rounded-full mb-6 overflow-hidden">
               <motion.div
-                className="h-full rounded-full bg-[#f97316]"
+                className="h-full rounded-full bg-[#1A3A6B]"
                 animate={{ width: `${progressPct + 33.3}%` }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               />
@@ -259,7 +259,7 @@ export default function VolunteerRegistrationForm() {
                     transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
                     className="space-y-5"
                   >
-                    <h3 className="font-heading text-xl font-bold text-[#1a1a2e] mb-5">Tell Us About Yourself</h3>
+                    <h3 className="font-heading text-xl font-bold text-[#111827] mb-5">Tell Us About Yourself</h3>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <InputField label="First Name" id="firstName" value={formData.firstName} onChange={(v) => update("firstName", v)} required />
@@ -289,8 +289,8 @@ export default function VolunteerRegistrationForm() {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="country" className="block font-body text-sm font-semibold text-[#1a1a2e] mb-1.5">Country</label>
-                      <input id="country" type="text" value={formData.country} onChange={(e) => update("country", e.target.value)} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-warm-orange focus:ring-2 focus:ring-orange-100 font-body text-sm bg-white transition-all duration-300" />
+                      <label htmlFor="country" className="block font-body text-sm font-semibold text-[#111827] mb-1.5">Country</label>
+                      <input id="country" type="text" value={formData.country} onChange={(e) => update("country", e.target.value)} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#1A3A6B] focus:ring-2 focus:ring-orange-100 font-body text-sm bg-white transition-all duration-300" />
                     </div>
                   </motion.div>
                 )}
@@ -305,16 +305,16 @@ export default function VolunteerRegistrationForm() {
                     transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
                     className="space-y-5"
                   >
-                    <h3 className="font-heading text-xl font-bold text-[#1a1a2e] mb-5">Your Volunteer Preferences</h3>
+                    <h3 className="font-heading text-xl font-bold text-[#111827] mb-5">Your Volunteer Preferences</h3>
                     <div>
-                      <label htmlFor="role" className="block font-body text-sm font-semibold text-[#1a1a2e] mb-1.5">
-                        Preferred Role <span className="text-warm-orange">*</span>
+                      <label htmlFor="role" className="block font-body text-sm font-semibold text-[#111827] mb-1.5">
+                        Preferred Role <span className="text-[#1A3A6B]">*</span>
                       </label>
                       <select
                         id="role"
                         value={formData.role}
                         onChange={(e) => update("role", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-warm-orange focus:ring-2 focus:ring-orange-100 font-body text-sm text-[#1a1a2e] bg-white transition-all duration-300"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#1A3A6B] focus:ring-2 focus:ring-orange-100 font-body text-sm text-[#111827] bg-white transition-all duration-300"
                       >
                         <option value="">Select a role...</option>
                         {ROLES.map((r) => <option key={r} value={r}>{r}</option>)}
@@ -323,8 +323,8 @@ export default function VolunteerRegistrationForm() {
                     </div>
 
                     <div>
-                      <p className="font-body text-sm font-semibold text-[#1a1a2e] mb-2">
-                        Areas of Interest <span className="text-warm-orange">*</span>
+                      <p className="font-body text-sm font-semibold text-[#111827] mb-2">
+                        Areas of Interest <span className="text-[#1A3A6B]">*</span>
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {INTEREST_OPTIONS.map((opt) => (
@@ -334,8 +334,8 @@ export default function VolunteerRegistrationForm() {
                             onClick={() => toggleInterest(opt)}
                             className={`px-3 py-1.5 rounded-full text-xs font-bold font-body transition-all duration-300 cursor-pointer ${
                               formData.interests.includes(opt)
-                                ? "bg-[#f97316] text-white shadow-sm"
-                                : "bg-gray-100 text-gray-600 hover:bg-orange-50 hover:text-warm-orange"
+                                ? "bg-[#1A3A6B] text-white shadow-sm"
+                                : "bg-gray-100 text-gray-600 hover:bg-[#F3F4F6] hover:text-[#1A3A6B]"
                             }`}
                           >
                             {opt}
@@ -353,8 +353,8 @@ export default function VolunteerRegistrationForm() {
                     </div>
 
                     <div>
-                      <p className="font-body text-sm font-semibold text-[#1a1a2e] mb-2">
-                        Availability <span className="text-warm-orange">*</span>
+                      <p className="font-body text-sm font-semibold text-[#111827] mb-2">
+                        Availability <span className="text-[#1A3A6B]">*</span>
                       </p>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {AVAILABILITY_OPTIONS.map((opt) => (
@@ -362,7 +362,7 @@ export default function VolunteerRegistrationForm() {
                             <div
                               onClick={() => update("availability", opt)}
                               className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 transition-all duration-200 cursor-pointer ${
-                                formData.availability === opt ? "border-warm-orange bg-warm-orange" : "border-gray-300 group-hover:border-orange-300"
+                                formData.availability === opt ? "border-[#1A3A6B] bg-[#1A3A6B]" : "border-gray-300 group-hover:border-orange-300"
                               }`}
                             >
                               {formData.availability === opt && <div className="w-2 h-2 rounded-full bg-white" />}
@@ -375,14 +375,14 @@ export default function VolunteerRegistrationForm() {
                     </div>
 
                     <div>
-                      <p className="font-body text-sm font-semibold text-[#1a1a2e] mb-2">Prior Volunteer Experience?</p>
+                      <p className="font-body text-sm font-semibold text-[#111827] mb-2">Prior Volunteer Experience?</p>
                       <div className="flex gap-4">
                         {["Yes", "No"].map((v) => (
                           <label key={v} className="flex items-center gap-2 cursor-pointer">
                             <div
                               onClick={() => update("priorExperience", v)}
                               className={`w-5 h-5 rounded-full border-2 flex items-center justify-center cursor-pointer transition-all ${
-                                formData.priorExperience === v ? "border-warm-orange bg-warm-orange" : "border-gray-300 hover:border-orange-300"
+                                formData.priorExperience === v ? "border-[#1A3A6B] bg-[#1A3A6B]" : "border-gray-300 hover:border-orange-300"
                               }`}
                             >
                               {formData.priorExperience === v && <div className="w-2 h-2 rounded-full bg-white" />}
@@ -405,10 +405,10 @@ export default function VolunteerRegistrationForm() {
                     transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
                     className="space-y-5"
                   >
-                    <h3 className="font-heading text-xl font-bold text-[#1a1a2e] mb-5">One Last Step</h3>
+                    <h3 className="font-heading text-xl font-bold text-[#111827] mb-5">One Last Step</h3>
                     <div>
-                      <label htmlFor="motivation" className="block font-body text-sm font-semibold text-[#1a1a2e] mb-1.5">
-                        Why do you want to volunteer with us? <span className="text-warm-orange">*</span>
+                      <label htmlFor="motivation" className="block font-body text-sm font-semibold text-[#111827] mb-1.5">
+                        Why do you want to volunteer with us? <span className="text-[#1A3A6B]">*</span>
                       </label>
                       <textarea
                         id="motivation"
@@ -416,7 +416,7 @@ export default function VolunteerRegistrationForm() {
                         value={formData.motivation}
                         onChange={(e) => update("motivation", e.target.value)}
                         placeholder="Tell us what motivates you to join our mission..."
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-warm-orange focus:ring-2 focus:ring-orange-100 font-body text-sm text-[#1a1a2e] bg-white resize-none transition-all duration-300"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#1A3A6B] focus:ring-2 focus:ring-orange-100 font-body text-sm text-[#111827] bg-white resize-none transition-all duration-300"
                       />
                       {errors.motivation && <p className="text-xs text-red-500 mt-1">{errors.motivation}</p>}
                     </div>
@@ -438,25 +438,25 @@ export default function VolunteerRegistrationForm() {
                         <div
                           onClick={() => update("agreePolicy", !formData.agreePolicy)}
                           className={`mt-0.5 w-5 h-5 rounded-md border-2 flex items-center justify-center shrink-0 transition-all duration-200 cursor-pointer ${
-                            formData.agreePolicy ? "border-warm-orange bg-warm-orange" : "border-gray-300 group-hover:border-orange-300"
+                            formData.agreePolicy ? "border-[#1A3A6B] bg-[#1A3A6B]" : "border-gray-300 group-hover:border-orange-300"
                           }`}
                         >
                           {formData.agreePolicy && <CheckIcon size={12} className="text-white" />}
                         </div>
                         <span className="font-body text-sm text-gray-600 leading-relaxed">
                           I agree to the Shoe My Feet Foundation{" "}
-                          <a href="/volunteer-policy" className="text-warm-orange underline hover:text-warm-orange-dark">
+                          <a href="/volunteer-policy" className="text-[#1A3A6B] underline hover:text-[#1A3A6B]-dark">
                             Volunteer Policy
                           </a>
-                          , including the child protection guidelines and code of conduct. <span className="text-warm-orange">*</span>
+                          , including the child protection guidelines and code of conduct. <span className="text-[#1A3A6B]">*</span>
                         </span>
                       </label>
                       {errors.agreePolicy && <p className="text-xs text-red-500 mt-1">{errors.agreePolicy}</p>}
                     </div>
 
                     {/* Summary */}
-                    <div className="rounded-2xl bg-orange-50 border border-orange-200 p-4">
-                      <p className="font-heading font-bold text-[#1a1a2e] text-sm mb-2">Application Summary</p>
+                    <div className=" bg-[#F3F4F6] border border-orange-200 p-4">
+                      <p className="font-heading font-bold text-[#111827] text-sm mb-2">Application Summary</p>
                       <div className="space-y-1 font-body text-xs text-gray-600">
                         <p><strong>Name:</strong> {formData.firstName} {formData.lastName}</p>
                         <p><strong>Email:</strong> {formData.email}</p>
@@ -471,20 +471,20 @@ export default function VolunteerRegistrationForm() {
               {/* Navigation buttons */}
               <div className="flex items-center justify-between mt-8 pt-6 border-t border-gray-100">
                 {step > 0 ? (
-                  <button type="button" onClick={prevStep} className="px-6 py-2.5 rounded-full border border-gray-200 font-body text-sm font-bold text-gray-600 hover:border-orange-300 hover:text-warm-orange transition-all duration-300 cursor-pointer">
+                  <button type="button" onClick={prevStep} className="px-6 py-2.5 rounded-[10px] border border-gray-200 font-body text-sm font-bold text-gray-600 hover:border-[#1A3A6B] hover:text-[#1A3A6B] transition-all duration-300 cursor-pointer">
                     ← Back
                   </button>
                 ) : <div />}
 
                 {step < 2 ? (
-                  <button type="button" onClick={nextStep} className="btn-orange px-8 py-3 text-sm cursor-pointer">
+                  <button type="button" onClick={nextStep} className="btn-primary px-8 py-3 text-sm cursor-pointer">
                     Continue →
                   </button>
                 ) : (
                   <button
                     type="submit"
                     disabled={loading}
-                    className="btn-orange px-8 py-3 text-sm cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-2"
+                    className="btn-primary px-8 py-3 text-sm cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-2"
                   >
                     {loading ? (
                       <>

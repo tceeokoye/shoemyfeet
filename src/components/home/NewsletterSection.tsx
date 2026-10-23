@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -22,7 +22,7 @@ export default function NewsletterSection() {
       <div className="max-w-4xl mx-auto">
         
         <motion.div
-          className="relative bg-[#09090b] rounded-3xl p-8 sm:p-14 text-center text-white overflow-hidden shadow-2xl"
+          className="relative bg-[#111827] rounded-2xl p-8 sm:p-14 text-center text-white overflow-hidden shadow-2xl"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -30,15 +30,15 @@ export default function NewsletterSection() {
         >
           {/* Background Ambient Orbs */}
           <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-slate-800/10 blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-orange-500/10 blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#1A3A6B]/10 blur-3xl" />
 
           <div className="relative z-10 max-w-xl mx-auto">
-            <motion.div variants={fadeUp} className="w-14 h-14 rounded-2xl bg-[#09090b] flex items-center justify-center text-2xl mx-auto mb-6 shadow-lg">
+            <motion.div variants={fadeUp} className="w-14 h-14  bg-[#111827] flex items-center justify-center text-2xl mx-auto mb-6 shadow-lg">
               ✉️
             </motion.div>
 
             <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl font-bold text-white mb-3">
-              Stay Connected to <span className="text-warm-orange">Our Mission</span>
+              Stay Connected to <span className="text-[#1A3A6B]">Our Mission</span>
             </motion.h2>
 
             <motion.p variants={fadeUp} className="text-neutral-300 font-body text-sm sm:text-base mb-8 leading-relaxed">
@@ -49,7 +49,7 @@ export default function NewsletterSection() {
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
+                className="bg-white/10 backdrop-blur-md  p-6 border border-white/20"
               >
                 <div className="flex items-center justify-center gap-2 text-emerald-400 font-heading font-bold text-lg mb-1">
                   <CheckCircle2Icon size={20} />
@@ -79,7 +79,7 @@ export default function NewsletterSection() {
 
                 <motion.button
                   type="submit"
-                  className="btn-orange py-3.5 px-7 justify-center rounded-full text-sm font-bold whitespace-nowrap shadow-lg font-body"
+                  className="btn-primary py-3.5 px-7 justify-center rounded-[10px] text-sm font-bold whitespace-nowrap shadow-lg font-body"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

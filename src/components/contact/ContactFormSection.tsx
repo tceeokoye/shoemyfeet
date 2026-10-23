@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -90,7 +90,7 @@ export default function ContactFormSection() {
   };
 
   return (
-    <section id="contact-form" className="section-padding bg-[#09090b] relative overflow-hidden" aria-label="Send us a message">
+    <section id="contact-form" className="section-padding bg-[#111827] relative overflow-hidden" aria-label="Send us a message">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -101,11 +101,11 @@ export default function ContactFormSection() {
           viewport={viewportConfig}
           className="text-center mb-12"
         >
-          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-slate-200 text-[#f97316] font-bold text-sm mb-4">
+          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-slate-200 text-[#1A3A6B] font-bold text-sm mb-4">
             📝 Send a Message
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">
-            We&apos;d Love to <span className="text-[#f97316]">Hear From You</span>
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4">
+            We&apos;d Love to <span className="text-[#1A3A6B]">Hear From You</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
             Fill out the form below and our dedicated support team will get back to you promptly.
@@ -125,8 +125,8 @@ export default function ContactFormSection() {
               
               {/* Personal Information */}
               <div>
-                <h3 className="font-heading font-bold text-lg text-[#1a1a2e] mb-4 flex items-center gap-2">
-                  <span className="w-6 h-6 rounded-full bg-orange-100 text-warm-orange-dark flex items-center justify-center text-xs">1</span>
+                <h3 className="font-heading font-bold text-lg text-[#111827] mb-4 flex items-center gap-2">
+                  <span className="w-6 h-6 rounded-full bg-orange-100 text-[#1A3A6B]-dark flex items-center justify-center text-xs">1</span>
                   Personal Information
                 </h3>
 
@@ -140,8 +140,8 @@ export default function ContactFormSection() {
                       placeholder="e.g. Chukwuma Eze"
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className={`w-full px-4 py-3 rounded-2xl border-2 bg-gray-50 font-body text-sm text-[#1a1a2e] focus:outline-none transition-all ${
-                        errors.fullName ? "border-red-400 bg-red-50/20" : "border-gray-100 focus:border-[#09090b]/50 focus:bg-white"
+                      className={`w-full px-4 py-3  border-2 bg-gray-50 font-body text-sm text-[#111827] focus:outline-none transition-all ${
+                        errors.fullName ? "border-red-400 bg-red-50/20" : "border-gray-100 focus:border-[#111827]/50 focus:bg-white"
                       }`}
                     />
                     {errors.fullName && <p className="text-xs text-red-500 font-body mt-1">{errors.fullName}</p>}
@@ -156,8 +156,8 @@ export default function ContactFormSection() {
                       placeholder="chukwuma@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className={`w-full px-4 py-3 rounded-2xl border-2 bg-gray-50 font-body text-sm text-[#1a1a2e] focus:outline-none transition-all ${
-                        errors.email ? "border-red-400 bg-red-50/20" : "border-gray-100 focus:border-[#09090b]/50 focus:bg-white"
+                      className={`w-full px-4 py-3  border-2 bg-gray-50 font-body text-sm text-[#111827] focus:outline-none transition-all ${
+                        errors.email ? "border-red-400 bg-red-50/20" : "border-gray-100 focus:border-[#111827]/50 focus:bg-white"
                       }`}
                     />
                     {errors.email && <p className="text-xs text-red-500 font-body mt-1">{errors.email}</p>}
@@ -170,7 +170,7 @@ export default function ContactFormSection() {
                       placeholder="+234 800 000 0000"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-2xl border-2 border-gray-100 bg-gray-50 font-body text-sm text-[#1a1a2e] focus:outline-none focus:border-[#09090b]/50 focus:bg-white transition-all"
+                      className="w-full px-4 py-3  border-2 border-gray-100 bg-gray-50 font-body text-sm text-[#111827] focus:outline-none focus:border-[#111827]/50 focus:bg-white transition-all"
                     />
                   </div>
                 </div>
@@ -178,8 +178,8 @@ export default function ContactFormSection() {
 
               {/* Subject Category */}
               <div>
-                <h3 className="font-heading font-bold text-lg text-[#1a1a2e] mb-3 flex items-center gap-2">
-                  <span className="w-6 h-6 rounded-full bg-orange-100 text-[#f97316] flex items-center justify-center text-xs">2</span>
+                <h3 className="font-heading font-bold text-lg text-[#111827] mb-3 flex items-center gap-2">
+                  <span className="w-6 h-6 rounded-full bg-orange-100 text-[#1A3A6B] flex items-center justify-center text-xs">2</span>
                   Subject Category
                 </h3>
 
@@ -191,7 +191,7 @@ export default function ContactFormSection() {
                       onClick={() => setFormData({ ...formData, subject: cat })}
                       className={`px-3 py-2.5 rounded-xl text-xs font-bold font-body border transition-all text-center cursor-pointer ${
                         formData.subject === cat
-                          ? "bg-[#09090b] text-white border-[#09090b] shadow-md"
+                          ? "bg-[#111827] text-white border-[#111827] shadow-md"
                           : "bg-gray-50 border-gray-100 text-gray-600 hover:border-gray-200"
                       }`}
                     >
@@ -204,7 +204,7 @@ export default function ContactFormSection() {
               {/* Message Area */}
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-heading font-bold text-lg text-[#1a1a2e] flex items-center gap-2">
+                  <h3 className="font-heading font-bold text-lg text-[#111827] flex items-center gap-2">
                     <span className="w-6 h-6 rounded-full bg-green-100 text-forest-green flex items-center justify-center text-xs">3</span>
                     Your Message <span className="text-red-500 text-xs">*</span>
                   </h3>
@@ -219,8 +219,8 @@ export default function ContactFormSection() {
                   placeholder="Tell us how we can help or how you'd like to get involved..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className={`w-full px-4 py-3 rounded-2xl border-2 bg-gray-50 font-body text-sm text-[#1a1a2e] focus:outline-none transition-all resize-none ${
-                    errors.message ? "border-red-400 bg-red-50/20" : "border-gray-100 focus:border-[#09090b]/50 focus:bg-white"
+                  className={`w-full px-4 py-3  border-2 bg-gray-50 font-body text-sm text-[#111827] focus:outline-none transition-all resize-none ${
+                    errors.message ? "border-red-400 bg-red-50/20" : "border-gray-100 focus:border-[#111827]/50 focus:bg-white"
                   }`}
                 />
                 {errors.message && <p className="text-xs text-red-500 font-body mt-1">{errors.message}</p>}
@@ -239,7 +239,7 @@ export default function ContactFormSection() {
                         onClick={() => setFormData({ ...formData, preferredMethod: m.id })}
                         className={`flex-1 py-2 px-3 rounded-xl text-xs font-bold font-body border flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
                           formData.preferredMethod === m.id
-                            ? "bg-warm-orange text-white border-warm-orange shadow-sm"
+                            ? "bg-[#1A3A6B] text-white border-[#1A3A6B] shadow-sm"
                             : "bg-gray-50 text-gray-600 border-gray-100 hover:border-gray-200"
                         }`}
                       >
@@ -256,7 +256,7 @@ export default function ContactFormSection() {
                   <select
                     value={formData.bestTime}
                     onChange={(e) => setFormData({ ...formData, bestTime: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-50 font-body text-xs font-semibold text-[#1a1a2e] focus:outline-none focus:border-[#09090b]"
+                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-50 font-body text-xs font-semibold text-[#111827] focus:outline-none focus:border-[#111827]"
                   >
                     {bestTimes.map((t) => (
                       <option key={t.id} value={t.id}>{t.label}</option>
@@ -270,7 +270,7 @@ export default function ContactFormSection() {
                 <label className="block text-xs font-bold text-gray-700 font-body mb-2">
                   Optional Attachments (Proposal, Letter, Photos - Max 10MB)
                 </label>
-                <div className="relative border-2 border-dashed border-gray-200 rounded-2xl p-4 text-center bg-gray-50 hover:bg-white hover:border-[#09090b]/40 transition-all">
+                <div className="relative border-2 border-dashed border-gray-200  p-4 text-center bg-gray-50 hover:bg-white hover:border-[#111827]/40 transition-all">
                   <input
                     type="file"
                     multiple
@@ -286,7 +286,7 @@ export default function ContactFormSection() {
                 {attachments.length > 0 && (
                   <div className="flex flex-wrap gap-2 mt-3">
                     {attachments.map((file, i) => (
-                      <span key={i} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-100 text-xs font-body text-[#f97316]">
+                      <span key={i} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-100 text-xs font-body text-[#1A3A6B]">
                         📄 {file.name} ({file.size})
                         <button type="button" onClick={() => removeAttachment(i)} className="hover:text-red-500 cursor-pointer">
                           <XIcon size={12} />
@@ -302,7 +302,7 @@ export default function ContactFormSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full btn-orange py-4 text-base justify-center disabled:opacity-50 cursor-pointer shadow-lg shadow-orange-500/25"
+                  className="w-full btn-primary py-4 text-base justify-center disabled:opacity-50 cursor-pointer shadow-lg shadow-[#F3F4F6]0/25"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
@@ -329,11 +329,11 @@ export default function ContactFormSection() {
               <div className="w-20 h-20 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto text-4xl shadow-xl">
                 <CheckIcon size={40} />
               </div>
-              <h3 className="font-heading font-bold text-3xl text-[#1a1a2e]">Message Sent Successfully!</h3>
+              <h3 className="font-heading font-bold text-3xl text-[#111827]">Message Sent Successfully!</h3>
               <p className="text-gray-600 font-body text-base max-w-md mx-auto leading-relaxed">
-                Thank you for reaching out to <strong className="text-[#f97316]">Shoe My Feet Foundation</strong>. We have received your message regarding <strong className="text-warm-orange-dark">{formData.subject}</strong> and will respond shortly.
+                Thank you for reaching out to <strong className="text-[#1A3A6B]">Shoe My Feet Foundation</strong>. We have received your message regarding <strong className="text-[#1A3A6B]-dark">{formData.subject}</strong> and will respond shortly.
               </p>
-              <div className="p-4 rounded-2xl bg-slate-50 text-xs font-body text-[#f97316] max-w-sm mx-auto">
+              <div className="p-4  bg-slate-50 text-xs font-body text-[#1A3A6B] max-w-sm mx-auto">
                 📧 A copy has been sent to <strong>{formData.email}</strong>
               </div>
               <button

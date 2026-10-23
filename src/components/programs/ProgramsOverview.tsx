@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
@@ -6,7 +6,7 @@ import { GraduationCapIcon, HeartPulseIcon, HeartHandshakeIcon, SparklesIcon } f
 
 const pillars = [
   {
-    icon: <GraduationCapIcon size={32} className="text-[#f97316]" />,
+    icon: <GraduationCapIcon size={32} className="text-[#1A3A6B]" />,
     title: "Education",
     desc: "Ensuring every child can attend school with dignity",
     color: "bg-slate-50",
@@ -22,10 +22,10 @@ const pillars = [
     iconBg: "bg-emerald-100",
   },
   {
-    icon: <HeartHandshakeIcon size={32} className="text-orange-500" />,
+    icon: <HeartHandshakeIcon size={32} className="text-[#1A3A6B]" />,
     title: "Community",
     desc: "Building strong bonds through outreach and service",
-    color: "bg-orange-50",
+    color: "bg-[#F3F4F6]",
     border: "border-orange-100",
     iconBg: "bg-orange-100",
   },
@@ -59,10 +59,10 @@ export default function ProgramsOverview() {
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-5 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-5 leading-tight"
           >
             Programs Built to{" "}
-            <span className="text-warm-orange">Remove Every Barrier</span>
+            <span className="text-[#1A3A6B]">Remove Every Barrier</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -87,12 +87,12 @@ export default function ProgramsOverview() {
               key={p.title}
               variants={fadeUp}
               whileHover={{ y: -6, transition: { type: "spring" as const, stiffness: 300, damping: 22 } }}
-              className={`group p.color border ${p.border} rounded-3xl p-7 text-center hover:shadow-xl transition-all duration-300`}
+              className={`group p.color border ${p.border} rounded-2xl p-7 text-center hover:shadow-xl transition-all duration-300`}
             >
-              <div className={`w-16 h-16 ${p.iconBg} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm`}>
+              <div className={`w-16 h-16 ${p.iconBg}  flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm`}>
                 {p.icon}
               </div>
-              <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-2">{p.title}</h3>
+              <h3 className="font-heading font-bold text-xl text-[#111827] mb-2">{p.title}</h3>
               <p className="font-body text-gray-600 text-sm leading-relaxed">{p.desc}</p>
             </motion.div>
           ))}

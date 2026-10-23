@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 import { ChevronLeftIcon, ChevronRightIcon, StarIcon } from "@/components/ui/Icons";
 import { STORIES } from "@/lib/constants";
@@ -16,7 +16,7 @@ const testimonials = [
     quote: "I used to hide my feet in class because my shoes had big holes. Now I walk in front proudly. My teacher says I'm the first to raise my hand!",
     image: "/images/story1.jpg",
     stars: 5,
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const testimonials = [
     quote: "Class attendance jumped by nearly 30% after Shoe My Feet visited our school. The children are more focused, confident, and eager to learn.",
     image: "/images/story2.jpg",
     stars: 5,
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const testimonials = [
     quote: "The volunteer program changed my life. I completed shoemaking training and now I help make the very shoes we distribute to children!",
     image: "/images/story3.jpg",
     stars: 5,
-    color: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const testimonials = [
     quote: "These shoes make me feel like I belong. I can focus on my studies instead of worrying about my feet.",
     image: "/images/story4.jpg",
     stars: 5,
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
   {
     id: 5,
@@ -56,7 +56,7 @@ const testimonials = [
     quote: "Shoe My Feet hasn't just given shoes — they've given our community dignity. We are proud of what they do for our children.",
     image: "/images/volunteers.jpg",
     stars: 5,
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
   {
     id: 6,
@@ -66,7 +66,7 @@ const testimonials = [
     quote: "Our partnership with Shoe My Feet is one of the most impactful CSR initiatives we've undertaken. The transparency and dedication are unmatched.",
     image: "/images/founder.jpg",
     stars: 5,
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
 ];
 
@@ -110,16 +110,16 @@ export default function ImpactTestimonials() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-700 text-xs sm:text-sm font-bold border border-amber-200 mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-[#FFFFFF] text-[#1A3A6B] text-xs sm:text-sm font-bold border border-[#F3F4F6] mb-4"
           >
             Voices of Impact
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
             Words from{" "}
-            <span className="text-warm-orange">Those We Serve</span>
+            <span className="text-[#1A3A6B]">Those We Serve</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -131,7 +131,7 @@ export default function ImpactTestimonials() {
 
         {/* Main Carousel */}
         <div className="relative max-w-4xl mx-auto">
-          <div className="overflow-hidden rounded-3xl">
+          <div className="overflow-hidden rounded-2xl">
             <AnimatePresence custom={direction} mode="wait">
               <motion.div
                 key={t.id}
@@ -141,7 +141,7 @@ export default function ImpactTestimonials() {
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className={`t.color p-1 rounded-3xl shadow-2xl`}
+                className={`t.color p-1 rounded-2xl shadow-2xl`}
               >
                 <div className="bg-white rounded-[calc(1.5rem-4px)] p-8 sm:p-10 relative overflow-hidden">
                   {/* Background pattern */}
@@ -152,7 +152,7 @@ export default function ImpactTestimonials() {
                   <div className="grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start relative z-10">
                     {/* Portrait */}
                     <div className="flex flex-col items-center gap-3">
-                      <div className={`w-20 h-20 rounded-2xl overflow-hidden border-4 border-transparent t.color p-0.5 shadow-lg`}>
+                      <div className={`w-20 h-20  overflow-hidden border-4 border-transparent t.color p-0.5 shadow-lg`}>
                         <div className="w-full h-full rounded-xl overflow-hidden">
                           <Image
                             src={t.image}
@@ -166,7 +166,7 @@ export default function ImpactTestimonials() {
                       {/* Stars */}
                       <div className="flex gap-0.5">
                         {Array.from({ length: t.stars }).map((_, i) => (
-                          <StarIcon key={i} size={14} className="text-amber-400" />
+                          <StarIcon key={i} size={14} className="text-[#1A3A6B]" />
                         ))}
                       </div>
                     </div>
@@ -178,7 +178,7 @@ export default function ImpactTestimonials() {
                         {t.quote}
                       </p>
                       <div>
-                        <p className="font-heading font-bold text-[#1a1a2e] text-base">{t.name}</p>
+                        <p className="font-heading font-bold text-[#111827] text-base">{t.name}</p>
                         <p className={`font-body text-sm font-semibold t.color bg-clip-text text-transparent`}>{t.role}</p>
                         <p className="font-body text-xs text-gray-400 mt-0.5">{t.community}</p>
                       </div>
@@ -193,7 +193,7 @@ export default function ImpactTestimonials() {
           <div className="flex items-center justify-between mt-8">
             <button
               onClick={goPrev}
-              className="w-12 h-12 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-600 hover:border-slate-300 hover:text-[#f97316] hover:shadow-lg transition-all duration-300 cursor-pointer"
+              className="w-12 h-12 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-600 hover:border-slate-300 hover:text-[#1A3A6B] hover:shadow-lg transition-all duration-300 cursor-pointer"
               aria-label="Previous testimonial"
             >
               <ChevronLeftIcon size={20} />
@@ -206,7 +206,7 @@ export default function ImpactTestimonials() {
                   key={i}
                   onClick={() => goTo(i)}
                   className={`rounded-full transition-all duration-300 cursor-pointer ${
-                    i === current ? "w-8 h-3 bg-warm-orange" : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
+                    i === current ? "w-8 h-3 bg-[#1A3A6B]" : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
                 />
@@ -215,7 +215,7 @@ export default function ImpactTestimonials() {
 
             <button
               onClick={goNext}
-              className="w-12 h-12 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-600 hover:border-slate-300 hover:text-[#f97316] hover:shadow-lg transition-all duration-300 cursor-pointer"
+              className="w-12 h-12 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-600 hover:border-slate-300 hover:text-[#1A3A6B] hover:shadow-lg transition-all duration-300 cursor-pointer"
               aria-label="Next testimonial"
             >
               <ChevronRightIcon size={20} />
@@ -236,7 +236,7 @@ export default function ImpactTestimonials() {
               }`}
             >
               <div className={`w-12 h-12 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
-                i === current ? "border-warm-orange shadow-md" : "border-gray-200"
+                i === current ? "border-[#1A3A6B] shadow-md" : "border-gray-200"
               }`}>
                 <Image src={tes.image} alt={tes.name} width={48} height={48} className="w-full h-full object-cover" />
               </div>

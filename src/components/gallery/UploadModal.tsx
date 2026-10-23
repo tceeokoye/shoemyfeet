@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -57,7 +57,7 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
         onClick={onClose}
       >
         <motion.div
-          className="relative w-full max-w-xl bg-white rounded-3xl p-6 sm:p-8 shadow-2xl overflow-hidden border border-gray-100"
+          className="relative w-full max-w-xl bg-white rounded-2xl p-6 sm:p-8 shadow-2xl overflow-hidden border border-gray-100"
           initial={{ scale: 0.9, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
               <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 animate-bounce">
                 <CheckCircleIcon size={36} />
               </div>
-              <h3 className="font-heading text-2xl font-bold text-[#f97316] mb-2">
+              <h3 className="font-heading text-2xl font-bold text-[#1A3A6B] mb-2">
                 Thank You for Sharing!
               </h3>
               <p className="font-body text-gray-600 text-sm max-w-md mx-auto mb-6">
@@ -84,7 +84,7 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
               </p>
               <button
                 onClick={handleReset}
-                className="btn-primary text-sm px-6 py-2.5 rounded-full"
+                className="btn-primary text-sm px-6 py-2.5 rounded-[10px]"
               >
                 Close & Return to Gallery
               </button>
@@ -92,10 +92,10 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
           ) : (
             <div>
               <div className="mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-warm-orange-dark text-xs font-bold font-heading mb-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-[#1A3A6B]-dark text-xs font-bold font-heading mb-2">
                   Share Your Story
                 </span>
-                <h3 className="font-heading text-2xl font-bold text-[#1a1a2e]">
+                <h3 className="font-heading text-2xl font-bold text-[#111827]">
                   Upload Outreach {mediaType === "photo" ? "Photos" : "Videos"}
                 </h3>
                 <p className="font-body text-xs text-gray-500 mt-1">
@@ -104,12 +104,12 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
               </div>
 
               {/* Type Switcher */}
-              <div className="flex rounded-2xl bg-gray-100 p-1 mb-6">
+              <div className="flex  bg-gray-100 p-1 mb-6">
                 <button
                   type="button"
                   onClick={() => setMediaType("photo")}
                   className={`flex-1 py-2 rounded-xl text-xs font-bold font-heading flex items-center justify-center gap-2 transition-all ${
-                    mediaType === "photo" ? "bg-white text-[#f97316] shadow-sm" : "text-gray-500"
+                    mediaType === "photo" ? "bg-white text-[#1A3A6B] shadow-sm" : "text-gray-500"
                   }`}
                 >
                   <CameraIcon size={16} />
@@ -119,7 +119,7 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
                   type="button"
                   onClick={() => setMediaType("video")}
                   className={`flex-1 py-2 rounded-xl text-xs font-bold font-heading flex items-center justify-center gap-2 transition-all ${
-                    mediaType === "video" ? "bg-white text-[#f97316] shadow-sm" : "text-gray-500"
+                    mediaType === "video" ? "bg-white text-[#1A3A6B] shadow-sm" : "text-gray-500"
                   }`}
                 >
                   <VideoIcon size={16} />
@@ -129,7 +129,7 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
 
               <form onSubmit={handleSubmit} className="space-y-4 font-body text-xs">
                 {/* File Dropzone */}
-                <div className="border-2 border-dashed border-gray-300 hover:border-warm-orange rounded-2xl p-6 text-center bg-gray-50 transition-colors relative cursor-pointer group">
+                <div className="border-2 border-dashed border-gray-300 hover:border-[#1A3A6B]  p-6 text-center bg-gray-50 transition-colors relative cursor-pointer group">
                   <input
                     type="file"
                     accept={mediaType === "photo" ? "image/*" : "video/*"}
@@ -137,7 +137,7 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
                     className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
                     required
                   />
-                  <div className="w-12 h-12 rounded-full bg-orange-100 text-warm-orange flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-full bg-orange-100 text-[#1A3A6B] flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform">
                     <UploadIcon size={20} />
                   </div>
                   <p className="font-semibold text-gray-800 text-xs">
@@ -157,7 +157,7 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
                       placeholder="e.g. Philomena N."
                       value={title}
                       onChange={(e) => setTitle(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-warm-orange text-xs text-gray-900"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#1A3A6B] text-xs text-gray-900"
                     />
                   </div>
                   <div>
@@ -168,7 +168,7 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
                       placeholder="e.g. volunteer@shoemyfeet.org"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-warm-orange text-xs text-gray-900"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#1A3A6B] text-xs text-gray-900"
                     />
                   </div>
                 </div>
@@ -181,7 +181,7 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
                     placeholder="e.g. Kaduna School Shoe Distribution 2026"
                     value={eventLocation}
                     onChange={(e) => setEventLocation(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-warm-orange text-xs text-gray-900"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#1A3A6B] text-xs text-gray-900"
                   />
                 </div>
 
@@ -192,14 +192,14 @@ export default function UploadModal({ isOpen, defaultType = "photo", onClose }: 
                     placeholder="Describe what happened in this moment..."
                     value={caption}
                     onChange={(e) => setCaption(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-warm-orange text-xs text-gray-900"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#1A3A6B] text-xs text-gray-900"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3 rounded-full btn-orange text-xs font-bold flex items-center justify-center gap-2 shadow-lg disabled:opacity-50"
+                  className="w-full py-3 rounded-[10px] btn-primary text-xs font-bold flex items-center justify-center gap-2 shadow-lg disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     <span className="animate-pulse">Uploading Media...</span>

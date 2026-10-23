@@ -42,5 +42,6 @@ next-env.d.ts
 
 # large media & source archives
 *.zip
-/public/videos/
+/public/videos/*
+!/public/videos/My-Intro.mp4
 /src/assets/

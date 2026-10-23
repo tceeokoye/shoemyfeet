@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
@@ -13,7 +13,7 @@ const fourSteps = [
     description:
       "We collaborate closely with school administrators, community elders, and local leaders to identify primary schools where children lack adequate footwear and face severe hardship.",
     icon: "🔍",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-slate-50",
     border: "border-slate-100",
     details: ["School registration & verification", "Child shoe sizing audits", "Local stakeholder meetings"],
@@ -25,8 +25,8 @@ const fourSteps = [
     description:
       "Through generous individual donations, corporate CSR sponsorships (such as Access Bank), and shoe manufacturing partnerships, we secure high-quality, durable school shoes.",
     icon: "🤝",
-    color: "bg-[#f97316]",
-    bg: "bg-orange-50",
+    color: "bg-[#1A3A6B]",
+    bg: "bg-[#F3F4F6]",
     border: "border-orange-100",
     details: ["Corporate CSR matching", "Donor drive campaigns", "Quality manufacturing standards"],
   },
@@ -37,9 +37,9 @@ const fourSteps = [
     description:
       "Our dedicated volunteers carefully inspect, categorize, and organize every pair of shoes by size, gender, and school specification to guarantee a perfect fit for every child.",
     icon: "📦",
-    color: "bg-[#15803d]",
-    bg: "bg-emerald-50",
-    border: "border-emerald-100",
+    color: "bg-[#F97316]",
+    bg: "bg-orange-50",
+    border: "border-orange-100",
     details: ["Individual quality inspection", "Sizing categorisation", "Eco-friendly distribution packaging"],
   },
   {
@@ -49,7 +49,7 @@ const fourSteps = [
     description:
       "We host joyous distribution events at schools where volunteers personally fit each child with new shoes, celebrate their educational journey, and instill confidence.",
     icon: "✨",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-purple-50",
     border: "border-purple-100",
     details: ["Personal shoe fitting events", "Child empowerment sessions", "Impact tracking & teacher follow-up"],
@@ -75,15 +75,15 @@ export default function HowWeWork() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold font-body mb-3 border border-orange-200"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-xs sm:text-sm font-bold font-body mb-3 border border-orange-200"
           >
             How We Work
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a0a0a] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
-            Our 4-Step <span className="text-[#f97316]">Distribution Model</span>
+            Our 4-Step <span className="text-[#1A3A6B]">Distribution Model</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -138,7 +138,7 @@ export default function HowWeWork() {
                   >
                     {/* Content Card */}
                     <div className="w-full lg:w-[calc(50%-3rem)]">
-                      <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                      <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden">
                         <div className="flex items-center justify-between mb-4">
                           <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-extrabold font-body bg-slate-100 text-slate-700">
                             <span>Step {item.step}</span>
@@ -146,10 +146,10 @@ export default function HowWeWork() {
                           <span className="text-3xl">{item.icon}</span>
                         </div>
 
-                        <h3 className="font-heading font-bold text-2xl text-[#0a0a0a] mb-2">
+                        <h3 className="font-heading font-bold text-2xl text-[#111827] mb-2">
                           {item.title}
                         </h3>
-                        <p className="text-xs font-bold text-[#f97316] uppercase tracking-wider mb-4 font-body">
+                        <p className="text-xs font-bold text-[#1A3A6B] uppercase tracking-wider mb-4 font-body">
                           {item.subtitle}
                         </p>
                         <p className="font-body text-slate-600 text-sm leading-relaxed mb-6">
@@ -185,7 +185,7 @@ export default function HowWeWork() {
         {/* Tab 2: Foundation Journey Timeline */}
         {activeTab === "timeline" && (
           <div className="relative max-w-4xl mx-auto">
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#09090b] hidden lg:block" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#111827] hidden lg:block" />
 
             <div className="flex flex-col gap-10">
               {TIMELINE.map((item, i) => {
@@ -201,17 +201,17 @@ export default function HowWeWork() {
                     }`}
                   >
                     <div className="lg:w-[calc(50%-2rem)] w-full">
-                      <div className="group bg-white rounded-3xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+                      <div className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
                         <div className={`absolute top-0 left-0 right-0 h-1 item.color rounded-t-3xl`} />
                         <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold font-body mb-3 item.color text-white`}>
                           📅 {item.year}
                         </div>
-                        <h3 className="font-heading font-bold text-xl text-[#1a1a2e] mb-2">{item.title}</h3>
+                        <h3 className="font-heading font-bold text-xl text-[#111827] mb-2">{item.title}</h3>
                         <p className="font-body text-gray-600 text-sm leading-relaxed">{item.description}</p>
                       </div>
                     </div>
 
-                    <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full border-4 border-white shadow-lg items-center justify-center text-xs text-white z-10 bg-[#09090b]">
+                    <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full border-4 border-white shadow-lg items-center justify-center text-xs text-white z-10 bg-[#111827]">
                       •
                     </div>
 

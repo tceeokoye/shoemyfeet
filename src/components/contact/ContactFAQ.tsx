@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -51,7 +51,7 @@ export default function ContactFAQ() {
   );
 
   return (
-    <section className="section-padding bg-[#09090b] relative overflow-hidden" aria-label="Contact FAQs">
+    <section className="section-padding bg-[#111827] relative overflow-hidden" aria-label="Contact FAQs">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -65,8 +65,8 @@ export default function ContactFAQ() {
           <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-100 border border-indigo-200 text-indigo-700 font-bold text-sm mb-4">
             ❓ Got Questions?
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">
-            Frequently Asked <span className="text-[#f97316]">Questions</span>
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4">
+            Frequently Asked <span className="text-[#1A3A6B]">Questions</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-6">
             Find fast answers to common questions about getting involved, partnerships, donations, and outreach requests.
@@ -80,7 +80,7 @@ export default function ContactFAQ() {
               placeholder="Search questions (e.g. volunteer, donate, school)..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 rounded-2xl border border-gray-200 bg-white shadow-sm font-body text-sm text-[#1a1a2e] focus:outline-none focus:border-[#09090b]"
+              className="w-full pl-11 pr-4 py-3  border border-gray-200 bg-white shadow-sm font-body text-sm text-[#111827] focus:outline-none focus:border-[#111827]"
             />
           </motion.div>
         </motion.div>
@@ -100,29 +100,29 @@ export default function ContactFAQ() {
                 <motion.div
                   key={index}
                   variants={fadeUp}
-                  className={`rounded-2xl border transition-all overflow-hidden ${
-                    isOpen ? "border-[#09090b]/30 shadow-md shadow-blue-900/8 bg-white" : "border-gray-100 bg-white shadow-sm"
+                  className={` border transition-all overflow-hidden ${
+                    isOpen ? "border-[#111827]/30 shadow-md shadow-blue-900/8 bg-white" : "border-gray-100 bg-white shadow-sm"
                   }`}
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                     className={`w-full flex items-start gap-4 px-5 py-4 text-left transition-colors cursor-pointer ${
-                      isOpen ? "bg-[#09090b]" : "bg-white hover:bg-gray-50"
+                      isOpen ? "bg-[#111827]" : "bg-white hover:bg-gray-50"
                     }`}
                     aria-expanded={isOpen}
                   >
                     <span className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-bold transition-colors ${
-                      isOpen ? "bg-[#09090b] text-white" : "bg-gray-100 text-gray-500"
+                      isOpen ? "bg-[#111827] text-white" : "bg-gray-100 text-gray-500"
                     }`}>
                       {index + 1}
                     </span>
-                    <span className={`flex-1 font-body font-bold text-sm sm:text-base ${isOpen ? "text-[#f97316]" : "text-[#1a1a2e]"}`}>
+                    <span className={`flex-1 font-body font-bold text-sm sm:text-base ${isOpen ? "text-[#1A3A6B]" : "text-[#111827]"}`}>
                       {faq.q}
                     </span>
                     <motion.div
                       animate={{ rotate: isOpen ? 180 : 0 }}
                       transition={{ duration: 0.25 }}
-                      className={`flex-shrink-0 mt-0.5 ${isOpen ? "text-[#f97316]" : "text-gray-400"}`}
+                      className={`flex-shrink-0 mt-0.5 ${isOpen ? "text-[#1A3A6B]" : "text-gray-400"}`}
                     >
                       <ChevronDownIcon size={18} />
                     </motion.div>

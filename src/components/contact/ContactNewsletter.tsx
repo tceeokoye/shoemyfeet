@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -25,11 +25,11 @@ export default function ContactNewsletter() {
     <section className="section-padding bg-white relative overflow-hidden" aria-label="Newsletter invitation">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="bg-[#09090b] rounded-4xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+        <div className="bg-[#111827] rounded-4xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
           
           {/* Background Ambient Circles */}
           <div className="absolute top-0 right-0 w-80 h-80 rounded-full opacity-20 bg-white blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full opacity-20 bg-amber-300 blur-2xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full opacity-20 bg-[#1A3A6B] blur-2xl pointer-events-none" />
 
           <div className="relative z-10 max-w-2xl mx-auto text-center space-y-6">
             
@@ -61,7 +61,7 @@ export default function ContactNewsletter() {
                     placeholder="Your Name (e.g. Ada)"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="px-4 py-3.5 rounded-2xl bg-white/90 text-gray-900 font-body text-sm placeholder-gray-500 focus:outline-none focus:bg-white flex-1"
+                    className="px-4 py-3.5  bg-white/90 text-gray-900 font-body text-sm placeholder-gray-500 focus:outline-none focus:bg-white flex-1"
                   />
                   <input
                     type="email"
@@ -69,12 +69,12 @@ export default function ContactNewsletter() {
                     placeholder="Your Email Address *"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="px-4 py-3.5 rounded-2xl bg-white/90 text-gray-900 font-body text-sm placeholder-gray-500 focus:outline-none focus:bg-white flex-1"
+                    className="px-4 py-3.5  bg-white/90 text-gray-900 font-body text-sm placeholder-gray-500 focus:outline-none focus:bg-white flex-1"
                   />
                   <button
                     type="submit"
                     disabled={loading}
-                    className="px-6 py-3.5 rounded-2xl bg-[#09090b] text-white font-bold font-body text-sm hover:bg-[#09090b] transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                    className="px-6 py-3.5  bg-[#111827] text-white font-bold font-body text-sm hover:bg-[#111827] transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                   >
                     {loading ? (
                       <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -92,7 +92,7 @@ export default function ContactNewsletter() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="p-6 rounded-3xl bg-white/20 backdrop-blur-md border border-white/30 text-center space-y-2"
+                className="p-6 rounded-2xl bg-white/20 backdrop-blur-md border border-white/30 text-center space-y-2"
               >
                 <div className="w-12 h-12 rounded-full bg-white text-forest-green flex items-center justify-center mx-auto text-2xl shadow-lg">
                   <CheckIcon size={24} />

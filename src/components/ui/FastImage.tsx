@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image, { ImageProps } from "next/image";
+import RealImage from "@/components/ui/RealImage";
+import type { ImageProps } from "next/image";
 
 interface FastImageProps extends Omit<ImageProps, "onLoad"> {
   fallbackSrc?: string;
@@ -26,7 +27,7 @@ export default function FastImage({
       {!isLoaded && (
         <div className="absolute inset-0 z-10 skeleton-shimmer animate-pulse" />
       )}
-      <Image
+      <RealImage
         src={src}
         alt={alt}
         fill={fill}

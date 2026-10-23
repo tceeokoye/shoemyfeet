@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -26,12 +26,12 @@ export default function DonateSection() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-orange-100  text-warm-orange-dark text-sm font-bold mb-4 border border-orange-200">
+          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-orange-100  text-[#1A3A6B]-dark text-sm font-bold mb-4 border border-orange-200">
             Make a Difference Today
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-4xl sm:text-5xl font-bold text-[#1a1a2e] mb-4">
+          <motion.h2 variants={fadeUp} className="font-heading text-4xl sm:text-5xl font-bold text-[#111827] mb-4">
             Your Donation{" "}
-            <span className="text-warm-orange">Changes Lives</span>
+            <span className="text-[#1A3A6B]">Changes Lives</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-lg text-gray-600 font-body">
             Every dollar goes directly toward putting shoes on children&apos;s feet
@@ -43,17 +43,17 @@ export default function DonateSection() {
 
           {/* Donation Widget */}
           <motion.div
-            className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transform-gpu will-change-transform"
+            className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform-gpu will-change-transform"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
           >
             {/* Top gradient bar */}
-            <div className="h-2 bg-[#09090b]" />
+            <div className="h-2 bg-[#111827]" />
 
             <div className="p-8">
-              <h3 className="font-heading text-xl font-bold text-[#1a1a2e] mb-6">
+              <h3 className="font-heading text-xl font-bold text-[#111827] mb-6">
                 Choose Your Impact Level
               </h3>
 
@@ -63,16 +63,16 @@ export default function DonateSection() {
                   <motion.button
                     key={donation.amount}
                     onClick={() => { setSelectedAmount(donation.amount); setIsCustom(false); }}
-                    className={`relative p-3 rounded-2xl border-2 text-center transition-all font-body ${
+                    className={`relative p-3  border-2 text-center transition-all font-body ${
                       !isCustom && selectedAmount === donation.amount
-                        ? "border-[#09090b] bg-slate-50 text-[#f97316]"
+                        ? "border-[#111827] bg-slate-50 text-[#1A3A6B]"
                         : "border-gray-200 hover:border-slate-200 text-gray-700"
                     } ${donation.highlight ? "ring-2 ring-orange-400/30" : ""}`}
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.97 }}
                   >
                     {donation.highlight && (
-                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-[#09090b] text-white text-[9px] font-bold whitespace-nowrap">
+                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-[#111827] text-white text-[9px] font-bold whitespace-nowrap">
                         POPULAR
                       </div>
                     )}
@@ -80,7 +80,7 @@ export default function DonateSection() {
                     <div className="font-heading font-bold text-lg">${donation.amount}</div>
                     <div className="text-[10px] text-gray-500 leading-tight">{donation.impact}</div>
                     {!isCustom && selectedAmount === donation.amount && (
-                      <div className="absolute top-2 right-2 w-4 h-4 rounded-full bg-[#09090b] flex items-center justify-center">
+                      <div className="absolute top-2 right-2 w-4 h-4 rounded-full bg-[#111827] flex items-center justify-center">
                         <CheckIcon size={10} className="text-white" />
                       </div>
                     )}
@@ -93,14 +93,14 @@ export default function DonateSection() {
                 onClick={() => setIsCustom(true)}
                 className={`w-full py-3 rounded-xl border-2 text-sm font-bold transition-all font-body mb-6 ${
                   isCustom
-                    ? "border-[#09090b] bg-slate-50 text-[#f97316]"
+                    ? "border-[#111827] bg-slate-50 text-[#1A3A6B]"
                     : "border-dashed border-gray-200 text-gray-500 hover:border-slate-200"
                 }`}
               >
                 {isCustom ? (
                   <input
                     type="number"
-                    className="w-full text-center bg-transparent outline-none text-[#f97316] font-heading text-lg"
+                    className="w-full text-center bg-transparent outline-none text-[#1A3A6B] font-heading text-lg"
                     placeholder="Enter custom amount ($)"
                     value={customAmount}
                     onChange={(e) => setCustomAmount(e.target.value)}
@@ -114,14 +114,14 @@ export default function DonateSection() {
               {/* Impact Calculator */}
               {effectiveAmount > 0 && (
                 <motion.div
-                  className="bg-[#09090b] rounded-2xl p-4 mb-6 border border-slate-100"
+                  className="bg-[#111827]  p-4 mb-6 border border-slate-100"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   <p className="text-sm text-gray-600 font-body mb-2">Your ${effectiveAmount} impact:</p>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <div className="font-heading font-bold text-2xl text-[#f97316]">
+                    <div className="font-heading font-bold text-2xl text-[#1A3A6B]">
                       {shoesCount}
                     </div>
                     <div className="text-sm text-gray-600 font-body">
@@ -150,7 +150,7 @@ export default function DonateSection() {
 
               {/* Donate button */}
               <motion.button
-                className="w-full btn-orange py-4 text-base justify-center rounded-2xl shadow-xl"
+                className="w-full btn-primary py-4 text-base justify-center  shadow-xl"
                 whileHover={{ y: -2, scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -178,15 +178,15 @@ export default function DonateSection() {
             viewport={viewportConfig}
           >
             <motion.div variants={fadeUp}>
-              <h3 className="font-heading text-2xl font-bold text-[#1a1a2e] mb-4">
+              <h3 className="font-heading text-2xl font-bold text-[#111827] mb-4">
                 Where Your Money Goes
               </h3>
             </motion.div>
 
             {[
-              { pct: "85%", label: "Direct Program Costs", desc: "Shoes, training materials, community outreach", color: "bg-[#09090b]", width: "85%" },
-              { pct: "10%", label: "Operations", desc: "Coordination, volunteer management, logistics", color: "bg-[#f97316]", width: "10%" },
-              { pct: "5%", label: "Administration", desc: "Reporting, compliance, strategic growth", color: "bg-[#15803d]", width: "5%" },
+              { pct: "85%", label: "Direct Program Costs", desc: "Shoes, training materials, community outreach", color: "bg-[#111827]", width: "85%" },
+              { pct: "10%", label: "Operations", desc: "Coordination, volunteer management, logistics", color: "bg-[#1A3A6B]", width: "10%" },
+              { pct: "5%", label: "Administration", desc: "Reporting, compliance, strategic growth", color: "bg-[#16A34A]", width: "5%" },
             ].map((item, i) => (
               <motion.div key={item.label} variants={fadeUp} className="group">
                 <div className="flex items-center justify-between mb-1.5">
@@ -209,7 +209,7 @@ export default function DonateSection() {
             {/* Testimonial */}
             <motion.div
               variants={fadeUp}
-              className="mt-4 bg-[#09090b] rounded-2xl p-5 border border-slate-100"
+              className="mt-4 bg-[#111827]  p-5 border border-slate-100"
             >
               <p className="font-body text-gray-700 text-sm italic leading-relaxed mb-3">
                 &ldquo;Access Bank&apos;s partnership helped us distribute 1,000 pairs of shoes
@@ -217,7 +217,7 @@ export default function DonateSection() {
                 were attending school who hadn&apos;t been before.&rdquo;
               </p>
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-[#09090b] flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-[#111827] flex items-center justify-center">
                   <span className="text-white font-bold text-xs">AB</span>
                 </div>
                 <div>
@@ -235,7 +235,7 @@ export default function DonateSection() {
                   <a
                     key={way}
                     href="#volunteer"
-                    className="px-3 py-1.5 rounded-full border border-gray-200 text-xs font-bold text-gray-600 hover:border-[#09090b] hover:text-[#f97316] transition-all font-body"
+                    className="px-3 py-1.5 rounded-full border border-gray-200 text-xs font-bold text-gray-600 hover:border-[#111827] hover:text-[#1A3A6B] transition-all font-body"
                   >
                     {way}
                   </a>

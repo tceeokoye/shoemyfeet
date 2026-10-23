@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { fadeUp, fadeLeft, fadeRight, staggerContainer, viewportConfig } from "@/lib/animations";
 import { PROGRAMS } from "@/lib/constants";
 import { ArrowRight, Package, Wrench, Heart } from "lucide-react";
@@ -20,7 +20,7 @@ const programImages = [
 
 export default function ProgramsSection() {
   return (
-    <section id="programs" className="section-padding bg-[#09090b] overflow-hidden">
+    <section id="programs" className="section-padding bg-[#111827] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -34,9 +34,9 @@ export default function ProgramsSection() {
           <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-emerald-100 text-[#16a34a] text-sm font-bold mb-4 border border-emerald-200">
             Our Programs
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-4xl sm:text-5xl font-bold text-[#1a1a2e] mb-4">
+          <motion.h2 variants={fadeUp} className="font-heading text-4xl sm:text-5xl font-bold text-[#111827] mb-4">
             Three Ways We&apos;re{" "}
-            <span className="text-[#f97316]">Changing Lives</span>
+            <span className="text-[#1A3A6B]">Changing Lives</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-lg text-gray-600 font-body leading-relaxed">
             Combining immediate impact with long-term community empowerment —
@@ -62,8 +62,8 @@ export default function ProgramsSection() {
                 variants={index % 2 === 0 ? fadeLeft : fadeRight}
                 className={index % 2 === 1 ? "md:order-2" : ""}
               >
-                <div className="relative rounded-3xl overflow-hidden shadow-xl group">
-                  <div className="absolute inset-0 bg-[#09090b] blur-xl scale-105 z-[-1]" />
+                <div className="relative rounded-2xl overflow-hidden shadow-xl group">
+                  <div className="absolute inset-0 bg-[#111827] blur-xl scale-105 z-[-1]" />
                   <Image
                     src={programImages[index]}
                     alt={program.title}
@@ -71,7 +71,7 @@ export default function ProgramsSection() {
                     height={380}
                     className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-[#09090b]" />
+                  <div className="absolute inset-0 bg-[#111827]" />
 
                   {/* Floating stat */}
                   <motion.div
@@ -99,7 +99,7 @@ export default function ProgramsSection() {
                   </span>
                 </div>
 
-                <h3 className="font-heading font-bold text-3xl text-[#1a1a2e]">
+                <h3 className="font-heading font-bold text-3xl text-[#111827]">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 font-body leading-relaxed">

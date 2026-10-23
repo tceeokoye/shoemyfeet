@@ -1,8 +1,9 @@
-"use client";
+﻿"use client";
 
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
+import { Footprints, UsersRound, MapPin, School, Handshake } from "lucide-react";
 
 function Counter({ value, suffix, prefix = "" }: { value: number; suffix: string; prefix?: string }) {
   const [count, setCount] = useState(0);
@@ -35,12 +36,12 @@ function Counter({ value, suffix, prefix = "" }: { value: number; suffix: string
 }
 
 const stats = [
-  { value: 6500, suffix: "+", label: "Children Reached", emoji: "👧", color: "text-[#f97316]" },
-  { value: 6500, suffix: "+", label: "Pairs of Shoes Distributed", emoji: "👟", color: "text-[#f97316]" },
-  { value: 18, suffix: "+", label: "Communities Served", emoji: "📍", color: "text-[#15803d]" },
-  { value: 24, suffix: "+", label: "Schools Partnered With", emoji: "🏫", color: "text-[#f97316]" },
-  { value: 150, suffix: "+", label: "Volunteers Engaged", emoji: "🙌", color: "text-[#f97316]" },
-  { value: 12, suffix: "+", label: "Corporate Partners", emoji: "🤝", color: "text-[#f59e0b]" },
+  { value: 6500, suffix: "+", label: "Children Reached", icon: UsersRound, color: "text-[#1A3A6B]" },
+  { value: 6500, suffix: "+", label: "Pairs of Shoes Distributed", icon: Footprints, color: "text-[#1A3A6B]" },
+  { value: 18, suffix: "+", label: "Communities Served", icon: MapPin, color: "text-[#16A34A]" },
+  { value: 24, suffix: "+", label: "Schools Partnered With", icon: School, color: "text-[#1A3A6B]" },
+  { value: 150, suffix: "+", label: "Volunteers Engaged", icon: UsersRound, color: "text-[#1A3A6B]" },
+  { value: 12, suffix: "+", label: "Corporate Partners", icon: Handshake, color: "text-[#1A3A6B]" },
 ];
 
 export default function ProgramImpact() {
@@ -48,7 +49,7 @@ export default function ProgramImpact() {
   const inView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section className="section-padding bg-[#09090b] overflow-hidden relative">
+    <section className="section-padding bg-[#111827] overflow-hidden relative">
       {/* Footprint SVG background pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none overflow-hidden">
         {[...Array(12)].map((_, i) => (
@@ -61,7 +62,7 @@ export default function ProgramImpact() {
               transform: `rotate(${i % 2 === 0 ? -15 : 15}deg)`,
             }}
           >
-            👣
+            <Footprints size={48} className="text-white/15" aria-hidden="true" />
           </div>
         ))}
       </div>
@@ -83,7 +84,7 @@ export default function ProgramImpact() {
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
             Every Number Is a{" "}
-            <span className="text-amber-300">Child&apos;s Story</span>
+            <span className="text-[#142E56]">Child&apos;s Story</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-neutral-200/90 font-body text-base mt-4 leading-relaxed">
             Behind every statistic is a real child who walks to school with confidence, a family with renewed hope,
@@ -99,10 +100,10 @@ export default function ProgramImpact() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ type: "spring" as const, stiffness: 80, damping: 18, delay: i * 0.1 }}
               whileHover={{ y: -6, scale: 1.02, transition: { type: "spring" as const, stiffness: 280, damping: 22 } }}
-              className="group relative bg-white rounded-3xl p-7 text-center border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="group relative bg-white rounded-2xl p-7 text-center border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
-              <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-2xl shadow-sm mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                {stat.emoji}
+              <div className="w-14 h-14  bg-slate-50 border border-slate-100 flex items-center justify-center text-2xl shadow-sm mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <stat.icon size={25} className={stat.color} strokeWidth={1.8} aria-hidden="true" />
               </div>
               <div className={`font-heading text-4xl sm:text-5xl font-bold ${stat.color} mb-2`}>
                 <Counter value={stat.value} suffix={stat.suffix} />

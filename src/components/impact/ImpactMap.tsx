@@ -1,9 +1,9 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
-import { MapPinIcon } from "@/components/ui/Icons";
+import { MapPinIcon, ArrowRightIcon } from "@/components/ui/Icons";
 
 const regions = [
   {
@@ -14,12 +14,11 @@ const regions = [
     communities: 8,
     schools: 5,
     description: "Our founding state and primary base of operations. Home to our first distribution and ongoing child shoemaking program.",
-    color: "bg-[#09090b]",
-    dotColor: "#f97316",
+    color: "bg-[#111827]",
+    dotColor: "#1A3A6B",
     x: "52%",
     y: "65%",
     highlights: ["First distribution site", "kids shoemaking hub", "8 communities served"],
-    flag: "🏙️",
   },
   {
     id: "kaduna",
@@ -29,12 +28,11 @@ const regions = [
     communities: 7,
     schools: 5,
     description: "Our Northern Nigeria expansion. Over 2,000 shoes distributed in early 2024, marking our first major northern outreach.",
-    color: "bg-[#f97316]",
-    dotColor: "#f97316",
+    color: "bg-[#1A3A6B]",
+    dotColor: "#1A3A6B",
     x: "40%",
     y: "32%",
     highlights: ["2,000+ shoes in 2024", "Northern Nigeria breakthrough", "7 communities reached"],
-    flag: "🏔️",
   },
   {
     id: "edo",
@@ -44,12 +42,11 @@ const regions = [
     communities: 3,
     schools: 2,
     description: "Our newest expansion, launched in 2026 through a Benin City community outreach with national media coverage.",
-    color: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
     dotColor: "#16a34a",
     x: "38%",
     y: "68%",
     highlights: ["2026 expansion", "Benin City outreach", "National media coverage"],
-    flag: "🌿",
   },
 ];
 
@@ -126,11 +123,11 @@ export default function ImpactMap() {
   const selected = regions.find((r) => r.id === activeRegion) || regions[0];
 
   return (
-    <section className="section-padding bg-[#09090b] overflow-hidden relative">
+    <section className="section-padding bg-[#111827] overflow-hidden relative">
       {/* Background glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full bg-[#f97316]/10 blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-[#f97316]/10 blur-[140px]" />
+        <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full bg-[#1A3A6B]/10 blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-[#1A3A6B]/10 blur-[140px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -152,8 +149,8 @@ export default function ImpactMap() {
             variants={fadeUp}
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight"
           >
-            Where We're{" "}
-            <span className="text-warm-orange">
+            Where We&apos;re{" "}
+            <span className="text-[#1A3A6B]">
               Making an Impact
             </span>
           </motion.h2>
@@ -161,7 +158,7 @@ export default function ImpactMap() {
             variants={fadeUp}
             className="text-neutral-300 text-base sm:text-lg font-body leading-relaxed"
           >
-            Currently active across 3 Nigerian states, we're growing our reach to serve more underserved communities every year.
+            Currently active across 3 Nigerian states, we&apos;re growing our reach to serve more underserved communities every year.
           </motion.p>
         </motion.div>
 
@@ -172,7 +169,7 @@ export default function ImpactMap() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="glass-dark rounded-3xl p-6 sm:p-8"
+            className="glass-dark rounded-2xl p-6 sm:p-8"
           >
             <NigeriaMap activeRegion={activeRegion} onSelect={setActiveRegion} />
             
@@ -188,7 +185,7 @@ export default function ImpactMap() {
                       : "bg-white/10 text-neutral-300 hover:bg-white/20 border border-white/10"
                   }`}
                 >
-                  {region.flag} {region.name}
+                  <MapPinIcon size={14} className="mr-1 inline-block" aria-hidden="true" /> {region.name}
                 </button>
               ))}
             </div>
@@ -211,11 +208,11 @@ export default function ImpactMap() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className={`w-12 h-12 rounded-xl selected.color flex items-center justify-center text-2xl shadow-lg`}>
-                    {selected.flag}
+                    <MapPinIcon size={22} className="text-white" aria-hidden="true" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <MapPinIcon size={16} className="text-warm-orange" />
+                      <MapPinIcon size={16} className="text-[#1A3A6B]" />
                       <h3 className="font-heading text-2xl font-bold text-white">{selected.name}</h3>
                     </div>
                     <p className="text-orange-300 text-xs font-body">Active since {selected.id === "enugu" ? "2022" : selected.id === "kaduna" ? "2023" : "2026"}</p>
@@ -231,7 +228,7 @@ export default function ImpactMap() {
                     { label: "Communities", value: selected.communities + "+" },
                     { label: "Schools", value: selected.schools + "+" },
                   ].map((stat) => (
-                    <div key={stat.label} className="glass-dark rounded-2xl p-4 text-center border border-white/10">
+                    <div key={stat.label} className="glass-dark  p-4 text-center border border-white/10">
                       <div className={`font-heading text-2xl font-bold selected.color bg-clip-text text-transparent`}>
                         {stat.value}
                       </div>
@@ -264,11 +261,11 @@ export default function ImpactMap() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="mt-8 p-4 rounded-2xl border border-white/15 bg-white/5 backdrop-blur-sm"
+              className="mt-8 p-4  border border-white/15 bg-white/5 backdrop-blur-sm"
             >
               <p className="text-orange-300 text-sm font-body">
-                <span className="text-warm-orange font-bold">🚀 Expanding soon:</span>{" "}
-                We're planning to reach Lagos, Abuja, Rivers, and Anambra states in our next phase of national expansion.
+                <span className="text-[#1A3A6B] font-bold"><ArrowRightIcon size={14} className="mr-1 inline-block" aria-hidden="true" /> Expanding soon:</span>{" "}
+                We&apos;re planning to reach Lagos, Abuja, Rivers, and Anambra states in our next phase of national expansion.
               </p>
             </motion.div>
           </motion.div>

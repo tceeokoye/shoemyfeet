@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { fadeUp, fadeRight, staggerContainer, viewportConfig } from "@/lib/animations";
 import { ArrowRightIcon, HeartIcon, GlobeIcon, StarIcon } from "@/components/ui/Icons";
 
@@ -9,7 +9,7 @@ export default function VolunteerSection() {
   return (
     <section id="volunteer" className="section-padding overflow-hidden relative">
       {/* Background */}
-      <div className="absolute inset-0 bg-[#09090b]" />
+      <div className="absolute inset-0 bg-[#111827]" />
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-emerald-200/30 animate-blob-slow" />
         <div className="absolute bottom-20 left-20 w-48 h-48 rounded-full bg-orange-200/30 animate-blob" />
@@ -30,9 +30,9 @@ export default function VolunteerSection() {
               Join Our Movement
             </motion.span>
 
-            <motion.h2 variants={fadeUp} className="font-heading text-4xl sm:text-5xl font-bold text-[#1a1a2e]">
+            <motion.h2 variants={fadeUp} className="font-heading text-4xl sm:text-5xl font-bold text-[#111827]">
               Become a{" "}
-              <span className="text-[#f97316]">Change-Maker</span>{" "}
+              <span className="text-[#1A3A6B]">Change-Maker</span>{" "}
               Today
             </motion.h2>
 
@@ -60,7 +60,7 @@ export default function VolunteerSection() {
                 >
                   <span className="text-xl group-hover:scale-110 transition-transform">{item.icon}</span>
                   <div>
-                    <p className="font-heading font-bold text-sm text-[#1a1a2e]">{item.title}</p>
+                    <p className="font-heading font-bold text-sm text-[#111827]">{item.title}</p>
                     <p className="text-xs text-gray-500 font-body">{item.desc}</p>
                   </div>
                 </motion.div>
@@ -68,11 +68,11 @@ export default function VolunteerSection() {
             </motion.div>
 
             <motion.div variants={fadeUp} className="flex flex-wrap gap-3 pt-2">
-              <button className="btn-primary group">
+              <button className="btn-primary group rounded-[10px]">
                 Apply to Volunteer
                 <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="px-5 py-3 rounded-full font-bold text-[#f97316] border-2 border-[#09090b] hover:bg-[#09090b] hover:text-white transition-all font-body">
+              <button className="btn-secondary rounded-[10px]">
                 Corporate Volunteering
               </button>
             </motion.div>
@@ -86,8 +86,8 @@ export default function VolunteerSection() {
             viewport={viewportConfig}
             className="relative"
           >
-            <div className="absolute inset-0 bg-[#09090b] rounded-3xl blur-2xl scale-105" />
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="absolute inset-0 bg-[#111827] rounded-2xl blur-2xl scale-105" />
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/volunteers.jpg"
                 alt="Happy volunteers at Shoe My Feet Foundation shoe distribution event"
@@ -95,21 +95,21 @@ export default function VolunteerSection() {
                 height={480}
                 className="w-full h-96 object-cover"
               />
-              <div className="absolute inset-0 bg-[#09090b]" />
+              <div className="absolute inset-0 bg-[#111827]" />
             </div>
 
             {/* Stats */}
             <motion.div
-              className="absolute -bottom-6 -right-4 glass rounded-2xl px-5 py-4 shadow-xl border border-white/40"
+              className="absolute -bottom-6 -right-4 glass  px-5 py-4 shadow-xl border border-white/40"
               animate={{ y: [-4, 4, -4] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#09090b] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#111827] flex items-center justify-center">
                   <GlobeIcon size={18} className="text-white" />
                 </div>
                 <div>
-                  <div className="font-heading font-bold text-[#f97316] text-xl">200+</div>
+                  <div className="font-heading font-bold text-[#1A3A6B] text-xl">200+</div>
                   <div className="text-xs text-gray-500 font-body">Active Volunteers</div>
                 </div>
               </div>
@@ -117,13 +117,13 @@ export default function VolunteerSection() {
 
             {/* Review stars */}
             <motion.div
-              className="absolute -top-4 -left-4 glass rounded-2xl px-4 py-3 shadow-xl border border-white/40"
+              className="absolute -top-4 -left-4 glass  px-4 py-3 shadow-xl border border-white/40"
               animate={{ y: [4, -4, 4] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             >
               <div className="flex gap-0.5 mb-1">
                 {[1,2,3,4,5].map((s) => (
-                  <StarIcon key={s} size={12} className="fill-amber-400 text-amber-400" />
+                  <StarIcon key={s} size={12} className="fill-[#1A3A6B] text-[#1A3A6B]" />
                 ))}
               </div>
               <p className="text-xs text-gray-600 font-body max-w-[120px]">

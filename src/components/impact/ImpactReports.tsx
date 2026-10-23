@@ -1,145 +1,167 @@
-"use client";
+import Link from "next/link";
 
-import { motion } from "framer-motion";
-import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
+const documentHref = "/SHOE%20MY%20FEET%20FOUNDATION%20BRIEF%20FOR%20WEBSITE.docx";
 
-const reports = [
+const projectReports = [
   {
-    year: "2024",
-    title: "Annual Impact Report",
-    description: "Our comprehensive 2024 impact report documenting shoe distributions, community outreach events, children's empowerment outcomes, and financial transparency.",
-    icon: "📊",
-    color: "bg-[#09090b]",
-    bg: "bg-slate-50",
-    border: "border-slate-100",
-    badge: "Full Report",
-    badgeColor: "bg-orange-100 text-[#0a0a0a]",
-  },
-  {
-    year: "2024",
-    title: "Financial Summary",
-    description: "A transparent breakdown of how every Naira donated was spent — from shoe procurement to volunteer logistics and community events.",
-    icon: "💰",
-    color: "bg-[#15803d]",
-    bg: "bg-emerald-50",
-    border: "border-emerald-100",
-    badge: "Financials",
-    badgeColor: "bg-emerald-100 text-emerald-700",
-  },
-  {
-    year: "2024",
-    title: "Community Outreach Report",
-    description: "Detailed accounts of every community visit, school partnership, and outreach event conducted across Enugu, Kaduna, and Edo states.",
-    icon: "🏘️",
-    color: "bg-[#f97316]",
-    bg: "bg-orange-50",
-    border: "border-orange-100",
-    badge: "Outreach Data",
-    badgeColor: "bg-orange-100 text-orange-700",
-  },
-  {
-    year: "2024",
-    title: "Partnership Report",
-    description: "An overview of our corporate and institutional partnerships, CSR outcomes, and the collective impact driven by collaboration.",
-    icon: "🤝",
-    color: "bg-[#09090b]",
-    bg: "bg-purple-50",
-    border: "border-purple-100",
-    badge: "Partnerships",
-    badgeColor: "bg-purple-100 text-purple-700",
+    title: "Shoe My Feet Outreach Report 2022–2024",
+    href: documentHref,
+    external: true,
   },
 ];
 
+const publications = [
+  {
+    title:
+      "Sustainable Elimination of Schistosomiasis in Ethiopia - A Five-Year Follow Up Study",
+  },
+  {
+    title:
+      "Schistosomiasis Control in Ethiopia: The Role of Snail Mapping in Endemic Communities",
+  },
+  {
+    title:
+      "High Prevalence of Soil-Transmitted Helminths and Schistosomiasis Among Primary Schoolchildren in Southwest Ethiopia: The Need for Health Strategies Alongside Mass Drug Administration",
+  },
+  {
+    title:
+      "Childhood Intestinal Parasitic Infection and Sanitation Predictors in Rural Dembiya, Northwest Ethiopia",
+  },
+  {
+    title:
+      "Deworming School Children in Ethiopia: The Importance of a Comprehensive Approach",
+  },
+  {
+    title:
+      "Motivating School Communities Towards Behavior Change and Local Ownership: A Gamification Intervention to Prevent Trachoma at Primary Schools in Southern Ethiopia",
+  },
+  {
+    title:
+      "Seasonal and Spatial Dynamics of Freshwater Snails and Schistosomiasis in Mizan Aman, Southwest Ethiopia",
+  },
+];
+
+export function ReportDocumentLink({
+  title,
+  href,
+  external,
+}: {
+  title: string;
+  href: string;
+  external?: boolean;
+}) {
+  return (
+    <a
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noreferrer" : undefined}
+      aria-label={`Open ${title}`}
+      className="group flex flex-col items-center px-2 py-3 text-center"
+    >
+      <svg
+        viewBox="0 0 32 38"
+        className="h-9 w-8 shrink-0 text-[#1A3A6B] transition-transform duration-200 group-hover:-translate-y-1"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M5 1.5h14l8 8V34a2.5 2.5 0 0 1-2.5 2.5h-17A2.5 2.5 0 0 1 5 34V1.5Z"
+          fill="currentColor"
+        />
+        <path d="M19 1.5v8h8" fill="white" fillOpacity=".9" />
+        <path
+          d="M19 1.5v8h8M10 17h11M10 21h8"
+          stroke="white"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M12 29c2-5 4-8 6-9 1-1 2 0 1 1-2 3-6 7-9 8-1 0-1-1 0-1 4-1 9-1 12 0"
+          stroke="white"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+      <span className="mt-3 max-w-[14rem] text-sm leading-5 text-[#111827] group-hover:underline group-focus-visible:underline">
+        {title}
+      </span>
+    </a>
+  );
+}
+
 export default function ImpactReports() {
   return (
-    <section className="section-padding bg-[#f8fafc] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          className="text-center max-w-3xl mx-auto mb-14"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-        >
-          <motion.span
-            variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-700 text-xs sm:text-sm font-bold border border-indigo-200 mb-4"
-          >
-            Annual Reports & Transparency
-          </motion.span>
-          <motion.h2
-            variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
-          >
-            Open, Accountable,{" "}
-            <span className="text-[#f97316]">Transparent</span>
-          </motion.h2>
-          <motion.p
-            variants={fadeUp}
-            className="text-base sm:text-lg text-gray-600 font-body leading-relaxed"
-          >
-            We believe in full transparency. Every report below details exactly how your support has been used to create measurable, verifiable impact.
-          </motion.p>
-        </motion.div>
-
-        {/* Report Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {reports.map((report, index) => (
-            <motion.div
-              key={report.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.55, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 22 } }}
-              className={`${report.bg} ${report.border} border rounded-3xl p-6 group hover:shadow-xl transition-all duration-500 relative overflow-hidden`}
-            >
-              {/* Background glow */}
-              <div className={`absolute -bottom-6 -right-6 w-20 h-20 rounded-full report.color opacity-10 group-hover:opacity-20 transition-opacity duration-500`} />
-
-              {/* Icon */}
-              <div className={`w-14 h-14 rounded-2xl report.color flex items-center justify-center text-3xl shadow-lg mb-4`}>
-                {report.icon}
-              </div>
-
-              {/* Badge */}
-              <span className={`inline-block text-xs font-bold px-2.5 py-0.5 rounded-full font-body mb-3 ${report.badgeColor}`}>
-                {report.badge} · {report.year}
-              </span>
-
-              {/* Title */}
-              <h3 className="font-heading text-lg font-bold text-[#1a1a2e] mb-3">{report.title}</h3>
-
-              {/* Description */}
-              <p className="font-body text-gray-600 text-sm leading-relaxed mb-6">{report.description}</p>
-
-              {/* Download button */}
-              <button
-                className={`w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-sm font-bold font-body report.color text-white shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer`}
-                aria-label={`Download ${report.title}`}
+    <>
+      <section className="bg-white px-5 py-14 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-12 md:grid-cols-2 md:gap-10">
+            <section id="project-reports" aria-labelledby="project-reports-heading">
+              <h2
+                id="project-reports-heading"
+                className="mb-8 text-center font-heading text-2xl font-bold text-[#1A3A6B] sm:text-3xl"
               >
-                <span>📥</span>
-                <span>Download Report</span>
-              </button>
-            </motion.div>
-          ))}
-        </div>
+                Project Reports
+              </h2>
+              <div className="grid grid-cols-2 gap-x-2 gap-y-7 sm:grid-cols-3">
+                {projectReports.map((report) => (
+                  <ReportDocumentLink key={report.title} {...report} />
+                ))}
+              </div>
+            </section>
 
-        {/* Trust note */}
-        <motion.div
-          className="mt-12 text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <p className="font-body text-gray-500 text-sm">
-            🔒 Shoe My Feet Foundation is a{" "}
-            <span className="font-bold text-[#f97316]">CAC-Registered Incorporated Trustee</span>. All reports are verified and published annually.
-          </p>
-        </motion.div>
-      </div>
-    </section>
+            <section id="annual-reports" aria-labelledby="annual-reports-heading">
+              <h2
+                id="annual-reports-heading"
+                className="mb-8 text-center font-heading text-2xl font-bold text-[#F97316] sm:text-3xl"
+              >
+                Annual Reports
+              </h2>
+              <p className="mx-auto max-w-sm border-l-2 border-[#F97316] px-5 py-3 text-center text-sm leading-6 text-[#565650]">
+                Annual reports will be listed here when they are available.
+              </p>
+            </section>
+          </div>
+
+          <div className="mt-10 border-t border-[#e7e5df] pt-6 text-center">
+            <Link
+              href="/about/report"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A3A6B] transition-colors hover:text-[#142E56] hover:underline"
+            >
+              View the school-by-school distribution register
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="publications"
+        aria-labelledby="publications-heading"
+        className="bg-[#F8F8F7] px-5 py-16 sm:px-8 sm:py-20"
+      >
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14">
+            <h2
+              id="publications-heading"
+              className="font-heading text-3xl font-bold text-[#1A3A6B] sm:text-4xl"
+            >
+              Publications
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
+            {publications.map((publication) => (
+              <ReportDocumentLink
+                key={publication.title}
+                title={publication.title}
+                href={documentHref}
+                external
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

@@ -1,9 +1,10 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { GROUP_TYPES } from "@/lib/volunteerData";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 import { ArrowRightIcon, CheckIcon } from "@/components/ui/Icons";
+import { Building2 } from "lucide-react";
 
 export default function CorporateVolunteering() {
   return (
@@ -19,16 +20,16 @@ export default function CorporateVolunteering() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold border border-slate-200 mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-xs sm:text-sm font-bold border border-slate-200 mb-4"
           >
             Group & Corporate Volunteering
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
             Volunteer as a{" "}
-            <span className="text-[#f97316]">Team</span>
+            <span className="text-[#1A3A6B]">Team</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -48,7 +49,7 @@ export default function CorporateVolunteering() {
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.5, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -8, scale: 1.01, transition: { type: "spring", stiffness: 280, damping: 20 } }}
-              className="group relative bg-white/70 backdrop-blur-sm rounded-3xl p-7 border border-white shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-default"
+              className="group relative bg-white/70 backdrop-blur-sm rounded-2xl p-7 border border-white shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-default"
               style={{
                 background: "rgba(255,255,255,0.75)",
                 backdropFilter: "blur(20px) saturate(180%)",
@@ -57,21 +58,21 @@ export default function CorporateVolunteering() {
               }}
             >
               {/* Glass gradient overlay on hover */}
-              <div className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 group.color`} style={{ opacity: 0 }} />
+              <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 group.color`} style={{ opacity: 0 }} />
               <div className={`absolute -top-20 -right-20 w-40 h-40 rounded-full group.color opacity-5 group-hover:opacity-10 transition-opacity duration-500 blur-xl`} />
 
               {/* Icon */}
               <motion.div
-                className={`relative z-10 w-14 h-14 rounded-2xl group.color flex items-center justify-center text-3xl shadow-lg mb-5`}
+                className={`relative z-10 w-14 h-14  group.color flex items-center justify-center text-3xl shadow-lg mb-5`}
                 animate={{ rotate: [0, 3, -3, 0] }}
                 transition={{ duration: 5 + index * 0.4, repeat: Infinity, ease: "easeInOut", delay: index * 0.3 }}
               >
-                {group.icon}
+                <group.icon size={24} strokeWidth={1.8} aria-hidden="true" />
               </motion.div>
 
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="font-heading text-xl font-bold text-[#1a1a2e] mb-2 group-hover:text-[#f97316] transition-colors duration-300">
+                <h3 className="font-heading text-xl font-bold text-[#111827] mb-2 group-hover:text-[#1A3A6B] transition-colors duration-300">
                   {group.title}
                 </h3>
                 <p className="font-body text-gray-500 text-sm leading-relaxed mb-5">{group.description}</p>
@@ -102,7 +103,7 @@ export default function CorporateVolunteering() {
 
         {/* CSR highlight blurb */}
         <motion.div
-          className="mt-14 rounded-3xl bg-[#09090b] p-8 sm:p-10 text-center relative overflow-hidden"
+          className="mt-14 rounded-2xl bg-[#111827] p-8 sm:p-10 text-center relative overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -113,14 +114,14 @@ export default function CorporateVolunteering() {
             <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-slate-800/8 blur-[80px]" />
           </div>
           <div className="relative z-10">
-            <div className="text-4xl mb-4">🏢</div>
+            <Building2 size={30} className="mx-auto mb-4 text-[#1A3A6B]" strokeWidth={1.8} aria-hidden="true" />
             <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-3">
               CSR That Actually Matters
             </h3>
             <p className="font-body text-neutral-300/80 text-base leading-relaxed max-w-2xl mx-auto mb-6">
               Partner with us for a corporate social responsibility experience that goes beyond a press release. Your team will sort shoes, visit schools, and see firsthand the difference you make — documented with photos and a full impact report.
             </p>
-            <a href="/contact" className="btn-orange inline-flex items-center gap-2 px-8 py-4 text-base">
+            <a href="/contact" className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-base">
               Plan Your Corporate Day →
             </a>
           </div>

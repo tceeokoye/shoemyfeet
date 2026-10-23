@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
 
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { motion } from "framer-motion";
 import { VOLUNTEER_SPOTLIGHTS, VolunteerSpotlight } from "@/lib/blogData";
 import { fadeUp, viewportConfig, scaleIn } from "@/lib/animations";
@@ -15,11 +15,11 @@ export default function VolunteerSpotlightSection({ onSpotlightClick }: Voluntee
     <section className="my-20">
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-16">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 text-warm-orange-dark font-bold text-xs uppercase tracking-wider mb-3">
-          <UsersIcon size={14} className="text-warm-orange" />
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B]-dark font-bold text-xs uppercase tracking-wider mb-3">
+          <UsersIcon size={14} className="text-[#1A3A6B]" />
           <span>Champions of Change</span>
         </div>
-        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-[#1a1a2e] mb-4">
+        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-[#111827] mb-4">
           Volunteer & Partner Spotlights
         </h2>
         <p className="text-gray-600 font-body text-sm sm:text-base leading-relaxed">
@@ -39,29 +39,29 @@ export default function VolunteerSpotlightSection({ onSpotlightClick }: Voluntee
           <motion.div
             key={person.id}
             variants={scaleIn}
-            className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+            className="bg-white rounded-2xl p-8 border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
           >
             {/* Top decorative gradient bar */}
-            <div className="absolute top-0 left-0 right-0 h-2 bg-[#09090b]" />
+            <div className="absolute top-0 left-0 right-0 h-2 bg-[#111827]" />
 
             <div>
               {/* Header: Portrait & Role */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="relative w-16 h-16 rounded-2xl overflow-hidden border-2 border-warm-orange/30 shadow-md group-hover:scale-105 transition-transform shrink-0">
+                <div className="relative w-16 h-16  overflow-hidden border-2 border-[#1A3A6B]/30 shadow-md group-hover:scale-105 transition-transform shrink-0">
                   <Image src={person.avatar} alt={person.name} fill className="object-cover" />
                 </div>
                 <div>
-                  <h3 className="font-heading font-bold text-lg text-[#1a1a2e] group-hover:text-warm-orange transition-colors">
+                  <h3 className="font-heading font-bold text-lg text-[#111827] group-hover:text-[#1A3A6B] transition-colors">
                     {person.name}
                   </h3>
-                  <span className="text-xs font-bold text-warm-orange block font-body">{person.role}</span>
+                  <span className="text-xs font-bold text-[#1A3A6B] block font-body">{person.role}</span>
                   <span className="text-[11px] text-gray-500 font-body block">{person.organization}</span>
                 </div>
               </div>
 
               {/* Location Badge */}
               <div className="flex items-center gap-1.5 text-xs text-gray-500 font-body mb-4">
-                <MapPinIcon size={14} className="text-[#f97316]" />
+                <MapPinIcon size={14} className="text-[#1A3A6B]" />
                 <span>{person.location}</span>
                 <span>•</span>
                 <span className="font-bold text-forest-green">{person.shoesDistributed.toLocaleString()}+ Shoes Impacted</span>
@@ -73,8 +73,8 @@ export default function VolunteerSpotlightSection({ onSpotlightClick }: Voluntee
               </p>
 
               {/* Quote */}
-              <div className="bg-slate-50/70 p-4 rounded-2xl border-l-4 border-[#09090b] relative mb-6">
-                <QuoteIcon size={16} className="text-[#f97316]/20 absolute top-2 right-2" />
+              <div className="bg-slate-50/70 p-4  border-l-4 border-[#111827] relative mb-6">
+                <QuoteIcon size={16} className="text-[#1A3A6B]/20 absolute top-2 right-2" />
                 <p className="font-body italic text-xs text-gray-700 leading-relaxed">
                   &ldquo;{person.quote}&rdquo;
                 </p>
@@ -85,7 +85,7 @@ export default function VolunteerSpotlightSection({ onSpotlightClick }: Voluntee
             <button
               type="button"
               onClick={() => onSpotlightClick(person)}
-              className="w-full py-3 px-4 rounded-xl bg-gray-50 text-[#f97316] hover:bg-[#09090b] hover:text-white font-bold text-xs transition-all duration-300 inline-flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
+              className="w-full py-3 px-4 rounded-xl bg-gray-50 text-[#1A3A6B] hover:bg-[#111827] hover:text-white font-bold text-xs transition-all duration-300 inline-flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
             >
               <span>Read Full Spotlight</span>
               <ArrowRightIcon size={13} />

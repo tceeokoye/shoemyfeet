@@ -1,48 +1,59 @@
+
 "use client";
 
 import { motion } from "framer-motion";
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
 
 const metrics = [
-  { value: 6500, suffix: "+", label: "Pairs Distributed", icon: "👟" },
-  { value: 18,   suffix: "+", label: "Schools & Communities", icon: "🏫" },
-  { value: 137,  suffix: "+", label: "Kids Trained", icon: "🛠️" },
-  { value: 3,    suffix: "",  label: "Nigerian States", icon: "🗺️" },
+  { value: 6500, suffix: "+", label: "Pairs Distributed" },
+  { value: 18, suffix: "+", label: "Schools & Communities" },
+  { value: 137, suffix: "+", label: "Kids Trained" },
+  { value: 3, suffix: "", label: "Nigerian States" },
 ];
 
-function Counter({ metric, index }: { metric: typeof metrics[0]; index: number }) {
-  const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: true });
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.4,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: -100,
+    scale: 0.9,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 1.3,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+};
+
+
+function Counter({
+  metric,
+}: {
+  metric: (typeof metrics)[number];
+}) {
   return (
     <motion.div
-      ref={ref}
-      className="flex flex-col items-center text-center px-4 py-8 sm:py-10 relative group"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+      variants={cardVariants}
+      className="rounded-xl bg-white px-4 py-6 text-center shadow-md sm:py-8"
     >
-      {/* Divider (except first) */}
-      {index > 0 && (
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-10 w-px bg-white/10 hidden sm:block" />
-      )}
-
-      <span className="text-3xl mb-2 filter drop-shadow">{metric.icon}</span>
-
-      <div
-        className="font-heading font-extrabold text-white leading-none mb-1 drop-shadow-sm flex items-center justify-center gap-0.5"
-        style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)" }}
-      >
-        {inView ? (
-          <CountUp end={metric.value} duration={2.2} separator="," />
-        ) : (
-          "0"
-        )}
-        <span className="text-[#f97316]">{metric.suffix}</span>
+      <div className="mb-2 flex items-center justify-center gap-0.5 font-heading text-3xl font-semibold leading-none text-[#142E56] sm:text-4xl">
+        {metric.value.toLocaleString()}
+        {metric.suffix}
       </div>
 
-      <p className="font-body text-xs sm:text-sm text-neutral-300 font-semibold tracking-wide uppercase">
+      <p className="font-body text-xs font-medium uppercase tracking-wide text-[#696558] sm:text-sm">
         {metric.label}
       </p>
     </motion.div>
@@ -51,17 +62,19 @@ function Counter({ metric, index }: { metric: typeof metrics[0]; index: number }
 
 export default function ImpactSection() {
   return (
-    <section className="bg-[#09090b] border-y border-white/10 text-white relative overflow-hidden">
-      {/* Subtle Glow */}
-      <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-60 h-60 bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-60 h-60 bg-black/10 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-2 sm:grid-cols-4 divide-x-0 sm:divide-x divide-white/10">
-          {metrics.map((m, i) => (
-            <Counter key={m.label} metric={m} index={i} />
+    <section className="bg-[#FFFFFF] py-6 sm:py-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          className="grid grid-cols-2 gap-4 sm:grid-cols-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.25 }}
+        >
+          {metrics.map((metric) => (
+            <Counter key={metric.label} metric={metric} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

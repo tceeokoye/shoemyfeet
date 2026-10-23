@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -28,7 +28,7 @@ export default function VisitOfficeSection() {
   return (
     <section id="visit-office" className="section-padding bg-white relative overflow-hidden" aria-label="Visit our office">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#09090b] rounded-4xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+        <div className="bg-[#111827] rounded-4xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
           
           {/* Background Ambient Elements */}
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 bg-orange-400 blur-3xl pointer-events-none" />
@@ -49,7 +49,7 @@ export default function VisitOfficeSection() {
               </motion.span>
 
               <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-                Visit Our Office in <span className="text-warm-orange">Enugu</span>
+                Visit Our Office in <span className="text-[#1A3A6B]">Enugu</span>
               </motion.h2>
 
               <motion.p variants={fadeUp} className="text-neutral-200 font-body text-base leading-relaxed max-w-xl">
@@ -62,7 +62,7 @@ export default function VisitOfficeSection() {
                   { label: "Appointment", val: "Recommended" },
                   { label: "Accessibility", val: "100% Ramp Access" },
                 ].map((item) => (
-                  <div key={item.label} className="p-3 rounded-2xl bg-white/10 border border-white/10">
+                  <div key={item.label} className="p-3  bg-white/10 border border-white/10">
                     <div className="text-[10px] text-neutral-300 font-body font-semibold">{item.label}</div>
                     <div className="font-heading font-bold text-sm text-white mt-0.5">{item.val}</div>
                   </div>
@@ -72,7 +72,7 @@ export default function VisitOfficeSection() {
               <motion.div variants={fadeUp} className="pt-4 flex flex-wrap gap-4">
                 <button
                   onClick={() => setShowModal(true)}
-                  className="btn-orange text-base cursor-pointer shadow-lg shadow-orange-500/30"
+                  className="btn-primary text-base cursor-pointer shadow-lg shadow-163D2A/30"
                 >
                   <CalendarIcon size={18} />
                   <span>Schedule an Office Visit</span>
@@ -88,7 +88,7 @@ export default function VisitOfficeSection() {
               viewport={viewportConfig}
               className="lg:col-span-5 relative"
             >
-              <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 space-y-4">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 space-y-4">
                 <div className="text-4xl text-center">🏢</div>
                 <h3 className="font-heading font-bold text-xl text-center text-white">Visitor Amenities</h3>
                 
@@ -145,7 +145,7 @@ export default function VisitOfficeSection() {
                 <form onSubmit={handleBooking} className="space-y-4">
                   <div className="text-center mb-4">
                     <span className="text-3xl">🗓️</span>
-                    <h3 className="font-heading font-bold text-2xl text-[#1a1a2e] mt-1">Schedule a Visit</h3>
+                    <h3 className="font-heading font-bold text-2xl text-[#111827] mt-1">Schedule a Visit</h3>
                     <p className="text-xs text-gray-500 font-body">Book a guided tour of our Enugu headquarters</p>
                   </div>
 
@@ -157,7 +157,7 @@ export default function VisitOfficeSection() {
                       placeholder="e.g. Blessing Okafor"
                       value={visitForm.name}
                       onChange={(e) => setVisitForm({ ...visitForm, name: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#111827]"
                     />
                   </div>
 
@@ -169,7 +169,7 @@ export default function VisitOfficeSection() {
                       placeholder="blessing@example.com"
                       value={visitForm.email}
                       onChange={(e) => setVisitForm({ ...visitForm, email: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#111827]"
                     />
                   </div>
 
@@ -181,7 +181,7 @@ export default function VisitOfficeSection() {
                         required
                         value={visitForm.date}
                         onChange={(e) => setVisitForm({ ...visitForm, date: e.target.value })}
-                        className="w-full px-3 py-2 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
+                        className="w-full px-3 py-2 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#111827]"
                       />
                     </div>
                     <div>
@@ -189,7 +189,7 @@ export default function VisitOfficeSection() {
                       <select
                         value={visitForm.time}
                         onChange={(e) => setVisitForm({ ...visitForm, time: e.target.value })}
-                        className="w-full px-3 py-2 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
+                        className="w-full px-3 py-2 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#111827]"
                       >
                         <option value="10:00 AM">10:00 AM</option>
                         <option value="11:30 AM">11:30 AM</option>
@@ -204,7 +204,7 @@ export default function VisitOfficeSection() {
                     <select
                       value={visitForm.purpose}
                       onChange={(e) => setVisitForm({ ...visitForm, purpose: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#111827]"
                     >
                       <option value="General Visit & Tour">General Visit & Tour</option>
                       <option value="School Partnership">School Partnership Discussion</option>
@@ -214,7 +214,7 @@ export default function VisitOfficeSection() {
                     </select>
                   </div>
 
-                  <button type="submit" className="w-full btn-orange py-3 text-xs justify-center cursor-pointer">
+                  <button type="submit" className="w-full btn-primary py-3 text-xs justify-center cursor-pointer">
                     Confirm Appointment Booking
                   </button>
                 </form>
@@ -223,7 +223,7 @@ export default function VisitOfficeSection() {
                   <div className="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto text-2xl">
                     <CheckIcon size={32} />
                   </div>
-                  <h4 className="font-heading font-bold text-xl text-[#1a1a2e]">Appointment Reserved!</h4>
+                  <h4 className="font-heading font-bold text-xl text-[#111827]">Appointment Reserved!</h4>
                   <p className="text-xs text-gray-600 font-body">
                     A confirmation email has been sent to <strong>{visitForm.email}</strong> for <strong>{visitForm.date || "your requested date"}</strong> at <strong>{visitForm.time}</strong>.
                   </p>

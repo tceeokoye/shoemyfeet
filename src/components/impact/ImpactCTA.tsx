@@ -1,6 +1,7 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
+import { Footprints } from "lucide-react";
 import Link from "next/link";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 import { HeartIcon, ArrowRightIcon } from "@/components/ui/Icons";
@@ -19,12 +20,12 @@ const footprintPositions = [
 
 export default function ImpactCTA() {
   return (
-    <section className="section-padding bg-[#09090b] overflow-hidden relative">
+    <section className="section-padding bg-[#111827] overflow-hidden relative">
       {/* Glowing backgrounds */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full bg-[#f97316]/15 blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-[#f97316]/12 blur-[140px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-amber-400/5 blur-[160px]" />
+        <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full bg-[#1A3A6B]/15 blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-[#1A3A6B]/12 blur-[140px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[#1A3A6B]/5 blur-[160px]" />
       </div>
 
       {/* Animated footprint trail */}
@@ -37,14 +38,14 @@ export default function ImpactCTA() {
             animate={{ y: [0, -20, 0], opacity: [0.05, 0.18, 0.05] }}
             transition={{ duration: 3.5 + i * 0.4, repeat: Infinity, ease: "easeInOut", delay: fp.delay }}
           >
-            👣
+            <Footprints size={32} aria-hidden="true" />
           </motion.div>
         ))}
       </div>
 
       {/* Floating geometric shapes */}
       <motion.div
-        className="absolute top-10 left-10 w-16 h-16 rounded-3xl border-2 border-white/15 glass hidden md:block"
+        className="absolute top-10 left-10 w-16 h-16 rounded-2xl border-2 border-white/15 glass hidden md:block"
         animate={{ y: [-10, 10, -10], rotate: [0, 10, -10, 0] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -77,7 +78,7 @@ export default function ImpactCTA() {
             className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight"
           >
             Your Support Creates{" "}
-            <span className="text-warm-orange">
+            <span className="text-[#1A3A6B]">
               Every Success Story
             </span>
           </motion.h2>
@@ -97,13 +98,13 @@ export default function ImpactCTA() {
           >
             <Link
               href="/donate"
-              className="btn-orange text-base sm:text-lg px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 justify-center group"
+              className="btn-primary text-base sm:text-lg px-8 py-4 rounded-[10px] shadow-2xl hover:scale-105 transition-all duration-300 justify-center group"
             >
               <span>Donate Now</span>
             </Link>
             <Link
               href="/volunteer"
-              className="btn-primary border border-white/20 text-base sm:text-lg px-8 py-4 rounded-full backdrop-blur-md hover:scale-105 transition-all duration-300 justify-center group"
+              className="btn-secondary border border-white/20 text-base sm:text-lg px-8 py-4 rounded-[10px] backdrop-blur-md hover:scale-105 transition-all duration-300 justify-center group"
             >
               <span>Volunteer With Us</span>
               <ArrowRightIcon size={20} className="group-hover:translate-x-1 transition-transform" />

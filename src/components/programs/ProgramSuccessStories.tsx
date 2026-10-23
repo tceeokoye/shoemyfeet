@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import Link from "next/link";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 import { ArrowRightIcon, MapPinIcon } from "@/components/ui/Icons";
@@ -16,7 +16,7 @@ const stories = [
     image: "/images/story1.jpg",
     quote: "I used to hide my feet in class because my shoes had big holes. Now I walk in front proudly. My teacher says I'm the first to raise my hand!",
     program: "Shoe Distribution Initiative",
-    tagColor: "bg-orange-100 text-[#f97316]",
+    tagColor: "bg-orange-100 text-[#1A3A6B]",
   },
   {
     id: 2,
@@ -72,9 +72,9 @@ export default function ProgramSuccessStories() {
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
-            Stories That <span className="text-warm-orange">Change Everything</span>
+            Stories That <span className="text-[#1A3A6B]">Change Everything</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -99,7 +99,7 @@ export default function ProgramSuccessStories() {
               onHoverStart={() => setHovered(story.id)}
               onHoverEnd={() => setHovered(null)}
               whileHover={{ y: -10, transition: { type: "spring" as const, stiffness: 300, damping: 22 } }}
-              className="group bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
+              className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
               {/* Image */}
               <div className="relative h-56 overflow-hidden">
@@ -121,14 +121,14 @@ export default function ProgramSuccessStories() {
               {/* Content */}
               <div className="p-5">
                 {/* Quote mark */}
-                <div className="text-5xl text-warm-orange/20 font-serif leading-none mb-1">&ldquo;</div>
+                <div className="text-5xl text-[#1A3A6B]/20 font-serif leading-none mb-1">&ldquo;</div>
                 <p className="font-body text-gray-700 text-sm leading-relaxed italic mb-4 line-clamp-3">
                   {story.quote}
                 </p>
                 <div className="flex items-center gap-2 pt-3 border-t border-gray-100">
                   <div>
-                    <p className="font-heading font-bold text-[#1a1a2e] text-sm">{story.name}</p>
-                    <p className="font-body text-xs  text-warm-orange-dark font-semibold">{story.role}</p>
+                    <p className="font-heading font-bold text-[#111827] text-sm">{story.name}</p>
+                    <p className="font-body text-xs  text-[#1A3A6B]-dark font-semibold">{story.role}</p>
                     <div className="flex items-center gap-1 mt-0.5">
                       <MapPinIcon size={10} className="text-gray-400" />
                       <p className="font-body text-xs text-gray-400">{story.community}</p>
@@ -144,7 +144,7 @@ export default function ProgramSuccessStories() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="absolute inset-0 rounded-3xl border-2 border-[#f97316]/30 pointer-events-none"
+                    className="absolute inset-0 rounded-2xl border-2 border-[#1A3A6B]/30 pointer-events-none"
                   />
                 )}
               </AnimatePresence>
@@ -160,7 +160,10 @@ export default function ProgramSuccessStories() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
         >
-          <Link href="/about" className="btn-primary group inline-flex items-center gap-2 text-base">
+          <Link
+            href="/about"
+            className="group inline-flex items-center gap-2 font-body text-base font-semibold text-[#1A3A6B] transition-colors hover:text-[#142E56]"
+          >
             <span>Read More Stories</span>
             <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
           </Link>

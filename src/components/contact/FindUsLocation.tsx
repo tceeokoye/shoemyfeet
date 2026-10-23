@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
@@ -24,11 +24,11 @@ export default function FindUsLocation() {
           viewport={viewportConfig}
           className="text-center mb-14"
         >
-          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-slate-200 text-[#f97316] font-bold text-sm mb-4">
+          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-slate-200 text-[#1A3A6B] font-bold text-sm mb-4">
             🗺️ Our Head Office Location
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">
-            Find Us in <span className="text-[#f97316]">Enugu, Nigeria</span>
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4">
+            Find Us in <span className="text-[#1A3A6B]">Enugu, Nigeria</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Our central headquarters is conveniently located in the heart of Enugu State. Visitors and partners are always welcome!
@@ -60,12 +60,12 @@ export default function FindUsLocation() {
             />
 
             {/* Custom Overlay Marker Badge */}
-            <div className="absolute top-4 left-4 glass rounded-2xl p-3 shadow-xl border border-white/60 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#f97316] flex items-center justify-center text-white shadow-md">
+            <div className="absolute top-4 left-4 glass  p-3 shadow-xl border border-white/60 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-[#1A3A6B] flex items-center justify-center text-white shadow-md">
                 <MapPinIcon size={20} />
               </div>
               <div>
-                <div className="font-heading font-bold text-[#f97316] text-sm">Shoe My Feet HQ</div>
+                <div className="font-heading font-bold text-[#1A3A6B] text-sm">Shoe My Feet HQ</div>
                 <div className="text-[11px] text-gray-600 font-body">Independence Layout, Enugu</div>
               </div>
             </div>
@@ -79,9 +79,9 @@ export default function FindUsLocation() {
             viewport={viewportConfig}
             className="lg:col-span-5 space-y-6"
           >
-            <motion.div variants={fadeUp} className="bg-[#09090b] p-6 rounded-3xl border border-slate-100 shadow-sm">
-              <h3 className="font-heading font-bold text-xl text-[#f97316] mb-2 flex items-center gap-2">
-                <MapPinIcon size={22} className="text-warm-orange" />
+            <motion.div variants={fadeUp} className="bg-[#111827] p-6 rounded-2xl border border-slate-100 shadow-sm">
+              <h3 className="font-heading font-bold text-xl text-[#1A3A6B] mb-2 flex items-center gap-2">
+                <MapPinIcon size={22} className="text-[#1A3A6B]" />
                 Office Address
               </h3>
               <p className="text-gray-700 font-body text-base leading-relaxed mb-3">
@@ -92,7 +92,7 @@ export default function FindUsLocation() {
                 href="https://maps.google.com/?q=Independence+Layout+Enugu+Nigeria"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-orange py-3 px-6 text-sm inline-flex items-center gap-2"
+                className="btn-primary py-3 px-6 text-sm inline-flex items-center gap-2"
               >
                 <span>Get Directions on Google Maps</span>
                 <ArrowRightIcon size={14} />
@@ -100,12 +100,12 @@ export default function FindUsLocation() {
             </motion.div>
 
             {/* Landmarks */}
-            <motion.div variants={fadeUp} className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
-              <h4 className="font-heading font-bold text-lg text-[#1a1a2e] mb-3">Nearby Landmarks</h4>
+            <motion.div variants={fadeUp} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+              <h4 className="font-heading font-bold text-lg text-[#111827] mb-3">Nearby Landmarks</h4>
               <div className="grid grid-cols-2 gap-3">
                 {landmarks.map((l) => (
-                  <div key={l.name} className="p-3 rounded-2xl bg-gray-50 border border-gray-100 text-xs font-body">
-                    <div className="font-bold text-[#1a1a2e] flex items-center gap-1.5 mb-0.5">
+                  <div key={l.name} className="p-3  bg-gray-50 border border-gray-100 text-xs font-body">
+                    <div className="font-bold text-[#111827] flex items-center gap-1.5 mb-0.5">
                       <span>{l.icon}</span>
                       <span className="truncate">{l.name}</span>
                     </div>

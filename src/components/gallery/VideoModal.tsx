@@ -1,8 +1,9 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { XIcon, PlayIcon, PauseIcon, Volume2Icon, VolumeXIcon, MaximizeIcon, MapPinIcon, CalendarIcon } from "@/components/ui/Icons";
+import { resolveRealPhoto } from "@/lib/realPhotos";
 import { MediaItem } from "./galleryData";
 
 interface VideoModalProps {
@@ -117,7 +118,7 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
       >
         <motion.div
           ref={containerRef}
-          className="relative w-full max-w-5xl bg-[#09090b] rounded-3xl overflow-hidden shadow-2xl border border-white/15 flex flex-col max-h-[90vh]"
+          className="relative w-full max-w-5xl bg-[#111827] rounded-2xl overflow-hidden shadow-2xl border border-white/15 flex flex-col max-h-[90vh]"
           initial={{ scale: 0.9, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -127,7 +128,7 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
           {/* Header */}
           <div className="flex items-center justify-between px-6 py-4 bg-white/5 border-b border-white/10 z-20">
             <div className="flex items-center gap-3">
-              <span className="px-3 py-1 rounded-full bg-warm-orange text-white text-xs font-bold font-heading">
+              <span className="px-3 py-1 rounded-full bg-[#1A3A6B] text-white text-xs font-bold font-heading">
                 VIDEO
               </span>
               <div>
@@ -136,11 +137,11 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
                 </h3>
                 <div className="flex items-center gap-4 text-xs text-neutral-300 font-body">
                   <span className="flex items-center gap-1">
-                    <MapPinIcon size={12} className="text-warm-orange" />
+                    <MapPinIcon size={12} className="text-[#1A3A6B]" />
                     {video.location}
                   </span>
                   <span className="flex items-center gap-1">
-                    <CalendarIcon size={12} className="text-hope-yellow" />
+                    <CalendarIcon size={12} className="text-[#142E56]" />
                     {video.date}
                   </span>
                 </div>
@@ -157,7 +158,7 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
           </div>
 
           {/* Video Player Area */}
-          <div className="relative flex-1 bg-black flex items-center justify-center min-h-[320px] sm:min-h-[480px]">
+          <div className="relative flex-1 bg-black flex items-center justify-center min-h-80 sm:min-h-[480px]">
             {isYouTube ? (
               <iframe
                 src={`${video.videoUrl}?autoplay=1&rel=0`}
@@ -171,7 +172,7 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
                 <video
                   ref={videoRef}
                   src={video.videoUrl || "/videos/story.mp4"}
-                  poster={video.image}
+                  poster={resolveRealPhoto(video.image) as string}
                   autoPlay
                   playsInline
                   onTimeUpdate={handleTimeUpdate}
@@ -189,14 +190,14 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
                     max="100"
                     value={progress}
                     onChange={handleSeek}
-                    className="w-full h-1.5 bg-white/30 rounded-lg appearance-none cursor-pointer accent-[#f97316] hover:h-2 transition-all"
+                    className="w-full h-1.5 bg-white/30 rounded-lg appearance-none cursor-pointer accent-[#1A3A6B] hover:h-2 transition-all"
                   />
 
                   <div className="flex items-center justify-between text-white text-xs font-body pt-1">
                     <div className="flex items-center gap-3">
                       <button
                         onClick={togglePlay}
-                        className="p-2 rounded-full bg-white/20 hover:bg-warm-orange transition-colors"
+                        className="p-2 rounded-full bg-white/20 hover:bg-[#1A3A6B] transition-colors"
                         aria-label={isPlaying ? "Pause" : "Play"}
                       >
                         {isPlaying ? <PauseIcon size={16} /> : <PlayIcon size={16} />}
@@ -231,12 +232,12 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
           </div>
 
           {/* Description Footer */}
-          <div className="px-6 py-4 bg-[#09090b] border-t border-white/10 text-white">
+          <div className="px-6 py-4 bg-[#111827] border-t border-white/10 text-white">
             <p className="text-sm font-body text-neutral-200 leading-relaxed">
               {video.caption}
             </p>
             {video.beneficiaries && (
-              <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-hope-yellow text-xs font-bold">
+              <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#142E56] text-xs font-bold">
                 Impact: {video.beneficiaries}
               </div>
             )}

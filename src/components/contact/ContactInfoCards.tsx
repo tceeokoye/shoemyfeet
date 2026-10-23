@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -26,7 +26,7 @@ const contactCards: ContactCardCategory[] = [
   {
     category: "Head Office",
     icon: "📍",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-slate-50",
     border: "border-slate-100",
     items: [
@@ -41,8 +41,8 @@ const contactCards: ContactCardCategory[] = [
   {
     category: "Phone Support",
     icon: "📞",
-    color: "bg-[#f97316]",
-    bg: "bg-orange-50",
+    color: "bg-[#1A3A6B]",
+    bg: "bg-[#F3F4F6]",
     border: "border-orange-100",
     items: [
       { label: "General Enquiries", value: "+234 800 746 3693", clickable: "tel:+2348007463693" },
@@ -56,8 +56,8 @@ const contactCards: ContactCardCategory[] = [
   {
     category: "Email Channels",
     icon: "✉️",
-    color: "bg-[#15803d]",
-    bg: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
+    bg: "bg-[#16A34A]",
     border: "border-green-100",
     items: [
       { label: "General Support", value: "hello@shoemyfeet.org", clickable: "mailto:hello@shoemyfeet.org" },
@@ -71,7 +71,7 @@ const contactCards: ContactCardCategory[] = [
   {
     category: "Office Hours",
     icon: "⏰",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-purple-50",
     border: "border-purple-100",
     items: [
@@ -106,11 +106,11 @@ export default function ContactInfoCards() {
           viewport={viewportConfig}
           className="text-center mb-14"
         >
-          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 text-warm-orange-dark font-bold text-sm mb-4">
+          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 text-[#1A3A6B]-dark font-bold text-sm mb-4">
             📌 Quick Contact
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">
-            Ways to <span className="text-warm-orange">Reach Us</span>
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4">
+            Ways to <span className="text-[#1A3A6B]">Reach Us</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Choose your preferred communication channel below. Our team is responsive, friendly, and eager to assist you.
@@ -132,14 +132,14 @@ export default function ContactInfoCards() {
               custom={index}
               whileHover={{ y: -6 }}
               transition={{ type: "spring", stiffness: 280, damping: 22 }}
-              className="bg-white rounded-3xl p-6 border border-slate-100 shadow-md hover:shadow-xl transition-all flex flex-col justify-between relative overflow-hidden"
+              className="bg-white rounded-2xl p-6 border border-slate-100 shadow-md hover:shadow-xl transition-all flex flex-col justify-between relative overflow-hidden"
             >
               <div>
-                <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-2xl shadow-sm mb-5">
+                <div className="w-14 h-14  bg-slate-50 border border-slate-100 flex items-center justify-center text-2xl shadow-sm mb-5">
                   {card.icon}
                 </div>
 
-                <h3 className="font-heading font-bold text-xl text-[#0a0a0a] mb-4">{card.category}</h3>
+                <h3 className="font-heading font-bold text-xl text-[#111827] mb-4">{card.category}</h3>
 
                 <div className="space-y-3">
                   {card.items.map((item) => (
@@ -149,7 +149,7 @@ export default function ContactInfoCards() {
                         <div className="flex items-center justify-between gap-1">
                           <a
                             href={item.clickable}
-                            className="font-body font-bold text-sm text-[#0a0a0a] hover:text-[#f97316] transition-colors truncate"
+                            className="font-body font-bold text-sm text-[#111827] hover:text-[#1A3A6B] transition-colors truncate"
                           >
                             {item.value}
                           </a>
@@ -162,7 +162,7 @@ export default function ContactInfoCards() {
                           </button>
                         </div>
                       ) : (
-                        <div className="font-body font-semibold text-sm text-[#0a0a0a]">{item.value}</div>
+                        <div className="font-body font-semibold text-sm text-[#111827]">{item.value}</div>
                       )}
                     </div>
                   ))}
@@ -172,7 +172,7 @@ export default function ContactInfoCards() {
               <div className="pt-6 mt-6 border-t border-slate-100">
                 <a
                   href={card.actionHref}
-                  className="w-full py-2.5 px-4 rounded-xl bg-slate-50 border border-slate-200 text-[#0a0a0a] font-bold font-body text-xs text-center inline-block hover:bg-black hover:text-white transition-all shadow-xs"
+                  className="w-full py-2.5 px-4 rounded-xl bg-slate-50 border border-slate-200 text-[#111827] font-bold font-body text-xs text-center inline-block hover:bg-black hover:text-white transition-all shadow-xs"
                 >
                   {card.actionLabel} →
                 </a>

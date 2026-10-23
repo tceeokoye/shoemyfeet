@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -8,10 +8,10 @@ import { fadeUp, fadeRight, staggerContainer, viewportConfig } from "@/lib/anima
 import { ArrowRightIcon, HeartIcon, MailIcon, CheckCircle2Icon } from "@/components/ui/Icons";
 
 const roles = [
-  { icon: "👟", title: "Shoe Distribution", desc: "Assist fitting sessions" },
-  { icon: "🛠️", title: "Skills Mentorship", desc: "Teach shoemaking" },
-  { icon: "📸", title: "Media & Stories", desc: "Document impact" },
-  { icon: "📊", title: "Event Operations", desc: "Logistics support" },
+  { title: "Shoe Distribution", desc: "Assist fitting sessions" },
+  { title: "Skills Mentorship", desc: "Teach shoemaking" },
+  { title: "Media & Stories", desc: "Document impact" },
+  { title: "Event Operations", desc: "Logistics support" },
 ];
 
 export default function VolunteerCTA() {
@@ -24,10 +24,7 @@ export default function VolunteerCTA() {
   };
 
   return (
-    <section className="section-padding bg-[#fdfbf7] relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-black/10 rounded-full blur-3xl pointer-events-none" />
-
+    <section className="section-padding bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* ── Volunteer Section ── */}
@@ -42,37 +39,37 @@ export default function VolunteerCTA() {
             viewport={viewportConfig}
           >
             <motion.div variants={fadeUp} className="flex items-center gap-3">
-              <div className="h-px w-10 bg-[#f97316]" />
-              <span className="text-xs font-bold text-[#f97316] uppercase tracking-widest font-heading">
+              <div className="h-px w-10 bg-[#1A3A6B]" />
+              <span className="text-xs font-medium text-[#C2410C] uppercase tracking-[0.12em] font-heading">
                 Volunteer Community
               </span>
             </motion.div>
 
-            <motion.h2 variants={fadeUp} className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#0a0a0a] tracking-tight">
+            <motion.h2 variants={fadeUp} className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#111827] tracking-tight">
               Become a{" "}
-              <span className="text-[#f97316]">Change Maker</span> Today
+              <span className="text-[#C2410C]">Change Maker</span> Today
             </motion.h2>
 
             <motion.p variants={fadeUp} className="font-body text-slate-600 text-base sm:text-lg leading-relaxed">
-              Your time, passion, and skills can transform children's lives across Nigeria.
+              Your time, passion, and skills can transform children&apos;s lives across Nigeria.
               Join 200+ dedicated volunteers making an impact at school outreaches, workshops,
               and community campaigns.
             </motion.p>
 
             {/* 3D Volunteer Role Cards */}
             <motion.div variants={staggerContainer} className="grid grid-cols-2 gap-2.5 sm:gap-4">
-              {roles.map((r) => (
+              {roles.map((r, index) => (
                 <motion.div
                   key={r.title}
                   variants={fadeUp}
-                  className="bg-white rounded-2xl p-3 sm:p-4 border border-slate-200/80 card-3d flex flex-col sm:flex-row items-start gap-2 sm:gap-3"
+                  className="border-t border-[#F3F4F6] py-3 sm:py-4 flex items-start gap-3"
                 >
-                  <span className="text-2xl sm:text-3xl shrink-0">{r.icon}</span>
+                  <span className="text-sm font-medium text-[#C2410C] tabular-nums">0{index + 1}</span>
                   <div className="min-w-0 flex-1">
-                    <h4 className="font-heading font-bold text-xs sm:text-sm md:text-base text-[#0a0a0a] leading-tight mb-0.5">
+                    <h4 className="font-heading font-medium text-sm sm:text-base text-[#111827] leading-tight mb-0.5">
                       {r.title}
                     </h4>
-                    <p className="text-[11px] sm:text-xs text-slate-500 font-body leading-tight">
+                    <p className="text-xs sm:text-sm text-[#696558] font-body leading-tight">
                       {r.desc}
                     </p>
                   </div>
@@ -81,7 +78,7 @@ export default function VolunteerCTA() {
             </motion.div>
 
             <motion.div variants={fadeUp} className="pt-2">
-              <Link href="/volunteer" className="btn-orange group text-base shadow-xl">
+              <Link href="/volunteer" className="btn-primary group text-base shadow-xl">
                 <span>Join as a Volunteer</span>
                 <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -96,9 +93,9 @@ export default function VolunteerCTA() {
             whileInView="visible"
             viewport={viewportConfig}
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white card-3d">
+            <div             className="relative overflow-hidden rounded-3xl border border-[#F3F4F6] shadow-lg shadow-[#1A3A6B]/10">
               <FastImage
-                src="/images/volunteers.jpg"
+                src="/images/shoe_distribution.jpg"
                 alt="Volunteers at shoe distribution event"
                 width={600}
                 height={480}
@@ -111,14 +108,14 @@ export default function VolunteerCTA() {
             <motion.div
               animate={{ y: [-6, 6, -6] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -right-4 bg-black text-white rounded-2xl p-4 shadow-2xl border border-white/20 flex items-center gap-3 card-3d-dark shadow-black/80"
+              className="absolute -bottom-6 -right-4 bg-[#FFFFFF] text-[#111827] p-4 shadow-lg border border-[#F3F4F6] flex items-center gap-3"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#f97316] flex items-center justify-center font-heading font-bold text-lg shadow-md">
+              <div className="w-12 h-12 bg-[#e8dba9] text-[#5f4a15] flex items-center justify-center font-heading font-semibold text-lg">
                 200+
               </div>
               <div>
-                <div className="font-heading font-bold text-white text-base leading-none">Active Volunteers</div>
-                <div className="text-xs text-neutral-300 font-body mt-1">Across 3 States</div>
+                <div className="font-heading font-medium text-[#111827] text-base leading-none">Active Volunteers</div>
+                <div className="text-xs text-[#696558] font-body mt-1">Across 3 States</div>
               </div>
             </motion.div>
           </motion.div>
@@ -126,7 +123,7 @@ export default function VolunteerCTA() {
 
         {/* Unified Donate + Newsletter Banner */}
         <motion.div
-          className="bg-[#09090b] rounded-3xl overflow-hidden relative shadow-2xl border border-white/15 card-3d-dark text-white shadow-black/80"
+          className="bg-[#111827] rounded-2xl overflow-hidden relative shadow-2xl border border-white/15 card-3d-dark text-white shadow-black/80"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -134,27 +131,27 @@ export default function VolunteerCTA() {
         >
           <div className="absolute inset-0 opacity-15 pointer-events-none">
             <FastImage
-              src="/images/work-confidence.jpeg"
+              src="/images/everychild.jpg"
               alt=""
               fill
               className="object-cover"
             />
           </div>
-          <div className="absolute top-0 right-0 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#1A3A6B]/20 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-black/20 rounded-full blur-3xl" />
 
           <div className="relative z-10 grid lg:grid-cols-2 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-white/15">
 
             {/* Donate Box */}
             <div className="p-8 sm:p-12 flex flex-col gap-5">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/20 border border-orange-500/40 text-amber-300 text-xs font-bold font-heading w-fit">
-                <HeartIcon size={14} className="fill-amber-300" />
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1A3A6B]/20 border border-[#1A3A6B]/40 text-[#F97316] text-xs font-bold font-heading w-fit">
+              <HeartIcon size={14} className="fill-[#F97316]" />
                 Make a Direct Impact
               </span>
 
               <h2 className="font-heading font-bold text-2xl sm:text-3xl text-white leading-snug">
                 Your Gift Helps a Child Walk into School with{" "}
-                <span className="text-[#f59e0b]">Confidence</span>
+                <span className="text-[#F97316]">Confidence</span>
               </h2>
 
               <p className="font-body text-neutral-200/90 text-sm leading-relaxed">
@@ -165,14 +162,14 @@ export default function VolunteerCTA() {
               <div className="flex flex-wrap gap-3 text-xs font-body text-neutral-200">
                 {["100% Direct Delivery", "Registered CAC NGO", "Transparent Reports"].map((t) => (
                   <span key={t} className="flex items-center gap-1.5 font-semibold">
-                    <CheckCircle2Icon size={14} className="text-amber-400" />
+                    <CheckCircle2Icon size={14} className="text-[#1A3A6B]" />
                     {t}
                   </span>
                 ))}
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <Link href="/donate" className="btn-orange text-base font-bold shadow-xl">
+                <Link href="/donate" className="btn-primary text-base font-bold shadow-xl">
                   <span>Donate Now</span>
                   <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -184,7 +181,7 @@ export default function VolunteerCTA() {
 
             {/* Newsletter Box */}
             <div className="p-8 sm:p-12 flex flex-col gap-5">
-              <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-3xl shadow-lg">
+              <div className="w-14 h-14  bg-white/10 border border-white/20 flex items-center justify-center text-3xl shadow-lg">
                 ✉️
               </div>
 
@@ -201,7 +198,7 @@ export default function VolunteerCTA() {
                 <motion.div
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="bg-white/10 border border-white/20 rounded-2xl p-5 text-center"
+                  className="bg-white/10 border border-white/20  p-5 text-center"
                 >
                   <div className="flex items-center justify-center gap-2 text-emerald-400 font-heading font-bold text-lg mb-1">
                     <CheckCircle2Icon size={20} />
@@ -226,7 +223,7 @@ export default function VolunteerCTA() {
                   </div>
                   <button
                     type="submit"
-                    className="btn-orange py-3.5 px-6 justify-center text-base font-bold shadow-xl cursor-pointer"
+                    className="btn-primary py-3.5 px-6 justify-center text-base font-bold shadow-xl cursor-pointer"
                   >
                     Subscribe
                   </button>

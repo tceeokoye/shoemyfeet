@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -28,13 +28,13 @@ export default function PageLoader() {
     <AnimatePresence>
       {loading && (
         <motion.div
-          className="fixed inset-0 z-[100] bg-[#09090b] flex flex-col items-center justify-center select-none pointer-events-none"
+          className="fixed inset-0 z-[100] bg-[#111827] flex flex-col items-center justify-center select-none pointer-events-none"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
           {/* Subtle background glow */}
-          <div className="absolute w-72 h-72 rounded-full bg-[#f97316]/10 blur-[120px] pointer-events-none" />
+          <div className="absolute w-72 h-72 rounded-full bg-[#1A3A6B]/10 blur-[120px] pointer-events-none" />
 
           {/* Logo mark */}
           <motion.div
@@ -44,7 +44,7 @@ export default function PageLoader() {
             className="flex flex-col items-center mb-12 relative z-10"
           >
             {/* Shoe icon */}
-            <div className="w-16 h-16 rounded-2xl bg-[#f97316] flex items-center justify-center shadow-2xl mb-5 shadow-orange-500/20">
+            <div className="w-16 h-16  bg-[#1A3A6B] flex items-center justify-center shadow-2xl mb-5 shadow-163D2A/20">
               <svg viewBox="0 0 40 40" className="w-10 h-10" fill="none">
                 <path
                   d="M5 22c1-4 4-7 8-7 3 0 5.5 2 8 2.5 2 .4 4-.5 5.5-.5 2 0 3.5 1.2 3.5 3v1.5H5V22z"
@@ -61,7 +61,7 @@ export default function PageLoader() {
             <h1 className="font-heading font-bold text-2xl text-white tracking-tight">
               Shoe My Feet
             </h1>
-            <p className="text-[11px] text-[#f97316] font-body font-bold tracking-widest uppercase mt-1">
+            <p className="text-[11px] text-[#1A3A6B] font-body font-bold tracking-widest uppercase mt-1">
               Foundation
             </p>
           </motion.div>
@@ -70,7 +70,7 @@ export default function PageLoader() {
           <div className="w-48 relative z-10">
             <div className="h-1 bg-white/10 rounded-full overflow-hidden">
               <motion.div
-                className="h-full bg-[#f97316] rounded-full origin-left"
+                className="h-full bg-[#1A3A6B] rounded-full origin-left"
                 style={{ scaleX: progress / 100 }}
                 transition={{ duration: 0.1 }}
               />

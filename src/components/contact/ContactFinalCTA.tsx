@@ -21,7 +21,7 @@ const footprintTrail = [
 
 export default function ContactFinalCTA() {
   return (
-    <section className="relative section-padding bg-[#09090b] text-white overflow-hidden" aria-label="Final call to action">
+    <section className="relative section-padding bg-[#111827] text-white overflow-hidden" aria-label="Final call to action">
       {/* Background layers */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl bg-slate-800" />
@@ -69,7 +69,7 @@ export default function ContactFinalCTA() {
           {/* Animated Message Icon */}
           <motion.div variants={fadeUp} className="relative">
             <motion.div
-              className="w-24 h-24 rounded-full bg-[#f97316] flex items-center justify-center shadow-2xl shadow-orange-500/30 text-white"
+              className="w-24 h-24 rounded-full bg-[#1A3A6B] flex items-center justify-center shadow-2xl shadow-163D2A/30 text-white"
               animate={{ scale: [1, 1.06, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
@@ -85,7 +85,7 @@ export default function ContactFinalCTA() {
 
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] text-white">
             Every Conversation Can Change{" "}
-            <span className="text-warm-orange">a Child&apos;s Future</span>
+            <span className="text-[#1A3A6B]">a Child&apos;s Future</span>
           </motion.h2>
 
           <motion.p variants={fadeUp} className="text-neutral-300 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
@@ -94,20 +94,20 @@ export default function ContactFinalCTA() {
 
           {/* CTA Buttons */}
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl">
-            <a href="#contact-form" className="btn-orange text-base py-4 px-8 flex-1 justify-center group">
+            <a href="#contact-form" className="btn-primary text-base py-4 px-8 flex-1 justify-center group rounded-[10px]">
               <MailIcon size={18} className="text-white group-hover:scale-110 transition-transform" />
               Contact Us Today
               <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <Link href="/volunteer" className="flex-1 py-4 px-8 rounded-full font-bold font-body text-base text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 transition-all flex items-center justify-center gap-2">
+            <Link href="/volunteer" className="btn-secondary flex-1 py-4 px-8 font-bold font-body text-base flex items-center justify-center gap-2 rounded-[10px]">
               Become a Volunteer
             </Link>
-            <Link href="/donate" className="flex-1 py-4 px-8 rounded-full font-bold font-body text-base text-white border-2 border-white/10 hover:bg-white/5 hover:border-white/20 transition-all flex items-center justify-center gap-2">
+            <Link href="/donate" className="btn-primary flex-1 py-4 px-8 font-bold font-body text-base flex items-center justify-center gap-2 rounded-[10px]">
               Donate Now
             </Link>
           </motion.div>
 
-          <motion.p variants={fadeUp} className="text-xs text-orange-400 font-body">
+          <motion.p variants={fadeUp} className="text-xs text-white/60 font-body">
             🔒 CAC Registered Nonprofit Organization in Nigeria. All inquiries strictly confidential.
           </motion.p>
         </motion.div>

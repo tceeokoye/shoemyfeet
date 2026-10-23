@@ -4,59 +4,54 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { MenuIcon, CloseIcon } from "@/components/ui/Icons";
+import BrandLogo from "@/assets/shoe-my-fit-logo.png"
 
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Programs", href: "/programs" },
-  { label: "Impact", href: "/impact" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "/contact" },
+import { MenuIcon, CloseIcon } from "@/components/ui/Icons";
+import Image from "@/components/ui/RealImage";
+import BubblingHeart from "@/components/ui/BubblingHeart";
+
+const impactLinks = [
+  { label: "Our Impact", href: "/impact" },
+  { label: "Our Reach", href: "/impact/reach" },
+  { label: "Blog & News", href: "/blog" },
 ];
 
-/* ── Modern White & Black Foot Logo Design ── */
-function LogoMark({ scrolled = false }: { scrolled?: boolean }) {
-  return (
-    <Link href="/" className="flex items-center gap-3 group shrink-0">
-      {/* Black & White Foot Icon Badge */}
-      <div className="w-11 h-11 rounded-2xl bg-black flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 border-2 border-white/20">
-        <svg viewBox="0 0 44 44" className="w-7 h-7 fill-white drop-shadow-md">
-          {/* Sole & Footprint silhouette */}
-          <path d="M10 28c0 0 3-8 11-8s11 3.5 15 3.5 6-1.5 8-1.5c1.5 0 2.5 1 2.5 3v2H10v-5z" />
-          <path d="M9 30h28v3c0 2-1.5 3.5-3.5 3.5H12.5C10.5 36.5 9 35 9 33v-3z" fill="#f97316" />
-          {/* Toes details */}
-          <circle cx="12" cy="17" r="2.5" />
-          <circle cx="18" cy="15" r="2.8" />
-          <circle cx="24" cy="15" r="2.8" />
-          <circle cx="30" cy="17" r="2.5" />
-        </svg>
-      </div>
+const aboutLinks = [
+  { label: "Need & Solution", href: "/about/how-we-work" },
+  { label: "Our Tools", href: "/about/tools" },
+  { label: "Reports and Publications", href: "/impact/reports" },
+];
 
-      {/* High-Contrast Wordmark - Always ultra readable */}
-      <div className="leading-none">
-        <span className="block font-heading text-xl font-extrabold tracking-tight text-white group-hover:text-[#f97316] transition-colors drop-shadow-md">
-          Shoe My Feet
-        </span>
-        <span className="block font-heading text-[11px] font-bold tracking-widest uppercase text-[#f97316] mt-0.5">
-          Foundation
-        </span>
-      </div>
-    </Link>
-  );
-}
+const projectsLinks = [
+  { label: "Projects", href: "/programs" },
+  { label: "Previous Projects", href: "/programs/previous-projects" },
+  { label: "Our Partners", href: "/programs/corporate-partnerships" },
+];
+
+const connectLinks = [
+  { label: "About Us", href: "/about" },
+  { label: "Our Team", href: "/about/team" },
+  { label: "Careers", href: "/about/careers" },
+];
+
+const desktopDropdowns = [
+  { id: "work", label: "Our Work", href: "/about/how-we-work", links: aboutLinks },
+  { id: "projects", label: "Our Projects", href: "/programs", links: projectsLinks },
+  { id: "impact", label: "Our Impact", href: "/impact", links: impactLinks },
+  { id: "connect", label: "Connect with Us", href: "/contact", links: connectLinks },
+];
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
   useEffect(() => setIsOpen(false), [pathname]);
 
   const isActive = (href: string) =>
@@ -67,10 +62,10 @@ export default function Navbar() {
       {/* ── Modern Floating Header ── */}
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-3 sm:pt-4 px-3 sm:px-4 pointer-events-none">
         <motion.nav
-          className={`pointer-events-auto w-full max-w-6xl rounded-2xl sm:rounded-3xl transition-all duration-500 ${
+          className={`pointer-events-auto w-full max-w-7xl  rounded-2xl transition-all duration-500 ${
             scrolled
-              ? "bg-black/92 sm:bg-[#09090b]/95 backdrop-blur-2xl shadow-2xl shadow-black/70 border border-white/20"
-              : "bg-black/80 sm:bg-[#09090b]/85 backdrop-blur-xl border border-white/15 shadow-xl shadow-black/50"
+              ? "bg-[#FFFFFF] shadow-lg shadow-black/10 border border-black/10"
+              : "bg-[#FFFFFF] border border-black/10 shadow-lg shadow-black/10"
           }`}
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -78,54 +73,105 @@ export default function Navbar() {
         >
           <div className="flex items-center justify-between px-4 sm:px-6 py-3">
             {/* Logo */}
-            <LogoMark scrolled={scrolled} />
+            <Image src={BrandLogo} alt="Shoe My Feet Foundation" height={48} width={48} className="object-contain" />
 
             {/* Desktop Nav Links */}
-            <div className="hidden lg:flex items-center gap-1">
-              {navLinks.map((link) => {
-                const active = isActive(link.href);
+            <div className="hidden flex-1 items-center justify-evenly gap-1 mx-auto max-w-[760px] lg:flex">
+              {desktopDropdowns.map((dropdown) => {
+                const isDropdownOpen = activeDropdown === dropdown.id;
+
                 return (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className={`relative px-4 py-2 text-base font-bold rounded-xl transition-all duration-200 font-heading ${
-                      active
-                        ? "text-[#f97316] bg-white/10"
-                        : "text-white/90 hover:text-white hover:bg-white/10"
-                    }`}
+                  <div
+                    key={dropdown.id}
+                    className="relative"
+                    onMouseEnter={() => setActiveDropdown(dropdown.id)}
+                    onMouseLeave={(event) => {
+                      if (!event.currentTarget.contains(document.activeElement)) {
+                        setActiveDropdown(null);
+                      }
+                    }}
+                    onBlur={(event) => {
+                      if (
+                        !(event.relatedTarget instanceof Node) ||
+                        !event.currentTarget.contains(event.relatedTarget)
+                      ) {
+                        setActiveDropdown(null);
+                      }
+                    }}
                   >
-                    {link.label}
-                    {active && (
-                      <motion.span
-                        layoutId="nav-active-pill"
-                        className="absolute bottom-1 left-3 right-3 h-[3px] rounded-full bg-[#f97316]"
-                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    <button
+                      type="button"
+                      aria-expanded={isDropdownOpen}
+                      aria-controls={
+                        isDropdownOpen
+                          ? `nav-dropdown-${dropdown.id}`
+                          : undefined
+                      }
+                      onClick={() => setActiveDropdown(dropdown.id)}
+                      onFocus={() => setActiveDropdown(dropdown.id)}
+                      className={`flex cursor-pointer items-center gap-2 rounded-xl px-4 py-2 text-base font-semibold font-heading transition-colors ${
+                        dropdown.links.some((link) => isActive(link.href))
+                          ? "text-[#1A3A6B]"
+                          : "text-[#111827] hover:text-[#1A3A6B]"
+                      }`}
+                    >
+                      {dropdown.label}
+                      <span
+                        aria-hidden="true"
+                        className={`mt-[-3px] size-1.5 rotate-45 border-b border-r border-current transition-transform ${
+                          isDropdownOpen ? "mt-1 rotate-[225deg]" : ""
+                        }`}
                       />
-                    )}
-                  </Link>
+                    </button>
+                    <AnimatePresence>
+                      {isDropdownOpen && (
+                        <motion.div
+                          id={`nav-dropdown-${dropdown.id}`}
+                          className="absolute left-0 top-full z-50 w-max min-w-56 pt-3"
+                          initial={{ opacity: 0, y: 8, scale: 0.98 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 6, scale: 0.98 }}
+                          transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+                        >
+                          <div className="overflow-hidden rounded-xl border border-black/10 bg-[#FFFFFF] py-2 shadow-xl shadow-black/10">
+                            {dropdown.links.map((link) => (
+                              <Link
+                                key={link.href}
+                                href={link.href}
+                                onClick={() => setActiveDropdown(null)}
+                                className={`block px-4 py-2.5 text-sm font-semibold transition-colors ${
+                                  pathname === link.href
+                                    ? "bg-[#F3F4F6] text-[#1A3A6B]"
+                                    : "text-[#343434] hover:bg-black/5 hover:text-[#1A3A6B]"
+                                }`}
+                              >
+                                {link.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
                 );
               })}
             </div>
 
             {/* Desktop CTA Donate */}
-            <div className="hidden lg:flex items-center gap-3">
-              <Link
-                href="/volunteer"
-                className="text-sm font-extrabold text-white/80 hover:text-white transition-colors font-heading px-3 py-2"
-              >
-                Volunteer
-              </Link>
+            <div className="hidden lg:flex items-center">
               <Link
                 href="/donate"
-                className="btn-orange text-sm font-extrabold py-2.5 px-5 shadow-lg shadow-orange-600/30"
+                onClick={() => setActiveDropdown(null)}
+                className="donate-button-pulse donate-button-pulse--horizontal btn-primary text-sm font-semibold py-2.5 px-5 shadow-lg shadow-[#1A3A6B]/20"
               >
                 <span>Donate Now</span>
+                <BubblingHeart size={17} className="text-white"/>
               </Link>
             </div>
 
             {/* Mobile Toggle */}
             <button
-              className="lg:hidden p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer border border-white/15"
+              className="lg:hidden p-2.5 rounded-xl bg-black/5 hover:bg-black/10 text-[#111827] transition-colors cursor-pointer border border-black/10"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -139,16 +185,16 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-40 bg-[#09090b] text-white flex flex-col"
+            className="fixed inset-0 z-40 bg-[#FFFFFF] text-[#111827] flex flex-col"
             initial={{ opacity: 0, y: "-100%" }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-white/10">
-              <LogoMark />
+            <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-black/10">
+              <Image src={BrandLogo} alt="Shoe My Feet Foundation" height={48} width={48} className="object-contain" />
               <button
-                className="p-2.5 rounded-xl bg-white/10 text-white"
+                className="p-2.5 rounded-xl bg-black/5 text-[#111827]"
                 onClick={() => setIsOpen(false)}
               >
                 <CloseIcon size={22} />
@@ -156,48 +202,43 @@ export default function Navbar() {
             </div>
 
             <nav className="flex flex-col px-6 py-8 gap-2 flex-1 overflow-y-auto">
-              {navLinks.map((link, i) => {
-                const active = isActive(link.href);
-                return (
-                  <motion.div
-                    key={link.label}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.05 }}
-                  >
-                    <Link
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`flex items-center justify-between px-5 py-4 rounded-2xl text-xl font-bold font-heading transition-all ${
-                        active
-                          ? "bg-[#f97316] text-white shadow-lg"
-                          : "text-white/80 hover:text-white hover:bg-white/10"
-                      }`}
-                    >
-                      <span>{link.label}</span>
-                      {active && <span className="w-2.5 h-2.5 rounded-full bg-white animate-pulse" />}
-                    </Link>
-                  </motion.div>
-                );
-              })}
-              <div className="pt-4 border-t border-white/10 mt-2">
-                <Link
-                  href="/volunteer"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between px-5 py-4 rounded-2xl text-xl font-bold font-heading text-white/80 hover:text-white hover:bg-white/10"
-                >
-                  Volunteer
-                </Link>
-              </div>
+              {desktopDropdowns.map((dropdown) => (
+                <details key={dropdown.id} className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-4 text-xl font-semibold font-heading text-[#343434] hover:bg-black/5">
+                    {dropdown.label}
+                    <span
+                      aria-hidden="true"
+                      className="mr-1 size-2 rotate-45 border-b-2 border-r-2 border-current transition-transform group-open:rotate-[225deg]"
+                    />
+                  </summary>
+                  <div className="ml-4 border-l border-black/10 py-1 pl-3">
+                    {dropdown.links.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setIsOpen(false)}
+                        className={`block rounded-xl px-4 py-3 font-semibold transition-colors ${
+                          isActive(link.href)
+                            ? "text-[#1A3A6B]"
+                            : "text-[#555] hover:text-[#1A3A6B]"
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </details>
+              ))}
             </nav>
 
-            <div className="p-6 border-t border-white/10 bg-[#09090b]">
+            <div className="p-6 border-t rounded-sm border-black/10 bg-[#FFFFFF]">
               <Link
                 href="/donate"
                 onClick={() => setIsOpen(false)}
-                className="w-full btn-orange justify-center py-4 text-lg shadow-xl"
+                className="donate-button-pulse donate-button-pulse--horizontal w-full btn-primary justify-center py-4 text-lg shadow-xl"
               >
                 <span>Donate Now</span>
+                <BubblingHeart size={17} className="text-white"  />
               </Link>
             </div>
           </motion.div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
@@ -12,7 +12,7 @@ const benefits = [
     description:
       "Bare feet expose children to soil-transmitted helminths, tetanus, bacterial infections, and parasitic worms. Proper footwear forms a crucial health shield, keeping children safe and healthy.",
     stat: "99% Protection",
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
     bg: "bg-rose-50",
     border: "border-rose-100 hover:border-rose-300",
   },
@@ -23,9 +23,9 @@ const benefits = [
     description:
       "Many rural children walk 3 to 8 kilometres across rocky paths, thorny brush, and sharp stones to reach school. Sturdy shoes prevent cuts, punctures, and chronic foot trauma.",
     stat: "Safer Routes",
-    color: "bg-[#f59e0b]",
-    bg: "bg-amber-50",
-    border: "border-amber-100 hover:border-amber-300",
+    color: "bg-[#1A3A6B]",
+    bg: "bg-[#FFFFFF]",
+    border: "border-slate-200 hover:border-[#1A3A6B]",
   },
   {
     icon: "🎓",
@@ -34,7 +34,7 @@ const benefits = [
     description:
       "Lack of required footwear leads to school expulsion, shame, or missing classes due to foot injuries. Providing shoes increases regular attendance by over 30%.",
     stat: "+30% Attendance",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-slate-50",
     border: "border-slate-100 hover:border-slate-200",
   },
@@ -45,7 +45,7 @@ const benefits = [
     description:
       "Wearing clean, fitted school shoes inspires pride and self-assurance. Children participate more eagerly in classroom activities and sports without feeling inferior.",
     stat: "High Self-Worth",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-purple-50",
     border: "border-purple-100 hover:border-purple-300",
   },
@@ -56,9 +56,9 @@ const benefits = [
     description:
       "Growing feet require ergonomic support. Quality shoes safeguard joint alignment, bone structure, and physical agility during vital childhood development years.",
     stat: "Healthy Growth",
-    color: "bg-[#15803d]",
-    bg: "bg-emerald-50",
-    border: "border-emerald-100 hover:border-emerald-300",
+    color: "bg-[#F97316]",
+    bg: "bg-orange-50",
+    border: "border-orange-100 hover:border-orange-300",
   },
   {
     icon: "🎖️",
@@ -67,8 +67,8 @@ const benefits = [
     description:
       "Every child deserves to stand tall and feel valued. Providing shoes treats children with honor and dignity, proving to them that their future matters.",
     stat: "Restored Dignity",
-    color: "bg-[#f97316]",
-    bg: "bg-orange-50",
+    color: "bg-[#1A3A6B]",
+    bg: "bg-[#F3F4F6]",
     border: "border-orange-100 hover:border-orange-300",
   },
 ];
@@ -104,15 +104,15 @@ export default function WhyShoesMatterAbout() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold font-body mb-3 border border-slate-200"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-xs sm:text-sm font-bold font-body mb-3 border border-slate-200"
           >
             Why Shoes Matter
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
-            More Than Footwear — A Gateway to <span className="text-[#f97316]">Life Transformation</span>
+            More Than Footwear — A Gateway to <span className="text-[#1A3A6B]">Life Transformation</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -132,12 +132,12 @@ export default function WhyShoesMatterAbout() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               whileHover={{ y: -6, transition: { type: "spring", stiffness: 280, damping: 22 } }}
-              className="bg-white rounded-3xl p-8 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-2xl p-8 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Header row with Icon and Stat Chip */}
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-2xl shadow-sm">
+                  <div className="w-14 h-14  bg-slate-50 border border-slate-100 flex items-center justify-center text-2xl shadow-sm">
                     {benefit.icon}
                   </div>
                   <span className="px-3 py-1 rounded-full text-xs font-bold font-body bg-slate-100 text-slate-700">
@@ -145,7 +145,7 @@ export default function WhyShoesMatterAbout() {
                   </span>
                 </div>
 
-                <h3 className="font-heading font-bold text-2xl text-[#0a0a0a] mb-1">
+                <h3 className="font-heading font-bold text-2xl text-[#111827] mb-1">
                   {benefit.title}
                 </h3>
                 <p className="text-xs font-bold text-slate-400 font-body uppercase tracking-wider mb-4">

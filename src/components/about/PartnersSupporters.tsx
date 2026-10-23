@@ -1,22 +1,22 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 const partners = [
-  { name: "Access Bank", type: "CSR Sponsor", initials: "AB", color: "bg-[#f97316]" },
-  { name: "The Rose Project", type: "Initiative Partner", initials: "RP", color: "bg-[#f97316]" },
-  { name: "UBA Her Progress", type: "Recognition Partner", initials: "UB", color: "bg-[#09090b]" },
-  { name: "iF Design Award", type: "Global Recognition", initials: "iF", color: "bg-[#f59e0b]" },
-  { name: "Häagen-Dazs Initiative", type: "Supporting Partner", initials: "HD", color: "bg-[#09090b]" },
-  { name: "Kaduna Education Ministry", type: "State Partner", initials: "KM", color: "bg-[#15803d]" },
-  { name: "Enugu State Govt", type: "State Partner", initials: "ES", color: "bg-[#15803d]" },
+  { name: "Access Bank", type: "CSR Sponsor", initials: "AB", color: "bg-[#1A3A6B]" },
+  { name: "The Rose Project", type: "Initiative Partner", initials: "RP", color: "bg-[#1A3A6B]" },
+  { name: "UBA Her Progress", type: "Recognition Partner", initials: "UB", color: "bg-[#111827]" },
+  { name: "iF Design Award", type: "Global Recognition", initials: "iF", color: "bg-[#1A3A6B]" },
+  { name: "Häagen-Dazs Initiative", type: "Supporting Partner", initials: "HD", color: "bg-[#111827]" },
+  { name: "Kaduna Education Ministry", type: "State Partner", initials: "KM", color: "bg-[#F97316]" },
+  { name: "Enugu State Govt", type: "State Partner", initials: "ES", color: "bg-[#F97316]" },
   { name: "CAC Nigeria", type: "Regulatory Trustee", initials: "CA", color: "bg-slate-700" },
 ];
 
 export default function PartnersSupporters() {
   return (
-    <section className="py-20 bg-[#09090b] overflow-hidden border-t border-white/10 relative text-white">
+    <section className="py-20 bg-[#111827] overflow-hidden border-t border-white/10 relative text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center mb-12">
         <motion.div
           variants={staggerContainer}
@@ -27,7 +27,7 @@ export default function PartnersSupporters() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-orange-500/20 text-amber-300 text-xs font-bold font-body mb-3 border border-orange-500/40"
+            className="inline-block px-4 py-1.5 rounded-full bg-[#1A3A6B]/20 text-[#142E56] text-xs font-bold font-body mb-3 border border-[#1A3A6B]/40"
           >
             Partners &amp; Supporters
           </motion.span>
@@ -35,7 +35,7 @@ export default function PartnersSupporters() {
             variants={fadeUp}
             className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4"
           >
-            Powered by <span className="text-[#f59e0b]">Generosity &amp; Collaboration</span>
+            Powered by <span className="text-[#1A3A6B]">Generosity &amp; Collaboration</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -49,21 +49,21 @@ export default function PartnersSupporters() {
       {/* Marquee Track */}
       <div className="relative flex overflow-x-hidden group py-4">
         {/* Gradient Fade Overlays */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-[#09090b] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-[#09090b] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-[#111827] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-[#111827] to-transparent z-10 pointer-events-none" />
 
         {/* Marquee Row 1 */}
         <div className="flex shrink-0 animate-marquee group-hover:[animation-play-state:paused] items-center gap-8 py-2">
           {partners.concat(partners).map((partner, index) => (
             <div
               key={`about-partner-1-${index}`}
-              className="flex items-center gap-4 px-6 py-3.5 rounded-2xl bg-white border border-gray-200/70 shadow-sm hover:shadow-md hover:border-slate-200 transition-all shrink-0 cursor-default"
+              className="flex items-center gap-4 px-6 py-3.5  bg-white border border-gray-200/70 shadow-sm hover:shadow-md hover:border-slate-200 transition-all shrink-0 cursor-default"
             >
-              <div className={`w-10 h-10 rounded-xl partner.color flex items-center justify-center text-white font-heading font-bold text-sm shadow-sm`}>
+              <div className={`w-10 h-10 rounded-xl ${partner.color} flex items-center justify-center text-white font-heading font-bold text-sm shadow-sm`}>
                 {partner.initials}
               </div>
               <div className="text-left">
-                <span className="font-heading font-bold text-base text-[#1a1a2e] block leading-none">
+                <span className="font-heading font-bold text-base text-[#111827] block leading-none">
                   {partner.name}
                 </span>
                 <span className="text-xs text-gray-400 font-body font-medium block mt-1">
@@ -79,13 +79,13 @@ export default function PartnersSupporters() {
           {partners.concat(partners).map((partner, index) => (
             <div
               key={`about-partner-2-${index}`}
-              className="flex items-center gap-4 px-6 py-3.5 rounded-2xl bg-white border border-gray-200/70 shadow-sm hover:shadow-md hover:border-slate-200 transition-all shrink-0 cursor-default"
+              className="flex items-center gap-4 px-6 py-3.5  bg-white border border-gray-200/70 shadow-sm hover:shadow-md hover:border-slate-200 transition-all shrink-0 cursor-default"
             >
-              <div className={`w-10 h-10 rounded-xl partner.color flex items-center justify-center text-white font-heading font-bold text-sm shadow-sm`}>
+              <div className={`w-10 h-10 rounded-xl ${partner.color} flex items-center justify-center text-white font-heading font-bold text-sm shadow-sm`}>
                 {partner.initials}
               </div>
               <div className="text-left">
-                <span className="font-heading font-bold text-base text-[#1a1a2e] block leading-none">
+                <span className="font-heading font-bold text-base text-[#111827] block leading-none">
                   {partner.name}
                 </span>
                 <span className="text-xs text-gray-400 font-body font-medium block mt-1">

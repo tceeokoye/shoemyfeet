@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { XIcon, ChevronLeftIcon, ChevronRightIcon, MapPinIcon, CalendarIcon, Share2Icon, DownloadIcon, ZoomInIcon } from "@/components/ui/Icons";
 import { MediaItem } from "./galleryData";
 
@@ -70,7 +70,7 @@ export default function LightboxModal({ photos, currentIndex, onClose, onNavigat
         {/* Top Controls Bar */}
         <div className="absolute top-0 left-0 right-0 p-4 sm:p-6 flex items-center justify-between z-30 pointer-events-auto">
           <div className="flex items-center gap-3">
-            <span className="px-3.5 py-1 rounded-full bg-[#f97316] text-white text-xs font-heading font-bold shadow-md">
+            <span className="px-3.5 py-1 rounded-full bg-[#1A3A6B] text-white text-xs font-heading font-bold shadow-md">
               {currentIndex + 1} / {photos.length}
             </span>
             <span className="text-white/80 font-body text-xs hidden sm:inline-block">
@@ -93,7 +93,7 @@ export default function LightboxModal({ photos, currentIndex, onClose, onNavigat
 
             <button
               onClick={onClose}
-              className="p-2.5 rounded-full bg-white/10 text-white hover:bg-warm-orange transition-all hover:scale-110"
+              className="p-2.5 rounded-full bg-white/10 text-white hover:bg-[#1A3A6B] transition-all hover:scale-110"
               aria-label="Close Lightbox"
             >
               <XIcon size={20} />
@@ -143,14 +143,14 @@ export default function LightboxModal({ photos, currentIndex, onClose, onNavigat
             alt={photo.title}
             fill
             priority
-            className="object-contain rounded-2xl transition-transform duration-300 drop-shadow-2xl"
+            className="object-contain  transition-transform duration-300 drop-shadow-2xl"
             sizes="(max-width: 1280px) 100vw, 1280px"
           />
         </motion.div>
 
         {/* Bottom Details Caption Bar */}
         <motion.div
-          className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-[#09090b] z-30 pointer-events-auto flex flex-col sm:flex-row sm:items-end justify-between gap-4 max-w-6xl mx-auto"
+          className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-[#111827] z-30 pointer-events-auto flex flex-col sm:flex-row sm:items-end justify-between gap-4 max-w-6xl mx-auto"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           onClick={(e) => e.stopPropagation()}
@@ -164,11 +164,11 @@ export default function LightboxModal({ photos, currentIndex, onClose, onNavigat
             </p>
             <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-300 font-body">
               <span className="flex items-center gap-1">
-                <MapPinIcon size={14} className="text-warm-orange" />
+                <MapPinIcon size={14} className="text-[#1A3A6B]" />
                 {photo.location}
               </span>
               <span className="flex items-center gap-1">
-                <CalendarIcon size={14} className="text-hope-yellow" />
+                <CalendarIcon size={14} className="text-[#142E56]" />
                 {photo.date}
               </span>
             </div>
@@ -196,7 +196,7 @@ export default function LightboxModal({ photos, currentIndex, onClose, onNavigat
                   });
                 }
               }}
-              className="px-4 py-2 rounded-full bg-[#f97316] text-white font-body text-xs font-bold shadow-md hover:scale-105 transition-all flex items-center gap-1.5"
+              className="px-4 py-2 rounded-full bg-[#1A3A6B] text-white font-body text-xs font-bold shadow-md hover:scale-105 transition-all flex items-center gap-1.5"
             >
               <Share2Icon size={14} />
               <span>Share</span>

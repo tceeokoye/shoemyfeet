@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
 
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { motion } from "framer-motion";
 import { Article } from "@/lib/blogData";
 import { fadeUp, viewportConfig } from "@/lib/animations";
@@ -20,11 +20,11 @@ export default function FeaturedArticle({ article, onReadStory, onAuthorClick }:
         initial="hidden"
         whileInView="visible"
         viewport={viewportConfig}
-        className="group relative bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100/80 hover:shadow-2xl transition-all duration-500"
+        className="group relative bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100/80 hover:shadow-2xl transition-all duration-500"
       >
         <div className="grid lg:grid-cols-12 gap-0 items-stretch">
           {/* Large Image Cover Container */}
-          <div className="lg:col-span-7 relative min-h-[320px] sm:min-h-[420px] overflow-hidden">
+          <div className="lg:col-span-7 relative min-h-80 sm:min-h-[420px] overflow-hidden">
             <Image
               src={article.coverImage}
               alt={article.title}
@@ -37,11 +37,11 @@ export default function FeaturedArticle({ article, onReadStory, onAuthorClick }:
 
             {/* Badges Overlay */}
             <div className="absolute top-6 left-6 flex flex-wrap items-center gap-2 z-10">
-              <span className="px-3.5 py-1.5 rounded-full bg-warm-orange text-white font-bold text-xs shadow-md tracking-wider uppercase inline-flex items-center gap-1.5">
+              <span className="px-3.5 py-1.5 rounded-full bg-[#1A3A6B] text-white font-bold text-xs shadow-md tracking-wider uppercase inline-flex items-center gap-1.5">
                 <SparklesIcon size={12} />
                 Featured Story
               </span>
-              <span className="px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#f97316] font-bold text-xs shadow-md">
+              <span className="px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#1A3A6B] font-bold text-xs shadow-md">
                 {article.category}
               </span>
             </div>
@@ -63,18 +63,18 @@ export default function FeaturedArticle({ article, onReadStory, onAuthorClick }:
               {/* Meta strip */}
               <div className="hidden lg:flex items-center gap-4 text-xs font-body text-gray-500 mb-4">
                 <span className="flex items-center gap-1.5 font-medium text-gray-600">
-                  <CalendarIcon size={14} className="text-warm-orange" />
+                  <CalendarIcon size={14} className="text-[#1A3A6B]" />
                   {article.publishedAt}
                 </span>
                 <span>•</span>
                 <span className="flex items-center gap-1.5 font-medium text-gray-600">
-                  <ClockIcon size={14} className="text-warm-orange" />
+                  <ClockIcon size={14} className="text-[#1A3A6B]" />
                   {article.readingTime}
                 </span>
               </div>
 
               {/* Title */}
-              <h2 className="text-2xl sm:text-3xl lg:text-3xl font-heading font-bold text-[#1a1a2e] mb-4 group-hover:text-warm-orange transition-colors leading-snug">
+              <h2 className="text-2xl sm:text-3xl lg:text-3xl font-heading font-bold text-[#111827] mb-4 group-hover:text-[#1A3A6B] transition-colors leading-snug">
                 {article.title}
               </h2>
 
@@ -92,11 +92,11 @@ export default function FeaturedArticle({ article, onReadStory, onAuthorClick }:
                 onClick={() => onAuthorClick(article.author.id)}
                 className="flex items-center gap-3 text-left hover:opacity-80 transition-opacity cursor-pointer group/author"
               >
-                <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-warm-orange/30 group-hover/author:border-warm-orange transition-colors shadow-xs">
+                <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#1A3A6B]/30 group-hover/author:border-[#1A3A6B] transition-colors shadow-xs">
                   <Image src={article.author.avatar} alt={article.author.name} fill className="object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-heading font-bold text-xs text-[#1a1a2e] group-hover/author:text-warm-orange transition-colors">
+                  <h4 className="font-heading font-bold text-xs text-[#111827] group-hover/author:text-[#1A3A6B] transition-colors">
                     {article.author.name}
                   </h4>
                   <span className="text-[11px] text-gray-500 font-body block">{article.author.role}</span>
@@ -117,7 +117,7 @@ export default function FeaturedArticle({ article, onReadStory, onAuthorClick }:
                 <button
                   type="button"
                   onClick={() => onReadStory(article)}
-                  className="btn-primary text-xs py-3 px-6 rounded-full inline-flex items-center justify-center gap-2 cursor-pointer shadow-md group-hover:bg-[#f97316] transition-all"
+                  className="btn-secondary text-xs py-3 px-6 rounded-[10px] inline-flex items-center justify-center gap-2 cursor-pointer shadow-md group-hover:bg-[#1A3A6B] transition-all"
                 >
                   <span>Read Full Story</span>
                   <ArrowRightIcon size={14} className="group-hover:translate-x-1 transition-transform" />

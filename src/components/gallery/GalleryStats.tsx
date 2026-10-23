@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
@@ -57,7 +57,7 @@ export default function GalleryStats() {
   return (
     <section className="relative z-20 -mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.div
-        className="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-100 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
+        className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl border border-gray-100 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -69,10 +69,10 @@ export default function GalleryStats() {
             variants={fadeUp}
             className="flex flex-col items-center text-center p-3 group hover:scale-105 transition-transform"
           >
-            <div className={`w-12 h-12 rounded-2xl stat.color flex items-center justify-center shadow-lg mb-3 group-hover:rotate-6 transition-transform`}>
+            <div className={`w-12 h-12  stat.color flex items-center justify-center shadow-lg mb-3 group-hover:rotate-6 transition-transform`}>
               {getIcon(stat.icon)}
             </div>
-            <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#f97316] leading-tight mb-1">
+            <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#1A3A6B] leading-tight mb-1">
               <Counter value={stat.value} suffix={stat.suffix} />
             </h3>
             <p className="font-body text-xs sm:text-sm font-semibold text-gray-500">

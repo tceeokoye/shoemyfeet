@@ -1,9 +1,8 @@
-"use client";
+﻿"use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
-import { ChevronLeftIcon, ChevronRightIcon, QuoteIcon, StarIcon } from "@/components/ui/Icons";
 
 const testimonials = [
   {
@@ -12,8 +11,6 @@ const testimonials = [
     org: "Lagos Island General Hospital",
     quote: "As a doctor, I know firsthand how barefoot children suffer. Shoe My Feet Foundation is addressing one of the most overlooked health crises affecting Nigerian children. My monthly donation is one of the most meaningful things I do.",
     amount: "Monthly Donor",
-    avatar: "👩‍⚕️",
-    stars: 5,
   },
   {
     name: "Chidi Okafor",
@@ -21,8 +18,6 @@ const testimonials = [
     org: "Lagos Startup Hub",
     quote: "I grew up barefoot. I know exactly what it feels like to be turned away from school or to hide your feet in shame. When I found Shoe My Feet Foundation, I knew I had to contribute. This is exactly where giving should go.",
     amount: "Annual Donor",
-    avatar: "👨‍💼",
-    stars: 5,
   },
   {
     name: "TechForward Nigeria",
@@ -30,8 +25,6 @@ const testimonials = [
     org: "IT & Technology Company",
     quote: "As part of our CSR initiative, we've partnered with Shoe My Feet Foundation for two years. The transparency, impact reporting, and genuine care for children make them one of our most trusted nonprofit partners.",
     amount: "Gold Partner",
-    avatar: "🏢",
-    stars: 5,
   },
   {
     name: "Pastor Mrs. Blessing Eze",
@@ -39,8 +32,6 @@ const testimonials = [
     org: "Redeemed Christian Church, Enugu",
     quote: "Our congregation organized a shoe donation drive and raised ₦450,000 in one Sunday service. The children we helped were so joyful — their faces lit up like Christmas morning. We will be doing this every quarter now.",
     amount: "Community Drive Organizer",
-    avatar: "⛪",
-    stars: 5,
   },
   {
     name: "Aisha Bello",
@@ -48,8 +39,6 @@ const testimonials = [
     org: "Girls Forward Initiative",
     quote: "We've seen firsthand how shoe insecurity affects girls' attendance and self-esteem. Collaborating with Shoe My Feet Foundation has amplified our reach enormously. They are a model of how Nigerian nonprofits should operate.",
     amount: "Partner Organization",
-    avatar: "👩‍💼",
-    stars: 5,
   },
 ];
 
@@ -60,19 +49,16 @@ export default function DonorTestimonials() {
   const next = () => setActive((i) => (i + 1) % testimonials.length);
 
   return (
-    <section className="section-padding bg-white relative overflow-hidden" aria-label="Donor testimonials">
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#09090b]" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 opacity-5 blur-3xl rounded-full bg-slate-800 pointer-events-none" />
-
+    <section className="section-padding bg-white" aria-label="Donor testimonials">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-center mb-14">
-          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-100 border border-teal-200 text-teal-700 font-bold text-sm mb-4">
-            💬 Donor Voices
+          <motion.span variants={fadeUp} className="text-sm font-semibold uppercase tracking-wide text-[#142E56] mb-4">
+            Donor Voices
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-5">
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-5">
             Hear From Our{" "}
-            <span className="text-[#f97316]">Generous Donors</span>
+            <span className="text-[#1A3A6B]">Generous Donors</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Real voices from the people and organizations who have joined our mission.
@@ -88,30 +74,16 @@ export default function DonorTestimonials() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.97 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-[#09090b] rounded-4xl border border-gray-100 shadow-xl p-8 sm:p-10 relative overflow-hidden"
+              className="rounded-xl bg-white p-8 shadow-md sm:p-10"
             >
-              {/* Quote mark */}
-              <div className="absolute top-6 right-8 opacity-10">
-                <QuoteIcon size={64} className="text-[#f97316]" />
-              </div>
-
               <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center mb-6">
-                {/* Avatar */}
-                <div className="w-20 h-20 rounded-2xl bg-[#09090b] flex items-center justify-center text-4xl flex-shrink-0 border border-slate-100 shadow-sm">
-                  {testimonials[active].avatar}
-                </div>
                 <div>
-                  <h3 className="font-heading font-bold text-xl text-[#1a1a2e]">{testimonials[active].name}</h3>
+                  <h3 className="font-heading font-bold text-xl text-[#111827]">{testimonials[active].name}</h3>
                   <p className="text-sm text-gray-500 font-body">{testimonials[active].role}</p>
-                  <p className="text-xs text-[#f97316] font-body font-semibold">{testimonials[active].org}</p>
-                  <div className="flex gap-0.5 mt-1">
-                    {Array.from({ length: testimonials[active].stars }).map((_, i) => (
-                      <StarIcon key={i} size={14} className="text-amber-400 fill-amber-400" />
-                    ))}
-                  </div>
+                  <p className="text-xs text-[#1A3A6B] font-body font-semibold">{testimonials[active].org}</p>
                 </div>
                 <div className="sm:ml-auto">
-                  <span className="px-3 py-1.5 rounded-full bg-orange-100 border border-orange-200 text-warm-orange-dark text-xs font-bold font-body">
+                  <span className="text-xs font-bold font-body text-[#142E56]">
                     {testimonials[active].amount}
                   </span>
                 </div>
@@ -125,33 +97,31 @@ export default function DonorTestimonials() {
 
           {/* Navigation */}
           <div className="flex items-center justify-between mt-6">
-            <div className="flex gap-2">
+            <div className="flex gap-3">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setActive(i)}
-                  className={`rounded-full transition-all cursor-pointer ${i === active ? "w-8 h-2.5 bg-warm-orange" : "w-2.5 h-2.5 bg-gray-200 hover:bg-gray-300"}`}
+                  className={`text-sm cursor-pointer ${i === active ? "font-bold text-[#1A3A6B]" : "text-gray-500 hover:text-[#1A3A6B]"}`}
                   aria-label={`Go to testimonial ${i + 1}`}
-                />
+                >
+                  {i + 1}
+                </button>
               ))}
             </div>
             <div className="flex gap-2">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+              <button
                 onClick={prev}
-                className="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500 hover:border-[#09090b] hover:text-[#f97316] transition-all cursor-pointer"
+                className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-gray-600 shadow-sm hover:shadow-md cursor-pointer"
               >
-                <ChevronLeftIcon size={18} />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                Previous
+              </button>
+              <button
                 onClick={next}
-                className="w-10 h-10 rounded-full bg-[#09090b] text-white flex items-center justify-center hover:bg-[#09090b]-dark transition-all shadow-md cursor-pointer"
+                className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-gray-600 shadow-sm hover:shadow-md cursor-pointer"
               >
-                <ChevronRightIcon size={18} />
-              </motion.button>
+                Next
+              </button>
             </div>
           </div>
         </div>
@@ -168,16 +138,14 @@ export default function DonorTestimonials() {
             <motion.button
               key={i}
               variants={fadeUp}
-              whileHover={{ y: -3, scale: 1.05 }}
               onClick={() => setActive(i)}
-              className={`p-3 rounded-2xl border text-center cursor-pointer transition-all ${
+              className={`rounded-lg bg-white p-3 text-center shadow-sm cursor-pointer transition-all ${
                 i === active
-                  ? "border-[#09090b] bg-slate-50 shadow-md"
-                  : "border-gray-100 bg-gray-50 hover:border-gray-200"
+                  ? "shadow-md"
+                  : "hover:shadow-md"
               }`}
             >
-              <span className="text-2xl">{t.avatar}</span>
-              <div className="text-[10px] font-bold text-gray-600 mt-1 font-body leading-tight">{t.name.split(" ")[0]}</div>
+              <span className="text-[10px] font-bold text-gray-600 font-body leading-tight">{t.name.split(" ")[0]}</span>
             </motion.button>
           ))}
         </motion.div>

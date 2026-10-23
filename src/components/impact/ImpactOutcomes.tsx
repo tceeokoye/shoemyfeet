@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import { motion } from "framer-motion";
@@ -20,7 +20,7 @@ const outcomes = [
     value: 30,
     unit: "%",
     description: "Average increase in school attendance recorded in partner schools after shoe distribution.",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-slate-50",
     border: "border-slate-100",
     progress: 75,
@@ -31,9 +31,9 @@ const outcomes = [
     value: 94,
     unit: "%",
     description: "Of children report feeling more confident and engaged in school after receiving proper footwear.",
-    color: "bg-[#f59e0b]",
-    bg: "bg-amber-50",
-    border: "border-amber-100",
+    color: "bg-[#1A3A6B]",
+    bg: "bg-[#FFFFFF]",
+    border: "border-[#d4dcd4]",
     progress: 94,
   },
   {
@@ -42,7 +42,7 @@ const outcomes = [
     value: 3,
     unit: "x",
     description: "Reduction in foot infections, cuts, and injuries reported among beneficiary children.",
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
     bg: "bg-rose-50",
     border: "border-rose-100",
     progress: 70,
@@ -53,7 +53,7 @@ const outcomes = [
     value: 300,
     unit: "+",
     description: "Active volunteers mobilized across all states, growing year on year as our community expands.",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-purple-50",
     border: "border-purple-100",
     progress: 60,
@@ -64,7 +64,7 @@ const outcomes = [
     value: 18,
     unit: "+",
     description: "Communities actively partnered with us, with local leaders, PTAs, and families fully involved.",
-    color: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
     bg: "bg-emerald-50",
     border: "border-emerald-100",
     progress: 80,
@@ -75,8 +75,8 @@ const outcomes = [
     value: 6,
     unit: "+",
     description: "Corporate and institutional partners committed to multi-year collaboration and support.",
-    color: "bg-[#f97316]",
-    bg: "bg-orange-50",
+    color: "bg-[#1A3A6B]",
+    bg: "bg-[#F3F4F6]",
     border: "border-orange-100",
     progress: 65,
   },
@@ -93,20 +93,20 @@ function OutcomeCard({ outcome, index }: { outcome: typeof outcomes[0]; index: n
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 22 } }}
-      className="bg-white border border-slate-100 rounded-3xl p-6 relative overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+      className="bg-white border border-slate-100 rounded-2xl p-6 relative overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
     >
       <div>
         {/* Icon */}
-        <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center shadow-sm mb-4 text-[#f97316]">
-          <Icon size={22} className="text-[#f97316]" />
+        <div className="w-12 h-12  bg-slate-50 border border-slate-100 flex items-center justify-center shadow-sm mb-4 text-[#1A3A6B]">
+          <Icon size={22} className="text-[#1A3A6B]" />
         </div>
 
         {/* Title */}
-        <h3 className="font-heading text-lg font-bold text-[#0a0a0a] mb-2">{outcome.title}</h3>
+        <h3 className="font-heading text-lg font-bold text-[#111827] mb-2">{outcome.title}</h3>
 
         {/* Big number */}
-        <div className="font-heading text-4xl font-extrabold text-[#0a0a0a] mb-2">
-          {outcome.value}<span className="text-[#f97316]">{outcome.unit}</span>
+        <div className="font-heading text-4xl font-extrabold text-[#111827] mb-2">
+          {outcome.value}<span className="text-[#1A3A6B]">{outcome.unit}</span>
         </div>
 
         {/* Description */}
@@ -117,7 +117,7 @@ function OutcomeCard({ outcome, index }: { outcome: typeof outcomes[0]; index: n
       <div>
         <div className="relative h-2 rounded-full bg-slate-100 overflow-hidden">
           <motion.div
-            className="absolute inset-y-0 left-0 rounded-full bg-[#f97316]"
+            className="absolute inset-y-0 left-0 rounded-full bg-[#1A3A6B]"
             initial={{ width: 0 }}
             animate={inView ? { width: `${outcome.progress}%` } : {}}
             transition={{ duration: 1.2, delay: index * 0.07 + 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -143,16 +143,16 @@ export default function ImpactOutcomes() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold border border-orange-200 mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-xs sm:text-sm font-bold border border-orange-200 mb-4"
           >
             Measuring Success
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a0a0a] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
             The Outcomes That{" "}
-            <span className="text-[#f97316]">Prove Our Impact</span>
+            <span className="text-[#1A3A6B]">Prove Our Impact</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}

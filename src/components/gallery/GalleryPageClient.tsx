@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import GalleryHero from "./GalleryHero";
@@ -20,7 +20,24 @@ import AlbumModal from "./AlbumModal";
 
 import { ALL_MEDIA_ITEMS, FeaturedMoment, MediaItem } from "./galleryData";
 
-export default function GalleryPageClient() {
+type GalleryCollection = "photos" | "videos" | "events";
+
+const collectionContent: Record<GalleryCollection, { title: string; description: string }> = {
+  photos: {
+    title: "Photographs from the field",
+    description: "Browse moments from shoe distributions, school visits, and community life.",
+  },
+  videos: {
+    title: "Films and community voices",
+    description: "Watch outreach documentaries and hear stories from the people behind the work.",
+  },
+  events: {
+    title: "Outreach events and albums",
+    description: "Explore event albums and trace our work across communities over time.",
+  },
+};
+
+export default function GalleryPageClient({ collection }: { collection: GalleryCollection }) {
   const [selectedVideo, setSelectedVideo] = useState<MediaItem | null>(null);
   const [photoIndex, setPhotoIndex] = useState<number | null>(null);
   const [selectedAlbum, setSelectedAlbum] = useState<FeaturedMoment | null>(null);
@@ -29,8 +46,9 @@ export default function GalleryPageClient() {
 
   const photosList = ALL_MEDIA_ITEMS.filter((m) => m.type === "photo");
 
-  const handleOpenPhoto = (_item: MediaItem, index: number) => {
-    setPhotoIndex(index);
+  const handleOpenPhoto = (item: MediaItem) => {
+    const index = photosList.findIndex((photo) => photo.id === item.id);
+    setPhotoIndex(index >= 0 ? index : null);
   };
 
   const handleOpenVideo = (video: MediaItem) => {
@@ -49,44 +67,48 @@ export default function GalleryPageClient() {
   return (
     <>
       <main className="[overflow-x:clip] min-h-screen bg-white">
-        {/* 1. Hero Section */}
-        <GalleryHero />
+        <section className="bg-[#FFFFFF] px-4 pb-10 pt-32 sm:px-6 sm:pb-14 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <a href="/gallery" className="mb-5 inline-block text-sm font-medium text-[#142E56] hover:underline">
+              ← Gallery overview
+            </a>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1A3A6B]">Shoe My Feet Foundation · Gallery</p>
+            <h1 className="font-heading text-4xl font-medium leading-tight text-[#111827] sm:text-5xl">
+              {collectionContent[collection].title}
+            </h1>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-[#696558] sm:text-lg">
+              {collectionContent[collection].description}
+            </p>
+          </div>
+        </section>
 
-        {/* 2. Gallery Statistics Counter */}
-        <GalleryStats />
+        {collection === "photos" && (
+          <>
+            <MediaGrid onSelectPhoto={handleOpenPhoto} onSelectVideo={handleOpenVideo} initialTab="Photos" />
+            <BeforeAfterTransformations onPlayVideo={handleOpenVideo} />
+            <MediaArchive onSelectPhoto={handleOpenPhoto} onSelectVideo={handleOpenVideo} />
+            <ShareYourStory onOpenUpload={handleOpenUpload} />
+          </>
+        )}
 
-        {/* 3. Featured Video Documentary Spotlight */}
-        <FeaturedVideoSection onPlayVideo={handleOpenVideo} />
+        {collection === "videos" && (
+          <>
+            <FeaturedVideoSection onPlayVideo={handleOpenVideo} />
+            <MediaGrid onSelectPhoto={handleOpenPhoto} onSelectVideo={handleOpenVideo} initialTab="Videos" />
+            <CommunityVoices onPlayVideo={handleOpenVideo} />
+            <ShareYourStory onOpenUpload={handleOpenUpload} />
+          </>
+        )}
 
-        {/* 4. Media Filters & Main Interactive Grid */}
-        <MediaGrid
-          onSelectPhoto={handleOpenPhoto}
-          onSelectVideo={handleOpenVideo}
-        />
-
-        {/* 5. Featured Moments & Event Albums */}
-        <FeaturedMoments onOpenAlbum={handleOpenAlbum} />
-
-        {/* 6. Before & After Transformations */}
-        <BeforeAfterTransformations onPlayVideo={handleOpenVideo} />
-
-        {/* 7. Chronological Event Timeline */}
-        <EventTimeline onPlayVideo={handleOpenVideo} />
-
-        {/* 8. Community Voices Testimonials */}
-        <CommunityVoices onPlayVideo={handleOpenVideo} />
-
-        {/* 9. Searchable Media Archive */}
-        <MediaArchive
-          onSelectPhoto={handleOpenPhoto}
-          onSelectVideo={handleOpenVideo}
-        />
-
-        {/* 10. Share Your Story CTA */}
-        <ShareYourStory onOpenUpload={handleOpenUpload} />
-
-        {/* 11. Final Call To Action */}
-        <GalleryCTA />
+        {collection === "events" && (
+          <>
+            <GalleryStats />
+            <FeaturedMoments onOpenAlbum={handleOpenAlbum} />
+            <EventTimeline onPlayVideo={handleOpenVideo} />
+            <MediaArchive onSelectPhoto={handleOpenPhoto} onSelectVideo={handleOpenVideo} />
+            <GalleryCTA />
+          </>
+        )}
       </main>
 
       {/* Global Interactive Modals */}

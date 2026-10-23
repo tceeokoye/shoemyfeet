@@ -1,6 +1,7 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
+import { Heart } from "lucide-react";
 import { WHY_VOLUNTEER_BENEFITS } from "@/lib/volunteerData";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 
@@ -18,22 +19,22 @@ export default function WhyVolunteer() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-warm-orange-dark text-xs sm:text-sm font-bold border border-orange-200 mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B]-dark text-xs sm:text-sm font-bold border border-orange-200 mb-4"
           >
             Why Volunteer With Us?
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-5 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-5 leading-tight"
           >
             Your Time Creates{" "}
-            <span className="text-warm-orange">Lasting Change</span>
+            <span className="text-[#1A3A6B]">Lasting Change</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
             className="text-base sm:text-lg text-gray-600 font-body leading-relaxed max-w-2xl mx-auto"
           >
-            Beyond the joy of service, volunteering with Shoe My Feet Foundation opens doors — to new skills, lifelong friendships, and the rare privilege of watching a child's life transform before your eyes.
+            Beyond the joy of service, volunteering with Shoe My Feet Foundation opens doors — to new skills, lifelong friendships, and the rare privilege of watching a child&apos;s life transform before your eyes.
           </motion.p>
         </motion.div>
 
@@ -47,18 +48,18 @@ export default function WhyVolunteer() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-              className={`relative group rounded-3xl p-7 benefit.bg border border-white hover:border-orange-200 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-default overflow-hidden`}
+              className={`relative group rounded-2xl p-7 ${benefit.bg} border border-white hover:border-orange-200 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-default overflow-hidden`}
             >
               {/* Hover glow */}
-              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-orange-50" />
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#F3F4F6]" />
 
               {/* Icon */}
               <motion.div
-                className="relative z-10 w-14 h-14 rounded-2xl bg-white shadow-md flex items-center justify-center text-3xl mb-5 group-hover:shadow-lg transition-shadow duration-300"
+                className={`relative z-10 flex size-14 items-center justify-center rounded-full bg-white text-[#1A3A6B] shadow-md mb-5 group-hover:shadow-lg transition-shadow duration-300`}
                 animate={{ rotate: [0, 4, -4, 0] }}
                 transition={{ duration: 4 + index * 0.5, repeat: Infinity, ease: "easeInOut", delay: index * 0.2 }}
               >
-                {benefit.icon}
+                <benefit.icon size={25} strokeWidth={1.8} aria-hidden="true" />
               </motion.div>
 
               {/* Content */}
@@ -69,7 +70,7 @@ export default function WhyVolunteer() {
 
               {/* Bottom accent bar */}
               <motion.div
-                className={`absolute bottom-0 left-0 h-1 benefit.bg.replace("from-", "from-").replace("to-", "to-") rounded-b-3xl`}
+                className="absolute bottom-0 left-0 h-1 rounded-b-3xl bg-[#1A3A6B]"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
@@ -82,20 +83,20 @@ export default function WhyVolunteer() {
 
         {/* Bottom quote strip */}
         <motion.div
-          className="mt-16 rounded-3xl bg-[#09090b] p-8 sm:p-10 text-center relative overflow-hidden"
+          className="mt-16 rounded-2xl bg-[#111827] p-8 sm:p-10 text-center relative overflow-hidden"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#f97316]/10 blur-[100px]" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#f97316]/8 blur-[100px]" />
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#1A3A6B]/10 blur-[100px]" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#1A3A6B]/8 blur-[100px]" />
           </div>
           <div className="relative z-10">
-            <div className="text-4xl mb-4">❤️</div>
+            <Heart size={30} className="mx-auto mb-4 text-[#1A3A6B]" fill="currentColor" aria-hidden="true" />
             <p className="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-relaxed max-w-3xl mx-auto">
-              "Volunteers don't get paid — not because they're worthless, but because they're <span className="text-warm-orange">priceless</span>."
+              &ldquo;Volunteers don&apos;t get paid, not because they&apos;re worthless, but because they&apos;re <span className="text-[#1A3A6B]">priceless</span>.&rdquo;
             </p>
             <p className="font-body text-orange-300 mt-4 text-sm font-semibold">— Sherry Anderson</p>
           </div>

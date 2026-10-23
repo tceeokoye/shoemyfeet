@@ -1,143 +1,132 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ContactHero from "@/components/contact/ContactHero";
-import ContactInfoCards from "@/components/contact/ContactInfoCards";
-import ContactFormSection from "@/components/contact/ContactFormSection";
-import LiveSupportOptions from "@/components/contact/LiveSupportOptions";
-import FindUsLocation from "@/components/contact/FindUsLocation";
-import RegionalContacts from "@/components/contact/RegionalContacts";
-import EmergencySupportCards from "@/components/contact/EmergencySupportCards";
-import MeetTeamContacts from "@/components/contact/MeetTeamContacts";
-import VisitOfficeSection from "@/components/contact/VisitOfficeSection";
-import SocialMediaConnect from "@/components/contact/SocialMediaConnect";
-import ContactFAQ from "@/components/contact/ContactFAQ";
-import ContactNewsletter from "@/components/contact/ContactNewsletter";
-import ContactFinalCTA from "@/components/contact/ContactFinalCTA";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Shoe My Feet Foundation — Let's Make Every Step Count Together",
-  description:
-    "Get in touch with Shoe My Feet Foundation in Nigeria. Contact our head office in Enugu, regional coordinators in Kaduna, Benin City, and Lagos, or send us a message online. We're here to help!",
-  keywords: [
-    "contact Shoe My Feet Foundation",
-    "Enugu NGO contact",
-    "nonprofit contact Nigeria",
-    "charity office Enugu",
-    "volunteer contact Nigeria",
-    "donation helpline Nigeria",
-    "school shoes partnership",
-    "corporate CSR contact Nigeria",
-  ],
-  openGraph: {
-    title: "Contact Us | Shoe My Feet Foundation",
-    description:
-      "Whether you want to volunteer, donate, partner with us, or request assistance for a school or community, we'd love to hear from you.",
-    url: "https://shoemyfeet.org/contact",
-    type: "website",
-    images: [
-      {
-        url: "/images/contact-og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Shoe My Feet Foundation office and volunteers in Enugu",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact Us | Shoe My Feet Foundation",
-    description: "Every conversation is another opportunity to change a child's life. Connect with us today.",
-    images: ["/images/contact-og.jpg"],
-  },
-};
-
-// JSON-LD Structured Data
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://shoemyfeet.org" },
-    { "@type": "ListItem", position: 2, name: "Contact Us", item: "https://shoemyfeet.org/contact" },
-  ],
-};
-
-const contactPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  name: "Contact Shoe My Feet Foundation",
-  description: "Contact information, office location, regional coordinators, and enquiry form for Shoe My Feet Foundation in Nigeria.",
-  mainEntity: {
-    "@type": "NGO",
-    name: "Shoe My Feet Foundation",
-    url: "https://shoemyfeet.org",
-    telephone: "+2348007463693",
-    email: "hello@shoemyfeet.org",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "No. 14 Independence Layout, Plot 8",
-      addressLocality: "Enugu",
-      addressRegion: "Enugu State",
-      addressCountry: "NG",
-    },
-    openingHours: "Mo-Fr 08:00-17:00, Sa 09:00-14:00",
-  },
+  title: "Contact Us | Shoe My Feet Foundation",
+  description: "Get in touch with Shoe My Feet Foundation. Reach us by phone, email, or through our simple contact form.",
 };
 
 export default function ContactPage() {
   return (
     <>
-      {/* JSON-LD Schemas */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
-      />
-
       <Navbar />
-      <main>
-        {/* 1. Hero Section */}
-        <ContactHero />
 
-        {/* 2. Contact Information Cards */}
-        <ContactInfoCards />
+      <main className="min-h-screen bg-[#FFFFFF] pt-28 pb-16 text-[#111827] sm:pt-32">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="overflow-hidden rounded-[32px] border border-[#F3F4F6] bg-white shadow-[0_20px_60px_rgba(17, 17, 17,0.08)]">
+            <div className="grid lg:grid-cols-[0.92fr_1.08fr]">
+              <aside className="bg-[#111827] px-6 py-8 text-white sm:px-8 lg:px-10 lg:py-12">
+                <span className="inline-flex rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#F97316]">
+                  Contact
+                </span>
 
-        {/* 3. Multi-Step Contact Form */}
-        <ContactFormSection />
+                <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                  Let&apos;s talk.
+                </h1>
 
-        {/* 4. Live Support Options */}
-        <LiveSupportOptions />
+                <p className="mt-4 max-w-md text-sm leading-7 text-[#F3F4F6] sm:text-base">
+                  We&apos;re happy to hear from you about partnerships, donations, volunteering, and community support.
+                </p>
 
-        {/* 5. Find Us (Location Map & Directions) */}
-        <FindUsLocation />
+                <div className="mt-8 space-y-4">
+                  <a
+                    href="https://shoemyfeet.org"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-between gap-4 rounded-2xl border border-white/12 bg-white/5 px-4 py-3 transition hover:bg-white/10"
+                  >
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.18em] text-[#F97316]">Website</p>
+                      <p className="mt-1 text-base font-medium text-white">shoemyfeet.org</p>
+                    </div>
+                    <span aria-hidden="true" className="text-2xl text-[#F97316]">→</span>
+                  </a>
 
-        {/* 6. Regional Contacts */}
-        <RegionalContacts />
+                  <a
+                    href="tel:+2348007463693"
+                    className="flex items-center justify-between gap-4 rounded-2xl border border-white/12 bg-white/5 px-4 py-3 transition hover:bg-white/10"
+                  >
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.18em] text-[#F97316]">Phone</p>
+                      <p className="mt-1 text-base font-medium text-white">+234 800 746 3693</p>
+                    </div>
+                    <span aria-hidden="true" className="text-2xl text-[#F97316]">☎</span>
+                  </a>
 
-        {/* 7. Emergency & Support Information */}
-        <EmergencySupportCards />
+                  <a
+                    href="mailto:hello@shoemyfeet.org"
+                    className="flex items-center justify-between gap-4 rounded-2xl border border-white/12 bg-white/5 px-4 py-3 transition hover:bg-white/10"
+                  >
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.18em] text-[#F97316]">Email</p>
+                      <p className="mt-1 text-base font-medium text-white">hello@shoemyfeet.org</p>
+                    </div>
+                    <span aria-hidden="true" className="text-2xl text-[#F97316]">✉</span>
+                  </a>
+                </div>
+              </aside>
 
-        {/* 8. Meet Our Team Contacts */}
-        <MeetTeamContacts />
+              <section className="px-6 py-8 sm:px-8 lg:px-10 lg:py-12">
+                <div className="mb-8">
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#a8741b]">Send a message</p>
+                  <h2 className="mt-2 text-3xl font-semibold tracking-tight text-[#111827] sm:text-4xl">
+                    We&apos;d love to hear from you.
+                  </h2>
+                </div>
 
-        {/* 9. Visit Our Office */}
-        <VisitOfficeSection />
+                <form className="space-y-5">
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <label className="block">
+                      <span className="mb-2 block text-sm font-medium text-[#111827]">Full name</span>
+                      <input
+                        type="text"
+                        placeholder="Your name"
+                        className="w-full rounded-2xl border border-[#d4dcd4] bg-[#f9f9f9] px-4 py-3 text-base text-[#111827] outline-none transition focus:border-[#1A3A6B] focus:bg-white"
+                      />
+                    </label>
 
-        {/* 10. Social Media Connect */}
-        <SocialMediaConnect />
+                    <label className="block">
+                      <span className="mb-2 block text-sm font-medium text-[#111827]">Email address</span>
+                      <input
+                        type="email"
+                        placeholder="you@example.com"
+                        className="w-full rounded-2xl border border-[#d4dcd4] bg-[#f9f9f9] px-4 py-3 text-base text-[#111827] outline-none transition focus:border-[#1A3A6B] focus:bg-white"
+                      />
+                    </label>
+                  </div>
 
-        {/* 11. Frequently Asked Questions */}
-        <ContactFAQ />
+                  <label className="block">
+                    <span className="mb-2 block text-sm font-medium text-[#111827]">Phone number</span>
+                    <input
+                      type="tel"
+                      placeholder="+234 800 000 0000"
+                      className="w-full rounded-2xl border border-[#d4dcd4] bg-[#f9f9f9] px-4 py-3 text-base text-[#111827] outline-none transition focus:border-[#1A3A6B] focus:bg-white"
+                    />
+                  </label>
 
-        {/* 12. Newsletter Invitation */}
-        <ContactNewsletter />
+                  <label className="block">
+                    <span className="mb-2 block text-sm font-medium text-[#111827]">Message</span>
+                    <textarea
+                      rows={5}
+                      placeholder="How can we help?"
+                      className="w-full rounded-2xl border border-[#d4dcd4] bg-[#f9f9f9] px-4 py-3 text-base text-[#111827] outline-none transition focus:border-[#1A3A6B] focus:bg-white"
+                    />
+                  </label>
 
-        {/* 13. Final Call to Action */}
-        <ContactFinalCTA />
+                  <button
+                    type="submit"
+                    className="inline-flex items-center justify-center rounded-full bg-[#1A3A6B] px-6 py-3 text-base font-semibold text-white transition hover:bg-[#142E56]"
+                  >
+                    Send message
+                  </button>
+                </form>
+              </section>
+            </div>
+          </div>
+        </div>
       </main>
+
       <Footer />
     </>
   );

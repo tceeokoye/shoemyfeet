@@ -1,8 +1,9 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
+import { Footprints } from "lucide-react";
 import { VOLUNTEER_STATS } from "@/lib/volunteerData";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 
@@ -20,10 +21,10 @@ function StatCard({ stat, index }: { stat: typeof VOLUNTEER_STATS[0]; index: num
       className="relative group text-center cursor-default"
     >
       {/* Glow card */}
-      <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors duration-500 p-6 sm:p-8">
+      <div className="relative overflow-hidden  border border-white/10 bg-white/5 hover:bg-white/10 transition-colors duration-500 p-6 sm:p-8">
         {/* Animated gradient border */}
-        <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 stat.color`} style={{ opacity: 0, padding: "1px" }}>
-          <div className="h-full w-full rounded-2xl bg-[#09090b]" />
+        <div className={`absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-500 stat.color`} style={{ opacity: 0, padding: "1px" }}>
+          <div className="h-full w-full  bg-[#111827]" />
         </div>
 
         {/* Icon */}
@@ -32,13 +33,13 @@ function StatCard({ stat, index }: { stat: typeof VOLUNTEER_STATS[0]; index: num
           animate={{ rotate: [0, 5, -5, 0] }}
           transition={{ duration: 4 + index * 0.3, repeat: Infinity, ease: "easeInOut", delay: index * 0.2 }}
         >
-          {stat.icon}
+          <stat.icon size={30} className="mx-auto text-[#1A3A6B]" strokeWidth={1.8} aria-hidden="true" />
         </motion.div>
 
         {/* Counter */}
         <div className={`font-heading text-5xl sm:text-6xl font-extrabold text-white mb-2 relative z-10 leading-none`}>
           {inView ? <CountUp end={stat.value} duration={2.5} separator="," /> : "0"}
-          <span className="text-[#f97316]">{stat.suffix}</span>
+          <span className="text-[#1A3A6B]">{stat.suffix}</span>
         </div>
 
         {/* Label */}
@@ -62,12 +63,12 @@ export default function VolunteerImpact() {
   return (
     <section
       id="volunteer-impact"
-      className="relative section-padding bg-[#09090b] text-white overflow-hidden border-t border-white/10"
+      className="relative section-padding bg-[#111827] text-white overflow-hidden border-t border-white/10"
     >
       {/* Decorative floating elements */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-1/4 left-1/6 w-[400px] h-[400px] rounded-full bg-[#f97316]/8 blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/6 w-[350px] h-[350px] rounded-full bg-[#f97316]/8 blur-[110px]" />
+        <div className="absolute top-1/4 left-1/6 w-[400px] h-[400px] rounded-full bg-[#1A3A6B]/8 blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/6 w-[350px] h-[350px] rounded-full bg-[#1A3A6B]/8 blur-[110px]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-white/3 blur-[200px]" />
       </div>
 
@@ -80,7 +81,7 @@ export default function VolunteerImpact() {
           animate={{ y: [0, -20, 0], opacity: [0.04, 0.10, 0.04] }}
           transition={{ duration: 4 + i * 0.6, repeat: Infinity, ease: "easeInOut", delay: i * 0.5 }}
         >
-          👣
+          <Footprints size={32} aria-hidden="true" />
         </motion.div>
       ))}
 
@@ -104,7 +105,7 @@ export default function VolunteerImpact() {
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight"
           >
             The Difference Your{" "}
-            <span className="text-warm-orange">
+            <span className="text-[#1A3A6B]">
               Time Makes
             </span>
           </motion.h2>
@@ -136,7 +137,7 @@ export default function VolunteerImpact() {
           </p>
           <a
             href="#volunteer-form"
-            className="btn-orange text-base sm:text-lg px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
+            className="btn-primary text-base sm:text-lg px-8 py-4 rounded-[10px] shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
           >
             Add Your Impact →
           </a>

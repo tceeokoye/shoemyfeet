@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
@@ -13,8 +13,8 @@ const emergencyCases = [
     cta: "Request School Support",
     href: "tel:+2348007463693",
     badge: "Fast Track Response",
-    color: "bg-[#f97316]",
-    bg: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
+    bg: "bg-[#1A3A6B]",
     border: "border-red-100",
   },
   {
@@ -25,8 +25,8 @@ const emergencyCases = [
     cta: "Treasury Hotline",
     href: "tel:+2348029876543",
     badge: "Instant Support",
-    color: "bg-[#f97316]",
-    bg: "bg-orange-50",
+    color: "bg-[#1A3A6B]",
+    bg: "bg-[#F3F4F6]",
     border: "border-orange-100",
   },
   {
@@ -37,7 +37,7 @@ const emergencyCases = [
     cta: "Connect CSR Director",
     href: "https://wa.me/2348140009988",
     badge: "Direct Line",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-slate-50",
     border: "border-slate-100",
   },
@@ -49,8 +49,8 @@ const emergencyCases = [
     cta: "Open WhatsApp Chat",
     href: "https://wa.me/2348140009988",
     badge: "Active 24/7",
-    color: "bg-[#15803d]",
-    bg: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
+    bg: "bg-[#16A34A]",
     border: "border-green-100",
   },
 ];
@@ -71,8 +71,8 @@ export default function EmergencySupportCards() {
           <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-100 border border-red-200 text-red-700 font-bold text-sm mb-4">
             ⚡ Urgent Enquiries
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">
-            Need Immediate <span className="text-warm-orange">Assistance?</span>
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4">
+            Need Immediate <span className="text-[#1A3A6B]">Assistance?</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             For time-sensitive community requests, urgent school supply needs, or high-priority corporate partnerships, use our direct hotlines.
@@ -94,11 +94,11 @@ export default function EmergencySupportCards() {
               custom={index}
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 280, damping: 22 }}
-              className={`rounded-3xl p-6 border ${item.border} item.bg shadow-sm hover:shadow-xl transition-all flex flex-col justify-between relative overflow-hidden`}
+              className={`rounded-2xl p-6 border ${item.border} item.bg shadow-sm hover:shadow-xl transition-all flex flex-col justify-between relative overflow-hidden`}
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className={`w-12 h-12 rounded-2xl item.color flex items-center justify-center text-2xl shadow-md text-white`}>
+                  <div className={`w-12 h-12  item.color flex items-center justify-center text-2xl shadow-md text-white`}>
                     {item.icon}
                   </div>
                   <span className="text-[10px] font-bold font-body px-2.5 py-1 rounded-full bg-white border border-gray-200 text-gray-700 shadow-xs">
@@ -106,7 +106,7 @@ export default function EmergencySupportCards() {
                   </span>
                 </div>
 
-                <h3 className="font-heading font-bold text-lg text-[#1a1a2e] mb-1">{item.title}</h3>
+                <h3 className="font-heading font-bold text-lg text-[#111827] mb-1">{item.title}</h3>
                 <div className="text-xs text-gray-500 font-body mb-3 font-medium">{item.subtitle}</div>
                 <p className="text-xs text-gray-600 font-body leading-relaxed mb-4">{item.description}</p>
               </div>
@@ -114,7 +114,7 @@ export default function EmergencySupportCards() {
               <div className="pt-4 border-t border-black/5">
                 <a
                   href={item.href}
-                  className={`w-full py-3 px-4 rounded-2xl item.color text-white font-bold font-body text-xs text-center inline-flex items-center justify-center gap-2 shadow-md hover:opacity-95 transition-all`}
+                  className={`w-full py-3 px-4  item.color text-white font-bold font-body text-xs text-center inline-flex items-center justify-center gap-2 shadow-md hover:opacity-95 transition-all`}
                 >
                   <span>{item.cta}</span>
                   <ArrowRightIcon size={14} />

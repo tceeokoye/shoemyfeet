@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { XIcon, MapPinIcon, CalendarIcon, PlayIcon, ZoomInIcon } from "@/components/ui/Icons";
 import { FeaturedMoment, MediaItem } from "./galleryData";
 
@@ -24,7 +24,7 @@ export default function AlbumModal({ album, onClose, onSelectMedia }: AlbumModal
         onClick={onClose}
       >
         <motion.div
-          className="relative w-full max-w-5xl bg-[#09090b] rounded-3xl overflow-hidden shadow-2xl border border-white/15 flex flex-col max-h-[88vh] text-white"
+          className="relative w-full max-w-5xl bg-[#111827] rounded-2xl overflow-hidden shadow-2xl border border-white/15 flex flex-col max-h-[88vh] text-white"
           initial={{ scale: 0.9, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -38,11 +38,11 @@ export default function AlbumModal({ album, onClose, onSelectMedia }: AlbumModal
               fill
               className="object-cover brightness-75"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-black/40 to-transparent" />
 
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 p-2.5 rounded-full bg-black/60 text-white hover:bg-[#f97316] transition-colors z-20 cursor-pointer"
+              className="absolute top-4 right-4 p-2.5 rounded-full bg-black/60 text-white hover:bg-[#1A3A6B] transition-colors z-20 cursor-pointer"
               aria-label="Close Album"
             >
               <XIcon size={20} />
@@ -50,15 +50,15 @@ export default function AlbumModal({ album, onClose, onSelectMedia }: AlbumModal
 
             <div className="absolute bottom-4 left-6 right-6 z-10 text-white">
               <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                <span className="px-3 py-1 rounded-full bg-[#f97316] text-white text-xs font-bold font-heading">
+                <span className="px-3 py-1 rounded-full bg-[#1A3A6B] text-white text-xs font-bold font-heading">
                   ALBUM PREVIEW
                 </span>
                 <span className="flex items-center gap-1 text-xs text-neutral-300 font-body">
-                  <MapPinIcon size={12} className="text-[#f97316]" />
+                  <MapPinIcon size={12} className="text-[#1A3A6B]" />
                   {album.location}
                 </span>
                 <span className="flex items-center gap-1 text-xs text-neutral-300 font-body">
-                  <CalendarIcon size={12} className="text-[#f59e0b]" />
+                  <CalendarIcon size={12} className="text-[#1A3A6B]" />
                   {album.date}
                 </span>
               </div>
@@ -72,7 +72,7 @@ export default function AlbumModal({ album, onClose, onSelectMedia }: AlbumModal
           </div>
 
           {/* Album Media Grid */}
-          <div className="p-6 overflow-y-auto flex-1 bg-[#09090b]">
+          <div className="p-6 overflow-y-auto flex-1 bg-[#111827]">
             <h4 className="font-heading text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center justify-between">
               <span>Album Gallery Items ({album.albumMedia.length})</span>
               <span className="text-xs text-orange-300 font-normal">Click item to enlarge</span>
@@ -85,7 +85,7 @@ export default function AlbumModal({ album, onClose, onSelectMedia }: AlbumModal
                   onClick={() => {
                     onSelectMedia(item);
                   }}
-                  className="group relative aspect-4/3 rounded-xl overflow-hidden cursor-pointer border border-white/10 hover:border-warm-orange transition-all duration-300 shadow-md"
+                  className="group relative aspect-4/3 rounded-xl overflow-hidden cursor-pointer border border-white/10 hover:border-[#1A3A6B] transition-all duration-300 shadow-md"
                 >
                   <Image
                     src={item.image}
@@ -97,7 +97,7 @@ export default function AlbumModal({ album, onClose, onSelectMedia }: AlbumModal
 
                   {item.type === "video" ? (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-10 h-10 rounded-full bg-warm-orange/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <div className="w-10 h-10 rounded-full bg-[#1A3A6B]/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                         <PlayIcon size={16} className="ml-0.5" />
                       </div>
                     </div>
@@ -109,7 +109,7 @@ export default function AlbumModal({ album, onClose, onSelectMedia }: AlbumModal
                     </div>
                   )}
 
-                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#09090b]">
+                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#111827]">
                     <p className="text-[11px] font-heading font-semibold text-white line-clamp-1">
                       {item.title}
                     </p>

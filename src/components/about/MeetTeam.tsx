@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 const team = [
@@ -80,15 +80,15 @@ export default function MeetTeam() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold font-body mb-3 border border-orange-200"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-xs sm:text-sm font-bold font-body mb-3 border border-orange-200"
           >
             Leadership &amp; Volunteers
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a0a0a] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
-            Meet the Hearts Behind <span className="text-[#f97316]">the Mission</span>
+            Meet the Hearts Behind <span className="text-[#1A3A6B]">the Mission</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -108,7 +108,7 @@ export default function MeetTeam() {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               whileHover={{ y: -6, transition: { type: "spring" as const, stiffness: 280, damping: 22 } }}
-              className="group relative bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="group relative bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               {/* Top Image Container */}
               <div className="relative w-full h-72 overflow-hidden bg-slate-100">
@@ -130,14 +130,14 @@ export default function MeetTeam() {
               {/* Card Body */}
               <div className="p-6 flex flex-col flex-1 justify-between">
                 <div>
-                  <h3 className="font-heading font-bold text-xl text-[#0a0a0a] mb-1">
+                  <h3 className="font-heading font-bold text-xl text-[#111827] mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-xs font-bold text-[#f97316] font-body uppercase tracking-wider mb-4">
+                  <p className="text-xs font-bold text-[#1A3A6B] font-body uppercase tracking-wider mb-4">
                     {member.position}
                   </p>
 
-                  <p className="text-slate-600 font-body text-xs leading-relaxed italic mb-6 relative pl-3 border-l-2 border-[#f97316]">
+                  <p className="text-slate-600 font-body text-xs leading-relaxed italic mb-6 relative pl-3 border-l-2 border-[#1A3A6B]">
                     &ldquo;{member.quote}&rdquo;
                   </p>
                 </div>
@@ -148,7 +148,7 @@ export default function MeetTeam() {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#09090b] hover:text-white transition-colors"
+                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#111827] hover:text-white transition-colors"
                     aria-label={`${member.name} LinkedIn`}
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -159,7 +159,7 @@ export default function MeetTeam() {
                     href={member.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#f97316] hover:text-white transition-colors"
+                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#1A3A6B] hover:text-white transition-colors"
                     aria-label={`${member.name} Twitter`}
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -168,7 +168,7 @@ export default function MeetTeam() {
                   </a>
                   <a
                     href={`mailto:${member.email}`}
-                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#ea580c] hover:text-white transition-colors ml-auto text-xs font-bold"
+                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#142E56] hover:text-white transition-colors ml-auto text-xs font-bold"
                     aria-label={`Email ${member.name}`}
                   >
                     ✉

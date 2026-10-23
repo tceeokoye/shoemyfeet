@@ -1,8 +1,9 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { HeartIcon, ArrowRightIcon } from "@/components/ui/Icons";
+import { ArrowRightIcon } from "@/components/ui/Icons";
+import { Footprints, Sparkles } from "lucide-react";
 
 const footprintTrail = [
   { left: "5%", top: "30%", delay: 0, rotate: -20 },
@@ -21,13 +22,13 @@ export default function VolunteerFinalCTA() {
   return (
     <section
       id="volunteer-cta"
-      className="relative section-padding bg-[#09090b] overflow-hidden"
+      className="relative section-padding bg-[#111827] overflow-hidden"
     >
       {/* Ambient glows */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-1/3 left-1/5 w-[500px] h-[500px] rounded-full bg-[#f97316]/12 blur-[150px]" />
-        <div className="absolute bottom-1/3 right-1/5 w-[400px] h-[400px] rounded-full bg-[#f97316]/8 blur-[130px]" />
-        <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-amber-400/8 blur-[100px]" />
+        <div className="absolute top-1/3 left-1/5 w-[500px] h-[500px] rounded-full bg-[#1A3A6B]/12 blur-[150px]" />
+        <div className="absolute bottom-1/3 right-1/5 w-[400px] h-[400px] rounded-full bg-[#1A3A6B]/8 blur-[130px]" />
+        <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#1A3A6B]/10 blur-[100px]" />
       </div>
 
       {/* Animated footprint trail */}
@@ -49,7 +50,7 @@ export default function VolunteerFinalCTA() {
               delay: fp.delay,
             }}
           >
-            👣
+            <Footprints size={22} aria-hidden="true" />
           </motion.div>
         ))}
       </div>
@@ -58,7 +59,7 @@ export default function VolunteerFinalCTA() {
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute text-yellow-400/20 select-none pointer-events-none"
+          className="absolute text-[#1A3A6B]/20 select-none pointer-events-none"
           style={{
             fontSize: `${14 + (i % 3) * 8}px`,
             left: `${15 + i * 14}%`,
@@ -67,7 +68,7 @@ export default function VolunteerFinalCTA() {
           animate={{ rotate: [0, 360] }}
           transition={{ duration: 10 + i * 3, repeat: Infinity, ease: "linear", delay: i * 0.5 }}
         >
-          ✦
+          <Sparkles size={18} aria-hidden="true" />
         </motion.div>
       ))}
 
@@ -82,21 +83,21 @@ export default function VolunteerFinalCTA() {
         >
           {/* Icon */}
           <motion.div
-            className="w-20 h-20 rounded-full bg-[#f97316] flex items-center justify-center text-4xl shadow-2xl mb-8"
+            className="w-20 h-20 rounded-full bg-[#1A3A6B] flex items-center justify-center text-4xl shadow-2xl mb-8"
             animate={{ scale: [1, 1.08, 1], rotate: [0, 5, -5, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           >
-            👟
+            <Footprints size={34} className="text-white" strokeWidth={1.8} aria-hidden="true" />
           </motion.div>
 
           {/* Headline */}
           <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight drop-shadow-lg">
             Your Time Can Change a{" "}
             <span className="relative inline-block">
-              <span className="text-warm-orange">
+              <span className="text-[#1A3A6B]">
                 Child&apos;s Future
               </span>
-              <svg className="absolute -bottom-1.5 left-0 w-full h-3 text-warm-orange/50" viewBox="0 0 100 12" preserveAspectRatio="none">
+              <svg className="absolute -bottom-1.5 left-0 w-full h-3 text-[#1A3A6B]/50" viewBox="0 0 100 12" preserveAspectRatio="none">
                 <path d="M0,0 Q50,12 100,0" fill="none" stroke="currentColor" strokeWidth="4" />
               </svg>
             </span>
@@ -111,7 +112,7 @@ export default function VolunteerFinalCTA() {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center w-full sm:w-auto">
             <a
               href="#volunteer-form"
-              className="btn-orange text-base sm:text-lg px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 justify-center inline-flex items-center gap-2"
+              className="btn-primary text-base sm:text-lg px-8 py-4 rounded-[10px] shadow-2xl hover:scale-105 transition-all duration-300 justify-center inline-flex items-center gap-2"
             >
               Apply to Volunteer
             </a>
@@ -124,7 +125,7 @@ export default function VolunteerFinalCTA() {
             </a>
             <Link
               href="/donate"
-              className="inline-flex items-center gap-2 justify-center px-8 py-4 rounded-full border border-warm-orange/40 bg-warm-orange/10 text-warm-orange font-bold text-base sm:text-lg hover:bg-warm-orange/20 hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center gap-2 justify-center px-8 py-4 rounded-full border border-[#1A3A6B]/40 bg-[#1A3A6B]/10 text-[#1A3A6B] font-bold text-base sm:text-lg hover:bg-[#1A3A6B]/20 hover:scale-105 transition-all duration-300"
             >
               Donate Instead
             </Link>

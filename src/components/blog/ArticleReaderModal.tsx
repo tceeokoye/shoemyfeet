@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { motion, AnimatePresence } from "framer-motion";
 import { Article, ARTICLES, ContentBlock } from "@/lib/blogData";
 import {
@@ -92,7 +92,7 @@ export default function ArticleReaderModal({
       case "dark":
         return "bg-[#121824] text-[#e2e8f0]";
       default:
-        return "bg-white text-[#1a1a2e]";
+        return "bg-white text-[#111827]";
     }
   };
 
@@ -152,12 +152,12 @@ export default function ArticleReaderModal({
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className={`relative w-full max-w-4xl max-h-[92vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-white/20 z-10 transition-colors duration-300 ${getThemeClass()}`}
+          className={`relative w-full max-w-4xl max-h-[92vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-white/20 z-10 transition-colors duration-300 ${getThemeClass()}`}
         >
           {/* Top Sticky Reading Progress Bar */}
           <div className="w-full bg-gray-200/40 h-1.5 shrink-0">
             <div
-              className="bg-[#f97316] h-full transition-all duration-150"
+              className="bg-[#1A3A6B] h-full transition-all duration-150"
               style={{ width: `${scrollProgress}%` }}
             />
           </div>
@@ -166,7 +166,7 @@ export default function ArticleReaderModal({
           <div className="px-6 py-4 border-b border-gray-200/30 flex flex-wrap items-center justify-between gap-4 shrink-0 bg-white/5 backdrop-blur-md">
             {/* Category & Reading Time */}
             <div className="flex items-center gap-3">
-              <span className="px-3 py-1 rounded-full bg-orange-100 text-warm-orange-dark font-bold text-xs">
+              <span className="px-3 py-1 rounded-full bg-orange-100 text-[#1A3A6B]-dark font-bold text-xs">
                 {article.category}
               </span>
               <span className="text-xs opacity-75 font-body flex items-center gap-1">
@@ -181,21 +181,21 @@ export default function ArticleReaderModal({
                 <button
                   type="button"
                   onClick={() => setFontSize("sm")}
-                  className={`px-2 py-0.5 rounded cursor-pointer ${fontSize === "sm" ? "bg-white text-[#f97316] shadow-xs" : "opacity-60"}`}
+                  className={`px-2 py-0.5 rounded cursor-pointer ${fontSize === "sm" ? "bg-white text-[#1A3A6B] shadow-xs" : "opacity-60"}`}
                 >
                   A-
                 </button>
                 <button
                   type="button"
                   onClick={() => setFontSize("base")}
-                  className={`px-2 py-0.5 rounded cursor-pointer ${fontSize === "base" ? "bg-white text-[#f97316] shadow-xs" : "opacity-60"}`}
+                  className={`px-2 py-0.5 rounded cursor-pointer ${fontSize === "base" ? "bg-white text-[#1A3A6B] shadow-xs" : "opacity-60"}`}
                 >
                   A
                 </button>
                 <button
                   type="button"
                   onClick={() => setFontSize("lg")}
-                  className={`px-2 py-0.5 rounded cursor-pointer ${fontSize === "lg" ? "bg-white text-[#f97316] shadow-xs" : "opacity-60"}`}
+                  className={`px-2 py-0.5 rounded cursor-pointer ${fontSize === "lg" ? "bg-white text-[#1A3A6B] shadow-xs" : "opacity-60"}`}
                 >
                   A+
                 </button>
@@ -208,8 +208,8 @@ export default function ArticleReaderModal({
                 className="p-2 rounded-lg bg-gray-200/30 hover:bg-gray-200/50 transition-colors cursor-pointer text-xs font-bold inline-flex items-center gap-1"
                 title="Toggle Reading Theme"
               >
-                {themeMode === "light" && <SunIcon size={16} className="text-amber-500" />}
-                {themeMode === "sepia" && <SparklesIcon size={16} className="text-amber-700" />}
+                {themeMode === "light" && <SunIcon size={16} className="text-[#1A3A6B]" />}
+                {themeMode === "sepia" && <SparklesIcon size={16} className="text-[#1A3A6B]" />}
                 {themeMode === "dark" && <MoonIcon size={16} className="text-orange-400" />}
               </button>
 
@@ -218,7 +218,7 @@ export default function ArticleReaderModal({
                 type="button"
                 onClick={toggleBookmark}
                 className={`p-2 rounded-lg transition-colors cursor-pointer ${
-                  isBookmarked ? "bg-orange-500 text-white" : "bg-gray-200/30 hover:bg-gray-200/50"
+                  isBookmarked ? "bg-[#1A3A6B] text-white" : "bg-gray-200/30 hover:bg-gray-200/50"
                 }`}
                 title="Bookmark Article"
               >
@@ -285,20 +285,20 @@ export default function ArticleReaderModal({
               <button
                 type="button"
                 onClick={() => onAuthorClick(article.author.id)}
-                className="flex items-center gap-3 p-3 rounded-2xl bg-gray-100/50 border border-gray-200/40 hover:bg-orange-50/50 transition-all cursor-pointer inline-flex"
+                className="flex items-center gap-3 p-3  bg-gray-100/50 border border-gray-200/40 hover:bg-[#F3F4F6]/50 transition-all cursor-pointer inline-flex"
               >
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-warm-orange">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#1A3A6B]">
                   <Image src={article.author.avatar} alt={article.author.name} fill className="object-cover" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-heading font-bold text-sm text-warm-orange">{article.author.name}</h4>
+                  <h4 className="font-heading font-bold text-sm text-[#1A3A6B]">{article.author.name}</h4>
                   <span className="text-xs opacity-75 font-body block">{article.author.role}</span>
                 </div>
               </button>
             </div>
 
             {/* Cover Image */}
-            <div className="relative h-72 sm:h-96 rounded-3xl overflow-hidden shadow-lg border border-gray-200/30">
+            <div className="relative h-72 sm:h-96 rounded-2xl overflow-hidden shadow-lg border border-gray-200/30">
               <Image src={article.coverImage} alt={article.title} fill className="object-cover" priority />
             </div>
 
@@ -322,9 +322,9 @@ export default function ArticleReaderModal({
 
                   case "pullQuote":
                     return (
-                      <div key={idx} className="my-8 p-6 rounded-2xl bg-[#09090b] border-l-4 border-warm-orange relative">
-                        <QuoteIcon size={28} className="text-warm-orange/30 absolute top-4 right-4" />
-                        <p className="font-heading font-bold italic text-lg sm:text-xl text-warm-orange-dark mb-2 leading-relaxed">
+                      <div key={idx} className="my-8 p-6  bg-[#111827] border-l-4 border-[#1A3A6B] relative">
+                        <QuoteIcon size={28} className="text-[#1A3A6B]/30 absolute top-4 right-4" />
+                        <p className="font-heading font-bold italic text-lg sm:text-xl text-[#1A3A6B]-dark mb-2 leading-relaxed">
                           &ldquo;{block.quote}&rdquo;
                         </p>
                         {block.attribution && (
@@ -339,9 +339,9 @@ export default function ArticleReaderModal({
                     return (
                       <div key={idx} className="grid sm:grid-cols-3 gap-4 my-8">
                         {block.stats.map((stat, sIdx) => (
-                          <div key={sIdx} className="bg-slate-50/80 p-5 rounded-2xl text-center border border-slate-100 shadow-sm">
-                            <span className="font-heading font-bold text-2xl text-[#f97316] block mb-1">{stat.value}</span>
-                            <span className="font-bold text-xs text-warm-orange block mb-1">{stat.label}</span>
+                          <div key={sIdx} className="bg-slate-50/80 p-5  text-center border border-slate-100 shadow-sm">
+                            <span className="font-heading font-bold text-2xl text-[#1A3A6B] block mb-1">{stat.value}</span>
+                            <span className="font-bold text-xs text-[#1A3A6B] block mb-1">{stat.label}</span>
                             <span className="text-[11px] opacity-75 block">{stat.description}</span>
                           </div>
                         ))}
@@ -350,7 +350,7 @@ export default function ArticleReaderModal({
 
                   case "calloutBox":
                     return (
-                      <div key={idx} className="p-5 rounded-2xl bg-emerald-50 text-emerald-900 border border-emerald-200 my-6">
+                      <div key={idx} className="p-5  bg-emerald-50 text-emerald-900 border border-emerald-200 my-6">
                         <h4 className="font-heading font-bold text-sm mb-1">{block.title}</h4>
                         <p className="text-xs opacity-90">{block.text}</p>
                       </div>
@@ -385,12 +385,12 @@ export default function ArticleReaderModal({
             </div>
 
             {/* Author Profile Bio Box */}
-            <div className="bg-[#09090b] text-white p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center gap-6">
+            <div className="bg-[#111827] text-white p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col sm:flex-row items-center gap-6">
               <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 shrink-0">
                 <Image src={article.author.avatar} alt={article.author.name} fill className="object-cover" />
               </div>
               <div className="text-center sm:text-left flex-1">
-                <span className="text-xs uppercase font-bold text-hope-yellow tracking-wider font-heading block mb-1">
+                <span className="text-xs uppercase font-bold text-[#142E56] tracking-wider font-heading block mb-1">
                   About The Author
                 </span>
                 <h3 className="font-heading font-bold text-xl text-white mb-1">{article.author.name}</h3>
@@ -400,7 +400,7 @@ export default function ArticleReaderModal({
                 <button
                   type="button"
                   onClick={() => onAuthorClick(article.author.id)}
-                  className="btn-orange text-xs py-2 px-4 rounded-full font-bold inline-flex items-center gap-1 shadow-md cursor-pointer"
+                  className="btn-primary text-xs py-2 px-4 rounded-[10px] font-bold inline-flex items-center gap-1 shadow-md cursor-pointer"
                 >
                   <UserIcon size={14} />
                   <span>View Author Profile & All Posts ({article.author.articleCount})</span>
@@ -418,15 +418,15 @@ export default function ArticleReaderModal({
                       key={rel.id}
                       type="button"
                       onClick={() => onSelectArticle(rel)}
-                      className="text-left bg-gray-50/80 p-4 rounded-2xl border border-gray-200/40 hover:bg-orange-50/50 transition-all cursor-pointer group"
+                      className="text-left bg-gray-50/80 p-4  border border-gray-200/40 hover:bg-[#F3F4F6]/50 transition-all cursor-pointer group"
                     >
                       <div className="relative h-28 rounded-xl overflow-hidden mb-3">
                         <Image src={rel.coverImage} alt={rel.title} fill className="object-cover group-hover:scale-105 transition-transform" />
                       </div>
-                      <span className="text-[10px] font-bold text-warm-orange uppercase tracking-wider block mb-1 font-heading">
+                      <span className="text-[10px] font-bold text-[#1A3A6B] uppercase tracking-wider block mb-1 font-heading">
                         {rel.category}
                       </span>
-                      <h4 className="font-heading font-bold text-xs text-[#1a1a2e] group-hover:text-warm-orange transition-colors line-clamp-2 mb-2 leading-snug">
+                      <h4 className="font-heading font-bold text-xs text-[#111827] group-hover:text-[#1A3A6B] transition-colors line-clamp-2 mb-2 leading-snug">
                         {rel.title}
                       </h4>
                       <span className="text-[10px] opacity-60 font-body block">{rel.readingTime}</span>

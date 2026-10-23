@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { COMMUNITY_VOICES, MediaItem } from "./galleryData";
 import { QuoteIcon, PlayIcon, SparklesIcon, MapPinIcon } from "@/components/ui/Icons";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
@@ -25,17 +25,17 @@ export default function CommunityVoices({ onPlayVideo }: CommunityVoicesProps) {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-warm-orange-dark text-xs sm:text-sm font-bold mb-3 border border-orange-200"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B]-dark text-xs sm:text-sm font-bold mb-3 border border-orange-200"
           >
-            <SparklesIcon size={14} className="text-warm-orange" />
+            <SparklesIcon size={14} className="text-[#1A3A6B]" />
             Voices of Impact
           </motion.span>
 
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-5xl font-bold text-[#1a1a2e] mb-4"
+            className="font-heading text-3xl sm:text-5xl font-bold text-[#111827] mb-4"
           >
-            Community <span className="text-warm-orange">Voices</span>
+            Community <span className="text-[#1A3A6B]">Voices</span>
           </motion.h2>
 
           <motion.p
@@ -55,12 +55,12 @@ export default function CommunityVoices({ onPlayVideo }: CommunityVoicesProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewportConfig}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-3xl p-6 border border-gray-100 shadow-lg card-hover flex flex-col justify-between group"
+              className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg card-hover flex flex-col justify-between group"
             >
               <div>
                 {/* Header Profile Info */}
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="relative w-14 h-14 rounded-2xl overflow-hidden shrink-0 border-2 border-warm-orange/30 shadow-md">
+                  <div className="relative w-14 h-14  overflow-hidden shrink-0 border-2 border-[#1A3A6B]/30 shadow-md">
                     <Image
                       src={voice.avatar}
                       alt={voice.name}
@@ -69,13 +69,13 @@ export default function CommunityVoices({ onPlayVideo }: CommunityVoicesProps) {
                     />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base text-[#f97316] leading-tight">
+                    <h3 className="font-heading font-bold text-base text-[#1A3A6B] leading-tight">
                       {voice.name}
                     </h3>
                     <p className="font-body text-xs text-gray-500 font-medium line-clamp-1">
                       {voice.role}
                     </p>
-                    <span className="inline-flex items-center gap-1 text-[10px] text-warm-orange font-semibold">
+                    <span className="inline-flex items-center gap-1 text-[10px] text-[#1A3A6B] font-semibold">
                       <MapPinIcon size={10} />
                       {voice.location}
                     </span>
@@ -83,8 +83,8 @@ export default function CommunityVoices({ onPlayVideo }: CommunityVoicesProps) {
                 </div>
 
                 {/* Quote Box */}
-                <div className="relative bg-orange-50/60 p-4 rounded-2xl mb-4 border border-orange-100">
-                  <QuoteIcon size={16} className="text-warm-orange mb-1" />
+                <div className="relative bg-[#F3F4F6]/60 p-4  mb-4 border border-orange-100">
+                  <QuoteIcon size={16} className="text-[#1A3A6B] mb-1" />
                   <p className="font-body text-xs text-gray-700 leading-relaxed italic">
                     &quot;{voice.quote}&quot;
                   </p>
@@ -109,7 +109,7 @@ export default function CommunityVoices({ onPlayVideo }: CommunityVoicesProps) {
                       videoUrl: voice.videoUrl || "/videos/story.mp4",
                     })
                   }
-                  className="w-full py-2.5 rounded-2xl bg-[#f97316] text-white font-heading text-xs font-bold flex items-center justify-center gap-2 shadow-md hover:scale-102 transition-all"
+                  className="w-full py-2.5  bg-[#1A3A6B] text-white font-heading text-xs font-bold flex items-center justify-center gap-2 shadow-md hover:scale-102 transition-all"
                 >
                   <PlayIcon size={14} className="fill-white" />
                   <span>Play Video Testimonial</span>

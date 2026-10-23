@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
-import PageLoader from "@/components/PageLoader";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/home/HeroSection";
 import ImpactSection from "@/components/home/ImpactSection";
 import OurStoryPreview from "@/components/home/OurStoryPreview";
 import WhyShoesMatter from "@/components/home/WhyShoesMatter";
+import SolutionSection from "@/components/home/SolutionSection";
+import PartnerCTA from "@/components/home/PartnerCTA";
 import ProgramsPreview from "@/components/home/ProgramsPreview";
 import GalleryPreview from "@/components/home/GalleryPreview";
 import VolunteerCTA from "@/components/home/VolunteerCTA";
@@ -49,29 +50,34 @@ export default function Home() {
 
   return (
     <>
-      <PageLoader />
       <Navbar />
       <main>
-        {/* 1. Hero — full-screen editorial with slideshow */}
+        {/* 1. Image-led introduction */}
         <HeroSection />
 
-        {/* 2. Impact counter strip */}
+        {/* 2. Impact at a glance */}
         <ImpactSection />
 
-        {/* 3. Our Story — founder + milestones */}
-        <OurStoryPreview />
-
-        {/* 4. Why Shoes Matter — 4 benefit cards */}
+        {/* 3. The challenge and why shoes matter */}
         <WhyShoesMatter />
 
-        {/* 5. Programs — 3 program cards */}
-        <ProgramsPreview />
+        {/* 4. The solution */}
+        <SolutionSection />
 
-        {/* 6. Gallery + testimonial */}
-        <GalleryPreview />
+        {/* 5. Mission and origin story */}
+        <OurStoryPreview />
 
-        {/* 7. Volunteer CTA + Donate + Newsletter (unified) */}
-        <VolunteerCTA />
+        {/* 6. Become a partner */}
+        <PartnerCTA />
+
+        {/* 7. How we respond */}
+        {/* <ProgramsPreview /> */}
+
+        {/* 8. Stories and moments from the field */}
+        {/* <GalleryPreview /> */}
+
+        {/* 9. Get involved, give, and stay connected */}
+        {/* <VolunteerCTA /> */}
       </main>
       <Footer />
     </>

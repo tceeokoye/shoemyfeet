@@ -1,154 +1,66 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { staggerContainer, viewportConfig, fadeUp } from "@/lib/animations";
-
-const cards = [
-  {
-    icon: "🎓",
-    title: "Education",
-    subtitle: "School Attendance",
-    stat: "+30% Attendance",
-    description:
-      "Children miss school due to foot injuries or dress code rejection. Shoes remove this obstacle, keeping children in class.",
-    accent: "#f97316",
-  },
-  {
-    icon: "❤️‍🩹",
-    title: "Health",
-    subtitle: "Infection Protection",
-    stat: "100% Infection Safety",
-    description:
-      "Bare feet expose children to soil-transmitted parasites, sharp objects, and infections on long daily walks.",
-    accent: "#ef4444",
-  },
-  {
-    icon: "✨",
-    title: "Confidence",
-    subtitle: "Self-Esteem & Pride",
-    stat: "Visible Transformation",
-    description:
-      "Wearing school shoes gives children the self-assurance to stand tall, participate in class, and feel equal among peers.",
-    accent: "#f59e0b",
-  },
-  {
-    icon: "🛡️",
-    title: "Dignity",
-    subtitle: "Equal Belonging",
-    stat: "Restored Pride",
-    description:
-      "No child should feel ashamed of their poverty. Shoes restore pride and afford every student the respect they deserve.",
-    accent: "#10b981",
-  },
-];
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring" as const,
-      stiffness: 90,
-      damping: 18,
-      delay: i * 0.12,
-    },
-  }),
-};
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Heart } from "lucide-react";
+import { fadeUp, viewportConfig } from "@/lib/animations";
 
 export default function WhyShoesMatter() {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.15 });
-
   return (
-    <section className="section-padding bg-[#fdfbf7] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Header */}
-        <motion.div
-          className="text-center max-w-2xl mx-auto mb-14"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
+    <section className="overflow-hidden bg-white px-4 py-16 text-center text-[#454545] sm:px-6 sm:py-20 lg:px-8">
+      <motion.div
+        className="mx-auto max-w-4xl"
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportConfig}
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.12 } },
+        }}
+      >
+        <motion.h2
+          variants={fadeUp}
+          className="relative mx-auto mb-8 flex h-[84px] w-full max-w-[704px] items-center justify-center font-heading text-xl font-bold uppercase leading-tight text-white sm:mb-10 sm:text-[21px]"
         >
-          <motion.div variants={fadeUp} className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-10 bg-[#f97316]" />
-            <span className="text-xs font-bold text-[#f97316] uppercase tracking-widest font-heading">
-              Core Mission Purpose
-            </span>
-            <div className="h-px w-10 bg-[#f97316]" />
-          </motion.div>
+          <span
+            aria-hidden="true"
+            className="absolute inset-0 z-0 bg-[length:100%_100%] bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/images/challenge-brush.svg')" }}
+          />
+          <span className="relative z-10">The Challenge</span>
+        </motion.h2>
 
-          <motion.h2
-            variants={fadeUp}
-            className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#0a0a0a] mb-4 tracking-tight"
+        <motion.p
+          variants={fadeUp}
+          className="mx-auto max-w-4xl text-base leading-relaxed sm:text-lg"
+        >
+          Too many children walk to school without proper footwear. Bare feet
+          leave them vulnerable to injury and infection, while the lack of
+          school shoes can keep them from learning with confidence.{" "}
+          <span className="font-semibold text-[#1A3A6B]">
+            Every child deserves to learn, grow, and feel protected.
+          </span>
+        </motion.p>
+
+        <motion.div
+          variants={fadeUp}
+          className="mt-7 flex flex-col items-center gap-7"
+        >
+          <Link
+            href="/about/mission"
+            className="text-base text-[#1A3A6B] underline decoration-1 underline-offset-2 hover:text-[#142E56]"
           >
-            A Simple Pair of Shoes Is{" "}
-            <span className="text-[#f97316]">More Than Footwear</span>
-          </motion.h2>
-
-          <motion.p variants={fadeUp} className="font-body text-slate-600 text-base sm:text-lg leading-relaxed">
-            For underserved children across Nigeria, shoes are a gateway to education,
-            physical protection, emotional well-being, and social inclusion.
-          </motion.p>
+            Learn More About Us &gt;
+          </Link>
+          <Link
+            href="/donate"
+            className="inline-flex min-w-[260px] items-center justify-center gap-2 rounded-[10px] bg-[#F97316] px-8 py-4 text-base font-medium tracking-[0.08em] text-white transition-colors hover:bg-[#EA580C] sm:min-w-[300px]"
+          >
+            Support Us Today
+            <Heart aria-hidden="true" className="h-4 w-4 fill-white text-white" />
+          </Link>
         </motion.div>
-
-        {/* 4 Clean White Cards */}
-        <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {cards.map((card, i) => (
-            <motion.div
-              key={card.title}
-              custom={i}
-              variants={cardVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              className="bg-white rounded-3xl p-7 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
-            >
-              <div>
-                {/* Icon + Stat Badge */}
-                <div className="flex items-start justify-between mb-5">
-                  <div className="w-14 h-14  flex items-center justify-center text-3xl ">
-                    {card.icon}
-                  </div>
-                  <span className="text-xs font-bold font-body px-3 py-1 rounded-full bg-slate-100 text-slate-700">
-                    {card.stat}
-                  </span>
-                </div>
-
-                <h3 className="font-heading font-bold text-2xl text-[#0a0a0a] mb-0.5">
-                  {card.title}
-                </h3>
-                <p className="text-xs font-extrabold text-slate-400 uppercase tracking-wider font-body mb-3">
-                  {card.subtitle}
-                </p>
-                <p className="font-body text-slate-600 text-sm leading-relaxed">
-                  {card.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Bottom Banner */}
-        <motion.div
-          className="mt-14 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <div className="inline-flex items-center gap-3 bg-[#09090b] text-white rounded-2xl px-6 py-4 shadow-2xl text-sm sm:text-base font-body border border-white/15 shadow-black/60">
-            {/* <span className="text-2xl animate-bounce">👟</span> */}
-            <span>
-              <strong className="text-[#f59e0b] font-heading font-bold text-lg">$20</strong>{" "}
-              can provide 1 durable pair of school shoes and transform a child's journey.
-            </span>
-          </div>
-        </motion.div>
-
-      </div>
+      </motion.div>
     </section>
   );
 }

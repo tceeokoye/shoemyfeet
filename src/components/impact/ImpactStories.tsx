@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 import { MapPinIcon, ArrowRightIcon } from "@/components/ui/Icons";
 
@@ -30,8 +30,8 @@ const stories = [
     after: "After Shoe My Feet's distribution, classroom attendance jumped by nearly 30%. Children are more focused, more confident, and genuinely excited to learn.",
     quote: "We saw attendance increase by nearly 30% after the shoe distribution. Children were more confident and focused in class.",
     tag: "School Partnership",
-    tagColor: "bg-amber-100 text-amber-800 border-amber-200",
-    accentClass: "bg-[#d97706]",
+    tagColor: "bg-[#FFFFFF] text-[#1A3A6B] border-[#F3F4F6]",
+    accentClass: "bg-[#1A3A6B]",
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ const stories = [
     quote: "These shoes make me feel like I belong. I can focus on my studies instead of worrying about my feet.",
     tag: "Community Outreach",
     tagColor: "bg-orange-100 text-orange-700 border-orange-200",
-    accentClass: "bg-[#d97706]",
+    accentClass: "bg-[#1A3A6B]",
   },
 ];
 
@@ -70,7 +70,7 @@ function StoryCard({ story, index }: { story: typeof stories[0]; index: number }
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.55, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-      className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 group"
+      className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 group"
     >
       {/* Image */}
       <div className="relative h-60 overflow-hidden">
@@ -95,7 +95,7 @@ function StoryCard({ story, index }: { story: typeof stories[0]; index: number }
       {/* Content */}
       <div className="p-6">
         {/* Quote */}
-        <div className="text-5xl text-warm-orange/20 font-serif leading-none mb-1">&ldquo;</div>
+        <div className="text-5xl text-[#1A3A6B]/20 font-serif leading-none mb-1">&ldquo;</div>
         <p className="font-body text-gray-700 text-sm leading-relaxed italic mb-4">
           {story.quote}
         </p>
@@ -128,8 +128,8 @@ function StoryCard({ story, index }: { story: typeof stories[0]; index: number }
         <div className="flex items-center justify-between pt-3 border-t border-gray-100">
           <div className="flex items-center gap-2">
             <div>
-              <p className="font-heading font-bold text-[#1a1a2e] text-sm">{story.name}</p>
-              <p className="font-body text-xs text-warm-orange-dark font-semibold">{story.role}</p>
+              <p className="font-heading font-bold text-[#111827] text-sm">{story.name}</p>
+              <p className="font-body text-xs text-[#1A3A6B]-dark font-semibold">{story.role}</p>
               <div className="flex items-center gap-1 mt-0.5">
                 <MapPinIcon size={10} className="text-gray-400" />
                 <p className="font-body text-xs text-gray-400">{story.community}</p>
@@ -141,7 +141,7 @@ function StoryCard({ story, index }: { story: typeof stories[0]; index: number }
             className={`inline-flex items-center gap-1.5 text-xs font-bold font-body px-3 py-1.5 rounded-full transition-all duration-300 cursor-pointer ${
               expanded
                 ? "bg-gray-100 text-gray-600"
-                : "bg-[#d97706] text-white shadow-md hover:shadow-lg hover:bg-[#b45309]"
+                : "bg-[#1A3A6B] text-white shadow-md hover:shadow-lg hover:bg-[#142E56]"
             }`}
           >
             {expanded ? "Close" : "Read Story"}
@@ -176,10 +176,10 @@ export default function ImpactStories() {
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
             The People Behind{" "}
-            <span className="text-warm-orange">Every Number</span>
+            <span className="text-[#1A3A6B]">Every Number</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}

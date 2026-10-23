@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -15,10 +15,10 @@ const leadingFootprints = [
 
 export default function GalleryCTA() {
   return (
-    <section className="section-padding bg-[#09090b] text-white relative overflow-hidden">
+    <section className="section-padding bg-[#111827] text-white relative overflow-hidden">
       {/* Background Orbs */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-orange-500/10 blur-[150px]" />
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#1A3A6B]/10 blur-[150px]" />
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-slate-800/10 blur-[150px]" />
       </div>
 
@@ -31,8 +31,8 @@ export default function GalleryCTA() {
         >
           {/* Badge */}
           <motion.div variants={fadeUp} className="mb-4 inline-block">
-            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/10 text-hope-yellow text-xs sm:text-sm font-bold font-heading border border-white/20">
-              <SparklesIcon size={14} className="text-warm-orange" />
+            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/10 text-[#142E56] text-xs sm:text-sm font-bold font-heading border border-white/20">
+              <SparklesIcon size={14} className="text-[#1A3A6B]" />
               Make A Difference Today
             </span>
           </motion.div>
@@ -43,7 +43,7 @@ export default function GalleryCTA() {
             className="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight max-w-4xl mx-auto"
           >
             Every Smile Captured Inspires Another{" "}
-            <span className="text-warm-orange">
+            <span className="text-[#1A3A6B]">
               Act of Kindness
             </span>
           </motion.h2>
@@ -85,14 +85,14 @@ export default function GalleryCTA() {
           <motion.div variants={fadeUp} className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <Link
               href="/donate"
-              className="btn-orange text-base sm:text-lg px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
+              className="btn-primary text-base sm:text-lg px-8 py-4 rounded-[10px] shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
             >
               <span>Donate Now</span>
             </Link>
 
             <Link
               href="/volunteer"
-              className="btn-primary border border-white/20 text-base sm:text-lg px-8 py-4 rounded-full backdrop-blur-md hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
+              className="btn-primary border border-white/20 text-base sm:text-lg px-8 py-4 rounded-[10px] backdrop-blur-md hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
             >
               <UsersIcon size={20} />
               <span>Volunteer</span>

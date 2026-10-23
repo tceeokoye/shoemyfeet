@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
@@ -12,7 +12,7 @@ const teamMembers = [
     email: "chidubem@shoemyfeet.org",
     bio: "Leads global strategy, vision, and governance for Shoe My Feet Foundation.",
     avatar: "👨‍💼",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
     name: "Dr. Amaka Eze",
@@ -21,7 +21,7 @@ const teamMembers = [
     email: "amaka@shoemyfeet.org",
     bio: "Oversees 1,200+ volunteers and coordinates school shoe distribution events.",
     avatar: "👩‍⚕️",
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
   {
     name: "Emeka Okoro",
@@ -30,7 +30,7 @@ const teamMembers = [
     email: "emeka@shoemyfeet.org",
     bio: "Manages CSR partnerships, corporate sponsors, and major donor relationships.",
     avatar: "👨‍💼",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
     name: "Blessing Johnson",
@@ -39,7 +39,7 @@ const teamMembers = [
     email: "blessing@shoemyfeet.org",
     bio: "Handles press enquiries, story features, social media, and impact documentaries.",
     avatar: "👩‍💻",
-    color: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
   },
   {
     name: "Grace Danjuma",
@@ -48,7 +48,7 @@ const teamMembers = [
     email: "grace@shoemyfeet.org",
     bio: "Manages donation receipts, recurring giving programs, and financial reporting.",
     avatar: "👩‍💼",
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
 ];
 
@@ -68,8 +68,8 @@ export default function MeetTeamContacts() {
           <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-100 border border-teal-200 text-teal-700 font-bold text-sm mb-4">
             👥 People Behind the Mission
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">
-            Meet Our Key <span className="text-[#f97316]">Team Contacts</span>
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4">
+            Meet Our Key <span className="text-[#1A3A6B]">Team Contacts</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Have a specific query for a department lead? Reach out directly to our leadership team.
@@ -91,15 +91,15 @@ export default function MeetTeamContacts() {
               custom={index}
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 280, damping: 22 }}
-              className="bg-white rounded-3xl p-5 border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between text-center relative overflow-hidden group"
+              className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between text-center relative overflow-hidden group"
             >
               <div>
-                <div className={`w-20 h-20 rounded-2xl member.color flex items-center justify-center text-4xl mx-auto mb-4 shadow-lg text-white group-hover:scale-105 transition-transform`}>
+                <div className={`w-20 h-20  member.color flex items-center justify-center text-4xl mx-auto mb-4 shadow-lg text-white group-hover:scale-105 transition-transform`}>
                   {member.avatar}
                 </div>
 
-                <h3 className="font-heading font-bold text-base text-[#1a1a2e] mb-1">{member.name}</h3>
-                <div className="text-xs text-warm-orange-dark font-body font-bold mb-1">{member.position}</div>
+                <h3 className="font-heading font-bold text-base text-[#111827] mb-1">{member.name}</h3>
+                <div className="text-xs text-[#1A3A6B]-dark font-body font-bold mb-1">{member.position}</div>
                 <div className="text-[10px] text-gray-400 font-body uppercase tracking-wider font-semibold mb-3">{member.department}</div>
                 <p className="text-xs text-gray-500 font-body leading-relaxed mb-4">{member.bio}</p>
               </div>
@@ -107,7 +107,7 @@ export default function MeetTeamContacts() {
               <div className="pt-4 border-t border-gray-100">
                 <a
                   href={`mailto:${member.email}`}
-                  className="w-full py-2 px-3 rounded-xl bg-slate-50 text-[#f97316] font-bold font-body text-xs flex items-center justify-center gap-1.5 hover:bg-[#09090b] hover:text-white transition-all"
+                  className="w-full py-2 px-3 rounded-xl bg-slate-50 text-[#1A3A6B] font-bold font-body text-xs flex items-center justify-center gap-1.5 hover:bg-[#111827] hover:text-white transition-all"
                 >
                   <MailIcon size={13} />
                   <span>Email Direct</span>

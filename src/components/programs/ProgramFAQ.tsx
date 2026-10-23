@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -41,20 +41,20 @@ function FAQItem({ item, index }: { item: typeof faqs[0]; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ delay: index * 0.07, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-      className="border border-gray-200 rounded-2xl overflow-hidden bg-white hover:border-slate-200 transition-colors duration-300"
+      className="border border-gray-200  overflow-hidden bg-white hover:border-slate-200 transition-colors duration-300"
     >
       <button
         onClick={() => setOpen((p) => !p)}
         className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
         aria-expanded={open}
       >
-        <span className="font-heading font-bold text-[#1a1a2e] text-base sm:text-lg pr-4">
+        <span className="font-heading font-bold text-[#111827] text-base sm:text-lg pr-4">
           {item.q}
         </span>
         <motion.div
           animate={{ rotate: open ? 180 : 0 }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="shrink-0 w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-[#f97316]"
+          className="shrink-0 w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-[#1A3A6B]"
         >
           <ChevronDownIcon size={16} />
         </motion.div>
@@ -96,15 +96,15 @@ export default function ProgramFAQ() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold border border-slate-200 mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-xs sm:text-sm font-bold border border-slate-200 mb-4"
           >
             Frequently Asked Questions
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
-            Got <span className="text-[#f97316]">Questions?</span>
+            Got <span className="text-[#1A3A6B]">Questions?</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}

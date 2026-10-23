@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -14,8 +14,8 @@ const supportChannels = [
     cta: "Chat on WhatsApp",
     href: "https://wa.me/2348140009988",
     badge: "Instant",
-    color: "bg-[#15803d]",
-    bg: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
+    bg: "bg-[#16A34A]",
     border: "border-green-100",
   },
   {
@@ -26,8 +26,8 @@ const supportChannels = [
     cta: "Request Call Back",
     action: "callback-modal",
     badge: "Free Call",
-    color: "bg-[#f97316]",
-    bg: "bg-orange-50",
+    color: "bg-[#1A3A6B]",
+    bg: "bg-[#F3F4F6]",
     border: "border-orange-100",
   },
   {
@@ -38,7 +38,7 @@ const supportChannels = [
     cta: "Book Video Call",
     href: "#visit-office",
     badge: "1-on-1",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-slate-50",
     border: "border-slate-100",
   },
@@ -50,7 +50,7 @@ const supportChannels = [
     cta: "Email Support",
     href: "mailto:hello@shoemyfeet.org",
     badge: "< 4hrs Reply",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-purple-50",
     border: "border-purple-100",
   },
@@ -71,7 +71,7 @@ export default function LiveSupportOptions() {
   };
 
   return (
-    <section className="section-padding bg-[#09090b] relative overflow-hidden" aria-label="Live support options">
+    <section className="section-padding bg-[#111827] relative overflow-hidden" aria-label="Live support options">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -85,8 +85,8 @@ export default function LiveSupportOptions() {
           <motion.span variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 border border-green-200 text-forest-green font-bold text-sm mb-4">
             🎧 Live Assistance
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">
-            Interactive <span className="text-[#f97316]">Support Options</span>
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4">
+            Interactive <span className="text-[#1A3A6B]">Support Options</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-gray-600 font-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Need real-time help? Connect with our team through any of our live support channels.
@@ -108,11 +108,11 @@ export default function LiveSupportOptions() {
               custom={index}
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 280, damping: 22 }}
-              className={`rounded-3xl p-6 border ${chan.border} chan.bg shadow-sm hover:shadow-xl transition-all flex flex-col justify-between relative overflow-hidden`}
+              className={`rounded-2xl p-6 border ${chan.border} chan.bg shadow-sm hover:shadow-xl transition-all flex flex-col justify-between relative overflow-hidden`}
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className={`w-12 h-12 rounded-2xl chan.color flex items-center justify-center text-2xl shadow-md text-white`}>
+                  <div className={`w-12 h-12  chan.color flex items-center justify-center text-2xl shadow-md text-white`}>
                     {chan.icon}
                   </div>
                   <span className="text-[10px] font-bold font-body px-2.5 py-1 rounded-full bg-white border border-gray-200 text-gray-700 shadow-xs">
@@ -120,7 +120,7 @@ export default function LiveSupportOptions() {
                   </span>
                 </div>
 
-                <h3 className="font-heading font-bold text-lg text-[#1a1a2e] mb-2">{chan.title}</h3>
+                <h3 className="font-heading font-bold text-lg text-[#111827] mb-2">{chan.title}</h3>
                 <p className="text-xs text-gray-600 font-body leading-relaxed mb-6">{chan.description}</p>
               </div>
 
@@ -128,7 +128,7 @@ export default function LiveSupportOptions() {
                 {chan.action === "callback-modal" ? (
                   <button
                     onClick={() => setShowCallBackModal(true)}
-                    className={`w-full py-3 px-4 rounded-2xl chan.color text-white font-bold font-body text-xs text-center inline-flex items-center justify-center gap-2 shadow-md hover:opacity-95 transition-all cursor-pointer`}
+                    className={`w-full py-3 px-4  chan.color text-white font-bold font-body text-xs text-center inline-flex items-center justify-center gap-2 shadow-md hover:opacity-95 transition-all cursor-pointer`}
                   >
                     <span>{chan.cta}</span>
                     <ArrowRightIcon size={14} />
@@ -136,7 +136,7 @@ export default function LiveSupportOptions() {
                 ) : (
                   <a
                     href={chan.href}
-                    className={`w-full py-3 px-4 rounded-2xl chan.color text-white font-bold font-body text-xs text-center inline-flex items-center justify-center gap-2 shadow-md hover:opacity-95 transition-all`}
+                    className={`w-full py-3 px-4  chan.color text-white font-bold font-body text-xs text-center inline-flex items-center justify-center gap-2 shadow-md hover:opacity-95 transition-all`}
                   >
                     <span>{chan.cta}</span>
                     <ArrowRightIcon size={14} />
@@ -177,7 +177,7 @@ export default function LiveSupportOptions() {
                 <form onSubmit={handleCallbackSubmit} className="space-y-4">
                   <div className="text-center mb-4">
                     <span className="text-3xl">📞</span>
-                    <h3 className="font-heading font-bold text-2xl text-[#1a1a2e] mt-1">Request a Call Back</h3>
+                    <h3 className="font-heading font-bold text-2xl text-[#111827] mt-1">Request a Call Back</h3>
                     <p className="text-xs text-gray-500 font-body">We will call your phone line free of charge</p>
                   </div>
 
@@ -189,7 +189,7 @@ export default function LiveSupportOptions() {
                       placeholder="e.g. Obinna Johnson"
                       value={callbackData.name}
                       onChange={(e) => setCallbackData({ ...callbackData, name: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#111827]"
                     />
                   </div>
 
@@ -201,7 +201,7 @@ export default function LiveSupportOptions() {
                       placeholder="+234 800 000 0000"
                       value={callbackData.phone}
                       onChange={(e) => setCallbackData({ ...callbackData, phone: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#111827]"
                     />
                   </div>
 
@@ -210,7 +210,7 @@ export default function LiveSupportOptions() {
                     <select
                       value={callbackData.topic}
                       onChange={(e) => setCallbackData({ ...callbackData, topic: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#09090b]"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 font-body text-xs focus:outline-none focus:border-[#111827]"
                     >
                       <option value="General Enquiry">General Enquiry</option>
                       <option value="Volunteering">Volunteering Opportunities</option>
@@ -220,7 +220,7 @@ export default function LiveSupportOptions() {
                     </select>
                   </div>
 
-                  <button type="submit" className="w-full btn-orange py-3 text-xs justify-center cursor-pointer">
+                  <button type="submit" className="w-full btn-primary py-3 text-xs justify-center cursor-pointer">
                     Submit Call Back Request
                   </button>
                 </form>
@@ -229,7 +229,7 @@ export default function LiveSupportOptions() {
                   <div className="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto text-2xl">
                     <CheckIcon size={32} />
                   </div>
-                  <h4 className="font-heading font-bold text-xl text-[#1a1a2e]">Call Request Received!</h4>
+                  <h4 className="font-heading font-bold text-xl text-[#111827]">Call Request Received!</h4>
                   <p className="text-xs text-gray-600 font-body">
                     Our team will call <strong>{callbackData.phone}</strong> shortly. Thank you!
                   </p>

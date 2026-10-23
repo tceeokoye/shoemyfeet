@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { TRANSFORMATIONS, TransformationItem, MediaItem } from "./galleryData";
 import { SparklesIcon, PlayIcon, QuoteIcon, SlidersIcon } from "@/components/ui/Icons";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
@@ -36,7 +36,7 @@ function ComparisonSlider({ item }: { item: TransformationItem }) {
 
   return (
     <div
-      className="relative aspect-4/3 w-full rounded-2xl overflow-hidden cursor-ew-resize select-none border-2 border-white shadow-xl"
+      className="relative aspect-4/3 w-full  overflow-hidden cursor-ew-resize select-none border-2 border-white shadow-xl"
       onMouseDown={() => setIsDragging(true)}
       onMouseUp={() => setIsDragging(false)}
       onMouseLeave={() => setIsDragging(false)}
@@ -77,7 +77,7 @@ function ComparisonSlider({ item }: { item: TransformationItem }) {
         className="absolute top-0 bottom-0 w-1 bg-white shadow-2xl z-20 pointer-events-none"
         style={{ left: `${sliderPosition}%` }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white text-[#f97316] shadow-2xl flex items-center justify-center border-2 border-warm-orange">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white text-[#1A3A6B] shadow-2xl flex items-center justify-center border-2 border-[#1A3A6B]">
           <SlidersIcon size={16} />
         </div>
       </div>
@@ -100,17 +100,17 @@ export default function BeforeAfterTransformations({ onPlayVideo }: BeforeAfterT
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-warm-orange-dark text-xs sm:text-sm font-bold mb-3 border border-orange-200"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B]-dark text-xs sm:text-sm font-bold mb-3 border border-orange-200"
           >
-            <SparklesIcon size={14} className="text-warm-orange" />
+            <SparklesIcon size={14} className="text-[#1A3A6B]" />
             Visual Impact Proof
           </motion.span>
 
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-5xl font-bold text-[#1a1a2e] mb-4"
+            className="font-heading text-3xl sm:text-5xl font-bold text-[#111827] mb-4"
           >
-            Before & After <span className="text-warm-orange">Transformations</span>
+            Before & After <span className="text-[#1A3A6B]">Transformations</span>
           </motion.h2>
 
           <motion.p
@@ -130,7 +130,7 @@ export default function BeforeAfterTransformations({ onPlayVideo }: BeforeAfterT
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewportConfig}
               transition={{ duration: 0.5 }}
-              className="bg-[#fafafa] rounded-3xl p-6 border border-gray-200/80 shadow-lg flex flex-col justify-between"
+              className="bg-[#fafafa] rounded-2xl p-6 border border-gray-200/80 shadow-lg flex flex-col justify-between"
             >
               <div>
                 {/* Interactive Slider */}
@@ -139,7 +139,7 @@ export default function BeforeAfterTransformations({ onPlayVideo }: BeforeAfterT
                 {/* Child Details & Story */}
                 <div className="mt-6">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-heading text-xl font-bold text-[#f97316]">
+                    <h3 className="font-heading text-xl font-bold text-[#1A3A6B]">
                       {item.childName}, Age {item.age}
                     </h3>
                     <span className="text-xs font-semibold text-gray-500 bg-white px-2.5 py-1 rounded-full border border-gray-200">
@@ -154,9 +154,9 @@ export default function BeforeAfterTransformations({ onPlayVideo }: BeforeAfterT
               </div>
 
               {/* Quote & Optional Video */}
-              <div className="pt-4 border-t border-gray-200/80 bg-white p-4 rounded-2xl">
+              <div className="pt-4 border-t border-gray-200/80 bg-white p-4 ">
                 <div className="flex gap-2.5 items-start mb-3">
-                  <QuoteIcon size={18} className="text-warm-orange shrink-0 mt-0.5" />
+                  <QuoteIcon size={18} className="text-[#1A3A6B] shrink-0 mt-0.5" />
                   <p className="font-body text-xs italic text-gray-700 font-medium">
                     &quot;{item.quote}&quot;
                   </p>
@@ -179,9 +179,9 @@ export default function BeforeAfterTransformations({ onPlayVideo }: BeforeAfterT
                         videoUrl: item.testimonialVideo,
                       })
                     }
-                    className="w-full py-2 rounded-xl bg-orange-50 hover:bg-orange-100 text-warm-orange-dark font-heading text-xs font-bold flex items-center justify-center gap-1.5 transition-colors"
+                    className="w-full py-2 rounded-xl bg-[#F3F4F6] hover:bg-orange-100 text-[#1A3A6B]-dark font-heading text-xs font-bold flex items-center justify-center gap-1.5 transition-colors"
                   >
-                    <PlayIcon size={14} className="fill-warm-orange" />
+                    <PlayIcon size={14} className="fill-[#1A3A6B]" />
                     <span>Watch {item.childName}&apos;s Video Story</span>
                   </button>
                 )}

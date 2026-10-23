@@ -1,4 +1,4 @@
-export const BRAND = {
+﻿export const BRAND = {
   name: "Shoe My Feet Foundation",
   tagline: "Every Step Changes a Life",
   mission:
@@ -20,32 +20,32 @@ export const IMPACT_STATS = [
     suffix: "+",
     label: "Pairs of School Shoes Distributed",
     icon: "shoe",
-    color: "text-[#f97316]",
-    bgColor: "bg-[#09090b]",
+    color: "text-[#1A3A6B]",
+    bgColor: "bg-[#111827]",
   },
   {
     value: 18,
     suffix: "+",
     label: "Schools & Communities Reached",
     icon: "school",
-    color: "text-warm-orange",
-    bgColor: "bg-[#f97316]",
+    color: "text-[#1A3A6B]",
+    bgColor: "bg-[#1A3A6B]",
   },
   {
     value: 137,
     suffix: "+",
     label: "Kids Trained in Shoemaking",
     icon: "users",
-    color: "text-amber-500",
-    bgColor: "bg-[#f59e0b]",
+    color: "text-[#1A3A6B]",
+    bgColor: "bg-[#1A3A6B]",
   },
   {
     value: 3,
     suffix: "",
     label: "States Across Nigeria",
     icon: "map",
-    color: "text-[#f97316]",
-    bgColor: "bg-[#09090b]",
+    color: "text-[#1A3A6B]",
+    bgColor: "bg-[#111827]",
   },
 ];
 
@@ -58,9 +58,9 @@ export const PROGRAMS = [
     longDescription:
       "Each distribution includes school registration, professional shoe fitting, child engagement sessions, community participation, volunteer mobilisation, and school partnerships. We ensure every child receives the right fit with dignity.",
     icon: "package",
-    color: "text-[#f97316]",
+    color: "text-[#1A3A6B]",
     bgColor: "bg-slate-50",
-    badgeColor: "bg-[#09090b]",
+    badgeColor: "bg-[#111827]",
     stats: "6,500+ shoes distributed",
     image: "/images/shoe_distribution.jpg",
     features: [
@@ -80,11 +80,11 @@ export const PROGRAMS = [
     longDescription:
       "Participants learn to make school shoes, use professional tools, understand footwear production, and develop business skills. Graduates become facilitators for future cohorts, creating a self-sustaining cycle of community leadership.",
     icon: "tool",
-    color: "text-warm-orange",
-    bgColor: "bg-orange-50",
-    badgeColor: "bg-[#f97316]",
+    color: "text-[#1A3A6B]",
+    bgColor: "bg-[#F3F4F6]",
+    badgeColor: "bg-[#1A3A6B]",
     stats: "137+ kids trained",
-    image: "/images/crafting7.jpeg",
+    image: "/images/crafting1.jpeg",
     features: [
       "Practical shoemaking skills",
       "Professional tool training",
@@ -102,9 +102,9 @@ export const PROGRAMS = [
     longDescription:
       "These engagements ensure local ownership of each outreach while creating lasting partnerships that promote school attendance, dignity, and child wellbeing in every community we serve.",
     icon: "heart",
-    color: "text-amber-500",
-    bgColor: "bg-amber-50",
-    badgeColor: "bg-[#f59e0b]",
+    color: "text-[#1A3A6B]",
+    bgColor: "bg-[#FFFFFF]",
+    badgeColor: "bg-[#1A3A6B]",
     stats: "18+ communities engaged",
     image: "/images/addressing.jpg",
     features: [
@@ -257,7 +257,7 @@ export const TIMELINE = [
     description:
       "On International Women's Day, Philomena Nwajagu distributed the first 100 pairs of school shoes to children in her community, supported by family and friends.",
     icon: "heart",
-    color: "text-warm-orange",
+    color: "text-[#1A3A6B]",
   },
   {
     year: "April 2022",
@@ -265,7 +265,7 @@ export const TIMELINE = [
     description:
       "An additional 150 pairs were donated, bringing the total first outreach to 250 children and revealing the scale of the footwear crisis across Nigeria.",
     icon: "trending-up",
-    color: "text-amber-500",
+    color: "text-[#1A3A6B]",
   },
   {
     year: "2023",
@@ -273,7 +273,7 @@ export const TIMELINE = [
     description:
       "A landmark CSR partnership with Access Bank resulted in 1,000 pairs of school shoes distributed, dramatically expanding our reach across multiple schools.",
     icon: "handshake",
-    color: "text-[#f97316]",
+    color: "text-[#1A3A6B]",
   },
   {
     year: "Early 2024",
@@ -281,7 +281,7 @@ export const TIMELINE = [
     description:
       "Over 2,000 pairs of shoes were distributed to children in Kaduna State, marking our first large-scale Northern Nigeria outreach.",
     icon: "map-pin",
-    color: "text-warm-orange",
+    color: "text-[#1A3A6B]",
   },
   {
     year: "Late 2024",
@@ -289,7 +289,7 @@ export const TIMELINE = [
     description:
       "Launched the Shoemaking Skills & Kids Empowerment programme, training over 137 young people and local artisans in shoemaking and entrepreneurship.",
     icon: "tool",
-    color: "text-amber-500",
+    color: "text-[#1A3A6B]",
   },
   {
     year: "2026",
@@ -297,7 +297,7 @@ export const TIMELINE = [
     description:
       "Expanded into Edo State through a Benin City outreach, continuing the mission with national media recognition and growing community impact.",
     icon: "star",
-    color: "text-[#f97316]",
+    color: "text-[#1A3A6B]",
   },
 ];
 
@@ -307,9 +307,9 @@ export const WHY_SHOES_MATTER = [
     title: "Health Protection",
     description:
       "Bare feet are exposed to cuts, infections, soil-transmitted diseases, and injuries. Proper shoes protect children's health and keep them learning.",
-    color: "text-[#f97316]",
+    color: "text-[#1A3A6B]",
     bgColor: "bg-slate-50",
-    badgeColor: "bg-[#09090b]",
+    badgeColor: "bg-[#111827]",
     stat: "3x fewer infections",
   },
   {
@@ -317,9 +317,9 @@ export const WHY_SHOES_MATTER = [
     title: "School Attendance",
     description:
       "Children miss school due to foot pain, embarrassment, or dress code violations. Shoes remove this barrier and keep children in the classroom.",
-    color: "text-warm-orange",
-    bgColor: "bg-orange-50",
-    badgeColor: "bg-[#f97316]",
+    color: "text-[#1A3A6B]",
+    bgColor: "bg-[#F3F4F6]",
+    badgeColor: "bg-[#1A3A6B]",
     stat: "30% attendance increase",
   },
   {
@@ -327,9 +327,9 @@ export const WHY_SHOES_MATTER = [
     title: "Confidence & Dignity",
     description:
       "Wearing proper school shoes allows children to walk tall, participate fully, and feel equal to their peers — boosting self-esteem and academic engagement.",
-    color: "text-amber-500",
-    bgColor: "bg-amber-50",
-    badgeColor: "bg-[#f59e0b]",
+    color: "text-[#1A3A6B]",
+    bgColor: "bg-[#FFFFFF]",
+    badgeColor: "bg-[#1A3A6B]",
     stat: "Visible transformation",
   },
   {
@@ -337,9 +337,9 @@ export const WHY_SHOES_MATTER = [
     title: "Safety on the Road",
     description:
       "Many children walk several kilometres to school. Proper footwear protects against stones, thorns, broken glass, and rough terrain on long journeys.",
-    color: "text-[#f97316]",
+    color: "text-[#1A3A6B]",
     bgColor: "bg-slate-50",
-    badgeColor: "bg-[#09090b]",
+    badgeColor: "bg-[#111827]",
     stat: "Safer daily journeys",
   },
   {
@@ -347,9 +347,9 @@ export const WHY_SHOES_MATTER = [
     title: "Community Dignity",
     description:
       "When children attend school properly dressed, entire communities take pride in their children's education and invest more in their futures.",
-    color: "text-warm-orange",
-    bgColor: "bg-orange-50",
-    badgeColor: "bg-[#f97316]",
+    color: "text-[#1A3A6B]",
+    bgColor: "bg-[#F3F4F6]",
+    badgeColor: "bg-[#1A3A6B]",
     stat: "Stronger communities",
   },
   {
@@ -357,9 +357,9 @@ export const WHY_SHOES_MATTER = [
     title: "Better Outcomes",
     description:
       "Research shows children who are comfortable, healthy, and confident perform better academically, creating lasting impact beyond the shoes themselves.",
-    color: "text-amber-500",
-    bgColor: "bg-amber-50",
-    badgeColor: "bg-[#f59e0b]",
+    color: "text-[#1A3A6B]",
+    bgColor: "bg-[#FFFFFF]",
+    badgeColor: "bg-[#1A3A6B]",
     stat: "Improved academic results",
   },
 ];

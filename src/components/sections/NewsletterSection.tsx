@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -20,14 +20,14 @@ export default function NewsletterSection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[#09090b]" />
+      <div className="absolute inset-0 bg-[#111827]" />
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-black/15 animate-blob-slow" />
-        <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-orange-500/15 animate-blob" />
+        <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-[#1A3A6B]/15 animate-blob" />
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-5"
           style={{
-            backgroundColor: "#f97316",
+            backgroundColor: "#1A3A6B",
             backgroundSize: "48px 48px"
           }}
         />
@@ -47,7 +47,7 @@ export default function NewsletterSection() {
 
           <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
             Stay Connected to{" "}
-            <span className="text-warm-orange">Our Mission</span>
+            <span className="text-[#1A3A6B]">Our Mission</span>
           </motion.h2>
 
           <motion.p variants={fadeUp} className="text-neutral-300 font-body mb-8 leading-relaxed">
@@ -59,7 +59,7 @@ export default function NewsletterSection() {
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="glass rounded-2xl px-8 py-6 border border-white/20 text-center"
+              className="glass  px-8 py-6 border border-white/20 text-center"
             >
               <span className="text-4xl mb-3 block">🎉</span>
               <p className="font-heading font-bold text-white text-xl">Thank you!</p>
@@ -81,12 +81,12 @@ export default function NewsletterSection() {
                   placeholder="Your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-10 pr-4 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-blue-300 font-body focus:outline-none focus:border-white/40 transition-colors"
+                  className="w-full pl-10 pr-4 py-4  bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-blue-300 font-body focus:outline-none focus:border-white/40 transition-colors"
                 />
               </div>
               <motion.button
                 type="submit"
-                className="btn-orange py-4 px-6 justify-center rounded-2xl whitespace-nowrap"
+                className="btn-primary py-4 px-6 justify-center  whitespace-nowrap"
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >

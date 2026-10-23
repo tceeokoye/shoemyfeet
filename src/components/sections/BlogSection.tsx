@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
@@ -13,7 +13,7 @@ const blogPosts = [
     date: "June 2024",
     readTime: "5 min read",
     emoji: "📖",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
     bg: "bg-slate-50",
   },
   {
@@ -24,8 +24,8 @@ const blogPosts = [
     date: "May 2024",
     readTime: "4 min read",
     emoji: "🛠️",
-    color: "bg-[#f97316]",
-    bg: "bg-orange-50",
+    color: "bg-[#1A3A6B]",
+    bg: "bg-[#F3F4F6]",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const blogPosts = [
     date: "March 2024",
     readTime: "3 min read",
     emoji: "🤝",
-    color: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
     bg: "bg-emerald-50",
   },
 ];
@@ -57,15 +57,15 @@ export default function BlogSection() {
             <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-purple-100 text-purple-700 text-sm font-bold mb-3 border border-purple-200">
               Latest Stories
             </motion.span>
-            <motion.h2 variants={fadeUp} className="font-heading text-4xl font-bold text-[#1a1a2e]">
+            <motion.h2 variants={fadeUp} className="font-heading text-4xl font-bold text-[#111827]">
               Stories of{" "}
-              <span className="text-[#f97316]">Transformation</span>
+              <span className="text-[#1A3A6B]">Transformation</span>
             </motion.h2>
           </div>
           <motion.a
             variants={fadeUp}
             href="#"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-[#09090b] text-[#f97316] font-bold text-sm hover:bg-[#09090b] hover:text-white transition-all font-body whitespace-nowrap"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-[#111827] text-[#1A3A6B] font-bold text-sm hover:bg-[#111827] hover:text-white transition-all font-body whitespace-nowrap"
           >
             View All Stories
             <ArrowRightIcon size={14} />
@@ -84,7 +84,7 @@ export default function BlogSection() {
             <motion.article
               key={post.id}
               variants={fadeUp}
-              className="group bg-white rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition-all duration-400 overflow-hidden cursor-pointer transform-gpu will-change-transform"
+              className="group bg-white rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition-all duration-400 overflow-hidden cursor-pointer transform-gpu will-change-transform"
               whileHover={{ y: -6 }}
             >
               {/* Top gradient image area */}
@@ -117,7 +117,7 @@ export default function BlogSection() {
                   </span>
                 </div>
 
-                <h3 className="font-heading font-bold text-lg text-[#1a1a2e] mb-3 group-hover:text-[#f97316] transition-colors leading-snug">
+                <h3 className="font-heading font-bold text-lg text-[#111827] mb-3 group-hover:text-[#1A3A6B] transition-colors leading-snug">
                   {post.title}
                 </h3>
 
@@ -125,7 +125,7 @@ export default function BlogSection() {
                   {post.excerpt}
                 </p>
 
-                <div className="flex items-center gap-1 text-sm font-bold text-[#f97316] font-body group-hover:gap-2 transition-all">
+                <div className="flex items-center gap-1 text-sm font-bold text-[#1A3A6B] font-body group-hover:gap-2 transition-all">
                   Read Story
                   <ArrowRightIcon size={14} className="group-hover:translate-x-1 transition-transform" />
                 </div>

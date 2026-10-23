@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import Link from "next/link";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 import { STORIES } from "@/lib/constants";
@@ -17,7 +17,7 @@ export default function SuccessStories() {
   const story = STORIES[activeIndex];
 
   return (
-    <section className="section-padding bg-[#09090b] overflow-hidden">
+    <section className="section-padding bg-[#111827] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -28,11 +28,11 @@ export default function SuccessStories() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-800 text-xs sm:text-sm font-bold mb-3 border border-amber-200">
+          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full bg-[#FFFFFF] text-[#1A3A6B] text-xs sm:text-sm font-bold mb-3 border border-[#F3F4F6]">
             Success Stories
           </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">
-            Voices of <span className="text-warm-orange">Transformation</span>
+          <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4">
+            Voices of <span className="text-[#1A3A6B]">Transformation</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-base sm:text-lg text-gray-600 font-body leading-relaxed">
             Behind every shoe distributed is a child whose dignity has been restored and whose future has been brightened.
@@ -48,12 +48,12 @@ export default function SuccessStories() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -30 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-gray-100 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center"
+              className="bg-white rounded-2xl p-8 sm:p-12 shadow-2xl border border-gray-100 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center"
             >
               {/* Image Side */}
               <div className="lg:col-span-5 relative">
-                <div className="absolute inset-0 bg-[#09090b] rounded-3xl blur-2xl scale-105" />
-                <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+                <div className="absolute inset-0 bg-[#111827] rounded-2xl blur-2xl scale-105" />
+                <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                   <Image
                     src={`/images/story${(activeIndex % 2) + 1}.jpg`}
                     alt={`Story of ${story.name}`}
@@ -73,16 +73,16 @@ export default function SuccessStories() {
               {/* Content Side */}
               <div className="lg:col-span-7 flex flex-col justify-between gap-6">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#f97316] flex items-center justify-center text-white shadow-lg mb-6">
+                  <div className="w-12 h-12  bg-[#1A3A6B] flex items-center justify-center text-white shadow-lg mb-6">
                     <QuoteIcon size={24} />
                   </div>
 
-                  <blockquote className="font-heading text-2xl sm:text-3xl text-[#1a1a2e] leading-snug font-semibold italic mb-6">
+                  <blockquote className="font-heading text-2xl sm:text-3xl text-[#111827] leading-snug font-semibold italic mb-6">
                     &ldquo;{story.quote}&rdquo;
                   </blockquote>
 
                   <div>
-                    <h4 className="font-heading font-bold text-xl text-[#f97316]">{story.name}</h4>
+                    <h4 className="font-heading font-bold text-xl text-[#1A3A6B]">{story.name}</h4>
                     <p className="text-sm text-gray-500 font-body">{story.role} · {story.location}</p>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export default function SuccessStories() {
                   <div className="flex items-center gap-3">
                     <button
                       onClick={prev}
-                      className="w-11 h-11 rounded-full border-2 border-gray-200 hover:border-[#09090b] hover:bg-[#09090b] hover:text-white text-gray-700 flex items-center justify-center transition-all"
+                      className="w-11 h-11 rounded-full border-2 border-gray-200 hover:border-[#111827] hover:bg-[#111827] hover:text-white text-gray-700 flex items-center justify-center transition-all"
                       aria-label="Previous story"
                     >
                       <ChevronLeftIcon size={20} />
@@ -105,7 +105,7 @@ export default function SuccessStories() {
                           key={i}
                           onClick={() => setActiveIndex(i)}
                           className={`h-2.5 rounded-full transition-all ${
-                            i === activeIndex ? "bg-[#f97316] w-6" : "bg-gray-200 w-2.5"
+                            i === activeIndex ? "bg-[#1A3A6B] w-6" : "bg-gray-200 w-2.5"
                           }`}
                           aria-label={`Go to slide ${i + 1}`}
                         />
@@ -114,7 +114,7 @@ export default function SuccessStories() {
 
                     <button
                       onClick={next}
-                      className="w-11 h-11 rounded-full border-2 border-gray-200 hover:border-[#09090b] hover:bg-[#09090b] hover:text-white text-gray-700 flex items-center justify-center transition-all"
+                      className="w-11 h-11 rounded-full border-2 border-gray-200 hover:border-[#111827] hover:bg-[#111827] hover:text-white text-gray-700 flex items-center justify-center transition-all"
                       aria-label="Next story"
                     >
                       <ChevronRightIcon size={20} />
@@ -124,7 +124,7 @@ export default function SuccessStories() {
                   {/* Read Story Link */}
                   <Link
                     href="/blog"
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#f97316] hover: text-warm-orange-dark transition-colors font-body group"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1A3A6B] hover: text-[#1A3A6B]-dark transition-colors font-body group"
                   >
                     <span>Read Story</span>
                     <ArrowRightIcon size={15} className="group-hover:translate-x-1 transition-transform" />

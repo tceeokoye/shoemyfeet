@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { SparklesIcon, MapPinIcon, ChevronRightIcon } from "@/components/ui/Icons";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
@@ -106,17 +106,17 @@ export default function GallerySection() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-sm font-bold mb-4 border border-slate-200"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-sm font-bold mb-4 border border-slate-200"
           >
-            <SparklesIcon size={14} className="text-orange-500" />
+            <SparklesIcon size={14} className="text-[#1A3A6B]" />
             Stories in Pictures
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-4xl sm:text-5xl font-bold text-[#1a1a2e] mb-4"
+            className="font-heading text-4xl sm:text-5xl font-bold text-[#111827] mb-4"
           >
             Every Photo Tells a{" "}
-            <span className="text-warm-orange">Story of Change</span>
+            <span className="text-[#1A3A6B]">Story of Change</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -151,8 +151,8 @@ export default function GallerySection() {
                 style={{ gridArea: AREA_NAMES[areaIdx] }}
                 className={`relative overflow-hidden transition-all duration-500 group will-change-transform ${
                   isFeatured
-                    ? "rounded-3xl border-2 border-[#f97316] shadow-2xl"
-                    : "rounded-2xl border-2 border-white hover:border-[#f97316]/60 hover:shadow-xl"
+                    ? "rounded-2xl border-2 border-[#1A3A6B] shadow-2xl"
+                    : " border-2 border-white hover:border-[#1A3A6B]/60 hover:shadow-xl"
                 }`}
               >
                 {/* Image */}
@@ -166,12 +166,12 @@ export default function GallerySection() {
                 />
 
                 {/* Gradient */}
-                <div className="absolute inset-0 bg-[#09090b] pointer-events-none" />
+                <div className="absolute inset-0 bg-[#111827] pointer-events-none" />
 
                 {/* Featured top badges */}
                 {isFeatured && (
                   <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
-                    <span className="px-3.5 py-1.5 rounded-full bg-[#f97316] text-white text-xs font-heading font-bold shadow-lg">
+                    <span className="px-3.5 py-1.5 rounded-full bg-[#1A3A6B] text-white text-xs font-heading font-bold shadow-lg">
                       FEATURED
                     </span>
                     <span className="glass px-3.5 py-1.5 rounded-full text-white text-xs font-body font-medium border border-white/30 flex items-center gap-1">
@@ -218,7 +218,7 @@ export default function GallerySection() {
             href="https://instagram.com/shoemyfeet"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary group inline-flex items-center gap-2"
+            className="btn-secondary group inline-flex items-center gap-2"
           >
             <span>View Full Gallery on Instagram</span>
             <ChevronRightIcon size={16} className="group-hover:translate-x-1 transition-transform" />

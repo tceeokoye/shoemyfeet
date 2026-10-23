@@ -1,448 +1,131 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
-import FastImage from "@/components/ui/FastImage";
+import { useState } from "react";
 import {
-  ArrowRightIcon,
-  PlayIcon,
-  HeartIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  SparklesIcon,
-} from "@/components/ui/Icons";
-
-interface SlideData {
-  id: number;
-  image: any;
-  badge: string;
-  headlineLines: string[];
-  highlightWord: string;
-  description: string;
-  primaryCta: { label: string; href: string };
-  secondaryCta: { label: string; href?: string; isVideo?: boolean };
-  floatStat?: { number: string; text: string; location: string };
-  objectPosition?: string;
-}
-
-const HERO_SLIDES: SlideData[] = [
-  {
-    id: 1,
-    image: "/images/everychild.jpg",
-    badge: "Every Step Changes a Life",
-    headlineLines: ["Every Child Deserves", "To Walk With"],
-    highlightWord: "Confidence.",
-    description:
-      "A simple pair of school shoes protects health, restores dignity, and keeps underserved children in the classroom across Nigeria.",
-    primaryCta: { label: "Donate Now", href: "/donate" },
-    secondaryCta: { label: "Watch Our Story", isVideo: true },
-    floatStat: { number: "6,500+", text: "Pairs Gifted to Children", location: "Lagos & Ogun State" },
-    objectPosition: "object-[center_20%]",
-  },
-  {
-    id: 2,
-    image: "/images/protecting_little.jpg",
-    badge: "Health & Dignity Protected",
-    headlineLines: ["Protecting Little Soles", "From Pain &"],
-    highlightWord: "Infection.",
-    description:
-      "Over 6,500+ pairs delivered directly into remote schools, preventing soil-transmitted infections and severe foot injuries.",
-    primaryCta: { label: "Support Outreach", href: "/donate" },
-    secondaryCta: { label: "Explore Our Impact", href: "/impact" },
-    floatStat: { number: "100%", text: "Parasite Protection Rate", location: "Enugu Outreach" },
-    objectPosition: "object-[center_top]",
-  },
-  {
-    id: 3,
-    image: "/images/keeping-children.jpg",
-    badge: "Equal Access to Education",
-    headlineLines: ["Keeping Children in Class,", "One Step at a"],
-    highlightWord: "Time.",
-    description:
-      "No student should miss class due to barefoot journeys or shoe policies. We provide durable footwear so learning never stops.",
-    primaryCta: { label: "Sponsor a Child", href: "/donate" },
-    secondaryCta: { label: "View Our Programs", href: "/programs" },
-    floatStat: { number: "+30%", text: "Increase in Attendance", location: "Primary Schools" },
-    objectPosition: "object-[center_top]",
-  },
-  {
-    id: 4,
-    image: "/images/crafting9.jpeg",
-    badge: "Kids Shoemaking & Craftsmanship",
-    headlineLines: ["Building Sustainable", "Futures Through"],
-    highlightWord: "Craftsmanship.",
-    description:
-      "137+ kids trained in shoemaking, producing quality footwear while building independent, sustainable livelihoods.",
-    primaryCta: { label: "Empower Kids", href: "/volunteer" },
-    secondaryCta: { label: "Our Story", href: "/about" },
-    floatStat: { number: "137+", text: "Kids Trained in Shoemaking", location: "Footwear Academy" },
-    objectPosition: "object-center",
-  },
-];
-
-const SLIDE_DURATION = 7500; // 7.5s gives ample time to read content comfortably
+  AnimatePresence,
+  motion,
+  useReducedMotion,
+} from "framer-motion";
+import Link from "next/link";
+import impactPhoto from "@/assets/FCR_6666.jpg";
+import { ArrowRightIcon, PlayIcon } from "@/components/ui/Icons";
 
 export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [direction, setDirection] = useState(1);
+  const shouldReduceMotion = useReducedMotion();
   const [isPlayingVideo, setIsPlayingVideo] = useState(false);
-  const [isReady, setIsReady] = useState(true);
-  const touchStartX = useRef<number | null>(null);
-
-  useEffect(() => {
-    const handleLoaderComplete = () => setIsReady(true);
-    window.addEventListener("page-loader-complete", handleLoaderComplete);
-    const timer = setTimeout(() => setIsReady(true), 300);
-
-    return () => {
-      window.removeEventListener("page-loader-complete", handleLoaderComplete);
-      clearTimeout(timer);
-    };
-  }, []);
-
-  const nextSlide = useCallback(() => {
-    setDirection(1);
-    setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-  }, []);
-
-  const prevSlide = useCallback(() => {
-    setDirection(-1);
-    setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
-  }, []);
-
-  const goToSlide = (index: number) => {
-    setDirection(index > currentSlide ? 1 : -1);
-    setCurrentSlide(index);
-  };
-
-  // Continuous Autoplay Timer (resets timer when currentSlide changes)
-  useEffect(() => {
-    if (!isReady) return;
-
-    const timer = setInterval(() => {
-      nextSlide();
-    }, SLIDE_DURATION);
-
-    return () => clearInterval(timer);
-  }, [nextSlide, isReady, currentSlide]);
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-    const touchEndX = e.changedTouches[0].clientX;
-    const diff = touchStartX.current - touchEndX;
-
-    if (diff > 50) nextSlide();
-    else if (diff < -50) prevSlide();
-    touchStartX.current = null;
-  };
-
-  // Preload all slide images immediately
-  useEffect(() => {
-    HERO_SLIDES.forEach((s) => {
-      if (typeof window !== "undefined") {
-        const img = new window.Image();
-        img.src = s.image;
-      }
-    });
-  }, []);
-
-  const slide = HERO_SLIDES[currentSlide];
 
   return (
     <section
-      className="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#09090b] pt-28 sm:pt-32 pb-10 select-none"
-      aria-label="Hero section"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
+      aria-label="Shoe My Feet Foundation"
+      className="relative isolate flex min-h-screen items-center justify-center overflow-hidden px-5 pb-12 pt-24 text-center sm:px-8 lg:pt-44"
     >
-      {/* Background Glow Lights */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-[70px] pointer-events-none z-0" />
-      <div className="absolute bottom-10 right-10 w-[30rem] h-[30rem] bg-black/5 rounded-full blur-[80px] pointer-events-none z-0" />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0 scale-105 bg-center opacity-40 "
+        style={{ backgroundImage: `url("${impactPhoto.src}")` }}
+      />
+      <video
+        aria-hidden="true"
+        autoPlay={!shouldReduceMotion}
+        className="absolute inset-0 z-[1] h-full w-full object-cover"
+        loop
+        muted
+        playsInline
+        poster={impactPhoto.src}
+        preload={shouldReduceMotion ? "none" : "metadata"}
+        tabIndex={-1}
+      >
+        <source src="/videos/My-Intro.mp4" type="video/mp4" />
+      </video>
 
-      {/* CONTINUOUS CINEMATOGRAPHY SLOW MOTION BACKGROUND CAROUSEL */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Base Image Layer */}
-        <div className="absolute inset-0 w-full h-full bg-[#09090b]" />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-2 bg-linear-to-b from-black/30 via-black/40 to-[#111827]/65"
+      />
 
-        {/* Seamless Cross-fade with Continuous Slow Motion Cinematography (scale & pan) */}
-        <AnimatePresence initial={false} custom={direction}>
-          <motion.div
-            key={slide.id}
-            custom={direction}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              opacity: { duration: 1.2, ease: "easeInOut" },
-            }}
-            className="absolute inset-0 w-full h-full"
+      <motion.div
+        animate={{ opacity: 1, y: 0 }}
+        className="relative z-3 mx-auto flex w-full max-w-5xl flex-col items-center gap-6"
+        initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          Every Child Deserves
+          <span className="mt-2 block">
+            <span className="text-white">To Walk With</span>{" "}
+            <span className="text-[#F97316]">Confidence.</span>
+          </span>
+        </h1>
+
+        <p className="max-w-2xl  leading-relaxed text-white/90 drop-shadow text-xl sm:text-lg md:text-xl ">
+          A simple pair of school shoes protects health, restores dignity, and
+          helps underserved children stay in the classroom across Nigeria.
+        </p>
+
+        <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
+          <Link
+            className="group inline-flex items-center gap-3 rounded-[10px] bg-[#F97316] px-7 py-3.5 text-base font-semibold text-white shadow-lg transition-colors hover:bg-[#EA580C] sm:text-lg"
+            href="/donate"
           >
-            {/* Image layer continuously moving like cinematography without stopping */}
-            <motion.div
-              key={`cinematic-img-${slide.id}`}
-              initial={{ scale: slide.id % 2 === 0 ? 1.18 : 1.06 }}
-              animate={{
-                scale: slide.id % 2 === 0 ? 1.06 : 1.18,
-              }}
-              transition={{
-                duration: (SLIDE_DURATION + 1500) / 1000,
-                ease: "linear",
-              }}
-              className="relative w-full h-full origin-center"
-            >
-              <FastImage
-                key={`hero-slide-${slide.id}`}
-                src={slide.image}
-                alt={slide.badge}
-                fill
-                priority
-                className="object-cover w-full h-full object-center transform-gpu"
-                sizes="100vw"
-              />
-            </motion.div>
+            Support a Child Today
+            <ArrowRightIcon
+              className="transition-transform group-hover:translate-x-1"
+              size={18}
+            />
+          </Link>
 
-            {/* High-Contrast Black Cinematic Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      {/* Hero Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col lg:flex-row lg:items-center justify-between py-6 sm:py-10 gap-8">
-        <div className="max-w-3xl">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`slide-content-${slide.id}`}
-              initial={{ opacity: 0, y: 35, filter: "blur(6px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              exit={{ opacity: 0, y: -25, filter: "blur(4px)" }}
-              transition={{
-                duration: 0.8,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="flex flex-col gap-5 sm:gap-6"
-            >
-              {/* Kids Badge Tag */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.85 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.15 }}
-                className="inline-flex items-center gap-2.5 self-start px-4 py-2 rounded-full bg-black/80 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-xl shadow-black/50 font-heading border border-white/20 backdrop-blur-md"
-              >
-                <span className="w-2.5 h-2.5 rounded-full bg-[#f97316] animate-pulse" />
-                <span>{slide.badge}</span>
-              </motion.div>
-
-              {/* Main Headline with Kid Font Fredoka */}
-              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.12] text-white tracking-tight drop-shadow-lg">
-                {slide.headlineLines.map((line, idx) => (
-                  <span key={idx} className="block">
-                    {line}
-                  </span>
-                ))}
-                <span className="text-[#f59e0b] inline-block relative mt-1 drop-shadow-md">
-                  {slide.highlightWord}
-                  <span className="absolute -bottom-1.5 left-0 w-full h-2.5 bg-[#f97316] rounded-full opacity-90" />
-                </span>
-              </h1>
-
-              {/* Description Subtitle */}
-              <p className="text-base sm:text-lg md:text-xl text-neutral-200 font-body leading-relaxed max-w-2xl font-normal drop-shadow">
-                {slide.description}
-              </p>
-
-              {/* CTAs */}
-              <div className="flex flex-wrap gap-4 items-center pt-6 md:pt-2">
-                <Link
-                  href={slide.primaryCta.href}
-                  className="btn-orange text-base sm:text-lg font-bold group shadow-2xl"
-                >
-                  <span>{slide.primaryCta.label}</span>
-                  <ArrowRightIcon
-                    size={18}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </Link>
-
-                {slide.secondaryCta.isVideo ? (
-                  <button
-                    onClick={() => setIsPlayingVideo(true)}
-                    className="flex items-center gap-3.5 px-6 py-3.5 rounded-full font-bold text-white bg-black/70 hover:bg-black/90 border border-white/25 transition-all font-heading text-base cursor-pointer backdrop-blur-md group shadow-xl shadow-black/40"
-                  >
-                    <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-[#f97316] text-white shadow-md group-hover:scale-110 transition-transform">
-                      <PlayIcon size={14} className="ml-0.5 fill-white text-white" />
-                    </span>
-                    <span>{slide.secondaryCta.label}</span>
-                  </button>
-                ) : (
-                  <Link
-                    href={slide.secondaryCta.href || "#"}
-                    className="flex items-center gap-2 px-6 py-3.5 rounded-full font-bold text-white bg-black/70 hover:bg-black/90 border border-white/25 transition-all font-heading text-base backdrop-blur-md group shadow-xl shadow-black/40"
-                  >
-                    <span>{slide.secondaryCta.label}</span>
-                    <ArrowRightIcon
-                      size={16}
-                      className="group-hover:translate-x-1 transition-transform text-[#f59e0b]"
-                    />
-                  </Link>
-                )}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* 3D Floating Showcase Card (Desktop) */}
-        {slide.floatStat && (
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden lg:flex flex-col gap-4 self-center"
+          <button
+            className="group inline-flex cursor-pointer items-center gap-3 rounded-[10px] border border-[#1A3A6B] bg-white px-7 py-3.5 text-base font-semibold text-[#1A3A6B] transition-colors hover:bg-[#F3F4F6] sm:text-lg"
+            onClick={() => setIsPlayingVideo(true)}
+            type="button"
           >
-            <motion.div
-              animate={{
-                y: [0, -14, 0],
-                rotate: [0, 1.5, 0, -1.5, 0],
-              }}
-              transition={{
-                duration: 6,
-                ease: "easeInOut",
-                repeat: Infinity,
-                repeatType: "mirror",
-              }}
-              className="bg-black/80 backdrop-blur-2xl border border-white/20 rounded-3xl p-6 shadow-2xl max-w-xs text-white relative overflow-hidden group hover:border-[#f97316]/60 transition-all card-3d-dark shadow-black/70"
-            >
-              <div className="absolute -top-10 -right-10 w-28 h-28 bg-orange-500/15 rounded-full blur-xl" />
-              
-              <div className="flex items-center gap-3 mb-3">
-                <span className="w-10 h-10 rounded-2xl bg-orange-500/20 border border-orange-500/40 flex items-center justify-center text-amber-300">
-                  <SparklesIcon size={20} />
-                </span>
-                <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-300 block font-heading">
-                    Verified Field Impact
-                  </span>
-                  <span className="text-xs text-neutral-300 font-body">
-                    {slide.floatStat.location}
-                  </span>
-                </div>
-              </div>
-
-              <div className="text-4xl font-heading font-extrabold text-white mb-1 drop-shadow-md">
-                {slide.floatStat.number}
-              </div>
-
-              <p className="text-xs text-neutral-300 font-body leading-relaxed">
-                {slide.floatStat.text}
-              </p>
-
-              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-neutral-400">
-                <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-orange-400 animate-ping" />
-                  Live Field Data
-                </span>
-                <span className="font-semibold text-amber-300">Shoe My Feet</span>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </div>
-
-      {/* Swiper Controls & Progress */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="flex items-center justify-between gap-4 pb-4 border-b border-white/15">
-          {/* Swiper Indicators */}
-          <div className="flex items-center gap-4">
-            <span className="text-xs font-bold text-neutral-300 font-heading tracking-widest">
-              0{currentSlide + 1} / 0{HERO_SLIDES.length}
+            <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[#F3F4F6]">
+              <PlayIcon className="fill-[#1A3A6B]" size={14} />
             </span>
-
-            <div className="flex items-center gap-2">
-              {HERO_SLIDES.map((s, idx) => (
-                <button
-                  key={s.id}
-                  onClick={() => goToSlide(idx)}
-                  aria-label={`Go to slide ${idx + 1}`}
-                  className="group relative h-2.5 rounded-full transition-all duration-300 overflow-hidden cursor-pointer"
-                  style={{
-                    width: idx === currentSlide ? "3rem" : "0.75rem",
-                    backgroundColor:
-                      idx === currentSlide ? "#f97316" : "rgba(255, 255, 255, 0.3)",
-                  }}
-                >
-                  {idx === currentSlide && (
-                    <motion.div
-                      key={`progress-${currentSlide}`}
-                      className="absolute inset-0 bg-amber-400 origin-left"
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: 1 }}
-                      transition={{
-                        duration: SLIDE_DURATION / 1000,
-                        ease: "linear",
-                      }}
-                    />
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Arrow Navigation */}
-          <div className="flex items-center gap-2">
-            <button
-              onClick={prevSlide}
-              aria-label="Previous slide"
-              className="w-10 h-10 rounded-full bg-black/60 hover:bg-[#f97316] border border-white/25 text-white flex items-center justify-center transition-all duration-200 cursor-pointer shadow-md hover:scale-105 active:scale-95"
-            >
-              <ChevronLeftIcon size={20} />
-            </button>
-            <button
-              onClick={nextSlide}
-              aria-label="Next slide"
-              className="w-10 h-10 rounded-full bg-black/60 hover:bg-[#f97316] border border-white/25 text-white flex items-center justify-center transition-all duration-200 cursor-pointer shadow-md hover:scale-105 active:scale-95"
-            >
-              <ChevronRightIcon size={20} />
-            </button>
-          </div>
+            Watch Our Story
+          </button>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Video Modal */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {isPlayingVideo && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4"
-            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-md"
             exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
             onClick={() => setIsPlayingVideo(false)}
           >
             <motion.div
-              onClick={(e) => e.stopPropagation()}
-              className="bg-[#09090b] border border-white/20 rounded-3xl p-3 max-w-4xl w-full shadow-2xl overflow-hidden relative shadow-black/80"
-              initial={{ opacity: 0, scale: 0.9, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              aria-label="Watch the Shoe My Feet Foundation story"
+              aria-modal="true"
+              className="relative w-full max-w-4xl overflow-hidden rounded-2xl border border-white/20 bg-black p-3 shadow-2xl"
+              initial={{ opacity: 0, scale: 0.95, y: 16 }}
+              onClick={(event) => event.stopPropagation()}
+              role="dialog"
+              transition={{ duration: 0.25 }}
             >
-              <div className="flex items-center justify-between px-3 py-2 text-white border-b border-white/10 mb-2">
-                <span className="font-heading font-bold text-sm text-[#f59e0b]">
+              <div className="mb-2 flex items-center justify-between border-b border-white/10 px-3 py-2 text-white">
+                <span className="font-semibold">
                   Shoe My Feet Foundation — Our Story
                 </span>
                 <button
+                  aria-label="Close video"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-lg hover:bg-white/20"
                   onClick={() => setIsPlayingVideo(false)}
-                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white cursor-pointer font-bold"
+                  type="button"
                 >
-                  ✕
+                  ×
                 </button>
               </div>
-              <div className="relative aspect-video overflow-hidden rounded-2xl bg-black">
-                <video className="w-full h-full object-cover" controls autoPlay playsInline>
+              <div className="relative aspect-video overflow-hidden">
+                <video
+                  autoPlay
+                  className="h-full w-full object-contain"
+                  controls
+                  playsInline
+                >
                   <source src="/videos/story.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>

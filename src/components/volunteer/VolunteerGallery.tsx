@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { VOLUNTEER_GALLERY } from "@/lib/volunteerData";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 import { XIcon, PlayIcon, ChevronLeftIcon, ChevronRightIcon } from "@/components/ui/Icons";
@@ -57,10 +57,10 @@ export default function VolunteerGallery() {
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4 leading-tight"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 leading-tight"
           >
             Moments of{" "}
-            <span className="text-warm-orange">Purpose & Joy</span>
+            <span className="text-[#1A3A6B]">Purpose & Joy</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -84,7 +84,7 @@ export default function VolunteerGallery() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm font-bold font-body transition-all duration-300 cursor-pointer ${
                 activeCategory === cat
-                  ? "bg-[#09090b] text-white shadow-lg scale-105"
+                  ? "bg-[#111827] text-white shadow-lg scale-105"
                   : "bg-white border border-gray-200 text-gray-600 hover:border-purple-300 hover:text-purple-700 hover:scale-105"
               }`}
             >
@@ -106,7 +106,7 @@ export default function VolunteerGallery() {
             {filtered.map((item, index) => (
               <motion.div
                 key={item.id}
-                className="relative break-inside-avoid rounded-2xl overflow-hidden cursor-pointer group shadow-sm hover:shadow-xl transition-shadow duration-500"
+                className="relative break-inside-avoid  overflow-hidden cursor-pointer group shadow-sm hover:shadow-xl transition-shadow duration-500"
                 initial={{ opacity: 0, scale: 0.94 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.45, delay: index * 0.04, ease: [0.16, 1, 0.3, 1] }}
@@ -135,13 +135,13 @@ export default function VolunteerGallery() {
                   {item.type === "video" && (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <PlayIcon size={24} className="text-warm-orange ml-1" />
+                        <PlayIcon size={24} className="text-[#1A3A6B] ml-1" />
                       </div>
                     </div>
                   )}
                   {/* Category badge */}
                   <div className="absolute top-3 left-3">
-                    <span className="px-2 py-0.5 rounded-full bg-white/90 text-[#1a1a2e] text-[10px] font-bold">
+                    <span className="px-2 py-0.5 rounded-full bg-white/90 text-[#111827] text-[10px] font-bold">
                       {item.category}
                     </span>
                   </div>
@@ -172,7 +172,7 @@ export default function VolunteerGallery() {
             >
               <div className="relative max-w-4xl w-full max-h-[85vh]" onClick={(e) => e.stopPropagation()}>
                 {/* Image */}
-                <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative w-full aspect-video  overflow-hidden shadow-2xl">
                   <Image
                     src={filtered[lightboxIndex].src}
                     alt={filtered[lightboxIndex].caption}
@@ -183,7 +183,7 @@ export default function VolunteerGallery() {
                   {filtered[lightboxIndex].type === "video" && (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-2xl">
-                        <PlayIcon size={36} className="text-warm-orange ml-1.5" />
+                        <PlayIcon size={36} className="text-[#1A3A6B] ml-1.5" />
                       </div>
                     </div>
                   )}

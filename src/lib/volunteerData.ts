@@ -1,9 +1,44 @@
-// ─── Volunteer Page Data ─────────────────────────────────────────────────────
+﻿// ─── Volunteer Page Data ─────────────────────────────────────────────────────
 // All mock data consumed by the Volunteer page components
+import type { LucideIcon } from "lucide-react";
+import {
+  Award,
+  BookOpen,
+  Building2,
+  CalendarDays,
+  Camera,
+  Church,
+  ClipboardList,
+  Clock3,
+  FileBadge2,
+  FolderOpen,
+  Footprints,
+  Globe2,
+  GraduationCap,
+  HandCoins,
+  Handshake,
+  Heart,
+  HeartHandshake,
+  House,
+  MessageCircle,
+  Palette,
+  Package,
+  Phone,
+  RefreshCw,
+  School,
+  ShieldCheck,
+  Smartphone,
+  Sprout,
+  Star,
+  Stethoscope,
+  Truck,
+  Trophy,
+  UsersRound,
+} from "lucide-react";
 
 export interface VolunteerRole {
   id: string;
-  icon: string;
+  icon: LucideIcon;
   title: string;
   description: string;
   commitment: string;
@@ -29,7 +64,7 @@ export interface VolunteerStat {
   value: number;
   suffix: string;
   label: string;
-  icon: string;
+  icon: LucideIcon;
   color: string;
 }
 
@@ -50,14 +85,14 @@ export interface FAQItem {
 
 export interface JourneyStep {
   step: number;
-  icon: string;
+  icon: LucideIcon;
   title: string;
   description: string;
   color: string;
 }
 
 export interface BenefitCard {
-  icon: string;
+  icon: LucideIcon;
   title: string;
   description: string;
   color: string;
@@ -65,14 +100,14 @@ export interface BenefitCard {
 }
 
 export interface RecognitionItem {
-  icon: string;
+  icon: LucideIcon;
   title: string;
   description: string;
   color: string;
 }
 
 export interface GroupType {
-  icon: string;
+  icon: LucideIcon;
   title: string;
   description: string;
   benefits: string[];
@@ -80,7 +115,7 @@ export interface GroupType {
 }
 
 export interface TrainingItem {
-  icon: string;
+  icon: LucideIcon;
   title: string;
   content: string;
 }
@@ -88,42 +123,42 @@ export interface TrainingItem {
 // ─── Why Volunteer Benefits ───────────────────────────────────────────────────
 export const WHY_VOLUNTEER_BENEFITS: BenefitCard[] = [
   {
-    icon: "❤️",
+    icon: Heart,
     title: "Change Lives",
     description: "Directly impact the health, dignity, and future of children in underserved communities across Nigeria.",
     color: "text-red-600",
-    bg: "bg-orange-50",
+    bg: "bg-[#F3F4F6]",
   },
   {
-    icon: "🏘️",
+    icon: House,
     title: "Build Stronger Communities",
     description: "Your service strengthens neighborhoods, schools, and local economies where every child matters.",
-    color: "text-[#f97316]",
+    color: "text-[#1A3A6B]",
     bg: "bg-slate-50",
   },
   {
-    icon: "🎓",
+    icon: GraduationCap,
     title: "Gain Valuable Experience",
     description: "Develop real-world skills in outreach, logistics, communication, and nonprofit operations.",
     color: "text-emerald-600",
     bg: "bg-emerald-50",
   },
   {
-    icon: "🤝",
+    icon: Handshake,
     title: "Meet Inspiring People",
     description: "Connect with passionate changemakers, community leaders, and compassionate professionals.",
     color: "text-purple-600",
     bg: "bg-purple-50",
   },
   {
-    icon: "🌟",
+    icon: Star,
     title: "Develop Leadership Skills",
     description: "Take on coordination roles, lead field teams, and grow into a trusted community ambassador.",
-    color: "text-amber-600",
-    bg: "bg-amber-50",
+    color: "text-[#1A3A6B]",
+    bg: "bg-[#FFFFFF]",
   },
   {
-    icon: "📸",
+    icon: Camera,
     title: "Create Lasting Memories",
     description: "Experience moments of joy, tears, and triumph that you will carry with you for a lifetime.",
     color: "text-pink-600",
@@ -135,62 +170,62 @@ export const WHY_VOLUNTEER_BENEFITS: BenefitCard[] = [
 export const VOLUNTEER_ROLES: VolunteerRole[] = [
   {
     id: "community-outreach",
-    icon: "🗣️",
+    icon: MessageCircle,
     title: "Community Outreach Volunteer",
     description: "Engage local communities, raise awareness, and identify children in greatest need of footwear support.",
     commitment: "4–8 hrs/week",
     skills: ["Communication", "Empathy", "Local Language"],
     location: "Enugu, Kaduna, Edo",
     category: "Field",
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
   {
     id: "shoe-collection",
-    icon: "👟",
+    icon: Footprints,
     title: "Shoe Collection Volunteer",
     description: "Organize drives, collect, sort, and quality-check donated footwear at partner locations and drop-off points.",
     commitment: "2–4 hrs/week",
     skills: ["Organization", "Attention to Detail"],
     location: "Multiple States",
     category: "Logistics",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
     id: "event-coordinator",
-    icon: "📋",
+    icon: ClipboardList,
     title: "Event Coordinator",
     description: "Plan and manage distribution events, school visits, and community outreach days from start to finish.",
     commitment: "6–10 hrs/week",
     skills: ["Project Management", "Teamwork", "Leadership"],
     location: "Nationwide",
     category: "Events",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
     id: "school-liaison",
-    icon: "🏫",
+    icon: School,
     title: "School Liaison Volunteer",
     description: "Build and maintain partnerships with schools, coordinate student measurements, and track impact metrics.",
     commitment: "3–5 hrs/week",
     skills: ["Networking", "Education", "Data Entry"],
     location: "Enugu State",
     category: "Partnerships",
-    color: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
   },
   {
     id: "medical-health",
-    icon: "🩺",
+    icon: Stethoscope,
     title: "Medical & Health Outreach Assistant",
     description: "Support foot health screenings, educate families on hygiene, and assist medical professionals during events.",
     commitment: "4–6 hrs/week",
     skills: ["Healthcare Background", "Empathy", "First Aid"],
     location: "Field Events",
     category: "Health",
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
   {
     id: "logistics-distribution",
-    icon: "🚛",
+    icon: Truck,
     title: "Logistics & Distribution Volunteer",
     description: "Coordinate transportation, storage, and delivery of shoes and supplies to distribution centers and schools.",
     commitment: "5–8 hrs/week",
@@ -201,69 +236,69 @@ export const VOLUNTEER_ROLES: VolunteerRole[] = [
   },
   {
     id: "photographer",
-    icon: "📷",
+    icon: Camera,
     title: "Photographer & Videographer",
     description: "Document outreach activities, capture authentic stories, and create visual content for reports and campaigns.",
     commitment: "2–4 hrs/event",
     skills: ["Photography", "Video Editing", "Storytelling"],
     location: "All Events",
     category: "Creative",
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
   {
     id: "social-media",
-    icon: "📱",
+    icon: Smartphone,
     title: "Social Media & Content Creator",
     description: "Create compelling posts, reels, stories, and campaigns that grow our digital presence and donor community.",
     commitment: "3–5 hrs/week",
     skills: ["Copywriting", "Design", "Social Media Strategy"],
     location: "Remote / Nationwide",
     category: "Digital",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
     id: "graphic-designer",
-    icon: "🎨",
+    icon: Palette,
     title: "Graphic Designer",
     description: "Design flyers, banners, reports, social media graphics, and branded materials for campaigns and events.",
     commitment: "3–6 hrs/week",
     skills: ["Adobe Suite / Figma", "Branding", "Creativity"],
     location: "Remote",
     category: "Creative",
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
   {
     id: "fundraising",
-    icon: "💰",
+    icon: HandCoins,
     title: "Fundraising Volunteer",
     description: "Help organize campaigns, approach donors, write grant proposals, and cultivate long-term giving relationships.",
     commitment: "4–8 hrs/week",
     skills: ["Sales", "Persuasion", "Grant Writing"],
     location: "Remote / Nationwide",
     category: "Fundraising",
-    color: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
   },
   {
     id: "admin-support",
-    icon: "🗂️",
+    icon: FolderOpen,
     title: "Administrative Support",
     description: "Assist with data management, volunteer records, email correspondence, scheduling, and reporting.",
     commitment: "3–5 hrs/week",
     skills: ["Microsoft Office", "Organization", "Communication"],
     location: "Remote",
     category: "Admin",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
     id: "corporate-teams",
-    icon: "🏢",
+    icon: Building2,
     title: "Corporate Volunteer Teams",
     description: "Bring your entire team for a meaningful team-building day — sorting shoes, visiting schools, or organizing events.",
     commitment: "1 full day (minimum)",
     skills: ["Teamwork", "Leadership", "Community Spirit"],
     location: "Customizable",
     category: "Corporate",
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
 ];
 
@@ -271,45 +306,45 @@ export const VOLUNTEER_ROLES: VolunteerRole[] = [
 export const VOLUNTEER_JOURNEY_STEPS: JourneyStep[] = [
   {
     step: 1,
-    icon: "📝",
+    icon: ClipboardList,
     title: "Submit Application",
     description: "Complete our simple online registration form with your personal details and areas of interest.",
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
   {
     step: 2,
-    icon: "🤝",
+    icon: Handshake,
     title: "Review & Interview",
     description: "Our volunteer coordinator reviews your application and schedules a brief welcome call within 48 hours.",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
     step: 3,
-    icon: "📚",
+    icon: BookOpen,
     title: "Orientation & Training",
     description: "Attend our volunteer orientation session covering the foundation's mission, safety, and child protection.",
-    color: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
   },
   {
     step: 4,
-    icon: "🌍",
+    icon: Globe2,
     title: "Join Outreach Activities",
     description: "Participate in scheduled distribution events, school visits, community drives, and field programs.",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
     step: 5,
-    icon: "⭐",
+    icon: Star,
     title: "Make a Lasting Impact",
     description: "Your contributions directly help children access education, improve their health, and walk with dignity.",
-    color: "bg-[#f59e0b]",
+    color: "bg-[#1A3A6B]",
   },
   {
     step: 6,
-    icon: "🏅",
+    icon: Award,
     title: "Become a Community Ambassador",
     description: "Long-serving volunteers take on leadership roles, mentor new volunteers, and represent our mission.",
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
 ];
 
@@ -385,12 +420,12 @@ export const VOLUNTEER_STORIES: VolunteerStory[] = [
 
 // ─── Volunteer Impact Stats ───────────────────────────────────────────────────
 export const VOLUNTEER_STATS: VolunteerStat[] = [
-  { value: 480, suffix: "+", label: "Active Volunteers", icon: "🙋", color: "bg-[#f97316]" },
-  { value: 24000, suffix: "+", label: "Volunteer Hours Contributed", icon: "⏱️", color: "bg-[#09090b]" },
-  { value: 62, suffix: "+", label: "Communities Served", icon: "🏘️", color: "bg-[#15803d]" },
-  { value: 130, suffix: "+", label: "Outreach Events Supported", icon: "📅", color: "bg-[#09090b]" },
-  { value: 14000, suffix: "+", label: "Children Impacted", icon: "👟", color: "bg-[#f97316]" },
-  { value: 78, suffix: "%", label: "Returning Volunteers", icon: "🔄", color: "bg-[#15803d]" },
+  { value: 480, suffix: "+", label: "Active Volunteers", icon: UsersRound, color: "bg-[#1A3A6B]" },
+  { value: 24000, suffix: "+", label: "Volunteer Hours Contributed", icon: Clock3, color: "bg-[#111827]" },
+  { value: 62, suffix: "+", label: "Communities Served", icon: House, color: "bg-[#16A34A]" },
+  { value: 130, suffix: "+", label: "Outreach Events Supported", icon: CalendarDays, color: "bg-[#111827]" },
+  { value: 14000, suffix: "+", label: "Children Impacted", icon: Footprints, color: "bg-[#1A3A6B]" },
+  { value: 78, suffix: "%", label: "Returning Volunteers", icon: RefreshCw, color: "bg-[#16A34A]" },
 ];
 
 // ─── Volunteer Gallery ────────────────────────────────────────────────────────
@@ -412,32 +447,32 @@ export const VOLUNTEER_GALLERY: GalleryItem[] = [
 // ─── Training & Support ───────────────────────────────────────────────────────
 export const TRAINING_ITEMS: TrainingItem[] = [
   {
-    icon: "🎓",
+    icon: GraduationCap,
     title: "New Volunteer Orientation",
     content: "Every volunteer attends a 2-hour onboarding session (virtual or in-person) covering the foundation's history, mission, values, code of conduct, and field protocols. You'll leave feeling confident and ready to serve.",
   },
   {
-    icon: "🛡️",
+    icon: ShieldCheck,
     title: "Child Protection & Safety",
     content: "Our child protection policy is paramount. All volunteers complete mandatory child safeguarding training, learn how to identify at-risk situations, and understand reporting procedures to keep every child safe during outreach.",
   },
   {
-    icon: "🩺",
+    icon: Stethoscope,
     title: "Health & Safety Guidelines",
     content: "Field volunteers receive first aid awareness, hygiene protocols, and safe lifting guidance. Medical volunteers receive specialized briefings tailored to foot health screening and community health outreach best practices.",
   },
   {
-    icon: "👥",
+    icon: UsersRound,
     title: "Team Mentorship Program",
     content: "Every new volunteer is paired with an experienced 'Volunteer Buddy' for their first three events. Your buddy helps you navigate the field, answers questions, and introduces you to the wider volunteer community.",
   },
   {
-    icon: "📦",
+    icon: Package,
     title: "Resource & Materials Library",
     content: "Access our private volunteer portal with training videos, field guides, distribution templates, photography tips, and safety checklists — all available 24/7 on mobile or desktop.",
   },
   {
-    icon: "🤙",
+    icon: Phone,
     title: "Continuous Support & Community",
     content: "Our WhatsApp volunteer communities, monthly check-in calls, and dedicated volunteer coordinator ensure you always have someone to reach out to — before, during, and after every event.",
   },
@@ -490,72 +525,72 @@ export const FAQ_ITEMS: FAQItem[] = [
 // ─── Recognition Items ────────────────────────────────────────────────────────
 export const RECOGNITION_ITEMS: RecognitionItem[] = [
   {
-    icon: "🏆",
+    icon: Trophy,
     title: "Volunteer of the Month",
     description: "Outstanding volunteers are spotlighted monthly across our website, social media, and newsletter — celebrating their unique contribution.",
-    color: "bg-[#f59e0b]",
+    color: "bg-[#1A3A6B]",
   },
   {
-    icon: "📜",
+    icon: FileBadge2,
     title: "Appreciation Certificates",
     description: "Every active volunteer receives official certificates recognizing their service hours — valuable for CVs, university applications, and NYSC records.",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
-    icon: "🎉",
+    icon: Star,
     title: "Annual Recognition Gala",
     description: "Once a year, we celebrate our volunteer family with an in-person appreciation evening featuring awards, testimonials, and heartfelt recognition.",
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
-    icon: "🌱",
+    icon: Sprout,
     title: "Leadership Pathways",
     description: "High-performing volunteers are invited into coordinator and ambassador roles, gaining real leadership experience in a registered nonprofit.",
-    color: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
   },
   {
-    icon: "🤗",
+    icon: HeartHandshake,
     title: "Community & Belonging",
     description: "Beyond recognition, we build a genuine family. Volunteer WhatsApp groups, social events, and ongoing mentorships foster deep, lasting friendships.",
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
 ];
 
 // ─── Group / Corporate Types ──────────────────────────────────────────────────
 export const GROUP_TYPES: GroupType[] = [
   {
-    icon: "🏢",
+    icon: Building2,
     title: "Companies & Corporations",
     description: "Create meaningful CSR impact. Bring your team for a structured volunteer day that builds morale and changes lives.",
     benefits: ["Custom event planning", "CSR documentation", "Brand recognition", "Team certificates"],
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
-    icon: "⛪",
+    icon: Church,
     title: "Churches & Faith Groups",
     description: "Live your faith's call to service. Organize congregation-wide shoe drives, collection campaigns, and field outreach.",
     benefits: ["Group coordination support", "Prayer initiative alignment", "Community testimonials", "Recognition in reports"],
-    color: "bg-[#09090b]",
+    color: "bg-[#111827]",
   },
   {
-    icon: "🏫",
+    icon: School,
     title: "Schools & Colleges",
     description: "Inspire the next generation of changemakers. Student volunteering builds empathy, leadership, and community service credentials.",
     benefits: ["Student volunteer certificates", "Service-learning hours", "School recognition", "Curriculum alignment"],
-    color: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
   },
   {
-    icon: "🎓",
+    icon: GraduationCap,
     title: "Universities & Research Groups",
     description: "Partner with us for field research, student placements, and data-driven outreach programs that advance academic goals.",
     benefits: ["Research partnership options", "Student placement letters", "Academic citations", "Field data access"],
-    color: "bg-[#f97316]",
+    color: "bg-[#1A3A6B]",
   },
   {
-    icon: "🤝",
+    icon: Handshake,
     title: "Community Groups & NGOs",
     description: "Collaborate on joint outreach initiatives, pool volunteer resources, and expand our collective impact across communities.",
     benefits: ["Co-branding opportunities", "Shared event logistics", "Joint impact reports", "Network expansion"],
-    color: "bg-[#15803d]",
+    color: "bg-[#16A34A]",
   },
 ];

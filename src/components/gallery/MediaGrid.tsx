@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Image from "@/components/ui/RealImage";
 import { ALL_MEDIA_ITEMS, CATEGORY_TABS, MediaItem } from "./galleryData";
 import { PlayIcon, ZoomInIcon, MapPinIcon, CalendarIcon, SparklesIcon, FilterIcon } from "@/components/ui/Icons";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
@@ -10,10 +10,11 @@ import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 interface MediaGridProps {
   onSelectPhoto: (item: MediaItem, index: number) => void;
   onSelectVideo: (item: MediaItem) => void;
+  initialTab?: string;
 }
 
-export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridProps) {
-  const [activeTab, setActiveTab] = useState("All Media");
+export default function MediaGrid({ onSelectPhoto, onSelectVideo, initialTab = "All Media" }: MediaGridProps) {
+  const [activeTab, setActiveTab] = useState(initialTab);
 
   const filteredMedia = ALL_MEDIA_ITEMS.filter((item) => {
     if (activeTab === "All Media") return true;
@@ -38,17 +39,17 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#f97316] text-xs sm:text-sm font-bold mb-3 border border-slate-200"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100 text-[#1A3A6B] text-xs sm:text-sm font-bold mb-3 border border-slate-200"
           >
-            <FilterIcon size={14} className="text-warm-orange" />
+            <FilterIcon size={14} className="text-[#1A3A6B]" />
             Interactive Visual Collection
           </motion.span>
 
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-3xl sm:text-5xl font-bold text-[#1a1a2e] mb-4"
+            className="font-heading text-3xl sm:text-5xl font-bold text-[#111827] mb-4"
           >
-            Explore Our <span className="text-warm-orange">Media Collection</span>
+            Explore Our <span className="text-[#1A3A6B]">Media Collection</span>
           </motion.h2>
 
           <motion.p
@@ -60,7 +61,7 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
         </motion.div>
 
         {/* Sticky Animated Filter Category Tabs Bar */}
-        <div className="sticky top-20 sm:top-22 z-30 py-3 mb-10 -mx-4 px-4 sm:mx-0 sm:px-0 bg-white/85 backdrop-blur-md border border-gray-200/80 rounded-2xl sm:rounded-full shadow-md transition-all duration-300">
+        <div className="sticky top-20 sm:top-22 z-30 py-3 mb-10 -mx-4 px-4 sm:mx-0 sm:px-0 bg-white/85 backdrop-blur-md border border-gray-200/80  sm:rounded-full shadow-md transition-all duration-300">
           <div className="flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar pb-1 sm:pb-0 px-2">
             {CATEGORY_TABS.map((tab) => {
               const isActive = activeTab === tab;
@@ -71,13 +72,13 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                   className={`relative shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-heading font-bold transition-all duration-300 ${
                     isActive
                       ? "text-white shadow-md scale-105"
-                      : "bg-gray-100/90 text-gray-600 hover:bg-gray-200/90 hover:text-[#f97316]"
+                      : "bg-gray-100/90 text-gray-600 hover:bg-gray-200/90 hover:text-[#1A3A6B]"
                   }`}
                 >
                   {isActive && (
                     <motion.div
                       layoutId="activeMediaTab"
-                      className="absolute inset-0 rounded-full bg-[#09090b]"
+                      className="absolute inset-0 rounded-full bg-[#111827]"
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -115,7 +116,7 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                       onSelectPhoto(item, photoIdx >= 0 ? photoIdx : 0);
                     }
                   }}
-                  className="group relative bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer flex flex-col"
+                  className="group relative bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer flex flex-col"
                 >
                   {/* Image Thumbnail Container */}
                   <div className="relative aspect-4/3 w-full overflow-hidden bg-gray-100">
@@ -129,15 +130,15 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                     />
 
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-[#09090b] opacity-80 group-hover:opacity-90 transition-opacity" />
+                    <div className="absolute inset-0 bg-[#111827] opacity-80 group-hover:opacity-90 transition-opacity" />
 
                     {/* Top Badges */}
                     <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
                       <span
                         className={`px-3 py-1 rounded-full text-[11px] font-heading font-bold shadow-md ${
                           isVideo
-                            ? "bg-warm-orange text-white"
-                            : "bg-white/90 text-[#f97316] backdrop-blur-md"
+                            ? "bg-[#1A3A6B] text-white"
+                            : "bg-white/90 text-[#1A3A6B] backdrop-blur-md"
                         }`}
                       >
                         {isVideo ? `VIDEO · ${item.duration}` : "PHOTO"}
@@ -152,7 +153,7 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                     {/* Play / Zoom Center Icon Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center z-10">
                       {isVideo ? (
-                        <div className="w-14 h-14 rounded-full bg-[#f97316] text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                        <div className="w-14 h-14 rounded-full bg-[#1A3A6B] text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
                           <PlayIcon size={22} className="ml-0.5 fill-white" />
                         </div>
                       ) : (
@@ -166,10 +167,10 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                   {/* Text Details Area */}
                   <div className="p-5 flex-1 flex flex-col justify-between">
                     <div>
-                      <div className="text-[11px] font-bold text-warm-orange uppercase tracking-wider mb-1">
+                      <div className="text-[11px] font-bold text-[#1A3A6B] uppercase tracking-wider mb-1">
                         {item.event}
                       </div>
-                      <h3 className="font-heading text-lg font-bold text-[#1a1a2e] group-hover:text-[#f97316] transition-colors line-clamp-1 mb-2">
+                      <h3 className="font-heading text-lg font-bold text-[#111827] group-hover:text-[#1A3A6B] transition-colors line-clamp-1 mb-2">
                         {item.title}
                       </h3>
                       <p className="font-body text-xs text-gray-600 line-clamp-2 leading-relaxed mb-4">
@@ -182,7 +183,7 @@ export default function MediaGrid({ onSelectPhoto, onSelectVideo }: MediaGridPro
                         <CalendarIcon size={13} className="text-gray-400" />
                         {item.date}
                       </span>
-                      <span className="font-bold text-[#f97316] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                      <span className="font-bold text-[#1A3A6B] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                         {isVideo ? "Watch Video" : "View Photo"} →
                       </span>
                     </div>
