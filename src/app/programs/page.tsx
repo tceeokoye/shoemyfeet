@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import EditorialHero from "@/components/ui/EditorialHero";
 import FastImage from "@/components/ui/FastImage";
 import ProgramsOverview from "@/components/programs/ProgramsOverview";
 import HowProgramsWork from "@/components/programs/HowProgramsWork";
 import ProgramSuccessStories from "@/components/programs/ProgramSuccessStories";
 import ProgramFAQ from "@/components/programs/ProgramFAQ";
 import ProgramsCTA from "@/components/programs/ProgramsCTA";
-import { ArrowRightIcon } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
   title: "Our Programs | Shoe My Feet Foundation",
@@ -35,130 +33,104 @@ const programPages = [
   {
     title: "Shoe Distribution Initiative",
     description:
-      "Our flagship program identifying vulnerable pupils and fitting them with durable, high-quality school shoes with dignity.",
+      "Providing durable school shoes to children so they can learn, play, and move with comfort and confidence.",
     href: "/programs/shoe-distribution",
-    image: "/images/distribution.jpg",
+    image: "/images/shoe_distribution.jpg",
     alt: "Children receiving fitted school shoes during outreach",
-    label: "Core Flagship Program",
   },
   {
     title: "Back-to-School Campaign",
     description:
-      "Termly campaigns equipping underserved children with shoes and essentials before school begins, removing resumption barriers.",
+      "Helping children begin each school term prepared with footwear and the essentials they need to learn.",
     href: "/programs/back-to-school",
-    image: "/images/children_walking_school.jpg",
-    alt: "Children walking together happily to school",
-    label: "Seasonal Initiative",
+    image: "/images/everychild.jpg",
+    alt: "Schoolchildren standing together at a school outreach event",
   },
   {
     title: "Kids Shoemaking & Skills",
     description:
-      "Hands-on footwear crafting workshops training 137+ children and youths in shoemaking, tool handling, and entrepreneurship.",
+      "Hands-on shoemaking and entrepreneurship skills that help young people build confidence and future opportunities.",
     href: "/programs/kids-shoemaking",
     image: "/images/crafting6.jpeg",
     alt: "Young people learning shoemaking craft at the workshop",
-    label: "Empowerment & Craftsmanship",
   },
   {
     title: "Community Outreach",
     description:
-      "Grassroots missions in remote villages and urban slums combining shoe donations with foot health, hygiene, and family support.",
+      "Working alongside communities to provide shoes, share foot-health guidance, and support children and families.",
     href: "/programs/community-outreach",
-    image: "/images/community.jpg",
-    alt: "Community gathering for shoe distribution and health education",
-    label: "Grassroots Action",
+    image: "/images/IMG_9272-01.jpeg",
+    alt: "Children and volunteers together during a foundation outreach",
   },
   {
     title: "School Partnership Program",
     description:
-      "Direct institutional collaborations with 50+ public schools to identify children in need and track attendance improvements.",
+      "Partnering with schools to identify needs, coordinate distributions, and follow each programme's impact.",
     href: "/programs/school-partnerships",
-    image: "/images/gallery5.jpg",
-    alt: "School distribution in collaboration with educators",
-    label: "Institutional Collaboration",
+    image: "/images/happy-kids.jpeg",
+    alt: "Schoolchildren with a volunteer during a school visit",
   },
   {
     title: "Corporate Partnerships & CSR",
     description:
-      "Transparent corporate social responsibility programs, employee volunteer drives, matching gifts, and co-branded outreach.",
+      "Building practical partnerships that bring organisations and volunteers together to support children.",
     href: "/programs/corporate-partnerships",
-    image: "/images/volunteers.jpg",
-    alt: "Corporate and community volunteers collaborating on outreach",
-    label: "Business & CSR",
+    image: "/images/keeping-children.jpg",
+    alt: "Children taking part in a community support programme",
   },
 ];
 
 export default function ProgramsPage() {
   return (
     <>
-      {/* Editorial Hero */}
-      <EditorialHero
-        eyebrow="Shoe My Feet Foundation · Programs"
-        title={
-          <>
-            Changing lives, <span className="text-[#142E56]">one step</span> at a time.
-          </>
-        }
-        description="Discover the initiatives through which we restore dignity, protect health, and keep children learning by providing school shoes, vocational skills, and community support across Nigeria."
-        image="/images/distribution.jpg"
-        imageAlt="Children receiving school shoes at a foundation distribution"
-      >
-        <Link href="#explore-programs" className="btn-primary">
-          Explore Programs
-        </Link>
-        <Link
-          href="/donate"
-          className="inline-flex items-center gap-2 border-b border-[#1A3A6B] pb-1 text-sm font-medium text-[#1A3A6B] hover:text-[#142E56] transition-colors"
-        >
-          Support Our Work <ArrowRightIcon size={16} />
-        </Link>
-      </EditorialHero>
-
-      {/* Program Grid Section */}
-      <section id="explore-programs" className="bg-white py-16 sm:py-24 scroll-mt-24">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-5 sm:mb-14">
-            <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1A3A6B]">
-                Targeted Initiatives
-              </p>
-              <h2 className="font-heading text-3xl font-semibold text-[#111827] sm:text-4xl">
-                Our Core Programs
-              </h2>
-            </div>
-            <p className="max-w-md text-base leading-7 text-[#565650]">
-              Select any program below to explore how it operates, its verified impact, and how you can get involved.
-            </p>
-          </div>
-
-          <div className="grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
-            {programPages.map((program) => (
-              <Link key={program.href} href={program.href} className="group block">
-                <div className="relative mb-5 aspect-[4/3] overflow-hidden bg-[#F3F4F6] rounded-xl">
-                  <FastImage
-                    src={program.image}
-                    alt={program.alt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
-                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#1A3A6B]">
-                  {program.label}
-                </p>
-                <h3 className="font-heading text-2xl font-medium text-[#111827] group-hover:text-[#1A3A6B] transition-colors">
-                  {program.title}
-                </h3>
-                <p className="mt-2 text-base leading-7 text-[#565650]">
-                  {program.description}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 border-b border-[#1A3A6B] pb-1 text-sm font-medium text-[#1A3A6B] group-hover:translate-x-0.5 transition-transform">
-                  Explore program <ArrowRightIcon size={14} />
-                </span>
-              </Link>
-            ))}
-          </div>
+      <section className="bg-white px-5 pb-8 pt-28 text-center sm:px-8 sm:pb-10 sm:pt-32">
+        <div className="relative mx-auto flex min-h-[84px] max-w-[704px] items-center justify-center px-5 py-5 sm:min-h-[104px]">
+          <span
+            aria-hidden="true"
+            className="absolute inset-0 bg-[length:100%_100%] bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/images/challenge-brush.svg')" }}
+          />
+          <h1 className="relative font-heading text-3xl font-extrabold uppercase text-white sm:text-4xl">
+            Our Projects
+          </h1>
         </div>
+      </section>
+
+      <section id="explore-programs" aria-label="Our projects" className="scroll-mt-24">
+        {programPages.map((program) => (
+          <article
+            key={program.href}
+            className="relative isolate flex min-h-[380px] items-center justify-center overflow-hidden bg-[#111827] px-5 py-20 text-center text-white sm:min-h-[440px] sm:px-8 lg:min-h-[500px]"
+          >
+            <div className="absolute inset-0 z-0">
+              <FastImage
+                src={program.image}
+                alt={program.alt}
+                fill
+                className="object-cover"
+                sizes="100vw"
+              />
+            </div>
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 z-10 bg-gradient-to-b from-[#111827]/65 via-[#111827]/55 to-[#111827]/75"
+            />
+            <div className="relative z-20 mx-auto max-w-3xl">
+              <h2 className="font-heading text-2xl font-extrabold uppercase leading-tight tracking-[0.12em] text-white sm:text-3xl md:text-4xl">
+                {program.title}
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-white/90 sm:text-base sm:leading-7">
+                {program.description}
+              </p>
+              <Link
+                href={program.href}
+                className="mt-8 inline-flex min-w-40 items-center justify-center rounded-full bg-[#F8D77A] px-7 py-3.5 text-sm font-semibold text-[#1A3A6B] transition-colors hover:bg-[#F97316] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              >
+                View Project
+              </Link>
+            </div>
+          </article>
+        ))}
       </section>
 
       {/* Pillars / Strategic Approach */}

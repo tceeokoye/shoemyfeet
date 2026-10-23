@@ -17,7 +17,6 @@ export default function ImpactReportsPage() {
       >
         <div aria-hidden="true" className="absolute inset-0 z-0 bg-[#111827]/65" />
         <div className="relative z-10 mx-auto max-w-4xl">
-          
           <h1 className="font-heading text-4xl font-extrabold leading-tight text-white sm:text-5xl md:text-6xl">
             Reports &amp; Publications
           </h1>

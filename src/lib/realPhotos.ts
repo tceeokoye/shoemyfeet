@@ -1,14 +1,15 @@
 import type { ImageProps } from "next/image";
-import distribution from "@/assets/FCR_6577.jpg";
-import fitting from "@/assets/FCR_6457.jpg";
-import children from "@/assets/FCR_6666.jpg";
-import schoolChildren from "@/assets/FCR_6429.jpg";
-import groupOutreach from "@/assets/FCR_6429.jpg";
-import volunteerPortrait from "@/assets/FCR_6682.jpg";
-import teamPhoto from "@/assets/FCR_6675.jpg";
-import shoeDetail from "@/assets/FCR_6709.jpg";
-import outreachBags from "@/assets/FCR_6411.jpg";
-import workshop from "@/assets/FCR_6402.jpg";
+
+const distribution = "/images/shoe_distribution.jpg";
+const fitting = "/images/IMG_9272-01.jpeg";
+const children = "/images/everychild.jpg";
+const schoolChildren = "/images/everychild-needs.jpeg";
+const groupOutreach = "/images/happy-kids.jpeg";
+const volunteerPortrait = "/images/MrPhilo.jpeg";
+const teamPhoto = "/images/keeping-children.jpg";
+const shoeDetail = "/images/protecting_little.jpg";
+const outreachBags = "/images/addressing.jpg";
+const workshop = "/images/crafting6.jpeg";
 
 const photosByName: Record<string, ImageProps["src"]> = {
   addressing: groupOutreach,

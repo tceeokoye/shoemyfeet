@@ -7,8 +7,9 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import Link from "next/link";
-import impactPhoto from "@/assets/FCR_6666.jpg";
 import { ArrowRightIcon, PlayIcon } from "@/components/ui/Icons";
+
+const impactPhoto = "/images/everychild.jpg";
 
 export default function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
@@ -22,7 +23,7 @@ export default function HeroSection() {
       <div
         aria-hidden="true"
         className="absolute inset-0 z-0 scale-105 bg-center opacity-40 "
-        style={{ backgroundImage: `url("${impactPhoto.src}")` }}
+        style={{ backgroundImage: `url("${impactPhoto}")` }}
       />
       <video
         aria-hidden="true"
@@ -31,7 +32,7 @@ export default function HeroSection() {
         loop
         muted
         playsInline
-        poster={impactPhoto.src}
+        poster={impactPhoto}
         preload={shouldReduceMotion ? "none" : "metadata"}
         tabIndex={-1}
       >

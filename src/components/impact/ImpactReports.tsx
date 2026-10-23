@@ -138,16 +138,25 @@ export default function ImpactReports() {
       <section
         id="publications"
         aria-labelledby="publications-heading"
-        className="bg-[#F8F8F7] px-5 py-16 sm:px-8 sm:py-20"
+        className="bg-[#e9e9e6] px-5 py-16 sm:px-8 sm:py-20"
       >
         <div className="mx-auto max-w-6xl">
-          <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14">
-            <h2
-              id="publications-heading"
-              className="font-heading text-3xl font-bold text-[#1A3A6B] sm:text-4xl"
-            >
-              Publications
-            </h2>
+          <div className="mx-auto mb-10 max-w-[704px] text-center sm:mb-14">
+            <div className="relative mx-auto flex min-h-[168px] items-center justify-center px-6 py-8 sm:min-h-[208px] sm:px-12 sm:py-10">
+              <span
+                aria-hidden="true"
+                className="absolute inset-0 bg-[length:100%_100%] bg-center bg-no-repeat brightness-0 invert"
+                style={{
+                  backgroundImage: "url('/images/challenge-brush.svg')",
+                }}
+              />
+              <h2
+                id="publications-heading"
+                className="relative font-heading text-3xl font-bold text-[#1A3A6B] sm:text-4xl"
+              >
+                Publications
+              </h2>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">

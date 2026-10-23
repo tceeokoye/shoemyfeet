@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import BrandLogo from "@/assets/shoe-my-fit-logo.png"
 
 import { MenuIcon, CloseIcon } from "@/components/ui/Icons";
 import Image from "@/components/ui/RealImage";
@@ -73,7 +72,7 @@ export default function Navbar() {
         >
           <div className="flex items-center justify-between px-4 sm:px-6 py-3">
             {/* Logo */}
-            <Image src={BrandLogo} alt="Shoe My Feet Foundation" height={48} width={48} className="object-contain" />
+            <Image src="/shoe-my-fit-logo.png" alt="Shoe My Feet Foundation" height={48} width={48} className="object-contain" />
 
             {/* Desktop Nav Links */}
             <div className="hidden flex-1 items-center justify-evenly gap-1 mx-auto max-w-[760px] lg:flex">
@@ -192,7 +191,7 @@ export default function Navbar() {
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-black/10">
-              <Image src={BrandLogo} alt="Shoe My Feet Foundation" height={48} width={48} className="object-contain" />
+              <Image src="/shoe-my-fit-logo.png" alt="Shoe My Feet Foundation" height={48} width={48} className="object-contain" />
               <button
                 className="p-2.5 rounded-xl bg-black/5 text-[#111827]"
                 onClick={() => setIsOpen(false)}

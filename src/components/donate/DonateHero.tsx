@@ -1,6 +1,5 @@
 import Image from "next/image";
 import DonationOptions from "@/components/donate/DonationOptions";
-import donationPhoto from "@/assets/FCR_6666.jpg";
 
 export default function DonateHero() {
   return (
@@ -10,7 +9,7 @@ export default function DonateHero() {
     >
       <div aria-hidden="true" className="absolute inset-0 z-0 overflow-hidden">
         <Image
-          src={donationPhoto}
+          src="/images/everychild.jpg"
           alt=""
           fill
           priority
