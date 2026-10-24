@@ -1,6 +1,7 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "@/components/ui/RealImage";
 import AboutPageIntro from "@/components/about/AboutPageIntro";
+import ScrollOverBg from "@/components/ui/scrollOverBg";
 
 export const metadata: Metadata = {
   title: "Mission & Values | Shoe My Feet Foundation",
@@ -56,6 +57,25 @@ export default function MissionPage() {
           </div>
         </div>
       </section>
+
+      <ScrollOverBg
+        backgroundImage="/images/shoe_distribution.jpg"
+        minHeight="min-h-[420px] sm:min-h-[480px]"
+        className="px-5 py-20 sm:px-8"
+        overlayClassName="bg-[#111827]/75"
+        eyebrow="Mission & Vision"
+        title="Walk With Us Toward a Fairer Future"
+        titleTag="h2"
+        titleClassName="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl"
+        description="Every pair of shoes is a step toward safety, education, and equal belonging for a child."
+        descriptionClassName="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg"
+        href="/donate"
+        linkLabel="Donate Now"
+        linkStyle="button"
+        secondaryHref="/volunteer"
+        secondaryLinkLabel="Become a Volunteer"
+        secondaryLinkStyle="outline"
+      />
     </>
   );
 }

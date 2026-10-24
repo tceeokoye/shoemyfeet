@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FastImage from "@/components/ui/FastImage";
 import { ArrowRightIcon } from "@/components/ui/Icons";
+import ScrollOverBg from "@/components/ui/scrollOverBg";
 
 export const metadata: Metadata = {
   title: "The Need & Our Solution | Shoe My Feet Foundation",
@@ -60,7 +61,10 @@ export default function HowWeWorkPage() {
         </figure>
       </section>
 
-      <section id="need" className="scroll-mt-28 bg-white px-5 pb-16 sm:px-8 sm:pb-20">
+      <section
+        id="need"
+        className="scroll-mt-28 bg-white px-5 pb-16 sm:px-8 sm:pb-20"
+      >
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="font-heading text-3xl font-semibold text-[#1A3A6B] sm:text-4xl">
             The Need
@@ -76,20 +80,23 @@ export default function HowWeWorkPage() {
         </div>
       </section>
 
+      <ScrollOverBg
+        backgroundImage="/images/shoe_distribution.jpg"
+        minHeight="min-h-[380px]"
+        className="px-5 py-20 sm:px-8 sm:py-24"
+        description={
+          <>
+            No child should have to choose between protecting their feet and
+            showing up ready to learn.
+          </>
+        }
+        descriptionClassName="mx-auto max-w-4xl font-heading text-2xl font-semibold leading-snug text-white sm:text-3xl"
+      />
       <section
-        className="relative isolate flex min-h-[380px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-fixed px-5 py-20 text-center text-white sm:px-8 sm:py-24"
-        style={{ backgroundImage: "url('/images/shoe_distribution.jpg')" }}
+        id="solution"
+        className="scroll-mt-28 bg-white px-5 py-16 sm:px-8 sm:py-24"
       >
-        <div aria-hidden="true" className="absolute inset-0 z-0 bg-black/65" />
-        <p className="relative z-10 mx-auto max-w-4xl font-heading text-2xl font-semibold leading-snug text-white sm:text-3xl">
-          No child should have to choose between protecting their feet and
-          showing up ready to learn.
-        </p>
-      </section>
-
-      <section id="solution" className="scroll-mt-28 bg-white px-5 py-16 sm:px-8 sm:py-24">
         <div className="mx-auto max-w-4xl text-center">
-         
           <h2 className="font-heading text-3xl font-semibold text-[#1A3A6B] sm:text-4xl">
             Solution
           </h2>
@@ -104,7 +111,10 @@ export default function HowWeWorkPage() {
 
         <div className="mx-auto mt-12 grid max-w-6xl gap-x-8 gap-y-12 sm:grid-cols-2 lg:mt-16">
           {solutionPillars.map((pillar) => (
-            <article key={pillar.number} className="grid items-center gap-5 sm:grid-cols-[0.9fr_1.1fr] sm:gap-6">
+            <article
+              key={pillar.number}
+              className="grid items-center gap-5 sm:grid-cols-[0.9fr_1.1fr] sm:gap-6"
+            >
               <div className="relative aspect-[4/3] overflow-hidden bg-[#F3F4F6]">
                 <FastImage
                   src={pillar.image}
@@ -115,7 +125,6 @@ export default function HowWeWorkPage() {
                 />
               </div>
               <div>
-                
                 <h3 className="font-heading text-xl font-semibold leading-snug text-[#111827] sm:text-2xl">
                   {pillar.title}
                 </h3>
@@ -128,35 +137,23 @@ export default function HowWeWorkPage() {
         </div>
       </section>
 
-      <section
-        className="relative isolate flex min-h-[320px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-fixed px-5 py-14 text-center text-white sm:px-8 sm:py-16"
-        style={{ backgroundImage: "url('/images/shoe_distribution.jpg')" }}
-      >
-        <div aria-hidden="true" className="absolute inset-0 z-0 bg-black/65" />
-        <div className="relative z-10 mx-auto max-w-3xl">
-          <h2 className="font-heading text-2xl font-semibold !text-white sm:text-3xl">
-            Help a child take their next step
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/85">
-            Your support helps bring shoes, skills, and more opportunities
-            within reach for children and communities.
-          </p>
-          <div className="mt-7 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/donate"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-[#1A3A6B] transition-colors hover:bg-white/90"
-            >
-              Support the work <ArrowRightIcon size={16} />
-            </Link>
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/50 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
-            >
-              Explore our programs <ArrowRightIcon size={16} />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ScrollOverBg
+        backgroundImage="/images/shoe_distribution.jpg"
+        minHeight="min-h-[340px] sm:min-h-[400px]"
+        className="px-5 py-14 sm:px-8 sm:py-16"
+        overlayClassName="bg-black/65"
+        title="Help a child take their next step"
+        titleTag="h2"
+        titleClassName="font-heading text-2xl font-semibold !text-white sm:text-3xl"
+        description="Your support helps bring shoes, skills, and more opportunities within reach for children and communities."
+        descriptionClassName="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/85"
+        href="/donate"
+        linkLabel="Support the work"
+        linkStyle="white"
+        secondaryHref="/projects"
+        secondaryLinkLabel="Explore our programs"
+        secondaryLinkStyle="outline"
+      />
     </>
   );
 }

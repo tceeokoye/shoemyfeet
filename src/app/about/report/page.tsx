@@ -3,6 +3,7 @@ import Image from "@/components/ui/RealImage";
 import TitleSplashBackground from "@/components/ui/TitleSplashBackground";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 import { ReportDocumentLink } from "@/components/impact/ImpactReports";
+import ScrollOverBg from "@/components/ui/scrollOverBg";
 
 export const metadata: Metadata = {
   title: "Reports & Publications | Shoe My Feet Foundation",
@@ -73,24 +74,19 @@ const publicationHighlights = [
 export default function DistributionReportPage() {
   return (
     <>
-      <section
-        className="relative isolate flex min-h-[520px] items-center justify-center overflow-hidden bg-[#17140f] bg-cover bg-center bg-fixed px-5 py-24 text-center text-white md:min-h-[600px] sm:px-8 sm:py-28"
-        style={{ backgroundImage: "url('/images/shoe_distribution.jpg')" }}
-      >
-        <div aria-hidden="true" className="absolute inset-0 z-0 bg-[#111827]/65" />
-        <div className="relative z-10 mx-auto max-w-4xl">
-          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.14em] text-[#F8D77A] sm:text-base">
-            Shoe My Feet Foundation · Accountability
-          </p>
-          <h1 className="font-heading text-4xl font-extrabold leading-tight text-white sm:text-5xl md:text-6xl">
-            Reports &amp; Publications
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/90 sm:text-lg">
-            Explore reports from Shoe My Feet Foundation programmes and learn
-            how our work is reaching children and school communities.
-          </p>
-        </div>
-      </section>
+      <ScrollOverBg
+        backgroundImage="/images/shoe_distribution.jpg"
+        minHeight="min-h-[520px] md:min-h-[600px]"
+        className="px-5 py-24 sm:px-8 sm:py-28"
+        eyebrow="Shoe My Feet Foundation · Accountability"
+        title="Reports & Publications"
+        titleTag="h1"
+        titleClassName="font-heading text-4xl font-extrabold leading-tight text-white sm:text-5xl md:text-6xl"
+        description="Explore reports from Shoe My Feet Foundation programmes and learn how our work is reaching children and school communities."
+        descriptionClassName="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/90 sm:text-lg"
+        contentClassName="mx-auto max-w-4xl"
+        overlayClassName="bg-[#111827]/65"
+      />
 
       <section className="bg-[#F8F8F7] px-5 py-12 sm:px-8 sm:py-16">
         <div className="mx-auto max-w-6xl">

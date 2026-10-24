@@ -1,7 +1,8 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "@/components/ui/RealImage";
 import Link from "next/link";
 import EditorialHero from "@/components/ui/EditorialHero";
+import AboutCTA from "@/components/about/AboutCTA";
 
 export const metadata: Metadata = {
   title: "About Us | Shoe My Feet Foundation",
@@ -104,6 +105,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <AboutCTA />
     </>
   );
 }

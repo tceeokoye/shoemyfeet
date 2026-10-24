@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AboutPageIntro from "@/components/about/AboutPageIntro";
 import { ArrowRightIcon } from "@/components/ui/Icons";
+import ScrollOverBg from "@/components/ui/scrollOverBg";
 
 export const metadata: Metadata = {
   title: "Careers | Shoe My Feet Foundation",
@@ -81,6 +82,25 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
+
+      <ScrollOverBg
+        backgroundImage="/images/crafting6.jpeg"
+        minHeight="min-h-[420px] sm:min-h-[480px]"
+        className="px-5 py-20 sm:px-8"
+        overlayClassName="bg-[#111827]/75"
+        eyebrow="Join Our Mission"
+        title="Put Your Passion to Meaningful Work"
+        titleTag="h2"
+        titleClassName="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl"
+        description="Whether volunteering, mentoring young shoemakers, or bringing professional expertise, every contribution helps children walk tall."
+        descriptionClassName="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg"
+        href="/contact"
+        linkLabel="Contact the Team"
+        linkStyle="button"
+        secondaryHref="/volunteer"
+        secondaryLinkLabel="Explore Volunteering"
+        secondaryLinkStyle="outline"
+      />
     </>
   );
 }

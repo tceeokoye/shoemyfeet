@@ -1,7 +1,8 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "@/components/ui/RealImage";
 import Link from "next/link";
 import AboutPageIntro from "@/components/about/AboutPageIntro";
+import ScrollOverBg from "@/components/ui/scrollOverBg";
 
 export const metadata: Metadata = {
   title: "Our Impact | Shoe My Feet Foundation",
@@ -50,6 +51,25 @@ export default function AboutImpactPage() {
           </div>
         </div>
       </section>
+
+      <ScrollOverBg
+        backgroundImage="/images/distribution.jpg"
+        minHeight="min-h-[420px] sm:min-h-[480px]"
+        className="px-5 py-20 sm:px-8"
+        overlayClassName="bg-[#111827]/75"
+        eyebrow="Impact In Action"
+        title="Help Us Reach the Next 3,000 Children"
+        titleTag="h2"
+        titleClassName="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl"
+        description="Your support provides durable school shoes, socks, and shoemaking craft training directly to children and schools in need."
+        descriptionClassName="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg"
+        href="/donate"
+        linkLabel="Support Our Work"
+        linkStyle="button"
+        secondaryHref="/about/report"
+        secondaryLinkLabel="View Full Report"
+        secondaryLinkStyle="outline"
+      />
     </>
   );
 }

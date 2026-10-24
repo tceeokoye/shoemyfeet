@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FastImage from "@/components/ui/FastImage";
-import TitleSplashBackground from "@/components/ui/TitleSplashBackground";
+import ToolsResourceBanner from "@/components/about/ToolsResourceBanner";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
@@ -14,7 +14,6 @@ const resourceSections = [
   {
     id: "school-partnerships",
     title: "School Shoe Distribution",
-    titleShape: 1,
     image: "/images/shoe_distribution.jpg",
     imageAlt: "Schoolchildren gathered with the Shoe My Feet Foundation team",
     introduction:
@@ -42,8 +41,7 @@ const resourceSections = [
   },
   {
     id: "shoemaking-skills",
-    title: "Shoemaking Skills & Youth Empowerment",
-    titleShape: 2,
+    title: "Shoemaking Skills ",
     image: "/images/crafting7.jpeg",
     imageAlt: "Young people learning practical shoemaking skills",
     introduction:
@@ -72,7 +70,6 @@ const resourceSections = [
   {
     id: "school-community-engagement",
     title: "School & Community Engagement",
-    titleShape: 3,
     image: "/images/addressing.jpg",
     imageAlt: "Foundation team member engaging with a community audience",
     introduction:
@@ -101,7 +98,6 @@ const resourceSections = [
   {
     id: "impact-and-reports",
     title: "Impact & Learning",
-    titleShape: 4,
     image: "/images/happy-kids.jpeg",
     imageAlt: "Children smiling together at a foundation community event",
     introduction:
@@ -161,20 +157,11 @@ export default function ToolsPage() {
 
       {resourceSections.map((section) => (
         <section key={section.id} id={section.id} className="scroll-mt-24">
-          <div
-            role="img"
-            aria-label={section.imageAlt}
-            className="relative h-80 overflow-hidden bg-[#1A3A6B] bg-cover bg-center bg-fixed sm:h-96 lg:h-[30rem]"
-            style={{ backgroundImage: `url('${section.image}')` }}
-          >
-            <div aria-hidden="true" className="absolute inset-0 bg-black/35" />
-            <div className="absolute inset-x-5 top-1/2 flex -translate-y-1/2 justify-center sm:inset-x-8">
-              <h2 className="relative isolate inline-flex min-h-[128px] max-w-full items-center justify-center px-8 py-7 text-center font-heading text-xl font-bold uppercase leading-tight tracking-wide text-white sm:min-h-[144px] sm:px-14 sm:py-8 sm:text-2xl">
-                <TitleSplashBackground variant={section.titleShape} />
-                <span className="relative z-10">{section.title}</span>
-              </h2>
-            </div>
-          </div>
+          <ToolsResourceBanner
+            title={section.title}
+            image={section.image}
+            imageAlt={section.imageAlt}
+          />
 
           <div className="bg-white px-5 py-12 sm:px-8 sm:py-16">
             <div className="mx-auto max-w-5xl">

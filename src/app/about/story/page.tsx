@@ -1,6 +1,7 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "@/components/ui/RealImage";
 import AboutPageIntro from "@/components/about/AboutPageIntro";
+import ScrollOverBg from "@/components/ui/scrollOverBg";
 
 export const metadata: Metadata = {
   title: "Our Story | Shoe My Feet Foundation",
@@ -47,6 +48,25 @@ export default function OurStoryPage() {
           </figure>
         </div>
       </section>
+
+      <ScrollOverBg
+        backgroundImage="/images/happy-kids.jpeg"
+        minHeight="min-h-[420px] sm:min-h-[480px]"
+        className="px-5 py-20 sm:px-8"
+        overlayClassName="bg-[#111827]/75"
+        eyebrow="Our Story · Next Steps"
+        title="Help write the next chapter of our story"
+        titleTag="h2"
+        titleClassName="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl"
+        description="Join us in bringing footwear, dignity, and real hope to more schoolchildren across Nigeria."
+        descriptionClassName="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg"
+        href="/donate"
+        linkLabel="Support Our Work"
+        linkStyle="button"
+        secondaryHref="/about/how-we-work"
+        secondaryLinkLabel="How We Work"
+        secondaryLinkStyle="outline"
+      />
     </>
   );
 }

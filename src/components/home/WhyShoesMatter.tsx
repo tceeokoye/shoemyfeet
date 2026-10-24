@@ -23,7 +23,7 @@ export default function WhyShoesMatter() {
           variants={fadeUp}
           className="relative mx-auto mb-8 flex h-[120px] w-full max-w-[704px] items-center justify-center font-heading text-xl font-bold uppercase leading-tight text-white sm:mb-10 sm:h-[140px] sm:text-[21px]"
         >
-          <TitleSplashBackground variant={4} />
+          <TitleSplashBackground variant={3} />
           <span className="relative z-10">The Challenge</span>
         </motion.h2>
 

@@ -113,51 +113,51 @@ export default function ProjectsPage() {
       <section
         id="partners"
         aria-labelledby="partners-heading"
-        className="bg-white px-5 pb-4 pt-8 sm:px-8 "
+        className="bg-white px-5 pb-8 pt-8 sm:px-8"
       >
-        <div className="mx-auto max-w-6xl  text-center">
-          <div className="relative mx-auto flex min-h-[116px] max-w-6xl items-center justify-center px-6 py-7 sm:min-h-[136px] sm:py-8">
+        <div className="mx-auto max-w-6xl text-left">
+          <div className="relative mx-auto flex aspect-[600/140] w-full max-w-[420px] items-center justify-center">
             <TitleSplashBackground variant={2} />
             <h2
               id="partners-heading"
               className="relative z-10 font-heading text-2xl font-extrabold uppercase text-white sm:text-3xl"
             >
-              Our Partners
+              Partners
             </h2>
           </div>
-          <p className="mx-auto mt-5 max-w-6xl text-sm leading-6 text-[#565650] sm:text-base">
+          <p className="mt-5 max-w-4xl text-sm leading-6 text-[#565650] sm:text-base">
             We are grateful for the support of our partners. Their commitment
             helps us equip children with shoes and create opportunities through
             practical skills and community outreach.
           </p>
           <div
             aria-label="Our partner organizations"
-            className="mx-auto mt-8 flex max-w-6xl flex-wrap items-center justify-start gap-x-8 gap-y-6"
+            className="mt-8 flex max-w-5xl flex-wrap items-center justify-start gap-x-4 gap-y-4 sm:gap-x-6"
           >
             <Image
               src="/pertnerLogos/cac.jpeg"
               alt="Corporate Affairs Commission"
               width={204}
               height={201}
-              className="h-24 w-24 object-contain sm:h-28 sm:w-28"
-              sizes="(max-width: 640px) 96px, 112px"
+              className="h-20 w-20 object-contain sm:h-24 sm:w-24"
+              sizes="(max-width: 640px) 80px, 96px"
             />
             <Image
               src="/pertnerLogos/kidpreneurplace.png"
               alt="Kidpreneur Place"
               width={609}
               height={155}
-              className="h-14 w-40 object-contain sm:h-16 sm:w-48"
-              sizes="(max-width: 640px) 160px, 192px"
+              className="h-12 w-32 object-contain sm:h-14 sm:w-40"
+              sizes="(max-width: 640px) 128px, 160px"
             />
           </div>
-          <figure className="relative mx-auto mt-24 aspect-[2/1] w-full max-w-6xl overflow-hidden">
+          <figure className="relative mx-0 mt-10 aspect-[16/10] w-full max-w-6xl overflow-hidden rounded-[18px]">
             <Image
               src="/images/placeholder.png"
               alt="Schoolchildren and a Shoe My Feet Foundation team member at a community project"
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 768px"
+              sizes="(max-width: 768px) 100vw, 1200px"
             />
           </figure>
         </div>

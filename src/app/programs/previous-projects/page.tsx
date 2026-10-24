@@ -3,6 +3,7 @@ import Link from "next/link";
 import ProgramPageIntro from "@/components/programs/ProgramPageIntro";
 import FastImage from "@/components/ui/FastImage";
 import { ArrowRightIcon } from "@/components/ui/Icons";
+import ScrollOverBg from "@/components/ui/scrollOverBg";
 
 export const metadata: Metadata = {
   title: "Previous Projects | Shoe My Feet Foundation",
@@ -112,6 +113,25 @@ export default function PreviousProjectsPage() {
           </div>
         </div>
       </section>
+
+      <ScrollOverBg
+        backgroundImage="/images/shoe_distribution.jpg"
+        minHeight="min-h-[420px] sm:min-h-[480px]"
+        className="px-5 py-20 sm:px-8"
+        overlayClassName="bg-[#111827]/75"
+        eyebrow="Our Journey Ahead"
+        title="Help Us Create the Next Milestone"
+        titleTag="h2"
+        titleClassName="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl"
+        description="Every distribution starts with people like you. Partner with us to bring durable shoes and shoemaking skills to more communities."
+        descriptionClassName="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg"
+        href="/donate"
+        linkLabel="Donate Now"
+        linkStyle="button"
+        secondaryHref="/projects"
+        secondaryLinkLabel="Explore Current Programs"
+        secondaryLinkStyle="outline"
+      />
     </>
   );
 }
