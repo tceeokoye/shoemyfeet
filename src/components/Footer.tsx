@@ -36,11 +36,13 @@ function handlePartnerSubmit(event: FormEvent<HTMLFormElement>) {
   window.location.href = `mailto:hello@shoemyfeet.org?subject=${encodeURIComponent(subject)}&body=${body}`;
 }
 
-export default function Footer() {
+export default function Footer({ compactTop = false }: { compactTop?: boolean }) {
   return (
     <footer className="text-[#333]">
       <div
-        className="bg-[#FFFFFF] px-6 py-12 sm:px-10 sm:py-14 lg:px-8 lg:py-12"
+        className={`bg-[#FFFFFF] px-6 pb-12 sm:px-10 sm:pb-14 lg:px-8 lg:pb-12 ${
+          compactTop ? "pt-8 sm:pt-10 lg:pt-12" : "pt-12 sm:pt-14 lg:pt-12"
+        }`}
         style={{
           backgroundImage:
             "repeating-linear-gradient(0deg, transparent 0, rgba(26, 58, 107, 0.018) 1px, transparent 3px), repeating-linear-gradient(90deg, transparent 0, rgba(26, 58, 107, 0.014) 1px, transparent 3px)",

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { fadeUp, viewportConfig } from "@/lib/animations";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 
@@ -10,6 +10,7 @@ export type ScrollOverBgLinkStyle = "text" | "button" | "outline" | "white";
 
 export interface ScrollOverBgProps {
   backgroundImage: string;
+  backgroundVideo?: string;
   minHeight?: string;
   id?: string;
   as?: "section" | "article" | "div";
@@ -144,6 +145,7 @@ function RenderLink({
 
 export default function ScrollOverBg({
   backgroundImage,
+  backgroundVideo,
   minHeight = "min-h-[520px]",
   id,
   as: Component = "section",
@@ -191,6 +193,8 @@ export default function ScrollOverBg({
 }: ScrollOverBgProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
+  const backgroundVideoRef = useRef<HTMLVideoElement>(null);
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -225,6 +229,36 @@ export default function ScrollOverBg({
     };
   }, []);
 
+  useEffect(() => {
+    const video = backgroundVideoRef.current;
+    const section = sectionRef.current;
+    if (!video || !section) return;
+
+    if (shouldReduceMotion) {
+      video.pause();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch((error: unknown) => {
+            console.warn("ScrollOverBg video playback could not start", error);
+          });
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.01 },
+    );
+
+    observer.observe(section);
+    return () => {
+      observer.disconnect();
+      video.pause();
+    };
+  }, [shouldReduceMotion]);
+
   const TitleTag = titleTag;
   const textAlignClass =
     align === "left"
@@ -253,7 +287,24 @@ export default function ScrollOverBg({
           marginLeft: "-50vw",
           backgroundImage: `url('${backgroundImage}')`,
         }}
-      />
+      >
+        {backgroundVideo && (
+          <video
+            ref={backgroundVideoRef}
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full object-cover"
+            loop
+            muted
+            playsInline
+            poster={backgroundImage}
+            preload={shouldReduceMotion ? "none" : "metadata"}
+            tabIndex={-1}
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+            Your browser does not support the video background.
+          </video>
+        )}
+      </div>
       <div
         aria-hidden="true"
         className={`absolute inset-0 z-0 ${overlayClassName}`}
@@ -293,21 +344,19 @@ export default function ScrollOverBg({
 
           {title && (
             <motion.div variants={fadeUp}>
-              <TitleTag className={titleClassName}>
-                {titlebgImage ? (
-                  <span className="relative isolate inline-flex items-center justify-center">
-                    <span
-                      aria-hidden="true"
-                      className="absolute inset-0 z-0 bg-center bg-no-repeat [background-size:100%_100%]"
-                      style={{
-                        backgroundImage: `url('${titlebgImage}')`,
-                      }}
-                    />
-                    <span className="relative z-10">{title}</span>
-                  </span>
-                ) : (
-                  title
+              <TitleTag className={`relative ${titleClassName}`}>
+                {titlebgImage && (
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 z-0 bg-center bg-no-repeat [background-size:100%_100%]"
+                    style={{
+                      backgroundImage: `url('${titlebgImage}')`,
+                    }}
+                  />
                 )}
+                <span className={titlebgImage ? "relative z-10" : undefined}>
+                  {title}
+                </span>
               </TitleTag>
             </motion.div>
           )}

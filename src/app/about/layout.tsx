@@ -7,7 +7,7 @@ export default function AboutLayout({ children }: { children: ReactNode }) {
     <div className="min-h-screen bg-white text-[#111827] flex flex-col font-sans">
       <Navbar />
       <main className="flex-grow">{children}</main>
-      <Footer />
+      <Footer compactTop />
     </div>
   );
 }

@@ -11,7 +11,7 @@ import BubblingHeart from "@/components/ui/BubblingHeart";
 
 const impactLinks = [
   { label: "Our Impact", href: "/impact" },
-  { label: "Our Reach", href: "/impact/reach" },
+  { label: "Our Reach", href: "/impact#impact-reach" },
   { label: "Blog & News", href: "/blog" },
 ];
 
@@ -24,13 +24,13 @@ const aboutLinks = [
 const projectsLinks = [
   { label: "Projects", href: "/projects" },
   { label: "Previous Projects", href: "/projects/previous-projects" },
-  { label: "Our Partners", href: "/projects/corporate-partnerships" },
+  { label: "Our Partners", href: "/projects#partners" },
 ];
 
 const connectLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Our Team", href: "/about/team" },
-  { label: "Careers", href: "/about/careers" },
+  { label: "Our Team", href: "/about#team" },
+  { label: "Careers", href: "/about#partner-with-us" },
 ];
 
 const desktopDropdowns = [
@@ -40,8 +40,13 @@ const desktopDropdowns = [
   { id: "connect", label: "Connect with Us", href: "/contact", links: connectLinks },
 ];
 
-export default function Navbar() {
+export default function Navbar({
+  variant = "floating",
+}: {
+  variant?: "floating" | "flat";
+}) {
   const pathname = usePathname();
+  const isFlat = variant === "flat";
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -52,24 +57,38 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  const isActive = (href: string) => {
+    const path = href.split("#")[0];
+    return path === "/" ? pathname === "/" : pathname.startsWith(path);
+  };
 
   return (
     <>
       {/* ── Modern Floating Header ── */}
-      <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-3 sm:pt-4 px-3 sm:px-4 pointer-events-none">
+      <div
+        className={`fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none ${
+          isFlat ? "" : "pt-3 px-3 sm:pt-4 sm:px-4"
+        }`}
+      >
         <motion.nav
-          className={`pointer-events-auto w-full max-w-7xl  rounded-2xl transition-all duration-500 ${
-            scrolled
-              ? "bg-[#FFFFFF] shadow-lg shadow-black/10 border border-black/10"
-              : "bg-[#FFFFFF] border border-black/10 shadow-lg shadow-black/10"
+          className={`pointer-events-auto w-full transition-all duration-500 ${
+            isFlat
+              ? "max-w-none border-x-0 border-t-0 rounded-none bg-[#FFFFFF] border-b border-black/10 shadow-none"
+              : `max-w-7xl rounded-2xl ${
+                  scrolled
+                    ? "bg-[#FFFFFF] shadow-lg shadow-black/10 border border-black/10"
+                    : "bg-[#FFFFFF] border border-black/10 shadow-lg shadow-black/10"
+                }`
           }`}
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center justify-between px-4 sm:px-6 py-3">
+          <div
+            className={`flex items-center justify-between px-4 sm:px-6 ${
+              isFlat ? "py-2" : "py-3"
+            }`}
+          >
             <Link
               href="/"
               aria-label="Shoe My Feet Foundation home"
@@ -81,7 +100,9 @@ export default function Navbar() {
                 height={48}
                 width={48}
                 priority
-                className="h-8 w-8 object-contain md:h-12 md:w-12"
+                className={`w-8 object-contain ${
+                  isFlat ? "h-8 md:h-10 md:w-10" : "h-8 md:h-12 md:w-12"
+                }`}
               />
             </Link>
 
