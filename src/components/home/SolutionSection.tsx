@@ -44,10 +44,10 @@ export default function SolutionSection() {
           transition={{ duration: 0.75, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
         >
           <Link
-            href="/projects"
+            href="/about/how-we-work#solution"
             className="inline-flex items-center gap-2 text-base font-semibold text-white underline decoration-1 underline-offset-4 transition-colors hover:text-[#F97316]"
           >
-            Read More <span aria-hidden="true">→</span>
+            Learn about our solution <span aria-hidden="true">→</span>
           </Link>
         </motion.div>
       </div>

@@ -49,7 +49,7 @@ export default function OurStoryPreview() {
               }}
             >
               <Link
-              href="/about/story"
+              href="/about"
               className="group inline-flex items-center gap-2 font-body text-base font-semibold text-[#111827] transition-colors hover:text-[#1A3A6B]"
               >
                 Read More
@@ -118,7 +118,7 @@ export default function OurStoryPreview() {
               }}
             >
               <Link
-                href="/projects/kids-shoemaking"
+                href="/about/tools"
                 className="group inline-flex items-center gap-2 font-body text-base font-semibold text-white transition-colors hover:text-[#F97316]"
               >
                 Read More
