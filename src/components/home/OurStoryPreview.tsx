@@ -1,49 +1,65 @@
 ﻿"use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
-import {
-  fadeUp,
-  fadeLeft,
-  fadeRight,
-  staggerContainer,
-  viewportConfig,
-} from "@/lib/animations";
-import { TIMELINE } from "@/lib/constants";
+import { fadeLeft, fadeRight, viewportConfig } from "@/lib/animations";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 
 export default function OurStoryPreview() {
-  const milestones = TIMELINE.slice(0, 3);
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <section className="bg-white relative overflow-hidden">
       <div className="relative left-1/2 w-full -translate-x-1/2">
         <div className="grid overflow-hidden lg:grid-cols-2">
-          <motion.div
+          <div
             className="order-1 flex min-h-85 flex-col items-center justify-center bg-[#F97316] px-6 py-12 text-center sm:min-h-96.25 sm:px-10 sm:py-14 lg:order-2 lg:min-h-140 lg:px-12"
-            variants={fadeRight}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
           >
-            <h2 className="mb-5 font-heading text-3xl font-extrabold leading-tight text-[#1A3A6B] sm:text-4xl">
+            <motion.h2
+              className="mb-5 font-heading text-3xl font-extrabold leading-tight text-[#1A3A6B] sm:text-4xl"
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 56 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            >
               About Shoe My Feet
-            </h2>
-            <p className="mb-7 max-w-xl text-base leading-6 text-[#1e1e1e] sm:text-lg sm:leading-7">
+            </motion.h2>
+            <motion.p
+              className="mb-7 max-w-xl text-base leading-6 text-[#1e1e1e] sm:text-lg sm:leading-7"
+              initial={shouldReduceMotion ? false : { opacity: 0, x: -64 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.9,
+                delay: 0.12,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
               Shoe My Feet Foundation works with schools and communities across Nigeria to provide children with school shoes, protect their feet, and help every child walk into learning with dignity.
-            </p>
-            <Link
+            </motion.p>
+            <motion.div
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 36 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.75,
+                delay: 0.28,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <Link
               href="/about/story"
               className="group inline-flex items-center gap-2 font-body text-base font-semibold text-[#111827] transition-colors hover:text-[#1A3A6B]"
-            >
-              Read More
-              <ArrowRightIcon
-                size={16}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </Link>
-          </motion.div>
+              >
+                Read More
+                <ArrowRightIcon
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                />
+              </Link>
+            </motion.div>
+          </div>
 
           <motion.figure
             className="relative order-2 min-h-80 bg-[#F3F4F6] sm:min-h-110 lg:order-1 lg:min-h-140"
@@ -63,33 +79,56 @@ export default function OurStoryPreview() {
         </div>
 
         <div className="grid overflow-hidden lg:grid-cols-2">
-          <motion.div
+          <div
             className="order-1 flex min-h-85 flex-col items-start justify-center bg-[#1A3A6B] px-8 py-12 text-left text-white sm:min-h-96.25 sm:px-12 sm:py-14 lg:min-h-140 lg:px-16"
-            variants={fadeLeft}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
           >
-            <h2 className="mb-7 font-heading text-3xl font-extrabold leading-tight text-[#F97316] sm:text-4xl">
+            <motion.h2
+              className="mb-7 font-heading text-3xl font-extrabold leading-tight text-[#F97316] sm:text-4xl"
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 56 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            >
               The Tools
-            </h2>
-            <p className="mb-8 max-w-xl text-base leading-7 sm:text-lg sm:leading-8">
+            </motion.h2>
+            <motion.p
+              className="mb-8 max-w-xl text-base leading-7 sm:text-lg sm:leading-8"
+              initial={shouldReduceMotion ? false : { opacity: 0, x: -64 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.9,
+                delay: 0.12,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
               We believe practical skills open doors. Through hands-on
               shoemaking workshops, children learn to make and repair shoes,
               build confidence, and discover new opportunities for their
               future.
-            </p>
-            <Link
-              href="/projects/kids-shoemaking"
-              className="group inline-flex items-center gap-2 font-body text-base font-semibold text-white transition-colors hover:text-[#F97316]"
+            </motion.p>
+            <motion.div
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 36 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.75,
+                delay: 0.28,
+                ease: [0.22, 1, 0.36, 1],
+              }}
             >
-              Read More
-              <ArrowRightIcon
-                size={16}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </Link>
-          </motion.div>
+              <Link
+                href="/projects/kids-shoemaking"
+                className="group inline-flex items-center gap-2 font-body text-base font-semibold text-white transition-colors hover:text-[#F97316]"
+              >
+                Read More
+                <ArrowRightIcon
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                />
+              </Link>
+            </motion.div>
+          </div>
 
           <motion.figure
             className="relative order-2 min-h-80 bg-[#F3F4F6] sm:min-h-110 lg:min-h-140"

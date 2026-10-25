@@ -113,10 +113,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section
-        id="team"
-        className="scroll-mt-24 bg-[#FAF9F6] px-5 py-14 sm:px-8 sm:py-20"
-      >
+      <section className="bg-[#FAF9F6] px-5 py-14 sm:px-8 sm:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-16 max-w-5xl text-center">
             <h2 className="relative isolate mx-auto inline-flex min-h-12 min-w-[250px] items-center justify-center px-8 py-2 font-heading text-xl font-extrabold uppercase leading-tight text-white sm:min-w-[330px] sm:text-2xl">
@@ -168,7 +165,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#FAF9F6] px-5 py-14 sm:px-8 sm:py-20">
+      <section
+        id="team"
+        className="scroll-mt-24 bg-[#FAF9F6] px-5 py-14 sm:px-8 sm:py-20"
+      >
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-16 max-w-5xl text-center">
             <h2 className="relative isolate mx-auto inline-flex min-h-12 min-w-[250px] items-center justify-center px-8 py-2 font-heading text-xl font-extrabold uppercase leading-tight text-white sm:min-w-[330px] sm:text-2xl">
@@ -243,7 +243,7 @@ export default function AboutPage() {
         className="scroll-mt-24 px-5 pt-14 pb-0 sm:px-8 sm:pt-16"
         overlayClassName="bg-[#111827]/80"
       >
-        <div className="mx-auto max-w-6xl text-center">
+        <div className="mx-auto max-w-6xl text-center pb-4">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-[#F97316]">
             Partner with us
           </p>

@@ -1,7 +1,9 @@
 
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 const metrics = [
   { value: 6500, suffix: "+", label: "Pairs Distributed" },
@@ -43,13 +45,23 @@ function Counter({
 }: {
   metric: (typeof metrics)[number];
 }) {
+  const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.div
+      ref={ref}
       variants={cardVariants}
       className="rounded-xl bg-white px-4 py-6 text-center shadow-md sm:py-8"
     >
       <div className="mb-2 flex items-center justify-center gap-0.5 font-heading text-3xl font-semibold leading-none text-[#142E56] sm:text-4xl">
-        {metric.value.toLocaleString()}
+        {inView && !shouldReduceMotion ? (
+          <CountUp end={metric.value} duration={2.5} separator="," />
+        ) : inView ? (
+          metric.value.toLocaleString()
+        ) : (
+          "0"
+        )}
         {metric.suffix}
       </div>
 
