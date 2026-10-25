@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { BLOG_TAGS, Article } from "@/lib/blogData";
-import { TagIcon, SparklesIcon } from "@/components/ui/Icons";
+import { TagIcon } from "@/components/ui/Icons";
 
 interface PopularTagsSectionProps {
   articles: Article[];

@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BLOG_CATEGORIES, Article } from "@/lib/blogData";
-import { SearchIcon, XIcon, SlidersIcon, ChevronDownIcon, SparklesIcon } from "@/components/ui/Icons";
+import { SearchIcon, XIcon, SlidersIcon, ChevronDownIcon } from "@/components/ui/Icons";
 
 interface BlogFiltersProps {
   articles: Article[];
@@ -39,7 +39,7 @@ export default function BlogFilters({
   onSelectArticle,
 }: BlogFiltersProps) {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [recentSearches, setRecentSearches] = useState<string[]>(["Enugu", "Footwear Health", "Kaduna Cobblers"]);
+  const [recentSearches] = useState<string[]>(["Enugu", "Footwear Health", "Kaduna Cobblers"]);
   const searchRef = useRef<HTMLDivElement>(null);
 
   // Filter matching suggestions

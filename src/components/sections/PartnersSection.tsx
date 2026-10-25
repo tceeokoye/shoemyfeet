@@ -1,8 +1,8 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
-import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 import { ExternalLink } from "lucide-react";
+import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 const partners = [
   {
@@ -156,7 +156,7 @@ export default function PartnersSection() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               {/* Logo avatar */}
-              <div className={`w-12 h-12 rounded-xl partner.color flex items-center justify-center mb-4 shadow-md group-hover:shadow-lg transition-shadow group-hover:scale-110 duration-300`}>
+              <div className={`w-12 h-12 rounded-xl ${partner.color} flex items-center justify-center mb-4 shadow-md group-hover:shadow-lg transition-shadow group-hover:scale-110 duration-300`}>
                 <span className="text-white font-heading font-bold text-sm">{partner.initials}</span>
               </div>
 
@@ -165,7 +165,7 @@ export default function PartnersSection() {
                 <div className="flex items-start justify-between gap-2 mb-1">
                   <h3 className="font-heading font-bold text-[#111827] text-base leading-tight">{partner.name}</h3>
                 </div>
-                <span className={`inline-block text-[10px] font-bold px-2 py-0.5 rounded-full partner.color text-white mb-2`}>
+                <span className={`inline-block text-[10px] font-bold px-2 py-0.5 rounded-full ${partner.color} text-white mb-2`}>
                   {partner.type}
                 </span>
                 <p className="text-xs text-gray-500 font-body leading-relaxed">{partner.description}</p>
@@ -197,10 +197,10 @@ export default function PartnersSection() {
               <div className="absolute top-4 right-5 text-4xl font-serif text-neutral-300 leading-none select-none">"</div>
 
               <p className="font-body text-gray-700 leading-relaxed mb-4 pr-6 italic text-sm">
-                "{t.quote}"
+                &ldquo;{t.quote}&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <div className={`w-10 h-10 rounded-full t.color flex items-center justify-center shrink-0`}>
+                <div className={`w-10 h-10 rounded-full ${t.color} flex items-center justify-center shrink-0`}>
                   <span className="text-white font-bold text-xs">{t.initials}</span>
                 </div>
                 <div>

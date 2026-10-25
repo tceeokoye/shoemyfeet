@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import FastImage from "@/components/ui/FastImage";
-import { ArrowRightIcon } from "@/components/ui/Icons";
 import ScrollOverBg from "@/components/ui/scrollOverBg";
 
 export const metadata: Metadata = {

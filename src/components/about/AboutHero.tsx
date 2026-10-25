@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import Image from "@/components/ui/RealImage";
 import Link from "next/link";
 import { fadeUp, staggerContainer } from "@/lib/animations";
-import { HeartIcon, ArrowRightIcon, SparklesIcon } from "@/components/ui/Icons";
+import { ArrowRightIcon, SparklesIcon } from "@/components/ui/Icons";
 
 export default function AboutHero() {
   const ref = useRef<HTMLDivElement>(null);

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
-import { MapPinIcon, MailIcon, ClockIcon, CheckIcon } from "@/components/ui/Icons";
+import { CheckIcon } from "@/components/ui/Icons";
 
 type ContactItem = {
   label: string;

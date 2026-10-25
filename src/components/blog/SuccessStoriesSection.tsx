@@ -4,7 +4,7 @@ import Image from "@/components/ui/RealImage";
 import { motion } from "framer-motion";
 import { SUCCESS_STORIES, Article } from "@/lib/blogData";
 import { fadeUp, viewportConfig, scaleIn } from "@/lib/animations";
-import { MapPinIcon, QuoteIcon, ArrowRightIcon, HeartIcon, SparklesIcon } from "@/components/ui/Icons";
+import { MapPinIcon, QuoteIcon, ArrowRightIcon, HeartIcon } from "@/components/ui/Icons";
 
 interface SuccessStoriesSectionProps {
   articles: Article[];

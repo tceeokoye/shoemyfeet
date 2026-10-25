@@ -8,9 +8,6 @@ import OurStoryPreview from "@/components/home/OurStoryPreview";
 import WhyShoesMatter from "@/components/home/WhyShoesMatter";
 import SolutionSection from "@/components/home/SolutionSection";
 import PartnerCTA from "@/components/home/PartnerCTA";
-import ProgramsPreview from "@/components/home/ProgramsPreview";
-import GalleryPreview from "@/components/home/GalleryPreview";
-import VolunteerCTA from "@/components/home/VolunteerCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {

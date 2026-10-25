@@ -38,7 +38,7 @@ const blogCards: BlogCard[] = [
 
 function SectionHeading({ title }: { title: string }) {
   return (
-    <h2 className="relative mx-auto mb-10 flex min-h-14 w-fit min-w-[260px] items-center justify-center px-10 py-3 text-center font-heading text-lg font-extrabold uppercase text-white sm:mb-12 sm:min-w-[320px] sm:text-xl">
+    <h2 className="relative mx-auto mb-10 flex min-h-14 w-fit min-w-65 items-center justify-center px-10 py-3 text-center font-heading text-lg font-extrabold uppercase text-white sm:mb-12 sm:min-w-[320px] sm:text-xl">
       <span
         aria-hidden="true"
         className="absolute inset-0 bg-center bg-no-repeat [background-size:100%_100%]"

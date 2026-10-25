@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeUp, viewportConfig, float, floatSlow } from "@/lib/animations";
-import { HeartIcon, FootprintsIcon, SparklesIcon, ArrowRightIcon, UsersIcon, HeartHandshakeIcon } from "@/components/ui/Icons";
+import { FootprintsIcon, SparklesIcon, ArrowRightIcon, UsersIcon } from "@/components/ui/Icons";
 
 export default function FinalCTA() {
   return (

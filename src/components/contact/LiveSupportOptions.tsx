@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
-import { PhoneIcon, MailIcon, ArrowRightIcon, CheckIcon, XIcon } from "@/components/ui/Icons";
+import { ArrowRightIcon, CheckIcon, XIcon } from "@/components/ui/Icons";
 
 const supportChannels = [
   {

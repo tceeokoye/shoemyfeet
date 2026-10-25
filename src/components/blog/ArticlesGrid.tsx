@@ -4,7 +4,7 @@ import Image from "@/components/ui/RealImage";
 import { motion, AnimatePresence } from "framer-motion";
 import { Article } from "@/lib/blogData";
 import { fadeUp, viewportConfig, scaleIn } from "@/lib/animations";
-import { CalendarIcon, ClockIcon, EyeIcon, Share2Icon, ArrowRightIcon, SparklesIcon, BookOpenIcon } from "@/components/ui/Icons";
+import { CalendarIcon, ClockIcon, EyeIcon, ArrowRightIcon, SparklesIcon, BookOpenIcon } from "@/components/ui/Icons";
 
 interface ArticlesGridProps {
   articles: Article[];
@@ -51,7 +51,7 @@ export default function ArticlesGrid({ articles, onReadStory, onAuthorClick, onR
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
         <AnimatePresence>
-          {articles.map((article, idx) => (
+          {articles.map((article) => (
             <motion.article
               key={article.id}
               variants={scaleIn}

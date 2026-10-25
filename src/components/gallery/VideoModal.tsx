@@ -33,7 +33,7 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [video, isPlaying, isMuted]);
+  }, [video, isPlaying, isMuted, onClose]);
 
   useEffect(() => {
     if (video) {
@@ -54,7 +54,7 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
         videoRef.current.pause();
         setIsPlaying(false);
       } else {
-        videoRef.current.play();
+        void videoRef.current.play();
         setIsPlaying(true);
       }
     }
@@ -62,8 +62,9 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
 
   const toggleMute = () => {
     if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
+      const nextMuted = !isMuted;
+      videoRef.current.muted = nextMuted;
+      setIsMuted(nextMuted);
     }
   };
 

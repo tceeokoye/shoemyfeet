@@ -222,7 +222,7 @@ export default function AboutPage() {
       <ScrollOverBg
         backgroundImage="/images/IMG_9272-01.jpeg"
         backgroundPosition="bg-center"
-        minHeight="min-h-[260px] sm:min-h-[300px]"
+        minHeight="min-h-65 sm:min-h-[300px]"
         className="px-5 py-14 sm:px-8 sm:py-16"
         overlayClassName="bg-[#111827]/70"
         title="Work With Us"

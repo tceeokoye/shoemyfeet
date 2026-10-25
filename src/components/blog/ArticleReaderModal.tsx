@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "@/components/ui/RealImage";
 import { motion, AnimatePresence } from "framer-motion";
-import { Article, ARTICLES, ContentBlock } from "@/lib/blogData";
+import { Article, ARTICLES } from "@/lib/blogData";
 import {
   XIcon,
   CalendarIcon,
@@ -15,11 +15,8 @@ import {
   SunIcon,
   MoonIcon,
   SparklesIcon,
-  DownloadIcon,
   QuoteIcon,
   CheckCircle2Icon,
-  PlayIcon,
-  ArrowRightIcon,
   UserIcon,
 } from "@/components/ui/Icons";
 import { trackArticleShare, trackEvent } from "@/lib/analytics";

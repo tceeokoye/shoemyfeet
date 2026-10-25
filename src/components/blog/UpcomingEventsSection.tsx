@@ -5,7 +5,7 @@ import Image from "@/components/ui/RealImage";
 import { motion } from "framer-motion";
 import { UPCOMING_EVENTS, Event } from "@/lib/blogData";
 import { fadeUp, viewportConfig, scaleIn } from "@/lib/animations";
-import { CalendarIcon, ClockIcon, MapPinIcon, UsersIcon, ArrowRightIcon, SparklesIcon, CheckCircleIcon } from "@/components/ui/Icons";
+import { CalendarIcon, ClockIcon, MapPinIcon, UsersIcon, ArrowRightIcon } from "@/components/ui/Icons";
 
 interface UpcomingEventsProps {
   onRSVPClick: (event: Event) => void;

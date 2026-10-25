@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { HeartIcon, UsersIcon, HeartHandshakeIcon, SparklesIcon } from "@/components/ui/Icons";
+import { UsersIcon, SparklesIcon } from "@/components/ui/Icons";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 const leadingFootprints = [

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
-import { PhoneIcon, MailIcon, MapPinIcon } from "@/components/ui/Icons";
 
 const regions = [
   {

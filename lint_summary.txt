@@ -1,0 +1,42 @@
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\about\AboutHero.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\ArticleReaderModal.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\ArticlesGrid.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\BlogFilters.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\EventRSVPModal.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\FinalCTA.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\NewsletterSection.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\PopularSidebar.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\PopularTagsSection.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\SuccessStoriesSection.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\UpcomingEventsSection.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\VolunteerSpotlightSection.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\ContactFinalCTA.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\ContactFormSection.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\ContactHero.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\ContactInfoCards.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\ContactNewsletter.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\EmergencySupportCards.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\FindUsLocation.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\LiveSupportOptions.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\MeetTeamContacts.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\RegionalContacts.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\VisitOfficeSection.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\EventTimeline.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\GalleryCTA.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\GalleryPageClient.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\LightboxModal.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\MediaGrid.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\VideoModal.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\home\HeroSection.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\home\PartnerMarquee.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\impact\ImpactOutcomes.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\impact\ImpactTestimonials.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\sections\DonateSection.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\sections\HeroSection.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\sections\TrustedBySection.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\sections\VolunteerSection.tsx
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\ui\RealImage.tsx
+---
+@typescript-eslint/no-unused-vars: 58
+react-hooks/exhaustive-deps: 2
+jsx-a11y/alt-text: 1

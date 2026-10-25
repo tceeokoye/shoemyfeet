@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useMemo } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Play, ChevronDown } from "lucide-react";
@@ -50,6 +50,20 @@ export default function HeroSection() {
   const blob2Y = useTransform(springY, [-0.5, 0.5], [15, -15]);
   const illustrationX = useTransform(springX, [-0.5, 0.5], [-10, 10]);
   const illustrationY = useTransform(springY, [-0.5, 0.5], [-8, 8]);
+
+  const particleStyles = useMemo(
+    () =>
+      Array.from({ length: 12 }, (_, i) => ({
+        key: `particle-${i}`,
+        width: Math.random() * 6 + 3,
+        height: Math.random() * 6 + 3,
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        background: "#1A3A6B",
+        opacity: 0.3,
+      })),
+    []
+  );
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
@@ -102,26 +116,26 @@ export default function HeroSection() {
         ))}
 
         {/* Particles */}
-        {[...Array(12)].map((_, i) => (
+        {particleStyles.map((particle, i) => (
           <motion.div
-            key={`particle-${i}`}
+            key={particle.key}
             className="absolute rounded-full"
             style={{
-              width: Math.random() * 6 + 3,
-              height: Math.random() * 6 + 3,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              background: i % 3 === 0 ? "#1A3A6B" : i % 3 === 1 ? "#1A3A6B" : "#1A3A6B",
-              opacity: 0.3,
+              width: particle.width,
+              height: particle.height,
+              left: particle.left,
+              top: particle.top,
+              background: particle.background,
+              opacity: particle.opacity,
             }}
             animate={{
               y: [0, -20, 0],
               opacity: [0.2, 0.5, 0.2],
             }}
             transition={{
-              duration: 3 + Math.random() * 3,
+              duration: 3 + (i % 3),
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: i * 0.2,
               ease: "easeInOut",
             }}
           />

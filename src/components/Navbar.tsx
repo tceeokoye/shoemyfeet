@@ -66,7 +66,7 @@ export default function Navbar({
     <>
       {/* ── Modern Floating Header ── */}
       <div
-        className={`fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none ${
+        className={`fixed top-0 left-0 right-0 z-40 flex justify-center pointer-events-none ${
           isFlat ? "" : "pt-3 px-3 sm:pt-4 sm:px-4"
         }`}
       >

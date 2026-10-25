@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import TitleSplashBackground from "@/components/ui/TitleSplashBackground";
+import { Heart } from "lucide-react";
 
 export default function WhyShoesMatter() {
   const shouldReduceMotion = useReducedMotion();
@@ -58,6 +59,13 @@ export default function WhyShoesMatter() {
             className="text-base text-[#1A3A6B] underline decoration-1 underline-offset-2 hover:text-[#142E56]"
           >
             Learn More About Us &gt;
+          </Link>
+           <Link
+            href="/donate"
+            className="inline-flex min-w-65 items-center justify-center gap-2 rounded-[10px] bg-[#F97316] px-8 py-4 text-base font-medium tracking-[0.08em] text-white transition-colors hover:bg-[#EA580C] sm:min-w-[300px]"
+          >
+            Support Us Today
+            <Heart aria-hidden="true" className="h-4 w-4 fill-white text-white" />
           </Link>
         </motion.div>
       </div>

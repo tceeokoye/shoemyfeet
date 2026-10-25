@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "@/components/ui/RealImage";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
 import { ChevronLeftIcon, ChevronRightIcon, StarIcon } from "@/components/ui/Icons";
-import { STORIES } from "@/lib/constants";
 
 const testimonials = [
   {
@@ -152,7 +151,7 @@ export default function ImpactTestimonials() {
                   <div className="grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start relative z-10">
                     {/* Portrait */}
                     <div className="flex flex-col items-center gap-3">
-                      <div className={`w-20 h-20  overflow-hidden border-4 border-transparent t.color p-0.5 shadow-lg`}>
+                      <div className={`w-20 h-20 overflow-hidden border-4 border-transparent ${t.color} p-0.5 shadow-lg`}>
                         <div className="w-full h-full rounded-xl overflow-hidden">
                           <Image
                             src={t.image}
@@ -179,7 +178,7 @@ export default function ImpactTestimonials() {
                       </p>
                       <div>
                         <p className="font-heading font-bold text-[#111827] text-base">{t.name}</p>
-                        <p className={`font-body text-sm font-semibold t.color bg-clip-text text-transparent`}>{t.role}</p>
+                        <p className={`font-body text-sm font-semibold ${t.color} bg-clip-text text-transparent`}>{t.role}</p>
                         <p className="font-body text-xs text-gray-400 mt-0.5">{t.community}</p>
                       </div>
                     </div>

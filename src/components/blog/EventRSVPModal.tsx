@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "@/components/ui/RealImage";
 import { motion, AnimatePresence } from "framer-motion";
 import { Event } from "@/lib/blogData";
-import { XIcon, CalendarIcon, ClockIcon, MapPinIcon, CheckCircle2Icon, MailIcon, HeartIcon } from "@/components/ui/Icons";
+import { XIcon, CalendarIcon, MapPinIcon, CheckCircle2Icon } from "@/components/ui/Icons";
 import { trackEvent } from "@/lib/analytics";
 
 interface EventRSVPModalProps {

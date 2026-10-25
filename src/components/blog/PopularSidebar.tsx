@@ -2,7 +2,7 @@
 
 import Image from "@/components/ui/RealImage";
 import { Article, BLOG_TAGS } from "@/lib/blogData";
-import { EyeIcon, Share2Icon, TrendingUpIcon, TagIcon, MailIcon, HeartIcon, ArrowRightIcon } from "@/components/ui/Icons";
+import { EyeIcon, TrendingUpIcon, TagIcon, MailIcon, HeartIcon, ArrowRightIcon } from "@/components/ui/Icons";
 
 interface PopularSidebarProps {
   articles: Article[];

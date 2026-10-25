@@ -1,0 +1,61 @@
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\about\AboutHero.tsx | 8 | @typescript-eslint/no-unused-vars | 'HeartIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\ArticleReaderModal.tsx | 6 | @typescript-eslint/no-unused-vars | 'ContentBlock' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\ArticleReaderModal.tsx | 18 | @typescript-eslint/no-unused-vars | 'DownloadIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\ArticleReaderModal.tsx | 21 | @typescript-eslint/no-unused-vars | 'PlayIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\ArticleReaderModal.tsx | 22 | @typescript-eslint/no-unused-vars | 'ArrowRightIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\ArticlesGrid.tsx | 7 | @typescript-eslint/no-unused-vars | 'Share2Icon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\ArticlesGrid.tsx | 54 | @typescript-eslint/no-unused-vars | 'idx' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\BlogFilters.tsx | 6 | @typescript-eslint/no-unused-vars | 'SparklesIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\BlogFilters.tsx | 42 | @typescript-eslint/no-unused-vars | 'setRecentSearches' is assigned a value but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\EventRSVPModal.tsx | 7 | @typescript-eslint/no-unused-vars | 'ClockIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\EventRSVPModal.tsx | 7 | @typescript-eslint/no-unused-vars | 'MailIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\EventRSVPModal.tsx | 7 | @typescript-eslint/no-unused-vars | 'HeartIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\FinalCTA.tsx | 6 | @typescript-eslint/no-unused-vars | 'HeartIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\FinalCTA.tsx | 6 | @typescript-eslint/no-unused-vars | 'HeartHandshakeIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\NewsletterSection.tsx | 5 | @typescript-eslint/no-unused-vars | 'viewportConfig' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\PopularSidebar.tsx | 5 | @typescript-eslint/no-unused-vars | 'Share2Icon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\PopularSidebar.tsx | 23 | @typescript-eslint/no-unused-vars | 'mostShared' is assigned a value but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\PopularTagsSection.tsx | 3 | @typescript-eslint/no-unused-vars | 'motion' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\PopularTagsSection.tsx | 5 | @typescript-eslint/no-unused-vars | 'SparklesIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\SuccessStoriesSection.tsx | 6 | @typescript-eslint/no-unused-vars | 'scaleIn' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\SuccessStoriesSection.tsx | 7 | @typescript-eslint/no-unused-vars | 'SparklesIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\UpcomingEventsSection.tsx | 8 | @typescript-eslint/no-unused-vars | 'UsersIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\UpcomingEventsSection.tsx | 8 | @typescript-eslint/no-unused-vars | 'SparklesIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\UpcomingEventsSection.tsx | 8 | @typescript-eslint/no-unused-vars | 'CheckCircleIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\blog\VolunteerSpotlightSection.tsx | 7 | @typescript-eslint/no-unused-vars | 'AwardIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\ContactFinalCTA.tsx | 5 | @typescript-eslint/no-unused-vars | 'HeartIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\ContactFormSection.tsx | 4 | @typescript-eslint/no-unused-vars | 'AnimatePresence' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\ContactHero.tsx | 1 | @typescript-eslint/no-unused-vars | 'Link' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\ContactInfoCards.tsx | 6 | @typescript-eslint/no-unused-vars | 'MapPinIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\ContactInfoCards.tsx | 6 | @typescript-eslint/no-unused-vars | 'MailIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\ContactInfoCards.tsx | 6 | @typescript-eslint/no-unused-vars | 'ClockIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\ContactNewsletter.tsx | 6 | @typescript-eslint/no-unused-vars | 'MailIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\EmergencySupportCards.tsx | 5 | @typescript-eslint/no-unused-vars | 'PhoneIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\FindUsLocation.tsx | 5 | @typescript-eslint/no-unused-vars | 'CheckIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\LiveSupportOptions.tsx | 6 | @typescript-eslint/no-unused-vars | 'PhoneIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\LiveSupportOptions.tsx | 6 | @typescript-eslint/no-unused-vars | 'MailIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\MeetTeamContacts.tsx | 5 | @typescript-eslint/no-unused-vars | 'ArrowRightIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\RegionalContacts.tsx | 5 | @typescript-eslint/no-unused-vars | 'PhoneIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\RegionalContacts.tsx | 5 | @typescript-eslint/no-unused-vars | 'MailIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\RegionalContacts.tsx | 5 | @typescript-eslint/no-unused-vars | 'MapPinIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\contact\VisitOfficeSection.tsx | 6 | @typescript-eslint/no-unused-vars | 'ClockIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\EventTimeline.tsx | 5 | @typescript-eslint/no-unused-vars | 'TimelineEvent' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\GalleryCTA.tsx | 5 | @typescript-eslint/no-unused-vars | 'HeartIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\GalleryCTA.tsx | 5 | @typescript-eslint/no-unused-vars | 'HeartHandshakeIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\GalleryPageClient.tsx | 4 | @typescript-eslint/no-unused-vars | 'GalleryHero' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\LightboxModal.tsx | 31 | react-hooks/exhaustive-deps | React Hook useEffect has missing dependencies: 'handleNext', 'handlePrev', and 'onClose'. Either include them or remove the dependency array. If 'onClose' changes too often, find the parent component 
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\MediaGrid.tsx | 7 | @typescript-eslint/no-unused-vars | 'SparklesIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\gallery\VideoModal.tsx | 36 | react-hooks/exhaustive-deps | React Hook useEffect has missing dependencies: 'onClose', 'toggleMute', and 'togglePlay'. Either include them or remove the dependency array. If 'onClose' changes too often, find the parent component 
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\home\HeroSection.tsx | 16 | @typescript-eslint/no-unused-vars | 'videoRef' is assigned a value but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\home\PartnerMarquee.tsx | 3 | @typescript-eslint/no-unused-vars | 'motion' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\impact\ImpactOutcomes.tsx | 3 | @typescript-eslint/no-unused-vars | 'useRef' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\impact\ImpactTestimonials.tsx | 8 | @typescript-eslint/no-unused-vars | 'STORIES' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\sections\DonateSection.tsx | 7 | @typescript-eslint/no-unused-vars | 'HeartIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\sections\HeroSection.tsx | 3 | @typescript-eslint/no-unused-vars | 'useEffect' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\sections\HeroSection.tsx | 3 | @typescript-eslint/no-unused-vars | 'useState' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\sections\HeroSection.tsx | 7 | @typescript-eslint/no-unused-vars | 'float' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\sections\HeroSection.tsx | 7 | @typescript-eslint/no-unused-vars | 'viewportConfig' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\sections\HeroSection.tsx | 13 | @typescript-eslint/no-unused-vars | 'index' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\sections\TrustedBySection.tsx | 5 | @typescript-eslint/no-unused-vars | 'PARTNERS' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\sections\VolunteerSection.tsx | 6 | @typescript-eslint/no-unused-vars | 'HeartIcon' is defined but never used.
+C:\Users\HP\OneDrive\Desktop\Shoe My feet\shoe-my-feet\src\components\ui\RealImage.tsx | 5 | jsx-a11y/alt-text | Image elements must have an alt prop, either with meaningful text, or an empty string for decorative images.

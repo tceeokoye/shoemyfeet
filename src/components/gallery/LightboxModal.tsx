@@ -28,7 +28,7 @@ export default function LightboxModal({ photos, currentIndex, onClose, onNavigat
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentIndex, photos]);
+  }, [currentIndex, onClose, onNavigate, photos]);
 
   useEffect(() => {
     if (currentIndex !== null) {
@@ -53,6 +53,18 @@ export default function LightboxModal({ photos, currentIndex, onClose, onNavigat
     if (currentIndex !== null && photos.length > 0) {
       const nextIdx = (currentIndex + 1) % photos.length;
       onNavigate(nextIdx);
+    }
+  };
+
+  const handleShare = async () => {
+    const shareData = {
+      title: photo?.title,
+      text: photo?.caption,
+      url: window.location.href,
+    };
+
+    if (navigator.share && photo) {
+      await navigator.share(shareData);
     }
   };
 
@@ -187,15 +199,7 @@ export default function LightboxModal({ photos, currentIndex, onClose, onNavigat
             </a>
 
             <button
-              onClick={() => {
-                if (navigator.share) {
-                  navigator.share({
-                    title: photo.title,
-                    text: photo.caption,
-                    url: window.location.href,
-                  });
-                }
-              }}
+              onClick={handleShare}
               className="px-4 py-2 rounded-full bg-[#1A3A6B] text-white font-body text-xs font-bold shadow-md hover:scale-105 transition-all flex items-center gap-1.5"
             >
               <Share2Icon size={14} />
